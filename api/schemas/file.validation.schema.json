@@ -1,0 +1,38 @@
+{
+    "getSchema":{
+       "type": "string",
+       "required": [
+         "id"     
+       ],
+       "properties": {
+         "id" : {
+           "type": "string"
+         }
+       }
+    },
+    "existSchema":{
+      "type": "string",
+       "required": [
+         "name"     
+       ],
+       "properties": {
+         "name" : {
+           "type": "string"
+         }
+       }
+    },
+    "postSchema":{
+        "type": "object",
+        "required": [
+          "name",
+          "file"     
+        ],
+        "properties": {
+          "name" : {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 50
+          }
+        }
+     }
+}

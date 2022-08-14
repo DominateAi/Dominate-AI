@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            margin: 0 !important;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-color: #fafafa;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .invoice-table {
+            width: 100%;
+            max-width: 595px;
+            margin: 0 auto;
+            border-collapse: collapse !important;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+            border-radius: 40px;
+        }
+
+        .thead-td {
+            padding: 41px 67px 37px 67px;
+            width: 100%;
+            background: rgba(255, 255, 255, 1);
+            border-radius: 40px 40px 0 0;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .thead-image {
+            width: 45%;
+        }
+
+        .tbody-td {
+            background-color: #fafafa;
+        }
+
+        .tbody-table {
+            width: 100%;
+            max-width: 100%;
+            border-collapse: collapse !important;
+        }
+
+        .success-msg-grey-bg-block {
+            background: #fafafa;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .success-msg-grey-bg-block td {
+            padding: 44px 60px;
+        }
+
+        .success-msg-btn {
+            cursor: pointer;
+            width: 227px;
+            height: 67px;
+            background: transparent linear-gradient(107deg,
+                    rgba(140, 217, 250, 1) 0%,
+                    rgba(36, 136, 203, 1) 100%);
+            border-radius: 34px;
+            border: 0;
+            font-size: 21px;
+            font-family: "Poppins-Bold", sans-serif, "Helvetica";
+            font-weight: 700;
+            color: #ffffff;
+            text-align: center;
+         text-decoration: none;
+         display: inline-block;
+        }
+
+        .button-link{
+          color: white !important;
+          text-decoration: none;
+        }
+
+        .font-30-bold {
+            font-size: 30px;
+            font-family: "Poppins-Bold", sans-serif, "Helvetica";
+            font-weight: 700;
+            line-height: 46px;
+            margin-bottom: 0;
+        }
+
+        .font-20-regular {
+            font-size: 20px;
+            font-family: "Poppins-Regular", sans-serif, "Helvetica";
+            font-weight: 400;
+            line-height: 30px;
+            margin-bottom: 0;
+        }
+
+        .font-21-regular {
+            font-size: 21px;
+            font-family: "Poppins-Regular", sans-serif, "Helvetica";
+            font-weight: 400;
+            line-height: 31px;
+            margin-bottom: 0;
+        }
+
+        .font-21-bold {
+            font-size: 21px;
+            font-family: "Poppins-Bold", sans-serif, "Helvetica";
+            font-weight: 700;
+            line-height: 31px;
+            margin-bottom: 0;
+
+        }
+
+        .mb-18 {
+            margin-bottom: 18px;
+        }
+
+        .mb-61 {
+            margin-bottom: 61px;
+        }
+
+        
+
+        .tfoot-tr td {
+            text-align: left;
+            padding-top: 27px;
+            padding-bottom: 22px;
+            padding-left: 67px;
+            border-radius: 0 0 40px 40px;
+            width: 100%;
+            background: #fafafa;
+            border-top: 2px solid #efe8e8;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+        }
+
+        @media screen and (max-width: 595px) {
+            .invoice-table {
+                width: 95%;
+                max-width: 95%;
+            }
+
+            .thead-image {
+                width: 65%;
+            }
+
+            .success-msg-grey-bg-block td {
+                padding: 44px;
+            }
+
+            .tfoot-tr td {
+            padding-left: 60px;
+            }
+            
+            .thead-td {
+            padding: 41px 60px 37px 60px;
+            
+            }
+
+            .td-border{
+              border-bottom: 2px solid #efe8e8 !important;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <table class="invoice-table">
+        <thead>
+            <tr>
+                <td class="thead-td success-msg-grey-bg-block td-border">
+                    <img class="thead-image" src="https://res.cloudinary.com/dd4krpktw/image/upload/v1580718740/thank-you-email/Dominate-logo-blue_zsmndl.svg" alt="logo" width="20%" height="auto" />
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tbody-td">
+                    <table class="tbody-table">
+                        <tbody class="success-msg-grey-bg-block">
+                            <tr>
+                                <td>
+                                    <h1 class="font-30-bold mb-18">Thank you!</h1>
+                                    <p class="font-20-regular mb-18">
+                                        You have signed up with dominate.ai, with the following workspace.
+                                    </p>
+                                    <p class="font-20-regular">
+                                        <span class="font-21-bold">Workspace Name:</span> {{workspaceId}}
+                                    </p>
+                                    <p class="font-20-regular mb-61">
+                                        <span class="font-21-bold">Workspace URL:</span> {{workspaceUrl}}
+
+                                    </p>
+                                    <button class="success-msg-btn">
+                                        <a href="{{workspaceUrl}}" class="button-link" >Continue</a>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="tfoot-tr">
+                <td class="font-21-regular">
+                    Copyright 2021. Dominate Ai
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    </bod>
+
+</html>

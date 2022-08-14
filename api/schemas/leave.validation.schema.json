@@ -1,0 +1,41 @@
+{
+  "getSchema": {
+    "type": "string",
+    "required": [
+      "id"
+    ],
+    "properties": {
+      "id": {
+        "type": "string"
+      }
+    }
+  },
+  "postSchema": {
+    "type": "object",
+    "required": [
+      "leaveType",
+      "fromDate",
+      "toDate",
+      "leaveStatus",
+      "hidden"
+    ],
+    "properties": {
+      "leavetype": {
+        "type": "string",
+        "enum":["PAID_LEAVE", "SICK_EAVE","HOLIDAY"]
+      },
+      "leaveStatus": {
+        "type": "string",
+        "enum":["APPROVED", "REJECTED", "PENDING"]
+      },
+      "fromDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "toDate": {
+        "type": "string",
+        "format": "date-time"
+      }
+    }
+  }
+}

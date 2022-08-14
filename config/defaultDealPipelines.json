@@ -1,0 +1,14 @@
+{
+    "defaultPipelines": [
+        {
+            "name": "Consultancy"
+        },
+        {
+            "name": "Services"
+        },
+        {
+            "name": "Product"
+        }
+    ]
+}
+

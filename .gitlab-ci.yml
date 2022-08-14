@@ -1,0 +1,31 @@
+image: jonaskello/docker-and-compose
+
+stages:
+  - build
+  - deploy
+
+before_script:
+  - docker info
+  - docker-compose --version
+
+build:
+  stage: build
+  tags:
+    - docker
+  script:
+    - docker images
+    - docker-compose  build
+    - docker images
+    
+deploy:
+  stage: deploy
+  tags:
+    - docker
+  script:
+    - docker ps
+    - docker-compose down
+    - docker system prune -f
+    - docker-compose up -d --scale dominate=2
+    - docker ps
+  only:
+    - master

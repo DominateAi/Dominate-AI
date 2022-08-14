@@ -1,0 +1,8 @@
+node_modules
+log/results.log
+.vscode
+dump.rdb
+scripts
+./test.js
+test.js
+package-lock.json

@@ -1,0 +1,73 @@
+{
+    "getSchema":{
+       "type": "string",
+       "required": [
+         "id"     
+       ],
+       "properties": {
+         "id" : {
+           "type": "string"
+         }
+       }
+    },
+    "existSchema":{
+      "type": "string",
+       "required": [
+         "name"     
+       ],
+       "properties": {
+         "name" : {
+           "type": "string"
+         }
+       }
+    },
+    "postSchema":{
+        "type": "object",
+        "required": [
+          "name",
+          "phone",
+          "assigned"
+        ],
+        "properties": {
+          "name" : {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 50
+          },
+          "phone" : {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 50
+          },
+          "phonecode":{
+            "type":"object"
+          },
+          "assigned" : {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 50
+          },
+          "isHidden" : {
+            "type": "boolean"
+          },
+          "isKanban" : {
+            "type": "boolean"
+          },
+          "status":{
+            "type": "string",
+            "enum": ["NEW_LEAD", "CONTACTED_LEADS", "QUALIFIED_LEADS", "OPPORTUNITIES", "CONVERTED", "ARCHIVE","ON_HOLD"]
+          },
+          "reason_for_drop":{
+            "type": "string",
+            "enum":["WENT_TO_COMPETITOR","OUT_OF_BUDGET","LOW_FOLLOWUPS","NOT_INTERESTED","DEAL_CANCELLED","OTHERS"]
+          },
+          "degree":{
+            "type":"string",
+            "enum":["COLD", "COOL","WARM","HOT","SUPER_HOT"]
+          }
+
+
+
+        }
+     }
+}

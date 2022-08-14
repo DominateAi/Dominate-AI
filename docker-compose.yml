@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+
+  redis:
+    image: redis
+    container_name: redis
+    expose:
+      - 6379
+
+  dominate:
+    links:
+    - redis
+    build:
+      context: .
+      dockerfile: DockerFile
+    command: "npm start"
+    image: dominatebackend
+    deploy: 
+      replicas: 2
+  loadbalancer:
+    build:
+      context: ./nginx
+      dockerfile: DockerFile
+    image: dominatebackendlb
+    ports:
+      - '80:80'
+      - '443:443'
+    links:
+      - dominate
+    volumes:
+      - /var/dominate/dist/dominate-frontend/:/usr/share/nginx/html
+
+  schedular:
+    image: dominatebackendschedular
+    build:
+      context: ./schedular
+      dockerfile: DockerFile  

@@ -1,0 +1,36 @@
+{
+    "getSchema":{
+       "type": "string",
+       "required": [
+         "id"     
+       ],
+       "properties": {
+         "id" : {
+           "type": "string"
+         }
+       }
+    },
+    "postSchema":{
+        "type": "object",
+        "required": [
+          "data",
+          "entityType",
+          "entityId"     
+        ],
+        "properties": {
+          "data" : {
+            "type": "object"
+          },
+          "entityType" : {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 50
+          },
+          "entityId" : {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 50
+          }
+        }
+     }
+}

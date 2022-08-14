@@ -1,0 +1,32 @@
+{
+    "getSchema":{
+       "type": "string",
+       "required": [
+         "id"     
+       ],
+       "properties": {
+         "id" : {
+           "type": "string"
+         }
+       }
+    },
+    "postSchema":{
+        "type": "object",
+        "required": [
+          "deal",
+          "revenueAmount"     
+        ],
+        "properties": {
+          "deal" : {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 50
+          },
+          "revenueAmount" : {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 50
+          }
+        }
+     }
+}

@@ -1,0 +1,18 @@
+FROM nginx
+
+# Old Lines
+# COPY ssl/cert_chain.crt ./etc/ssl/cert_chain.crt
+# COPY ssl/server.key ./etc/ssl/server.key
+
+# ssl_certificate /etc/letsencrypt/live/remote-teams.io/fullchain.pem;
+# ssl_certificate_key /etc/letsencrypt/live/remote-teams.io/privkey.pem;
+
+COPY newssl/fullchain.pem ./etc/ssl/fullchain.pem
+COPY newssl/privkey.pem ./etc/ssl/privkey.pem
+
+COPY nginx.conf ./etc/nginx/nginx.conf
+
+EXPOSE 443
+
+# Start Nginx when the container has provisioned.
+CMD ["nginx", "-g", "daemon off;"]

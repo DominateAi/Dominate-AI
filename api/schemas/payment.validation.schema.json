@@ -1,0 +1,45 @@
+{
+    "getSchema":{
+       "type": "string",
+       "required": [
+         "id"     
+       ],
+       "properties": {
+         "id" : {
+           "type": "string"
+         }
+       }
+    },
+    "paymentSuccessSchema":{
+        "type": "object",
+        "required": [
+          
+          "subscriptionId",
+          "plan",
+          "workspaceId",
+          "organizationId",
+          "paymentId"     
+        ],
+        "properties": {
+          "plan":{
+            "type":"string",
+            "enum":["ASTRONAUT","ROVER", "SPACESHIP", "SPACESTATION", "COLONY", "INTERNAL"]
+          }
+         
+        }
+     },
+     "createSubscriptionSchema":{
+      "type": "object",
+      "required": [
+        "plan",
+        "workspaceId"
+      ],
+      "properties": {
+        "plan":{
+          "type":"string",
+          "enum":["ASTRONAUT","ROVER", "SPACESHIP", "SPACESTATION", "COLONY", "INTERNAL"]
+        }
+       
+      }
+   }
+}

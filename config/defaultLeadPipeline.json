@@ -1,0 +1,11 @@
+{
+    "defaultPipeline": {
+            "leadPipelineName": "High Ticket Services",
+            "description":"Leads pipeline for tracking high ticket services",
+            "additionalInfo":{
+                "Type":"DEFAULT"
+            }
+        }
+    
+}
+
