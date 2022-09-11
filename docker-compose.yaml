@@ -1,0 +1,7 @@
+version: '3'
+services:
+  fronend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: frontend
