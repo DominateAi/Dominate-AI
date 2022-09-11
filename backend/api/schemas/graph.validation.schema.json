@@ -1,0 +1,72 @@
+{
+    "monthlySchema":{
+       "type": "string",
+       "required": [
+         "year"     
+       ],
+       "properties": {
+         "year" : {
+           "type": "string"
+         }
+       }
+    },
+    "weeklySchema":{
+      "type": "string",
+      "required": [
+        "year",
+        "month"     
+      ],
+      "properties": {
+        "year" : {
+          "type": "string"
+        },
+        "month" : {
+          "type": "string"
+        }
+      }
+   },
+    "dailySchema":{
+      "type": "string",
+      "required": [
+        "year",
+        "week"     
+      ],
+      "properties": {
+        "year" : {
+          "type": "string"
+        },
+        "week" : {
+          "type": "string"
+        }
+      }
+   },
+    "existSchema":{
+      "type": "string",
+       "required": [
+         "name"     
+       ],
+       "properties": {
+         "name" : {
+           "type": "string"
+         }
+       }
+    },
+    "postSchema":{
+        "type": "object",
+        "required": [
+          "name"     
+        ],
+        "properties": {
+          "name" : {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 50
+          },
+          "status" : {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 20
+          }
+        }
+     }
+}

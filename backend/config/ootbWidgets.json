@@ -1,0 +1,74 @@
+[
+    {
+        "name" :"widget-1",
+        "url": "/api/customers/count?key=status&value=ACTIVE",
+        "title":"Active customer",
+        "status": "ACTIVE"
+    },
+    {
+        "name" :"widget-2",
+        "url": "/api/leads/count?key=degree&value=SUPER_HOT",
+        "title":"Super Hot Leads",
+        "status": "ACTIVE"
+    },
+    {
+        "name" :"widget-3",
+        "url": "/api/tasks/count",
+        "title":"Tasks list",
+        "status": "ACTIVE"
+    },
+    {
+        "name" :"widget-4",
+        "url": "/api/tasks/completed",
+        "title":"Completed by far today",
+        "status": "ACTIVE"
+    },
+    {
+        "name" :"widget-5",
+        "url": "/api/leads/socialMedia/count",
+        "title":"Generated from social media",
+        "status": "ACTIVE"
+    },
+    {
+        "name" :"widget-6",
+        "url": "/api/leads/leaderboard?period=current",
+        "title":"Performance score board",
+        "status": "ACTIVE"
+    },
+    {
+        "name" :"widget-7",
+        "url": "/api/graph/users/target",
+        "title":"My Target",
+        "status": "ACTIVE"
+    },
+    {
+        "name" :"widget-8",
+        "url": "/api/leads/today/all?type=followup",
+        "title":"Total number of Follow Ups",
+        "status": "ACTIVE"
+    },
+    {
+        "name" :"widget-9",
+        "url": "/api/graph/leads/prediction?type=revenue",
+        "title":"Your Predictions",
+        "status": "ACTIVE"
+    },
+    {
+        "name" :"widget-10",
+        "url": "/api/users/count?key=status&value=ACTIVE",
+        "title":"Active Members",
+        "status": "ACTIVE"
+    },
+    {
+        "name" :"widget-11",
+        "url": "/api/leads/today/all?type=meeting",
+        "title":"Total number of Meetings",
+        "status": "ACTIVE"
+    },
+    {
+        "name" :"widget-12",
+        "url": "/api/calenders/upcomingEvents",
+        "title":"Upcoming Events in Calendar",
+        "status": "ACTIVE"
+    }
+]

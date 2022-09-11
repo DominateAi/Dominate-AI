@@ -1,0 +1,17 @@
+{
+    "pipelineTemplates": [
+        {
+            "name": "SAAS Product"
+        },
+        {
+            "name": "Cloud Infra"
+        },
+        {
+            "name": "Social Media"
+        },
+        {
+            "important_note": "need to create stages also of these deals in the json file"
+        }
+    ]
+}
+

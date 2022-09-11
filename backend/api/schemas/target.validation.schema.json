@@ -1,0 +1,70 @@
+{
+    "getSchema":{
+       "type": "string",
+       "required": [
+         "id"     
+       ],
+       "properties": {
+         "id" : {
+           "type": "string"
+         }
+       }
+    },
+    "postSchema":{
+        "type": "object",
+        "required": [
+          "entityId",
+          "targetType",
+          "status" 
+        ],
+        "properties": {
+          "entityId" : {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 50
+          },
+          "targetType" : {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 50,
+            "enum":[ "ORGANISATION", "MEMBER"]
+          },
+          "status" : {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 50,
+            "enum":[ "ACTIVE", "PENDING"]
+          },
+          "new_leads_dollar_value":{
+            "type": "number",
+            "minLength": 1,
+            "maxLength": 50
+          },
+          "new_leads_lead_value":{
+            "type": "integer",
+            "minLength": 1,
+            "maxLength": 50
+          },
+          "contacted_leads_dollar_value":{
+            "type": "number",
+            "minLength": 1,
+            "maxLength": 50
+          },
+          "contacted_leads_lead_value":{
+            "type": "integer",
+            "minLength": 1,
+            "maxLength": 50
+          },
+          "closed_leads_dollar_value":{
+            "type": "number",
+            "minLength": 1,
+            "maxLength": 50
+          },
+          "closed_leads_lead_value":{
+            "type": "integer",
+            "minLength": 1,
+            "maxLength": 50
+          }
+        }
+     }
+}

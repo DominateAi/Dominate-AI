@@ -1,0 +1,33 @@
+{
+  "getSchema": {
+    "type": "string",
+    "required": [
+      "id"
+    ],
+    "properties": {
+      "id": {
+        "type": "string"
+      }
+    }
+  },
+  "postSchema": {
+    "type": "object",
+    "required": [
+      "message",
+      "from",
+      "to"
+    ],
+    "properties": {
+      "name": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "status": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 10
+      }
+    }
+  }
+}

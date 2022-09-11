@@ -1,0 +1,15 @@
+{
+  "name": "dominate-schedular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "schedular.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node schedular.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-schedule": "1.3.2"
+  }
+}

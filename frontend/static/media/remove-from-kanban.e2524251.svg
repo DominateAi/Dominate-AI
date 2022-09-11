@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42.977" height="37.056" viewBox="0 0 42.977 37.056">
+  <g id="Group_5952" data-name="Group 5952" opacity="0.72">
+    <path id="Path_7928" data-name="Path 7928" d="M35.974,118.165H1.929A1.935,1.935,0,0,1,0,116.236V92.8H37.9v23.436A1.935,1.935,0,0,1,35.974,118.165Z" transform="translate(0 -85.162)" fill="#f2f2f2"/>
+    <path id="Path_7929" data-name="Path 7929" d="M36.36,0H1.543A1.523,1.523,0,0,0,0,1.543V8.391H37.9V1.543A1.523,1.523,0,0,0,36.36,0Z" transform="translate(0)" fill="#ffc428"/>
+    <g id="Group_2390" data-name="Group 2390" transform="translate(1.199 9.47)">
+      <rect id="Rectangle_2432" data-name="Rectangle 2432" width="8.266" height="22.392" fill="#cdd6e0"/>
+    </g>
+    <g id="Group_2400" data-name="Group 2400" transform="translate(10.309 9.47)">
+      <rect id="Rectangle_2432-2" data-name="Rectangle 2432" width="8.266" height="22.392" fill="#cdd6e0"/>
+    </g>
+    <g id="Group_2401" data-name="Group 2401" transform="translate(19.42 9.47)">
+      <rect id="Rectangle_2432-3" data-name="Rectangle 2432" width="8.266" height="22.392" fill="#cdd6e0"/>
+    </g>
+    <g id="Group_2402" data-name="Group 2402" transform="translate(28.53 9.47)">
+      <rect id="Rectangle_2432-4" data-name="Rectangle 2432" width="8.266" height="22.392" fill="#cdd6e0"/>
+    </g>
+    <rect id="Rectangle_2431" data-name="Rectangle 2431" width="5.305" height="5.305" transform="translate(3.333 12.116)" fill="#ff7058"/>
+    <rect id="Rectangle_2441" data-name="Rectangle 2441" width="5.305" height="5.305" transform="translate(12.217 18.037)" fill="#ff7058"/>
+    <rect id="Rectangle_2442" data-name="Rectangle 2442" width="5.305" height="5.305" transform="translate(21.1 12.116)" fill="#ff7058"/>
+    <rect id="Rectangle_2443" data-name="Rectangle 2443" width="5.305" height="5.305" transform="translate(29.984 22.973)" fill="#ff7058"/>
+    <ellipse id="Ellipse_504" data-name="Ellipse 504" cx="6.282" cy="6.282" rx="6.282" ry="6.282" transform="translate(30.414 24.492)" fill="red"/>
+    <line id="Line_525" data-name="Line 525" x2="5.757" transform="translate(33.674 30.752)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+  </g>
+</svg>

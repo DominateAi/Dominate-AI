@@ -1,0 +1,22 @@
+{
+    "features": [
+        {
+            "featureId": "call",
+            "name": "Call",
+            "permissions": [
+                "call:create",
+                "call:delete",
+                "call:view"
+            ]
+        },
+        {
+            "featureId": "storage",
+            "name": "Storage",
+            "permissions": [
+                "storage:create",
+                "storage:delete",
+                "storage:view"
+            ]
+        }
+    ]
+}

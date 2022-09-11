@@ -1,0 +1,42 @@
+{
+    "getSchema":{
+       "type": "string",
+       "required": [
+         "id"     
+       ],
+       "properties": {
+         "id" : {
+           "type": "string"
+         }
+       }
+    },
+    "postSchema":{
+        "type": "object",
+        "required": [
+          "to",
+          "entityId",
+          "entityType",
+          "status"     
+        ],
+        "properties": {
+          "to" : {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 50
+          },
+          "entityType" : {
+            "type": "string",
+            "enum": ["LEAD", "CUSTOMER"]
+          },
+          "status" : {
+            "type": "string",
+            "enum": ["NEW", "ARCHIVE"]
+          },
+          "entityId" : {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 50
+          }
+        }
+     }
+}
