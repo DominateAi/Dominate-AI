@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="66" height="70" viewBox="0 0 66 70">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_2101" data-name="Rectangle 2101" width="66" height="70" transform="translate(64 151)" fill="#fff"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.684" y1="1.311" x2="-0.132" y2="-0.249" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#502eff"/>
+      <stop offset="1" stop-color="#d1c7ff"/>
+    </linearGradient>
+    <filter id="Rectangle_2201" x="-8" y="-6" width="88" height="88" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Mask_Group_10" data-name="Mask Group 10" transform="translate(-64 -151)" clip-path="url(#clip-path)">
+    <g id="Group_1511" data-name="Group 1511">
+      <g id="Group_1500" data-name="Group 1500" transform="translate(66.643 150)">
+        <g id="Group_1496" data-name="Group 1496" transform="translate(-2 1)" opacity="0.87">
+          <g transform="matrix(1, 0, 0, 1, -0.64, 0)" filter="url(#Rectangle_2201)">
+            <rect id="Rectangle_2201-2" data-name="Rectangle 2201" width="70" height="70" rx="7" transform="translate(1)" fill="url(#linear-gradient)"/>
+          </g>
+        </g>
+      </g>
+      <path id="Icon_ionic-md-arrow-round-back" data-name="Icon ionic-md-arrow-round-back" d="M36.691,19.28H16.006l8.023-7.675a3.2,3.2,0,0,0,0-4.369,2.858,2.858,0,0,0-4.176,0L6.495,20.188a2.944,2.944,0,0,0-.87,2.165v.039a2.944,2.944,0,0,0,.87,2.165L19.844,37.51a2.858,2.858,0,0,0,4.176,0,3.2,3.2,0,0,0,0-4.369L16,25.466H36.682a3.026,3.026,0,0,0,2.958-3.093A2.994,2.994,0,0,0,36.691,19.28Z" transform="translate(73.104 163.67)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
