@@ -46,7 +46,7 @@ How to setup:
 
 INVITE Flow:!
 
-------------------
+-------------------
 1. Call invite Api:
 POST /api/users/invite HTTP/1.1
 Host: localhost:9010
