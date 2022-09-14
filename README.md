@@ -1,10 +1,9 @@
-<h1> Dominate Ai, Open Source / Community Version </h1>
-
 ![](website_screenshot.png)
 
 ![](Dashboard.png)
 
-[Visit Website](https://www.dominate.ai)
+<h1> Dominate Ai, Open Source / Community Version </h1>
+<h2> [Visit Website](https://www.dominate.ai) <h2>
 
 Dominate: Backend
 
