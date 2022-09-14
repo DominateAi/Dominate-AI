@@ -6,9 +6,6 @@ How to setup:
 3. run 'docker-compose build'
 3. run 'docker-compose up --scale dominate=2 -d' 
 
-[Untitled](https://user-images.githubusercontent.com/26513717/190064009-06ae24ee-744f-46dd-a48a-5a0096b2f3ea.png)
-
-
 
 INVITE Flow:!
 
