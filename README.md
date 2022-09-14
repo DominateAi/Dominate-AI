@@ -3,7 +3,7 @@
 ![](Dashboard.png)
 
 <h1> Dominate Ai, Open Source / Community Version </h1>
-<h2> [Visit Website](https://www.dominate.ai) <h2>
+<h2> [Visit Website](https://www.dominate.ai) </h2>
 
 Dominate: Backend
 
