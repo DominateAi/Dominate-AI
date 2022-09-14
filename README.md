@@ -1,8 +1,8 @@
+<h1> Dominate Ai, Open Source / Community Version </h1>
+
 ![](website_screenshot.png)
 
 ![](Dashboard.png)
-
-<h1> Dominate Ai, Open Source / Community Version </h1>
 
 Dominate: Backend
 
