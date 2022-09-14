@@ -4,6 +4,8 @@
 
 ![](Dashboard.png)
 
+[Visit Website](https://www.dominate.ai)
+
 Dominate: Backend
 
 How to setup:
