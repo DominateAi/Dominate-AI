@@ -1,5 +1,7 @@
 ![](website_screenshot.png)
 
+![](Dashboard.png)
+
 Dominate: Backend
 
 How to setup:
