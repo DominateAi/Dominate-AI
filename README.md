@@ -5,6 +5,7 @@
 <h1> Dominate Ai, Open Source / Community Version </h1>
 <h2> [Visit Website](https://www.dominate.ai) </h2>
 <p>
+	
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/akhilsails/)
 	
 ![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)
