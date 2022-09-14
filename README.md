@@ -2,6 +2,8 @@
 
 ![](Dashboard.png)
 
+<h1> Dominate Ai, Open Source / Community Version </h1>
+
 Dominate: Backend
 
 How to setup:
