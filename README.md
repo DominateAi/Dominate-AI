@@ -43,6 +43,17 @@ How to setup:
 3. run 'docker-compose build'
 3. run 'docker-compose up --scale dominate=2 -d' 
 
+Local Setup -
+
+Make sure Redis and MongoDB are installed and the servers for them have been started in the background.
+
+1. `git clone https://github.com/DominateAi/Dominate-OpenSource-version.git`
+2. `npm install`
+3. `npm run local`
+
+You can also setup database with admin with this addiitonal step before the 3rd step - 
+
+4. `Run ./scripts/init_dominate.js\`
 
 INVITE Flow:!
 
