@@ -1,0 +1,31 @@
+{
+    "env": "dev",
+    "server_port": 9010,
+    "server_url": "http://localhost:9010",
+    "server_domain": "",
+    "app_name": "Dominate.ai",
+    "multimedia_path": "",
+    "defaultUserFileUrlPath": "/public/download?filename=file-2019-11-18T17:38:30.307Z.jpeg",
+    "defaultOrganizationFileUrlPath": "/public/download?filename=file-2019-12-18T17:31:55.019Z.png",
+    "protocol": "http://",
+    "max_file_upload_limit": 20,
+    "monogodb_url": "mongodb://localhost:27017/dominate_master",
+    "server_secert": "dev",
+    "token_expiry": 20000000,
+    "refresh_token_expiry": 900,
+    "aud": "",
+    "iss": "",
+    "master_schema": "dominate_master",
+    "smtp": {
+        "clientId": "",
+        "clientSecret": "",
+        "refreshToken": "",
+        "senderEmail": ""
+    },
+    "organizationFreeTrialPeriod": 15,
+    "SENDGRID_API_KEY": "",
+    "dominateAdminEmail":"",
+    "redisHost": "localhost",
+    "systemToken": "",
+    "emailServiceAPIKEY": ""
+}

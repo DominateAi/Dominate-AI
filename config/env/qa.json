@@ -1,0 +1,81 @@
+{
+    "env": "qa",
+    "server_port": 9010,
+    "server_url": "http://localhost:9010",
+    "server_domain": "",
+    "app_name": "",
+    "multimedia_path": "",
+    "defaultUserFileUrlPath": "/public/download?filename=file-2019-11-18T17:38:30.307Z.jpeg",
+    "defaultOrganizationFileUrlPath": "/public/download?filename=file-2019-12-18T17:31:55.019Z.png",
+    "protocol": "http://",
+    "max_file_upload_limit": 20,
+    "monogodb_url": "mongodb://mongo:27017/dominate_master",
+    "server_secert": "dev",
+    "token_expiry": 20000000,
+    "refresh_token_expiry": 900,
+    "aud": "",
+    "iss": "",
+    "master_schema": "dominate_master",
+    "smtp": {
+        "clientId": "",
+        "clientSecret": "",
+        "refreshToken": "",
+        "senderEmail": ""
+    },
+    "minio": {
+        "endPoint": "minio",
+        "port": 9000,
+        "secure": false,
+        "accessKey": "",
+        "secretKey": ""
+    },
+    "fileServerRootBucket": "test-dominate",
+    "organizationFreeTrialPeriod": 15,
+    "defaultPriceId":"",
+    "SENDGRID_API_KEY": "",
+    "exotel": {
+        "apiKey": "",
+        "apiToken": "",
+        "sid": "",
+        "callerId": "",
+        "statusCallbackUrl": ""
+    },
+    "razorPayTest": {
+        "key_id": "",
+        "key_secret": ""
+    },
+    "razorPayLive": {
+        "key_id": "",
+        "key_secret": ""
+    },
+    "stripeTest":{
+        "key_id":"",
+        "key_secret":"",
+        "webhook_cli":"",
+        "webhook_secret":""
+    },
+    "stripeLive":{
+        "key_id":"",
+        "key_secret":"",
+        "webhook_cli":"",
+        "webhook_secret":""
+    },
+    "dominateAdminEmail":"",
+    "redisHost": "redis",
+    "systemToken": "",
+    "razorPayWebhookSecret":"",
+    "nylasRedirectUri":"",
+    "nylasclientId":"",
+    "nylasclientSecret":"",
+    "google_oauth_client_id":"",
+    "google_oauth_secret_id":"",
+    "google_access_type":"",
+    "microsoft_oauth_secret_id":"",
+    "microsoft_oauth_client_id":"",
+    "microsoft_oauth_authority":"",
+    "microsoft_oauth_authorise_endpoint":"",
+    "microsoft_oauth_token_endpoint":"",
+    "oauth_redirect_url":"",
+    "leadscrapperKey": "",
+    "leadscrapperUrl": ""
+}
