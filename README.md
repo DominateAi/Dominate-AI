@@ -2,7 +2,7 @@
 
 ![](Dashboard.png)
 
-<h1> Dominate Ai, Open Source / Community Version </h1>
+<h1> The world's best Open Source CRM - Dominate Ai</h1>
 <h2> [Visit Website](https://www.dominate.ai) </h2>
 <p>
 	
