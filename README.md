@@ -4,6 +4,7 @@
 
 <h1> The world's best Open Source CRM - Dominate Ai</h1>
 <h2> [Visit Website](https://www.dominate.ai) </h2>
+<h2> We're slowly open sourcing the entire code, please bear with us. </h2>
 <p>
 	
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/dominate-ai/?viewAsMember=true)
