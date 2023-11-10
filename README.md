@@ -47,7 +47,7 @@ Local Setup -
 
 Make sure Redis and MongoDB are installed and the servers for them have been started in the background.
 
-1. `git clone https://github.com/DominateAi/Dominate-OpenSource-version.git`
+1. `git clone https://github.com/DominateAi/Dominate-AI.git`
 2. `npm install`
 3. `npm run local`
 
