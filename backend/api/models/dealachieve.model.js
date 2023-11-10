@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 var uuid = require('node-uuid');
+var currentContext = require('../../common/currentContext');
 var uniqueValidator = require('mongoose-unique-validator');
 const LeadStatus = require('../../common/constants/LeadStatus');
 const DealStatus = require('../../common/constants/DealStatus');
@@ -45,55 +46,70 @@ dealachieveSchema.plugin(uniqueValidator);
 
 dealachieveSchema.statics = {
   getById: function(id) {
-    return this.findById(id).populate('assigned');
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).findById(id).populate('assigned');
   },
   search: function(query) {
-    return this.find(query).populate('assigned');
+    var context = currentContext.getCurrentContext();
+    var conn = this.db.useDb(context.workspaceId).model(modelName);
+    return conn.find(query).populate('assigned');
   },
   searchOne: function(query) {
-    return this.findOne(query).populate('assigned');
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).findOne(query).populate('assigned');
   },
   updateById: function(id, updateData) {
+    var context = currentContext.getCurrentContext();
     var options = { new: true };
-    return this.model(modelName).findOneAndUpdate({ _id: id }, { $set: updateData }, options);
+    return this.db.useDb(context.workspaceId).model(modelName).findOneAndUpdate({ _id: id }, { $set: updateData }, options);
   },
   deletebyId: function(id) {
-    return this.findByIdAndDelete(id);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).findByIdAndDelete(id);
   },
   create: function(data) {
-    var entity = new this(data);
+    var context = currentContext.getCurrentContext();
+    var entityModel = this.db.useDb(context.workspaceId).model(modelName);
+    var entity = new entityModel(data);
     return entity.save();
   },
   getPaginatedResult: function (query, options) {
-    return this.find(query, null, options).populate('assigned');
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).find(query, null, options).populate('assigned');
   },
   countDocuments: function (query) {
-    return this.count(query);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).count(query);
   },
   groupByKeyAndCountDocuments: function (key) {
-    return this.aggregate([{ $group: { _id: '$' + key, count: { $sum: 1 } } }]);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([{ $group: { _id: '$' + key, count: { $sum: 1 } } }]);
   },
   match: function(deal, type){
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$match:{"deal":deal}},
       {$match:{"type":type}}
       ])
   },
   monthAchievement: function(user, startDate,endDate){
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$match:{"onDate":{$gt:new Date(startDate), $lt: new Date(endDate)}}},
       {$match:{"user":user}},
       {$group:{"_id":"$type", count:{$sum:1}, dollars:{$sum:"$value"}}}
       ])
   },
   monthOrgAchievement: function(startDate,endDate){
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$match:{"onDate":{$gt:new Date(startDate), $lt: new Date(endDate)}}},
       {$group:{"_id":"$type", count:{$sum:1}, dollars:{$sum:"$value"}}}
       ])
   },
   indAcquired: function(user){
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$match:{"user":user}},
       {$match:{"type":"CLOSED"}},
       {$group:{"_id":{$month:"$onDate"},rev:{$sum:"$value"}}},
@@ -108,7 +124,8 @@ dealachieveSchema.statics = {
       ])
   },
   indCountAcq : function(user){
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$match:{"user":user}},
       {$match:{"type":"CLOSED"}},
       {$group:{"_id":{$month:"$onDate"},count:{$sum:1}}},
@@ -123,7 +140,8 @@ dealachieveSchema.statics = {
       ])
   },
   orgAcquired: function(){
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$match:{"type":"CLOSED"}},
       {$group:{"_id":{$month:"$onDate"},rev:{$sum:"$value"}}},
       {$project:{_id:1, rev:1, "month":{$switch:{
@@ -137,7 +155,8 @@ dealachieveSchema.statics = {
       ])
   },
   orgCountAcq: function(){
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$match:{"type":"CLOSED"}},
       {$group:{"_id":{$month:"$onDate"},count:{$sum:1}}},
       {$project:{_id:1, count:1, "month":{$switch:{
@@ -151,7 +170,8 @@ dealachieveSchema.statics = {
       ])
   },
   indMonNew: function(user){
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$match:{"user":user}},
       {$match:{"type":"OTHER"}},
       {$group:{"_id":{$month:"$onDate"}, count:{$sum:1}, dollars:{$sum:"$value"}}},
@@ -159,7 +179,8 @@ dealachieveSchema.statics = {
       ])
   },
   indMonConverted: function(user){
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$match:{"user":user}},
       {$match:{"type":"CLOSED"}},
       {$group:{"_id":{$month:"$onDate"}, count:{$sum:1}, dollars:{$sum:"$value"}}},
@@ -167,14 +188,16 @@ dealachieveSchema.statics = {
       ])
   },
   orgMonNew: function(){
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$match:{"type":"OTHER"}},
       {$group:{"_id":{$month:"$onDate"}, count:{$sum:1}, dollars:{$sum:"$value"}}},
       {$sort:{"_id":1}}
       ])
   },
   orgMonConverted: function(){
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$match:{"type":"CLOSED"}},
       {$group:{"_id":{$month:"$onDate"}, count:{$sum:1}, dollars:{$sum:"$value"}}},
       {$sort:{"_id":1}}

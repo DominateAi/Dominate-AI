@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 var uuid = require('node-uuid');
 var uniqueValidator = require('mongoose-unique-validator');
+var currentContext = require('../../common/currentContext');
 const Status = require('../../common/constants/Status');
 
 
@@ -15,12 +16,12 @@ const userSchema = new mongoose.Schema({
       type: String,
       required: true,
       unique: true,
-      // index: true
+      index: true
   },
   name: {
     type: String,
     required: true,
-    // index: true
+    index: true
   },
   firstName:{
     type: String,
@@ -85,7 +86,7 @@ const userSchema = new mongoose.Schema({
   }
 }, { timestamps: true });
 
-//userSchema.index({'$**': 'text'});
+userSchema.index({'$**': 'text'});
 
 userSchema.plugin(uniqueValidator);
 
@@ -137,53 +138,70 @@ userSchema.methods.toJSON = function() {
  }
 
 userSchema.statics = {
+
   getById: function(id) {
-      return this.findById(id).populate('role');
+      var context = currentContext.getCurrentContext();
+      return this.db.useDb(context.workspaceId).model(modelName).findById(id).populate('role');
   },
   search: function(query) {
-      return this.find(query).populate('role');
+      var context = currentContext.getCurrentContext();
+      var conn = this.db.useDb(context.workspaceId).model(modelName);
+      return conn.find(query).populate('role');
   },
   searchOne: function(query) {
-    return this.findOne(query).populate('role');
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).findOne(query).populate('role');
   },
   comparePassword : async function(oldPassword, newPassword, cb){
+    var context = currentContext.getCurrentContext();
     var isMatch = bcrypt.compare(oldPassword, newPassword, (err, isMatch) => {
       cb(err, isMatch);
     });
   return isMatch;
   },
   updateById: function(id, updateData) {
+      var context = currentContext.getCurrentContext();
       var options = {new:true};
-      return this.findOneAndUpdate({ _id: id}, {$set: updateData}, options);
+      return this.db.useDb(context.workspaceId).model(modelName).findOneAndUpdate({ _id: id}, {$set: updateData}, options);
   },
   deletebyId: function(id) {
-    return this.findByIdAndDelete(id);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).findByIdAndDelete(id);
   },
   getPaginatedResult: function (query, options) {
-    return this.find(query, null, options).populate('role');
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).find(query, null, options).populate('role');
   },
   countDocuments: function (query) {
-    return this.count(query);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).count(query);
   },
   groupByKeyAndCountDocuments: function (key) {
-    return this.aggregate([{ $group: { _id: '$' + key, count: { $sum: 1 } } }]);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([{ $group: { _id: '$' + key, count: { $sum: 1 } } }]);
   },
   create: function(data) {
-    var entity = new this(data);
-    return entity.save();
+     var context = currentContext.getCurrentContext();
+     var entityModel = this.db.useDb(context.workspaceId).model(modelName);
+     var entity = new entityModel(data);
+     return entity.save();
   },
   getTextSearchResult: function(text){
-    return this.find(
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).find(
       {$text: {$search: text}}, {score: {$meta: "textScore"}}).sort({score:{$meta:"textScore"}}
     ).populate('role');
   },
   createEmptyCollection: function(){
-    this.createCollection();
-    //this.createIndexes();
+    var context = currentContext.getCurrentContext();
+    this.db.useDb(context.workspaceId).model(modelName).createCollection();
+    this.db.useDb(context.workspaceId).model(modelName).createIndexes();
   },
-  workspaceUserSearch: function(query){
-    return this.find(query);
+  workspaceUserSearch: function(workspaceId, query){
+    var conn = this.db.useDb(workspaceId).model(modelName);
+    return conn.find(query);
   }
+  
 }
 
 

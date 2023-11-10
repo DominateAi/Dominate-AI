@@ -9,7 +9,7 @@ const ViewType = require('../../common/constants/ViewType');
 const CustomerStatus = require('../../common/constants/CustomerStatus');
 const taskService = require('./task.service');
 const userService = require('./user.service');
-
+const itargetService = require('./itarget.service');
 
 var graphService = {
     getEmailCountByTimestamp: getEmailCountByTimestamp,
@@ -17,6 +17,7 @@ var graphService = {
     getLeadCountByMedia: getLeadCountByMedia,
     getCustomerCountByStatus: getCustomerCountByStatus,
     getLeadsPrediction: getLeadsPrediction,
+    getUsersTarget: getUsersTarget,
     getLeadsByStatus: getLeadsByStatus
 }
 
@@ -341,74 +342,74 @@ function getLeadsPrediction(sumBy){
     });
 }
 
-// function getUsersTarget(){
-//     return new Promise((resolve,reject) => {
+function getUsersTarget(){
+    return new Promise((resolve,reject) => {
     
-//         let currentDate = new Date();
+        let currentDate = new Date();
 
-//         let currentUserId = currentContext.getCurrentContext().userId;
-//         let response = {
-//             'x_axis':{
-//                 labels: []
-//             },
-//             'y_axis':{
-//                 leads:[],
-//                 tasks: []
-//             }
-//         };
+        let currentUserId = currentContext.getCurrentContext().userId;
+        let response = {
+            'x_axis':{
+                labels: []
+            },
+            'y_axis':{
+                leads:[],
+                tasks: []
+            }
+        };
         
-//         let months = moment.monthsShort();
-//         leadService.getLeadCountByTimestamp('convertedDate', currentDate.getFullYear(), undefined, undefined, undefined, currentUserId)
-//             .then((data)=>{
-//                 console.log("****leaddata:" +  JSON.stringify(data));
-//                 months.forEach((val, index)=>{
-//                     response['x_axis']['labels'].push(val);
-//                     let leadCount = _.find(data, function(o) { return o._id == (index + 1)  ? o : undefined; });
-//                     if(leadCount){
-//                         response['y_axis']['leads'].push(leadCount.count);
-//                     }else{
-//                         response['y_axis']['leads'].push(0);   
-//                     }
-//                 });
-//                 taskService.getTaskCountByTimestamp('completedDate', currentDate.getFullYear(), currentUserId).then((taskData)=>{
-//                     console.log("****taskdata:" +  JSON.stringify(taskData));
-//                     months.forEach((val, index)=>{
-//                         let taskCount = _.find(taskData, function(o) { return o._id == (index + 1)  ? o : undefined; });
-//                         if(taskCount){
-//                             response['y_axis']['tasks'].push(taskCount.count);
-//                         }else{
-//                             response['y_axis']['tasks'].push(0);   
-//                         }
-//                     });
-//                     startDate = moment().startOf('month')._d;
-//                     endDate = moment().endOf('month')._d;
+        let months = moment.monthsShort();
+        leadService.getLeadCountByTimestamp('convertedDate', currentDate.getFullYear(), undefined, undefined, undefined, currentUserId)
+            .then((data)=>{
+                console.log("****leaddata:" +  JSON.stringify(data));
+                months.forEach((val, index)=>{
+                    response['x_axis']['labels'].push(val);
+                    let leadCount = _.find(data, function(o) { return o._id == (index + 1)  ? o : undefined; });
+                    if(leadCount){
+                        response['y_axis']['leads'].push(leadCount.count);
+                    }else{
+                        response['y_axis']['leads'].push(0);   
+                    }
+                });
+                taskService.getTaskCountByTimestamp('completedDate', currentDate.getFullYear(), currentUserId).then((taskData)=>{
+                    console.log("****taskdata:" +  JSON.stringify(taskData));
+                    months.forEach((val, index)=>{
+                        let taskCount = _.find(taskData, function(o) { return o._id == (index + 1)  ? o : undefined; });
+                        if(taskCount){
+                            response['y_axis']['tasks'].push(taskCount.count);
+                        }else{
+                            response['y_axis']['tasks'].push(0);   
+                        }
+                    });
+                    startDate = moment().startOf('month')._d;
+                    endDate = moment().endOf('month')._d;
 
-//                     console.log(currentUserId);
-//                 // GET THE TARGET BY ID. FOR THE USERS.
-//                 itargetService.thisMonthTarget(currentUserId, startDate, endDate ).then( data => {
-//                     console.log( data );
-//                     let currentMonth = currentDate.getMonth();
-//                     let finalResponse = {
-//                         graph: response,
-//                         convertedLeads: {
-//                             targetedLeadForUser : data ? data.targetConvertedLeads : 0,
-//                             convertedLead:  response['y_axis']['leads'][currentMonth]
-//                         },
-//                         taskCompleted: response['y_axis']['tasks'][currentMonth]
-//                     };
-//                     resolve(finalResponse);
-//                 });
+                    console.log(currentUserId);
+                // GET THE TARGET BY ID. FOR THE USERS.
+                itargetService.thisMonthTarget(currentUserId, startDate, endDate ).then( data => {
+                    console.log( data );
+                    let currentMonth = currentDate.getMonth();
+                    let finalResponse = {
+                        graph: response,
+                        convertedLeads: {
+                            targetedLeadForUser : data ? data.targetConvertedLeads : 0,
+                            convertedLead:  response['y_axis']['leads'][currentMonth]
+                        },
+                        taskCompleted: response['y_axis']['tasks'][currentMonth]
+                    };
+                    resolve(finalResponse);
+                });
 
-//                     userService.getUserById(currentUserId).then((userData)=>{
-//               }).catch((err)=>{
-//                         reject(err);
-//                     });
-//                 })
-//             }).catch((err)=>{
-//                 reject(err);
-//             });
-//     });
-// }
+                    userService.getUserById(currentUserId).then((userData)=>{
+              }).catch((err)=>{
+                        reject(err);
+                    });
+                })
+            }).catch((err)=>{
+                reject(err);
+            });
+    });
+}
 
 
 function getLeadsByStatus(){

@@ -6,6 +6,7 @@ var leadModel = require("../models/lead.model");
 var userModel = require("../models/user.model");
 var followupModel = require("../models/followup.model");
 var meetingModel = require("../models/meeting.model");
+var callModel = require("../models/call.model");
 var noteModel = require("../models/note.model");
 var accountModel = require("../models/account.model");
 var wactService = require("./workactivity.service");
@@ -19,6 +20,7 @@ const meetingService = require('./meeting.service');
 const userService = require('./user.service');
 const emailService = require('./email.service');
 const NotificationType = require('../../common/constants/NotificationType');
+const notificationClient = require('../../common/notificationClient');
 const moment = require('moment');
 
 var leadService = {
@@ -67,6 +69,7 @@ var leadService = {
     overwrite: overwrite,
     notoverwrite: notoverwrite,
     checkFields: checkFields,
+    contactsToLeads: contactsToLeads,
     getAvgCP: getAvgCP,
     bulkAddLead: bulkAddLead,
     addLeadImport: addLeadImport,
@@ -92,6 +95,7 @@ function addLead(leadData) {
                 'data': leadData,
                 'activityType': 'LEAD_CREATED'
             }
+            notificationClient.notify(NotificationType.LEAD_CREATED, data, user.workspaceId, user.userId);
             activityService.addActivity(activity).then((adata) => {
                 wactService.addWact(leadData, "LEAD", "CREATE").then((dataA)=>{resolve(data);}).catch((err) => {
                     reject(err);
@@ -151,6 +155,7 @@ function updateLead(id, leadData, callback) {
                 'data': leadData,
                 'activityType': 'LEAD_CLOSED'
             }
+            notificationClient.notify(NotificationType.LEAD_CLOSED, activity, user.workspaceId, leadData.entityId);
             activityService.addActivity(activity).then((adata) => {
                 wactService.addWact(leadData, "LEAD", "UPDATE", prevData).then((dataA)=>{resolve(data);}).catch((err) => {
                     reject(err);
@@ -1600,6 +1605,76 @@ function checkFields(leads){
         resolve(response);
        }
        dojob(leads);
+    })
+}
+
+function contactsToLeads(contacts, assignedTo, accountId){
+    return new Promise(async(resolve, reject) => {
+        var user = currentContext.getCurrentContext();
+        let existing=[], toBeAdded=[], data=[], result=[];
+            let response = {
+                "existing_leads": existing,
+                "leads_added_to_db": result
+            }
+        let leads =[];
+        let all_promise = [];
+        async function getLeads(contacts){
+ 
+    
+    for (i in contacts)
+    {
+       var lead ={
+        name: contacts[i].name,
+        email: contacts[i].email,
+        phone: contacts[i].phone,
+        phoneCode:contacts[i].phoneCode,
+        isKanban: "false",
+        isHidden: "false",
+        status:"NEW_LEAD",
+        degree:"COLD",
+        media:{facebook: "", linkedIn: "", instagram: "", skype: "", other: ""},
+        additionalInfo: contacts[i].additionalInfo,
+        createdBy: user.email,
+        lastModifiedBy: user.email,
+        }
+        leads.push(lead);
+    }
+        
+
+        if (assignedTo!==undefined){
+            leads.forEach(lead => {
+                lead['assigned'] = assignedTo
+            });
+        }
+        else{
+            leads.forEach(lead => {
+                lead['assigned'] = user.userId
+            });
+        }
+
+        if(accountId!==undefined){
+            leads.forEach(lead => {
+                lead['account_id'] = accountId;
+            })
+        }
+        else{
+            leads.forEach(lead => {
+                lead['account_id'] = "0123456789" 
+            });
+        }
+        for (i in leads){
+            let leadsearch = await leadModel.searchOne({ email: leads[i].email });
+                if(leadsearch){
+                    existing.push(leads[i]);
+                    }
+                }
+             toBeAdded = _.difference(leads, existing);
+             data = await leadModel.import(toBeAdded);
+                for(i in data){
+                    result.push(data[i]);
+                }
+            }
+            getLeads(contacts).then(()=>{resolve(response);})
     })
 }
 

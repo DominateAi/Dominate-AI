@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 var uuid = require('node-uuid');
+var currentContext = require('../../common/currentContext');
 var uniqueValidator = require('mongoose-unique-validator');
 const PipelineListType = require('../../common/constants/PipelineListType');
 
@@ -40,49 +41,63 @@ const pipelineListSchema = new mongoose.Schema({
 pipelineListSchema.plugin(uniqueValidator);
 
 pipelineListSchema.statics = {
+
+
   getById: function(id) {
-    return this.findById(id).populate({ 
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).findById(id).populate({ 
     path: 'cards',populate: {path: 'account',model: 'Accounts'}}).populate({ path: 'cards',
     populate: {path: 'salesperson',model: 'Users'}}).populate({path: 'cards',populate: {
     path: 'lead',model: 'Leads'}});
   },
   search: function(query) {
-    return this.find(query).populate({ 
+    var context = currentContext.getCurrentContext();
+    var conn = this.db.useDb(context.workspaceId).model(modelName);
+    return conn.find(query).populate({ 
       path: 'cards',populate: {path: 'account',model: 'Accounts'}}).populate({ path: 'cards',
       populate: {path: 'salesperson',model: 'Users'}}).populate({path: 'cards',populate: {
       path: 'lead',model: 'Leads'}});
   },
   searchOne: function(query) {
-    return this.findOne(query).populate({ 
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).findOne(query).populate({ 
       path: 'cards',populate: {path: 'account',model: 'Accounts'}}).populate({ path: 'cards',
       populate: {path: 'salesperson',model: 'Users'}}).populate({path: 'cards',populate: {
       path: 'lead',model: 'Leads'}});
   },
   updateById: function(id, updateData) {
+    var context = currentContext.getCurrentContext();
     var options = { new: true };
-    return this.findOneAndUpdate({ _id: id }, { $set: updateData }, options);
+    return this.db.useDb(context.workspaceId).model(modelName).findOneAndUpdate({ _id: id }, { $set: updateData }, options);
   },
   deletebyId: function(id) {
-    return this.findByIdAndDelete(id);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).findByIdAndDelete(id);
   },
   create: function(data) {
-    var entity = new this(data);
+    var context = currentContext.getCurrentContext();
+    var entityModel = this.db.useDb(context.workspaceId).model(modelName);
+    var entity = new entityModel(data);
     return entity.save();
   },
   getPaginatedResult: function (query, options) {
-    return this.find(query, null, options).populate({ 
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).find(query, null, options).populate({ 
       path: 'cards',populate: {path: 'account',model: 'Accounts'}}).populate({ path: 'cards',
       populate: {path: 'salesperson',model: 'Users'}}).populate({path: 'cards',populate: {
       path: 'lead',model: 'Leads'}});
   },
   countDocuments: function (query) {
-    return this.count(query);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).count(query);
   },
   groupByKeyAndCountDocuments: function (key) {
-    return this.aggregate([{ $group: { _id: '$' + key, count: { $sum: 1 } } }]);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([{ $group: { _id: '$' + key, count: { $sum: 1 } } }]);
   },
   globalAggregate: function( data ) {
-    return this.aggregate( data );
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate( data );
   }
 }
 

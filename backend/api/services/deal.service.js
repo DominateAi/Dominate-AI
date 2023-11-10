@@ -2,6 +2,7 @@ const moment = require('moment');
 var dealModel = require("../models/deal.model");
 var revenueModel = require("../models/revenue.model");
 const NotificationType = require('../../common/constants/NotificationType');
+const notificationClient = require('../../common/notificationClient');
 var activityService = require('../services/activity.service');
 var wactService = require("./workactivity.service");
 var currentContext = require('../../common/currentContext');
@@ -40,6 +41,7 @@ function addDeal(dealData) {
                 'data': dealData,
                 'activityType': 'DEAL_CREATED'
             }
+            notificationClient.notify(NotificationType.DEAL_ADDED, activity, user.workspaceId, dealData.entityId);
             activityService.addActivity(activity).then((adata) => {
                 wactService.addWact(dealData, "DEAL", "CREATE").then((dataA)=>{resolve(data);}).catch((err) => {
                     reject(err);
@@ -67,6 +69,7 @@ function updateDeal(id, dealData, callback) {
                     'data': dealData,
                     'activityType': 'DEAL_CLOSED'
                 }
+                notificationClient.notify(NotificationType.DEAL_CLOSED, activity, user.workspaceId, dealData.entityId);
                 activityService.addActivity(activity).then((adata) => {
                     resolve(data);
                 }).catch((err) => {

@@ -26,61 +26,32 @@ passport.deserializeUser((id, done) => {
 
  
 
-// const LocalStrategy = require('passport-local').Strategy;
-// passport.use(new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
-//   var context = currentContext.getCurrentContext();
-//   console.log("workspaceId: " + context.workspaceId);
-// //in the public login function, we had set the context with workspace id, we are using the same here to search the particular db for this user
-//   User.db.useDb(context.workspaceId).model('Users').findOne({ email: email.toLowerCase() } , (err, user) => {
-//     if (err) { return done(err); }
-//     if (!user) {
-//       return done(null, false, { msg: `Email ${email} not found.` });
-//     }
-//     console.log("user status: "+ user.status);
-//     if(user.status == Status.ACTIVE){
-//       user.comparePassword(password,  (err, isMatch) => {
-//         if (err) { return done(err); }
-//         user.workspaceId = context.workspaceId;
-//         if (isMatch) {
-//           return done(null, user);
-//         }
-//         return done(null, false, { msg: 'Invalid email or password.' });
-//       });
-//     }else{
-//       console.log(user.email + ", user not active");
-//       return done(errorCode.USER_NOT_ACTIVE); 
-//     }
-//   }).populate('role', 'name');
-// }));
-
-
 const LocalStrategy = require('passport-local').Strategy;
 passport.use(new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
-  // var context = currentContext.getCurrentContext();
-  // console.log("workspaceId: " + context.workspaceId);
+  var context = currentContext.getCurrentContext();
+  console.log("workspaceId: " + context.workspaceId);
 //in the public login function, we had set the context with workspace id, we are using the same here to search the particular db for this user
-  User.findOne({ email: email.toLowerCase() } , (err, user) => {
+  User.db.useDb(context.workspaceId).model('Users').findOne({ email: email.toLowerCase() } , (err, user) => {
     if (err) { return done(err); }
     if (!user) {
       return done(null, false, { msg: `Email ${email} not found.` });
     }
     console.log("user status: "+ user.status);
-    //if(user.status == Status.ACTIVE){
+    if(user.status == Status.ACTIVE){
       user.comparePassword(password,  (err, isMatch) => {
         if (err) { return done(err); }
-        //user.workspaceId = context.workspaceId;
+        user.workspaceId = context.workspaceId;
         if (isMatch) {
           return done(null, user);
         }
         return done(null, false, { msg: 'Invalid email or password.' });
       });
-    // }else{
-    //   console.log(user.email + ", user not active");
-    //   return done(errorCode.USER_NOT_ACTIVE); 
-    // }
+    }else{
+      console.log(user.email + ", user not active");
+      return done(errorCode.USER_NOT_ACTIVE); 
+    }
   }).populate('role', 'name');
 }));
-
 
 passport.use(new JWTStrategy({
   jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken({failmessage: 'Invalid Token'}),

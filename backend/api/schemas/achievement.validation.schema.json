@@ -25,7 +25,7 @@
           },
           "type":{
             "type": "string",
-            "enum": ["NEW_LEAD", "CONTACTED_LEADS", "QUALIFIED_LEADS", "OPPORTUNITIES", "CONVERTED", "ARCHIVE","ON_HOLD"]
+            "enum": ["NEW_LEAD", "CONTACTED_LEADS", "QUALIFIED_LEADS", "PROPOSALS_SENT", "OPPORTUNITIES", "CONVERTED", "ARCHIVE","ON_HOLD"]
           }
 
         }

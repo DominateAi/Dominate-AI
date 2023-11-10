@@ -4,15 +4,15 @@ const mailcomposer = require('mailcomposer.js');
  
 
 aws.config.update({
-  accessKeyId:'',
-  secretAccessKey:'',
+  accessKeyId:'AKIAWDPIYPJTOJD2A5PE',
+  secretAccessKey:'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',
   region:'ap-south-1'
 });
 
   
-const configSetName = '';
+const configSetName = 'Dominate.ai';
 const UTFconfig = 'UTF-8';
-const senderId = '';
+const senderId = 'notification.dominate@dominate.ai';
 
 const ses = new aws.SES();
 

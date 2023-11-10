@@ -13,6 +13,7 @@ var configResolve = require("../../common/configResolver");
 var mailer = require('../../common/aws_mailer');
 var currentContext = require('../../common/currentContext');
 const Status = require('../../common/constants/Status');
+var plans = require('../../config/plans.json').plans;
 var organizationService = require('../services/organization.service');
 const roleService = require('../services/role.service');
 const helper = require("../../common/helper");

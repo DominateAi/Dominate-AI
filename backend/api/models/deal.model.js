@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 var uuid = require('node-uuid');
+var currentContext = require('../../common/currentContext');
 const DealStatus = require('../../common/constants/DealStatus');
 var uniqueValidator = require('mongoose-unique-validator');
 const DealType = require('../../common/constants/DealType');
@@ -82,89 +83,115 @@ dealSchema.index({'$**': 'text'});
 dealSchema.plugin(uniqueValidator);
 
 dealSchema.statics = {
+
+  
   getById: function (id) {
-    return this.findById(id).populate('account').populate('salesperson').populate('lead')
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).findById(id).populate('account').populate('salesperson').populate('lead')
   },
   search: function (query) {
-    return this.find(query).populate('account').populate('salesperson').populate('lead')
+    var context = currentContext.getCurrentContext();
+    var conn = this.db.useDb(context.workspaceId).model(modelName);
+    return conn.find(query).populate('account').populate('salesperson').populate('lead')
   },
   searchOne: function (query) {
-    return this.findOne(query).populate('account').populate('salesperson').populate('lead')
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).findOne(query).populate('account').populate('salesperson').populate('lead')
   },
   updateById: function (id, updateData) {
+    var context = currentContext.getCurrentContext();
     var options = { new: true };
-    return this.findOneAndUpdate({ _id: id }, { $set: updateData }, options);
+    return this.db.useDb(context.workspaceId).model(modelName).findOneAndUpdate({ _id: id }, { $set: updateData }, options);
   },
   deletebyId: function (id) {
-    return this.findByIdAndDelete(id);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).findByIdAndDelete(id);
   },
   create: function (data) {
-    var entity = new this(data);
+    var context = currentContext.getCurrentContext();
+    var entityModel = this.db.useDb(context.workspaceId).model(modelName);
+    var entity = new entityModel(data);
     return entity.save();
   },
   getPaginatedResult: function (query, options) {
-    return this.find(query, null, options).populate('account').populate('salesperson').populate('lead')
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).find(query, null, options).populate('account').populate('salesperson').populate('lead')
   },
   countDocuments: function (query) {
-    return this.count(query);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).count(query);
   },
   estimatedDocumentCount: function (query) {
-    return this.estimatedDocumentCount(query);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).estimatedDocumentCount(query);
   },
   getAggregateCount: function (query) {
-    return this.aggregate(query);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate(query);
   },
   groupByKeyAndCountDocuments: function (key) {
-    return this.aggregate([{ $group: { _id: '$' + key, count: { $sum: 1 } } }]);
+    console.log(key);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([{ $group: { _id: '$' + key, count: { $sum: 1 } } }]);
   },
+  
   createEmptyCollection: function(){
-    this.createCollection();
-    this.createIndexes();
+    var context = currentContext.getCurrentContext();
+    this.db.useDb(context.workspaceId).model(modelName).createCollection();
+    this.db.useDb(context.workspaceId).model(modelName).createIndexes();
   },
   getTextSearchResult: function(text){
-    return this.find(
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).find(
       {$text: {$search: text}}, {score: {$meta: "textScore"}}).sort({score:{$meta:"textScore"}}
     );
   },
   matchAndAdd: function (match, add) {
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$match:{"status":match}},
       {$group:{_id:"",total:{$sum: '$' + add}}}
       ])
   },
   accRecurDeals: function () {
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$match:{"type":"RECURRING"}},
       {$match:{"status":"CLOSED"}},
       {$group:{_id:"$account"}}
       ])
   },
   dealsByAcc: function(account){
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$match:{"account":account}},
       {$lookup:{from:"leads",localField:"lead",foreignField:"_id",as:"leadsdata"}},
       {$lookup:{from:"users",localField:"salesperson",foreignField:"_id",as:"salespersonsdata"}}
       ])
   },
   monDealsChart: function(){
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$group:{"_id":{$month:"$closingDate"}, count:{$sum:1}}},{$sort:{"_id":1}}])
   },
   countAcc: function(accountId){
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$match:{"account":accountId}},
       {$group:{_id:"",count:{$sum:1}}},{$project:{"_id":0}}
       ])
   },
   recurValue: function(){
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$match:{"status":"CLOSED"}},
       {$match:{"type":"RECURRING"}},
       {$group:{_id:"",value:{$sum:"$value"}}}
       ])
   },
   accDealCount: function(){
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$group:{_id:"$account", count:{$sum:1}}},
       {$lookup:{from: "accounts",localField: "_id",foreignField: "_id",as: "account_data"}},
       {$addFields:{accountData:{ $arrayElemAt: [ "$account_data", 0 ] }}},

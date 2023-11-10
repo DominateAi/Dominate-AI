@@ -2,6 +2,7 @@ const moment = require('moment');
 var userModel = require("../models/user.model");
 var followupModel = require("../models/followup.model");
 var meetingModel = require("../models/meeting.model");
+var callModel = require("../models/call.model");
 var currentContext = require('../../common/currentContext');
 var Status = require('../../common/constants/Status');
 const roleService = require('../services/role.service');
@@ -44,8 +45,6 @@ var userService = {
 
 function addUser(userData) {
     return new Promise((resolve, reject) => {
-
-        console.log("userData is", userData);
         userService.getUserByEmail(userData.email).then((data) => {
             if (data) {
                 return reject(errorCode.USER_ALREADY_EXIST);
@@ -59,9 +58,6 @@ function addUser(userData) {
                 if(userData.profileImage != undefined){
                     userData.profileImage = helper.getPathFromImage(userData.profileImage, user.workspaceId);
                 }
-             userData.name = userData.firstName + " " + userData.lastName;
-             userData.status = Status.ACTIVE;
-             userData.dateOfJoining = new Date().toISOString();
                 //add default role
                 if (userData.role == undefined) {
                     roleService.getDefaultRole().then((result) => {
@@ -89,15 +85,22 @@ function createRole(userData, resolve, reject) {
     });
 }
 
+//for adding a default user, this is being called from organization service function
+//adding a default user to the organization
 function addDefaultUser(userData) {
     return new Promise((resolve, reject) => {
-
+//sets first and last names as admin if these are undefined, but we're passing these in the request
+//so it won't be undefined
         if (userData.firstName == undefined) {
             userData.firstName = "Admin";
         }
         if (userData.lastName == undefined) {
             userData.lastName = "Admin";
         }
+        userData.name = userData.firstName + " " + userData.lastName;
+        userData.status = Status.ACTIVE;
+        userData.dateOfJoining = new Date().toISOString();
+//basically calls the adduser function defined on top of this file
         addUser(userData).then((data) => {
             resolve(data);
         }).catch((err) => {
@@ -167,12 +170,13 @@ function getAllUser() {
                 close = await leadService.closedPercentage(data[i]._id);
                 followup = await followupModel.countDocuments({"organizer":data[i]._id});
                 meeting = await meetingModel.countDocuments({"organizer":data[i]._id});
+                call = await callModel.countDocuments({"from":data[i]._id});
                 console.log(followup);
                 if(Array.isArray(close) && close.length){
-                    obj1 = {"closedCount": close[0].count, "closedPercentage":close[0].percentage,"followupCount":followup, "meetingsCount":meeting};
+                    obj1 = {"closedCount": close[0].count, "closedPercentage":close[0].percentage,"followupCount":followup, "meetingsCount":meeting,"callCount":call};
                 }
                 else{
-                    obj1 = {"closedCount": "0", "closedPercentage":"0","followupCount":followup,"meetingsCount":meeting};
+                    obj1 = {"closedCount": "0", "closedPercentage":"0","followupCount":followup,"meetingsCount":meeting,"callCount":call};
                 }
                 obj2 = data[i]._doc;
                 var cluster = {...obj2,...obj1}
@@ -211,7 +215,7 @@ function searchUsers(searchCriteria) {
         // async function getUsers(){
         //     let currentDate = new Date().toISOString();
         //     let lastDate = moment(currentDate).endOf("month").toISOString();
-        //     var followup = 0, meeting = 0
+        //     var followup = 0, meeting = 0, call =0;
             userData = await userModel.getPaginatedResult(query, options); 
     //added json stringify and parse to overcome _doc issue mongoose
         //     let JsonData = JSON.stringify(userData);
@@ -255,17 +259,18 @@ function userCountData(){
             var userData = await userModel.search({})
             var result = [];
             for (user of userData){
-            var current = {}, closed =[], followup=0, meeting=0, upcomingLeaves =[], closedCount=0, closedPercentage=0;
+            var current = {}, closed =[], followup=0, meeting=0, call=0, upcomingLeaves =[], closedCount=0, closedPercentage=0;
             closed = await leadService.closedPercentage(user._id);
             followup = await followupModel.countDocuments({"organizer":user._id});
             meeting = await meetingModel.countDocuments({"organizer":user._id});
+            call = await callModel.countDocuments({"from":user._id});
             upcomingLeaves = await leaveService.getUpcomingLeaves(currentDate, lastDate, leaveType.HOLIDAY)
             if(Array.isArray(closed) && closed.length){
             closedCount = closed[0].count, 
             closedPercentage = closed[0].percentage
             }
             current["id"] = user._id, current["closedCount"] = closedCount, current["closedPercentage"] = closedPercentage,
-            current["followup"] = followup, current["upcomingLeaves"] = upcomingLeaves
+            current["followup"] = followup, current["call"] = call, current["upcomingLeaves"] = upcomingLeaves
             result.push(current);
            
          }
@@ -298,7 +303,7 @@ function getUserById(id) {
         let lastDate = moment(currentDate).endOf("month").toISOString();
         var data, close, transit =[], cluster = {};
         var context = currentContext.getCurrentContext();
-        var followup = 0, upcomingLeaves = 0, meeting = 0;
+        var followup = 0, call=0, upcomingLeaves = 0, meeting = 0;
         var data = await userModel.getById(id);
             let result = data;
             if(result != undefined){
@@ -306,13 +311,14 @@ function getUserById(id) {
                 close = await leadService.closedPercentage(id);
                     followup = await followupModel.countDocuments({"organizer":id});
                     meeting = await meetingModel.countDocuments({"organizer":id});
+                    call = await callModel.countDocuments({"from":id});
                     upcomingLeaves = await leaveService.getUpcomingLeaves(currentDate, lastDate, leaveType.HOLIDAY)
             }
             if(Array.isArray(close) && close.length){
-                obj1 = {"closedCount": close[0].count, "closedPercentage":close[0].percentage,"followupCount":followup, "meetingsCount":meeting};
+                obj1 = {"closedCount": close[0].count, "closedPercentage":close[0].percentage,"followupCount":followup, "meetingsCount":meeting,"callCount":call};
             }
             else{
-                obj1 = {"closedCount": "0", "closedPercentage":"0","followupCount":followup,"meetingsCount":meeting};
+                obj1 = {"closedCount": "0", "closedPercentage":"0","followupCount":followup,"meetingsCount":meeting,"callCount":call};
             }
             obj2 = data._doc;
             obj3 = upcomingLeaves;

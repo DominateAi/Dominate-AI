@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 var uuid = require('node-uuid');
+var currentContext = require('../../common/currentContext');
 const Status = require('../../common/constants/Status');
 var uniqueValidator = require('mongoose-unique-validator');
 const RoleCategory = require('../../common/constants/RoleCategory');
@@ -12,8 +13,8 @@ const roleSchema = new mongoose.Schema({
   name: {
       type: String,
       required: true,
-      // unique: true,
-      //index: true
+      unique: true,
+      index: true
   },
   status: {
     type: String,
@@ -49,27 +50,39 @@ const roleSchema = new mongoose.Schema({
 roleSchema.plugin(uniqueValidator);
 
 roleSchema.statics = {
+
+
   getById: function(id) {
-    return this.findById(id);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).findById(id);
   },
   search: function(query) {
-      return this.find(query);
+      var context = currentContext.getCurrentContext();
+      var conn = this.db.useDb(context.workspaceId).model(modelName);
+      // console.log( context.workspaceId );
+      return conn.find(query);
   },
   searchOne: function(query) {
-    return this.findOne(query);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).findOne(query);
   },
   updateById: function(id, updateData) {
+      var context = currentContext.getCurrentContext();
       var options = {new:true};
-      return this.findOneAndUpdate({ _id: id}, {$set: updateData}, options);
+      return this.db.useDb(context.workspaceId).model(modelName).findOneAndUpdate({ _id: id}, {$set: updateData}, options);
   },
   deletebyId: function(id) {
-    return this.findByIdAndDelete(id);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).findByIdAndDelete(id);
   },
   create: function(data) {
-    var entity = new this(data);
+    var context = currentContext.getCurrentContext();
+    var entityModel = this.db.useDb(context.workspaceId).model(modelName);
+    var entity = new entityModel(data);
     return entity.save();
   },getPaginatedResult: function (query, options) {
-    return this.find(query, null, options);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).find(query, null, options);
   }
 }
 

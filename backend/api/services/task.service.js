@@ -1,6 +1,7 @@
 var taskModel = require("../models/task.model");
 var currentContext = require('../../common/currentContext');
 const NotificationType = require('../../common/constants/NotificationType');
+const notificationClient = require('../../common/notificationClient');
 const moment = require('moment');
 
 var taskService = {
@@ -42,6 +43,7 @@ function addTask(taskData) {
         }) */
 
         taskModel.create(taskData).then((data) => {
+            notificationClient.notify(NotificationType.TASK_CREATED, data, user.workspaceId, user.userId);
             resolve(data);
         }).catch((err) => {
             reject(err);
@@ -57,6 +59,7 @@ function updateTask(id, taskData, callback) {
         taskData.lastModifiedBy = user.email;
 
         taskModel.updateById(id, taskData).then((data) => {
+            notificationClient.notify(NotificationType.TASK_UPDATED, data, user.workspaceId, user.userId);
             resolve(data);
         }).catch((err) => {
             reject(err);

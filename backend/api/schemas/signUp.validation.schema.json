@@ -2,6 +2,8 @@
     "postSchema": {
       "type": "object",
       "required": [
+        "organizationName",
+        "workspaceId",
         "defaultUserEmailId",
         "defaultUserPassword",
         "features"

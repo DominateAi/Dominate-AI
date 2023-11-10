@@ -3,6 +3,7 @@ var currentContext = require('../../common/currentContext');
 var LeaveStatus = require('../../common/constants/LeaveStatus');
 const LeaveType = require('../../common/constants/LeaveType');;
 const NotificationType = require('../../common/constants/NotificationType');
+const notificationClient = require('../../common/notificationClient');
 const moment = require('moment');
 
 var leaveService = {
@@ -217,6 +218,7 @@ function approveLeave(id, leaveData) {
         leaveData.leaveStatus = LeaveStatus.APPROVED;
 
         leaveModel.updateById(id, leaveData).then((data) => {
+            notificationClient.notify(NotificationType.LEAVE_APPROVED, data, user.workspaceId, user.userId);
             resolve(data);
         }).catch((err) => {
             reject(err);

@@ -10,7 +10,7 @@ var organizationFreeTrialPeriod = configResolve.getConfig().organizationFreeTria
 const UserModel = require('../models/user.model');
 var userService = require('../services/user.service');
 var schema = require('../schemas/user.validation.schema.json');
-
+var referralSchema = require('../schemas/referral.validation.schema.json');
 var iValidator = require('../../common/iValidator');
 var errorCode = require('../../common/error-code');
 var logger = require('../../config/winston')(__filename);
@@ -19,30 +19,41 @@ var errorMethods = require('../../common/error-methods');
 var organizationService = require('../services/organization.service');
 var signUpSchema = require('../schemas/signUp.validation.schema.json')
 const roleService = require('../services/role.service');
+const paymentService = require('../services/payment.service');
 var currentContext = require('../../common/currentContext');
+var plans = require('../../config/plans.json');
 var userAuthCodeService = require('../services/userAuthCode.service');
+var razorPayService = require('../../config/razorPayService');
 var uuid = require('node-uuid');
+var stripeService = require('../../config/stripeService');
 var emailTemplateService = require('../../common/emailTemplateService');
 var mailer = require('../../common/aws_mailer');
 const SubscriptionTypes = require('../../common/constants/SubscriptionTypes');
 const Status = require('../../common/constants/Status');
 const switchRoleService = require('../services/switchRole.service');
 const ootbFeatures = require('../../config/ootbFeatures.json');
+const callService = require('../services/call.service');
 var bodyParser = require('body-parser');
 const jwtTokenParser = require('../../common/tokenParserUtil');
+var minioClient = require('../../config/minioClient').minioClient;
 var environmentConfig = configResolve.getConfig();
 
 var helper = require("../../common/helper");
-
+const razorPayWebhookManager = require('../../common/webhooks/razorPayWebhookManager');
 const commonEmailTemplateService = require("../../common/emailTemplateService");
 const emailExtractor = require('node-email-extractor').default;
 var validator = require('validator');
-
-
+var googleOauthServices = require('../integrations/google/auth/google.auth.integration');
+var microsoftOauthServices = require('../integrations/microsoft/auth/microsoft.auth.integration');
+var stripeTest = configResolve.getConfig().stripeTest;
+var stripeLive = configResolve.getConfig().stripeLive;
+var currentStripe = stripeLive;
+var stripe = require('stripe')(currentStripe.key_secret);
+var tierPrices = require('../../config/tierPrices.json');
 //var tierPrices = require('../../config/testTierPrices.json');
 var _ = require('lodash');
 
-
+const referralService = require('../services/referral.service');
 var iValidator = require('../../common/iValidator');
 
 
@@ -61,7 +72,58 @@ var iValidator = require('../../common/iValidator');
  * @returns {Error}  default - Unexpected error
  */
 router.post('/login', function (req, res, next) {
-performLogin(next, req, res);
+//we set context with the workspaceid
+    var context = {};
+    context.workspaceId = req.headers.workspaceid;
+//we are setting the current context with value of workspace i.d, this will be used in passport localstrategy function
+    currentContext.setCurrentContext(context);
+
+    switchRoleService.getAdminUserRole(req.body.email).then((userRoledata) => {
+        if (userRoledata.currentUser != undefined) {
+//we get the org by workspaceId
+            organizationService.getOrganizationByWorkspaceId(context.workspaceId).then(async (organizationData) => {
+                var currentDate = new Date();
+                var tenantExpiryDate = organizationData.expirationDate;
+                if (organizationData.status == Status.ACTIVE) {
+//if todays date is beyond expiry date we perform the next few steps
+                    if (currentDate.getTime() >= tenantExpiryDate) {
+//we make the status as expired
+                        organizationData.status = Status.EXPIRED;
+                        organizationService.updateOrganization(organizationData._id, organizationData).then((updateData) => {
+                            switchRoleService.performSwitchRole(userRoledata.adminUser, userRoledata.supportRole).then((data) => {
+//if  current user is admin, then let him login
+                                if (userRoledata.currentUser.role._id == userRoledata.adminRole._id) {
+                                    performLogin(next, req, organizationData, res);
+                                } else {
+//if the user is not an admin, then just say your org is inactive
+//if status was active but we were beyond expiry date, then we have to set org as expired and let admin login
+                                    return next(errorMethods.sendBadRequest(errorCode.ORGANISATION_INACTIVE));
+                                }
+                            });
+                        }).catch((err) => {
+                            return next(errorMethods.sendBadRequest(errorCode.INTERNAL_SERVER_ERROR));
+                        });
+                    } else {
+//if org has not expired, then obviously let the user perform the login
+                        performLogin(next, req, organizationData, res);
+                    }
+                } else if (organizationData.status != Status.ACTIVE && userRoledata.supportRole != undefined && (userRoledata.currentUser.role._id == userRoledata.supportRole._id)) {
+//if org is already set as expired and user role is same as support role, then let him login, but why?                    
+console.log("user is",user)       
+performLogin(next, req, organizationData, res);
+                } else {
+                    return next(errorMethods.sendBadRequest(errorCode.ORGANISATION_INACTIVE));
+                }
+
+            }).catch((err) => {
+                console.log(err);
+                next(errorMethods.sendServerError(err));
+            });
+        } else {
+            return next(errorMethods.sendBadRequest(errorCode.LOGIN_FAILED));
+        }
+
+    });
 });
 
 
@@ -92,11 +154,20 @@ router.post('/signup', function (req, res, next) {
 //checks for the validation format and send error if not valid
         return res.status(422).send(json_format.errorMessage);
     }
-
-
-organizationService.addOrganization(signUpData).then((data) => {
+//next task is to look for the org if it exists in d.b, if it exists, then you cannot signup as the admin
+    organizationService.getOrganizationByWorkspaceId2(signUpData.workspaceId).then((data) => {
+//sending an error that org already exists. other members of the org can be invited and just login, only admin signs up
+        if (data != undefined) {
+            return next(errorMethods.sendBadRequest(errorCode.ORGANIZATION_ALREADY_EXIST));
+        } else {
+//if org doesn't exist, then add the org, when creating org, you are also creating the user!
+            organizationService.addOrganization(signUpData).then((data) => {
                 res.json(data);
-}).catch((err) => {
+            }).catch((err) => {
+                next(errorMethods.sendServerError(err));
+            });
+        }
+    }).catch((err) => {
         next(errorMethods.sendServerError(err));
     });
 });
@@ -122,16 +193,6 @@ router.get('/workspace/exist', function (req, res, next) {
     });
 });
 
-router.get('/getallroles/open', function (req, res, next) {
-
-    roleService.getAllRoles().then((data) => {
-        res.send(data);
-      }).catch((err) => {
-        next(errorMethods.sendServerError(err));
-      });
-});
-
-
 /**
  * Plan api
  * @route GET /public/plans
@@ -140,54 +201,54 @@ router.get('/getallroles/open', function (req, res, next) {
  * @returns {Error}  default - Unexpected error
  */
 //this is a public api because we were supposed to show plans to users when they were signingup itself
-// router.post('/plans', async function (req, res, next) {
-//     //COMMENTED FOR STRIPE
-// //     if (plans != undefined) {
-// //         var result = {
-// //             plans: []
-// //         };
-// //         plans.plans.forEach(p => {
-// // //don't send colony in the plans because users cannot select this plan on their own, 
-// // //only dominate super admin can onboard them
-// //             if (p.label != 'COLONY') {
-// //                 result.plans.push(p);
-// //             }
-// let currency = req.body.currency
-// let productData =[], temp={}
-// data = await stripeService.getAllPlans()
-        
-//             products = data.data
-//             for(i in products){
-//                 price = await stripeService.getPriceWithProductId(products[i].id, currency)
-//                 if(Array.isArray(price.data) && (price.data).length){
-//                     for(value of price.data){
-//                         if (value.active == true)
-//                         { 
-//                         priceData = value
-//                         } 
-//                     }
-//                 }
-//                 temp = {...products[i], priceData:price}
-//                 productData.push(temp)
+router.post('/plans', async function (req, res, next) {
+    //COMMENTED FOR STRIPE
+//     if (plans != undefined) {
+//         var result = {
+//             plans: []
+//         };
+//         plans.plans.forEach(p => {
+// //don't send colony in the plans because users cannot select this plan on their own, 
+// //only dominate super admin can onboard them
+//             if (p.label != 'COLONY') {
+//                 result.plans.push(p);
 //             }
-//             res.json(productData)
+let currency = req.body.currency
+let productData =[], temp={}
+data = await stripeService.getAllPlans()
+        
+            products = data.data
+            for(i in products){
+                price = await stripeService.getPriceWithProductId(products[i].id, currency)
+                if(Array.isArray(price.data) && (price.data).length){
+                    for(value of price.data){
+                        if (value.active == true)
+                        { 
+                        priceData = value
+                        } 
+                    }
+                }
+                temp = {...products[i], priceData:price}
+                productData.push(temp)
+            }
+            res.json(productData)
         
         
-//     //     res.json(result);
-//     // } else {
-//     //     next(errorMethods.sendServerError(errorCode.INTERNAL_SERVER_ERROR));
-//     // }
-// });
+    //     res.json(result);
+    // } else {
+    //     next(errorMethods.sendServerError(errorCode.INTERNAL_SERVER_ERROR));
+    // }
+});
 
-// router.post('/tierplans', async function (req, res, next) {
-//     try{
-//     let reqcurrency = req.body.currency
+router.post('/tierplans', async function (req, res, next) {
+    try{
+    let reqcurrency = req.body.currency
         
-//         var planData =  _.find(tierPrices.tierPrices, { currency:reqcurrency })
-//     console.log(planData)
-//                 res.json(planData)
-//     }catch(err){reject(err)}
-//     });
+        var planData =  _.find(tierPrices.tierPrices, { currency:reqcurrency })
+    console.log(planData)
+                res.json(planData)
+    }catch(err){reject(err)}
+    });
 
 /**
  * ForgotPassword api
@@ -423,46 +484,46 @@ router.patch('/users/verifyemail', function (req, res, next) {
  * @returns {Error}  default - Unexpected error
  */
 //this is a public api for placing a call through dominate
-// router.post('/statusCallback/:workspaceId/:authCode', function (req, res, next) {
-//     let authCode = req.params.authCode;
-//     let workspaceId = req.params.workspaceId;
-//     let callData = req.body;
+router.post('/statusCallback/:workspaceId/:authCode', function (req, res, next) {
+    let authCode = req.params.authCode;
+    let workspaceId = req.params.workspaceId;
+    let callData = req.body;
 
-//     var context = {};
-//     context.workspaceId = workspaceId;
-//     currentContext.setCurrentContext(context);
-//     userAuthCodeService.getUserAuthCodeById(authCode).then((result) => {
-//         if (result == undefined || result == null) {
-//             next(errorMethods.sendBadRequest(errorCode.NOT_FOUND));
-//         } else {
-//             context.email = result.email;
-//             currentContext.setCurrentContext(context);
-//             callService.getCallBySid(callData.CallSid).then((callResult) => {
-//                 var call = callResult;
-//                 call.status = callData.Status.replace("-", "_").toUpperCase();
-//                 call.startTime = callData.StartTime;
-//                 call.endTime = callData.EndTime;
-//                 call.callDuration = callData.ConversationDuration;
-//                 call.recordingUrl = callData.RecordingUrl;
-//                 call.data = callData;
+    var context = {};
+    context.workspaceId = workspaceId;
+    currentContext.setCurrentContext(context);
+    userAuthCodeService.getUserAuthCodeById(authCode).then((result) => {
+        if (result == undefined || result == null) {
+            next(errorMethods.sendBadRequest(errorCode.NOT_FOUND));
+        } else {
+            context.email = result.email;
+            currentContext.setCurrentContext(context);
+            callService.getCallBySid(callData.CallSid).then((callResult) => {
+                var call = callResult;
+                call.status = callData.Status.replace("-", "_").toUpperCase();
+                call.startTime = callData.StartTime;
+                call.endTime = callData.EndTime;
+                call.callDuration = callData.ConversationDuration;
+                call.recordingUrl = callData.RecordingUrl;
+                call.data = callData;
 
-//                 callService.updateCall(call._id, call).then((data) => {
-//                     res.json({ "success": true });
-//                 }).catch((err) => {
-//                     console.log(err);
-//                     res.json({ "success": false });
-//                 })
-//             }).catch((err) => {
-//                 console.log(err);
-//                 res.json({ "success": false });
-//             });
-//         }
-//     }).catch((err) => {
-//         console.log(err);
-//         res.json({ "success": false });
-//     });
+                callService.updateCall(call._id, call).then((data) => {
+                    res.json({ "success": true });
+                }).catch((err) => {
+                    console.log(err);
+                    res.json({ "success": false });
+                })
+            }).catch((err) => {
+                console.log(err);
+                res.json({ "success": false });
+            });
+        }
+    }).catch((err) => {
+        console.log(err);
+        res.json({ "success": false });
+    });
 
-// });
+});
 
 /**
  * Get refresh token
@@ -542,24 +603,21 @@ function prepareRefreshToken(user, res) {
     return res.json(rs);
 }
 
-//function performLogin(next, req, organizationData, res) {
-    function performLogin(next, req, res) {
+function performLogin(next, req, organizationData, res) {
     passport.authenticate('local', (err, user, info) => {
         if (err || !user) {
             //logger.error("Error:" + JSON.stringify(info));
-            
+            console.log(user);
             return next(errorMethods.sendBadRequest(errorCode.LOGIN_FAILED));
         }
-        console.log("REACHED HERE");
+
         req.logIn(user, (err) => {
             if (err) {
                 return next(err);
             }
 //we are creating this body object to be sent to jwtclaims
-            //const body = { _id: user._id, email: user.email, workspaceId: user.workspaceId };
-
-            const body = { _id: user._id, email: user.email};
-            //create the jwtclaims object and the refresh_token object
+            const body = { _id: user._id, email: user.email, workspaceId: user.workspaceId };
+//create the jwtclaims object and the refresh_token object
             const jwtClaims = {
                 user: body,
                 sub: "System_Token",
@@ -585,22 +643,22 @@ function prepareRefreshToken(user, res) {
             rs.lastName = user.lastName;
             rs.name = user.name;
             rs.userStatus = user.status;
-            //rs.status = organizationData.status;
+            rs.status = organizationData.status;
             rs.timezone = user.timezone;
             rs.token = token;
             rs.role = user.role;
             rs.jobTitle = user.jobTitle;
             rs.profileImage = helper.resolveImagePath(user.profileImage, user.workspaceId);
             rs.workspaceId = user.workspaceId;
-           // rs.organizationId = organizationData._id;
+            rs.organizationId = organizationData._id;
             rs.token_type = 'Bearer';
             rs.refresh_token = refresh_token;
             // rs.billingType = organizationData.billingType;
             // rs.subscriptionType = organizationData.subscriptionType;
-            //rs.productId = organizationData.productId;
-            //rs.customerId = organizationData.customerId;
+            rs.productId = organizationData.productId;
+            rs.customerId = organizationData.customerId;
             rs.tokenExpiresInSec = token_expiry;
-            //rs.tenantExpiryDate = organizationData.expirationDate;
+            rs.tenantExpiryDate = organizationData.expirationDate;
             rs.refreshTokenExpiresInSec = configResolve.getConfig().refresh_token_expiry;
             var expiresOn = new Date().getTime() + token_expiry * 1000;
             rs.tokenExpiresOn = expiresOn;
@@ -638,36 +696,36 @@ router.get('/features', function (req, res, next) {
 
 //Public API for creating a referral usage when a user is signing up.
 
-// router.post('/createReferral', async function (req, res, next) {
-// try{
-//     var referralData = req.body;
-//   var json_format = iValidator.json_schema(referralSchema.postSchema, referralData, "referral");
-//   if (json_format.valid == false) {
-//     return res.status(422).send(json_format.errorMessage);
-//   }
-//     var checkData = await referralService.searchReferrals({"query":{"toID":referralData.toID}})
-//     if (checkData != undefined && checkData.length > 0) {
-//         return next(errorMethods.sendBadRequest(errorCode.REFERRAL_TO_ID_NEEDS_TO_BE_UNIQUE));
-//        } else {
-//     var data = await referralService.searchReferrals({"query":{"toEmail":referralData.toEmail}})
+router.post('/createReferral', async function (req, res, next) {
+try{
+    var referralData = req.body;
+  var json_format = iValidator.json_schema(referralSchema.postSchema, referralData, "referral");
+  if (json_format.valid == false) {
+    return res.status(422).send(json_format.errorMessage);
+  }
+    var checkData = await referralService.searchReferrals({"query":{"toID":referralData.toID}})
+    if (checkData != undefined && checkData.length > 0) {
+        return next(errorMethods.sendBadRequest(errorCode.REFERRAL_TO_ID_NEEDS_TO_BE_UNIQUE));
+       } else {
+    var data = await referralService.searchReferrals({"query":{"toEmail":referralData.toEmail}})
     
-//     if (data != undefined && data.length > 0) {
-//       return next(errorMethods.sendBadRequest(errorCode.REFERRAL_ALREADY_USED_BY_USER));
-//      } else {
-//          refData = await referralService.addReferral(referralData)
-//          res.json(refData)
-//      }
-//     } 
-//     }catch{ next(errorMethods.sendServerError(err));}
-//   })
+    if (data != undefined && data.length > 0) {
+      return next(errorMethods.sendBadRequest(errorCode.REFERRAL_ALREADY_USED_BY_USER));
+     } else {
+         refData = await referralService.addReferral(referralData)
+         res.json(refData)
+     }
+    } 
+    }catch{ next(errorMethods.sendServerError(err));}
+  })
 
 
-//   router.post('/publicReferralSearch', async function (req, res, next) {
-// try{
-//     var data = await referralService.searchReferrals(req.body);
-//     res.json(data)
-// }catch{next(errorMethods.sendServerError(errorCode.INTERNAL_SERVER_ERROR));}
-// });
+  router.post('/publicReferralSearch', async function (req, res, next) {
+try{
+    var data = await referralService.searchReferrals(req.body);
+    res.json(data)
+}catch{next(errorMethods.sendServerError(errorCode.INTERNAL_SERVER_ERROR));}
+});
 
 /**
      * download api
@@ -677,62 +735,62 @@ router.get('/features', function (req, res, next) {
      * @returns {Error}  default - Unexpected error
      */
 //uses minio bucket and enables you to download files from minio basically
-// router.get("/download", function (request, response) {
-//     var token = request.query.token;
-//     try {
-//         var decoded = jwt.verify(token, server_secert);
-//         if (decoded != undefined) {
-//             minioClient.getObject(environmentConfig.fileServerRootBucket, request.query.filename, function (error, stream) {
-//                 if (error) {
-//                     console.error("Error while fetching file: " + error);
-//                     return response.status(400).json({ 'message': 'Invalid file', 'success': false });
-//                 }
-//                 stream.pipe(response);
-//             });
-//         } else {
-//             console.error("Error while fetching file: ");
-//             return response.status(400).json({ 'message': 'Invalid file', 'success': false });
-//         }
-//     } catch (err) {
-//         console.error("Error while fetching file: " + err);
-//         return response.status(400).json({ 'message': 'Invalid file', 'success': false });
-//     }
-// });
+router.get("/download", function (request, response) {
+    var token = request.query.token;
+    try {
+        var decoded = jwt.verify(token, server_secert);
+        if (decoded != undefined) {
+            minioClient.getObject(environmentConfig.fileServerRootBucket, request.query.filename, function (error, stream) {
+                if (error) {
+                    console.error("Error while fetching file: " + error);
+                    return response.status(400).json({ 'message': 'Invalid file', 'success': false });
+                }
+                stream.pipe(response);
+            });
+        } else {
+            console.error("Error while fetching file: ");
+            return response.status(400).json({ 'message': 'Invalid file', 'success': false });
+        }
+    } catch (err) {
+        console.error("Error while fetching file: " + err);
+        return response.status(400).json({ 'message': 'Invalid file', 'success': false });
+    }
+});
 
 //this is the webhooks razorpay api, it's in public because we're expecting razorpay to hit this
 //to send us subscription and payment related info, after the event is received bby us, we call the
 //even processing function in razorpayservice.
-// router.post('/webhooks/razorpay', async (req, res, next) => {
-//     const eventBody = req.body;
-//     const eventSignature = req.headers["x-razorpay-signature"];
-//     let valid;
-//     try{
-//         razorPayService.initiateEventProcessing( eventBody, eventSignature );
-//         return res.status(200).json("OK");
-//     } catch ( err ){
-//         return res.status(200).json("OK");
-//     }
-// });
+router.post('/webhooks/razorpay', async (req, res, next) => {
+    const eventBody = req.body;
+    const eventSignature = req.headers["x-razorpay-signature"];
+    let valid;
+    try{
+        razorPayService.initiateEventProcessing( eventBody, eventSignature );
+        return res.status(200).json("OK");
+    } catch ( err ){
+        return res.status(200).json("OK");
+    }
+});
 
 //bodyParser.raw({type: '*/*'})
 //bodyParser.raw({type: 'application/json'})
-// router.post('/stripe-webhooks', bodyParser.raw({type: 'application/json'}), (req, res) => {
-//     const eventSignature = req.headers['stripe-signature'];
-//     const eventBody = req.body;
-//     console.log(eventBody);
-//     let stripeEvent;
-//     try{
-//         stripeEvent = stripe.webhooks.constructEvent(eventBody, eventSignature, currentStripe.webhook_secret);
+router.post('/stripe-webhooks', bodyParser.raw({type: 'application/json'}), (req, res) => {
+    const eventSignature = req.headers['stripe-signature'];
+    const eventBody = req.body;
+    console.log(eventBody);
+    let stripeEvent;
+    try{
+        stripeEvent = stripe.webhooks.constructEvent(eventBody, eventSignature, currentStripe.webhook_secret);
        
-//     }catch ( err ){
-//         console.log(err.message);
-//         return res.status(400).send(`Webhook Error: ${err.message}`);
-//     }
-//         stripeService.processEvent(stripeEvent, eventSignature)
-//         console.log(stripeEvent);
-//         return res.status(200).json("OK");
+    }catch ( err ){
+        console.log(err.message);
+        return res.status(400).send(`Webhook Error: ${err.message}`);
+    }
+        stripeService.processEvent(stripeEvent, eventSignature)
+        console.log(stripeEvent);
+        return res.status(200).json("OK");
   
-// })
+})
 
 // //OLD CODE
 // router.post('/webhooks/razorpay', async (req, res, next) => {
@@ -818,15 +876,6 @@ router.post(`/organizations/checkWorkspaceUser`, async ( req, res, next ) => {
     } catch ( err ){
         return res.status(500).json(err);
     }
-});
-
-
-router.get('/userinworkspace/exist', function (req, res, next) {
-    userService.getUsersSimply().then((data) => {
-        res.json({data });
-    }).catch((err) => {
-        next(errorMethods.sendServerError(err));
-    });
 });
 
 module.exports = router;

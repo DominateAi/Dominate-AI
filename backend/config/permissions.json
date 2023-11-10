@@ -14,7 +14,8 @@
                 "user:view",
                 "lead:view",
                 "followup:view",
-                "meeting:view"
+                "meeting:view",
+                "call:view"
             ]
         },
         {
@@ -229,6 +230,7 @@
             "permissions": [
                 "lead:view",
                 "followup:view",
+                "call:view",
                 "note:view"
             ]
         },
@@ -238,6 +240,7 @@
             "permissions": [
                 "lead:view",
                 "followup:view",
+                "call:view",
                 "note:view"
             ]
         },
@@ -387,6 +390,13 @@
         },
         {
             "endpoint": "/leads/import/checkfields",
+            "method": "POST",
+            "permissions": [
+                "lead:create"
+            ]
+        },
+        {
+            "endpoint": "/leads/import/contactstoleads",
             "method": "POST",
             "permissions": [
                 "lead:create"
@@ -653,6 +663,111 @@
             "method": "POST",
             "permissions": [
                 "task:view"
+            ]
+        },
+        {
+            "endpoint": "/presentations",
+            "method": "POST",
+            "permissions": [
+                "presentation:create"
+            ]
+        },
+        {
+            "endpoint": "/presentations/overview",
+            "method": "GET",
+            "permissions": [
+                "presentation:overview"
+            ]
+        },
+        {
+            "endpoint": "/presentations/:id",
+            "method": "PUT",
+            "permissions": [
+                "presentation:edit"
+            ]
+        },
+        {
+            "endpoint": "/presentations",
+            "method": "GET",
+            "permissions": [
+                "presentation:view"
+            ]
+        },
+        {
+            "endpoint": "/leadSearch",
+            "method": "POST",
+            "permissions": [
+                "lead:view"
+            ]
+        },
+        {
+            "endpoint": "/presentations/:id",
+            "method": "GET",
+            "permissions": [
+                "presentation:view"
+            ]
+        },
+        {
+            "endpoint": "/presentations/:id",
+            "method": "DELETE",
+            "permissions": [
+                "presentation:delete"
+            ]
+        },
+        {
+            "endpoint": "/presentations/search",
+            "method": "POST",
+            "permissions": [
+                "presentation:view"
+            ]
+        },
+        {
+            "endpoint": "/proposals",
+            "method": "POST",
+            "permissions": [
+                "proposal:create"
+            ]
+        },
+        {
+            "endpoint": "/proposals/overview",
+            "method": "GET",
+            "permissions": [
+                "proposal:overview"
+            ]
+        },
+        {
+            "endpoint": "/proposals/:id",
+            "method": "PUT",
+            "permissions": [
+                "proposal:edit"
+            ]
+        },
+        {
+            "endpoint": "/proposals",
+            "method": "GET",
+            "permissions": [
+                "proposal:view"
+            ]
+        },
+        {
+            "endpoint": "/proposals/:id",
+            "method": "GET",
+            "permissions": [
+                "proposal:view"
+            ]
+        },
+        {
+            "endpoint": "/proposals/:id",
+            "method": "DELETE",
+            "permissions": [
+                "proposal:delete"
+            ]
+        },
+        {
+            "endpoint": "/proposals/search",
+            "method": "POST",
+            "permissions": [
+                "proposal:view"
             ]
         },
         {
@@ -1449,6 +1564,76 @@
             "method": "PUT",
             "permissions": [
                 "user:view"
+            ]
+        },
+        {
+            "endpoint": "/calls",
+            "method": "POST",
+            "permissions": [
+                "call:create"
+            ]
+        },
+        {
+            "endpoint": "/calls/dial",
+            "method": "POST",
+            "permissions": [
+                "call:dial"
+            ]
+        },
+        {
+            "endpoint": "/calls/bill/:id",
+            "method": "GET",
+            "permissions": [
+                "call:view"
+            ]
+        },
+        {
+            "endpoint": "/calls/:id",
+            "method": "PUT",
+            "permissions": [
+                "call:edit"
+            ]
+        },
+        {
+            "endpoint": "/calls/overview",
+            "method": "GET",
+            "permissions": [
+                "call:overview"
+            ]
+        },
+        {
+            "endpoint": "/calls/today",
+            "method": "GET",
+            "permissions": [
+                "call:view"
+            ]
+        },
+        {
+            "endpoint": "/calls",
+            "method": "GET",
+            "permissions": [
+                "call:view"
+            ]
+        },
+        {
+            "endpoint": "/calls/:id",
+            "method": "GET",
+            "permissions": [
+                "call:view"
+            ]
+        },
+        {
+            "endpoint": "/calls/:id",
+            "method": "DELETE",
+            "permissions": [
+                "call:delete"
+            ]
+        },
+        {
+            "endpoint": "/calls/search",
+            "method": "POST",
+            "permissions": [
+                "call:view"
             ]
         },
         {
@@ -2264,6 +2449,104 @@
                 "deal:view",
                 "user:view",
                 "revenue:view"
+            ]
+        },
+        {
+            "endpoint": "/contacts",
+            "method": "POST",
+            "permissions": [
+                "lead:create"
+            ]
+        },
+        {
+            "endpoint": "/contacts",
+            "method": "GET",
+            "permissions": [
+                "lead:view"
+            ]
+        },
+        {
+            "endpoint": "/contacts/search",
+            "method": "POST",
+            "permissions": [
+                "lead:view"
+            ]
+        },
+        {
+            "endpoint": "/contacts/export",
+            "method": "GET",
+            "permissions": [
+                "lead:view"
+            ]
+        },
+        {
+            "endpoint": "/contacts/import",
+            "method": "POST",
+            "permissions": [
+                "lead:view"
+            ]
+        },
+        {
+            "endpoint": "/contacts/count",
+            "method": "GET",
+            "permissions": [
+                "lead:view"
+            ]
+        },
+        {
+            "endpoint": "/contacts/overview",
+            "method": "GET",
+            "permissions": [
+                "lead:view"
+            ]
+        },
+        {
+            "endpoint": "/contacts/exist",
+            "method": "GET",
+            "permissions": [
+                "lead:view"
+            ]
+        },
+        {
+            "endpoint": "/contacts/timesheet",
+            "method": "POST",
+            "permissions": [
+                "lead:view"
+            ]
+        },
+        {
+            "endpoint": "/contacts/:id",
+            "method": "GET",
+            "permissions": [
+                "lead:view"
+            ]
+        },
+        {
+            "endpoint": "/contacts/:id",
+            "method": "PUT",
+            "permissions": [
+                "lead:edit"
+            ]
+        },
+        {
+            "endpoint": "/contacts/:id",
+            "method": "DELETE",
+            "permissions": [
+                "lead:delete"
+            ]
+        },
+        {
+            "endpoint": "/contacts/emailExist",
+            "method": "GET",
+            "permissions": [
+                "lead:view"
+            ]
+        },
+        {
+            "endpoint": "/contacts/bulkdelete",
+            "method": "POST",
+            "permissions": [
+                "lead:delete"
             ]
         },
         {
@@ -3782,6 +4065,261 @@
             ]
         },
         {
+            "endpoint": "/elists",
+            "method": "POST",
+            "permissions": [
+                "elist:create"
+            ]
+        },
+        {
+            "endpoint": "/elists/:id",
+            "method": "PUT",
+            "permissions": [
+                "elist:edit"
+            ]
+        },
+        {
+            "endpoint": "/elists/overview",
+            "method": "GET",
+            "permissions": [
+                "elist:overview"
+            ]
+        },
+        {
+            "endpoint": "/elists",
+            "method": "GET",
+            "permissions": [
+                "elist:view"
+            ]
+        },
+        {
+            "endpoint": "/elists/:id",
+            "method": "GET",
+            "permissions": [
+                "elist:view"
+            ]
+        },
+        {
+            "endpoint": "/elists/:id",
+            "method": "DELETE",
+            "permissions": [
+                "elist:delete"
+            ]
+        },
+        {
+            "endpoint": "/elists/search",
+            "method": "POST",
+            "permissions": [
+                "elist:view"
+            ]
+        },
+        {
+            "endpoint": "/elists/verify/:id",
+            "method": "GET",
+            "permissions": [
+                "elist:view"
+            ]
+        },
+        {
+            "endpoint": "/elists/keepValidated/:id",
+            "method": "GET",
+            "permissions": [
+                "elist:view",
+                "contact:view"
+            ]
+        },
+        {
+            "endpoint": "/elists/contactsByElist/:id",
+            "method": "GET",
+            "permissions": [
+                "elist:view",
+                "contact:view"
+            ]
+        },
+        {
+            "endpoint": "/elists/isInvalid/:id",
+            "method": "GET",
+            "permissions": [
+                "elist:view",
+                "contact:view"
+            ]
+        },
+        {
+            "endpoint": "/campaigns",
+            "method": "POST",
+            "permissions": [
+                "campaign:create"
+            ]
+        },
+        {
+            "endpoint": "/campaigns/:id",
+            "method": "PUT",
+            "permissions": [
+                "campaign:edit"
+            ]
+        },
+        {
+            "endpoint": "/campaigns/overview",
+            "method": "GET",
+            "permissions": [
+                "campaign:overview"
+            ]
+        },
+        {
+            "endpoint": "/campaigns",
+            "method": "GET",
+            "permissions": [
+                "campaign:view"
+            ]
+        },
+        {
+            "endpoint": "/campaigns/:id",
+            "method": "GET",
+            "permissions": [
+                "campaign:view"
+            ]
+        },
+        {
+            "endpoint": "/campaigns/:id",
+            "method": "DELETE",
+            "permissions": [
+                "campaign:delete"
+            ]
+        },
+        {
+            "endpoint": "/campaigns/campaignProfileCompleted/:id",
+            "method": "GET",
+            "permissions": [
+                "campaign:view"
+            ]
+        },
+        {
+            "endpoint": "/campaigns/search",
+            "method": "POST",
+            "permissions": [
+                "campaign:view"
+            ]
+        },
+        {
+            "endpoint": "/campaigns/changeStatus",
+            "method": "POST",
+            "permissions": [
+                "campaign:view"
+            ]
+        },
+        {
+            "endpoint": "/regdemails",
+            "method": "POST",
+            "permissions": [
+                "regdemail:create"
+            ]
+        },
+        {
+            "endpoint": "/regdemails/:id",
+            "method": "PUT",
+            "permissions": [
+                "regdemail:edit"
+            ]
+        },
+        {
+            "endpoint": "/regdemails/overview",
+            "method": "GET",
+            "permissions": [
+                "regdemail:overview"
+            ]
+        },
+        {
+            "endpoint": "/regdemails",
+            "method": "GET",
+            "permissions": [
+                "regdemail:view"
+            ]
+        },
+        {
+            "endpoint": "/regdemails/:id",
+            "method": "GET",
+            "permissions": [
+                "regdemail:view"
+            ]
+        },
+        {
+            "endpoint": "/regdemails/:id",
+            "method": "DELETE",
+            "permissions": [
+                "regdemail:delete"
+            ]
+        },
+        {
+            "endpoint": "/regdemails/verify/:id",
+            "method": "GET",
+            "permissions": [
+                "regdemail:view"
+            ]
+        },
+        {
+            "endpoint": "/regdemails/search",
+            "method": "POST",
+            "permissions": [
+                "regdemail:view"
+            ]
+        },
+        {
+            "endpoint": "/regdemails/exist",
+            "method": "GET",
+            "permissions": [
+                "regdemail:view"
+            ]
+        },
+        {
+            "endpoint": "/verifiedemails",
+            "method": "POST",
+            "permissions": [
+                "verifiedemail:create"
+            ]
+        },
+        {
+            "endpoint": "/verifiedemails/:id",
+            "method": "PUT",
+            "permissions": [
+                "verifiedemail:edit"
+            ]
+        },
+        {
+            "endpoint": "/verifiedemails/overview",
+            "method": "GET",
+            "permissions": [
+                "verifiedemail:overview"
+            ]
+        },
+        {
+            "endpoint": "/verifiedemails",
+            "method": "GET",
+            "permissions": [
+                "verifiedemail:view"
+            ]
+        },
+        {
+            "endpoint": "/verifiedemails/:id",
+            "method": "GET",
+            "permissions": [
+                "verifiedemail:view"
+            ]
+        },
+        {
+            "endpoint": "/verifiedemails/:id",
+            "method": "DELETE",
+            "permissions": [
+                "verifiedemail:delete"
+            ]
+        },
+        {
+            "endpoint": "/verifiedemails/search",
+            "method": "POST",
+            "permissions": [
+                "verifiedemail:view"
+            ]
+        },
+        {
             "endpoint":"/leadPipelines",
             "method":"GET",
             "permissions":[
@@ -3871,6 +4409,7 @@
             "permissions": [
                 "pipeLead:view",
                 "followup:view",
+                "call:view",
                 "note:view"
             ]
         },
@@ -3880,6 +4419,7 @@
             "permissions": [
                 "pipeLead:view",
                 "followup:view",
+                "call:view",
                 "note:view"
             ]
         },
@@ -4022,6 +4562,13 @@
         },
         {
             "endpoint": "/pipeLeads/import/checkfields",
+            "method": "POST",
+            "permissions": [
+                "pipeLead:create"
+            ]
+        },
+        {
+            "endpoint": "/pipeLeads/import/contactstopipeLeads",
             "method": "POST",
             "permissions": [
                 "pipeLead:create"

@@ -21,8 +21,6 @@ function addRole(roleData) {
         var user = currentContext.getCurrentContext();
         roleData.createdBy = user.email;
         roleData.lastModifiedBy = user.email;
-
-        
         if(roleData.internal == undefined){
             roleData.internal = false;
         }
@@ -31,7 +29,6 @@ function addRole(roleData) {
             roleData.permissions.length > 0 && roleData.permissions.includes('*')){
             reject("Invalid Permission");
         }
-        
 //simple function to create a new role
         roleModel.create(roleData).then((data)=>{
             resolve(data);
@@ -50,8 +47,6 @@ function addDefaultRoles(features) {
         var featurePermissions = [];
 //copies the roles defined in ootbroles file in roleCopy variable
         var ootbRolesCopy = _.cloneDeep(ootbRoles);
-
-        
 //take all features from ootb features file and runs loop (there is an array of objects called 
 //features iniside the file, hence the .features)
         ootbFeatures.features.forEach(ootbFeature => {
@@ -72,9 +67,7 @@ function addDefaultRoles(features) {
 //addRole function creates roles at db level for this particular workspace
             promises.push(addRole(role));
         });
-        
         Promise.all(promises).then((result)=>{
-           
             resolve(result);
         }).catch((err) => {
             reject(err);

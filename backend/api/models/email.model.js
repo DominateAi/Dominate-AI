@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 var uuid = require('node-uuid');
+var currentContext = require('../../common/currentContext');
 const Status = require('../../common/constants/Status');
 var uniqueValidator = require('mongoose-unique-validator');
 const EntityType = require('../../common/constants/EntityType');
@@ -55,37 +56,52 @@ const emailSchema = new mongoose.Schema({
 emailSchema.plugin(uniqueValidator);
 
 emailSchema.statics = {
+
+
   getById: function(id) {
-    return this.findById(id).populate('organizer');
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).findById(id).populate('organizer');
   },
   search: function(query) {
-    return this.find(query).populate('organizer');
+    var context = currentContext.getCurrentContext();
+    var conn = this.db.useDb(context.workspaceId).model(modelName);
+    return conn.find(query).populate('organizer');
   },
   searchOne: function(query) {
-    return this.findOne(query).populate('organizer');
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).findOne(query).populate('organizer');
   },
   updateById: function(id, updateData) {
+    var context = currentContext.getCurrentContext();
     var options = { new: true };
-    return this.findOneAndUpdate({ _id: id }, { $set: updateData }, options);
+    return this.db.useDb(context.workspaceId).model(modelName).findOneAndUpdate({ _id: id }, { $set: updateData }, options);
   },
   deletebyId: function(id) {
-    return this.findByIdAndDelete(id);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).findByIdAndDelete(id);
   },
   create: function(data) {
-    var entity = new this(data);
+    var context = currentContext.getCurrentContext();
+    var entityModel = this.db.useDb(context.workspaceId).model(modelName);
+    var entity = new entityModel(data);
     return entity.save();
   },
   getPaginatedResult: function (query, options) {
-    return this.find(query, null, options).populate('organizer');
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).find(query, null, options).populate('organizer');
   },
   countDocuments: function (query) {
-    return this.count(query);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).count(query);
   },
   groupByKeyAndCountDocuments: function (key) {
-    return this.aggregate([{ $group: { _id: '$' + key, count: { $sum: 1 } } }]);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([{ $group: { _id: '$' + key, count: { $sum: 1 } } }]);
   },
   groupByKeyAndCountDocumentsWithTimeframe: function (key, startDate, endDate) {
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName)
+    .aggregate([
       { $match: {
               $and:[
                   { createdAt: { $lte: new Date(endDate) } },
@@ -95,7 +111,9 @@ emailSchema.statics = {
       { $group: { _id: '$' + key, count: { $sum: 1 } } }]);
   },
   emailCountByAcc: function(accountId){
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName)
+    .aggregate([
       {$lookup:{from: "leads",localField: "entityId",foreignField: "_id",as: "lead_data"}},
       {$unwind:{path:"$lead_data", preserveNullAndEmptyArrays: true}},
       {$lookup:{from: "accounts",

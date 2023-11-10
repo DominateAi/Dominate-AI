@@ -1,5 +1,6 @@
 var meetingModel = require("../models/meeting.model");
 var currentContext = require('../../common/currentContext');
+const notificationClient = require('../../common/notificationClient');
 const NotificationType = require('../../common/constants/NotificationType');
 
 var meetingService = {
@@ -29,6 +30,7 @@ function addMeeting(meetingData) {
 
         meetingModel.create(meetingData).then((data) => {
             meetingModel.getById(data.id).then((meetingResult) => {
+                notificationClient.notify(NotificationType.MEETING_CREATED, meetingResult, user.workspaceId, user.userId);
                 resolve(meetingResult);
             }).catch((err) => {
                 reject(err);
@@ -47,6 +49,7 @@ function updateMeeting(id, meetingData, callback) {
         meetingData.meetingDate = new Date(meetingData.meetingDate).toDateString();
 
         meetingModel.updateById(id, meetingData).then((data) => {
+            notificationClient.notify(NotificationType.MEETING_UPDATED, data, user.workspaceId, data.assigned);
             resolve(data);
         }).catch((err) => {
             reject(err);

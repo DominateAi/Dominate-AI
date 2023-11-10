@@ -5,6 +5,7 @@ var currentContext = require('../../common/currentContext');
 const Status = require('../../common/constants/Status');
 var activityService = require('../services/activity.service');
 var wactService = require("./workactivity.service");
+const notificationClient = require('../../common/notificationClient');
 const NotificationType = require('../../common/constants/NotificationType');
 
 var followupService = {
@@ -51,6 +52,7 @@ function addFollowup(followupData) {
                 'data': followupData,
                 'activityType': 'FOLLOWUP_CREATED'
             }
+            notificationClient.notify(NotificationType.FOLLOWUP_ADDED, activity, user.workspaceId, followupData.entityId);
             activityService.addActivity(activity).then((adata) => {
                 resolve(data);
             }).catch((err) => {
@@ -77,6 +79,7 @@ function updateFollowup(id, followupData, callback) {
                 'data': followupData,
                 'activityType': 'FOLLOWUP_UPDATED'
             }
+            notificationClient.notify(NotificationType.FOLLOWUP_UPDATED, activity, user.workspaceId, followupData.entityId);
             activityService.addActivity(activity).then((adata) => {
                 if(followupData.status == "COMPLETED"){ wactService.addWact(followupData, "FOLLOWUP", "UPDATE", prevData).then((dataA)=>{resolve(data);}).catch((err) => {
                     reject(err);

@@ -7,6 +7,7 @@ var errorCode = require('../../common/error-code');
 var errorMethods = require('../../common/error-methods');
 var accessResolver = require('../../common/accessResolver');
 var currentContext = require('../../common/currentContext');
+var redisUtils = require('../../common/redisUtils');
 var Multer = require("multer");
 var csv = require('fast-csv');
 var parse = csv.parse;
@@ -83,6 +84,7 @@ function init(router) {
   router.post('/pipeLeads/import/overwrite', overwrite);
   router.post('/pipeLeads/import/notoverwrite',notoverwrite);
   router.post('/pipeLeads/import/checkfields', Multer({ storage: Multer.memoryStorage(), limits: limits}).single("file"), checkFields);
+  router.post('/pipeLeads/import/contactstopipeLeads', contactsToPipeLeads);
 }
 
 /**
@@ -849,6 +851,17 @@ function overwrite(req, res, next) {
 function notoverwrite(req, res, next) {
   let pipeLeads = req.body;
   pipeLeadService.notoverwrite(pipeLeads).then((data) => {
+    res.json(data);
+  }).catch((err) => {
+    next(errorMethods.sendServerError(err));
+  });
+}
+
+function contactsToPipeLeads(req, res, next) {
+  let contacts = req.body;
+  let assignedTo = req.query.assignedTo;
+  let accountId = req.query.accountId
+  pipeLeadService.contactsToPipeLeads(contacts, assignedTo, accountId).then((data) => {
     res.json(data);
   }).catch((err) => {
     next(errorMethods.sendServerError(err));

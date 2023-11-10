@@ -6,6 +6,7 @@ var pipeLeadModel = require("../models/pipeLead.model");
 var userModel = require("../models/user.model");
 var followupModel = require("../models/followup.model");
 var meetingModel = require("../models/meeting.model");
+var callModel = require("../models/call.model");
 var noteModel = require("../models/note.model");
 var accountModel = require("../models/account.model");
 var wactService = require("./workactivity.service");
@@ -19,6 +20,7 @@ const meetingService = require('./meeting.service');
 const userService = require('./user.service');
 const emailService = require('./email.service');
 const NotificationType = require('../../common/constants/NotificationType');
+const notificationClient = require('../../common/notificationClient');
 const moment = require('moment');
 
 var pipeLeadService = {
@@ -67,6 +69,7 @@ var pipeLeadService = {
     overwrite: overwrite,
     notoverwrite: notoverwrite,
     checkFields: checkFields,
+    contactsToPipeLeads: contactsToPipeLeads,
     getAvgCP: getAvgCP,
     bulkAddPipeLead: bulkAddPipeLead,
     addPipeLeadImport: addPipeLeadImport,
@@ -92,6 +95,7 @@ function addPipeLead(pipeLeadData) {
                 'data': pipeLeadData,
                 'activityType': 'LEAD_CREATED'
             }
+            notificationClient.notify(NotificationType.LEAD_CREATED, data, user.workspaceId, user.userId);
             activityService.addActivity(activity).then((adata) => {
                 wactService.addWact(pipeLeadData, "LEAD", "CREATE").then((dataA)=>{resolve(data);}).catch((err) => {
                     reject(err);
@@ -151,6 +155,7 @@ function updatePipeLead(id, pipeLeadData, callback) {
                 'data': pipeLeadData,
                 'activityType': 'LEAD_CLOSED'
             }
+            notificationClient.notify(NotificationType.LEAD_CLOSED, activity, user.workspaceId, pipeLeadData.entityId);
             activityService.addActivity(activity).then((adata) => {
                 wactService.addWact(pipeLeadData, "LEAD", "UPDATE", prevData).then((dataA)=>{resolve(data);}).catch((err) => {
                     reject(err);
@@ -1605,6 +1610,76 @@ function checkFields(pipeLeads){
         resolve(response);
        }
        dojob(pipeLeads);
+    })
+}
+
+function contactsToPipeLeads(contacts, assignedTo, accountId){
+    return new Promise(async(resolve, reject) => {
+        var user = currentContext.getCurrentContext();
+        let existing=[], toBeAdded=[], data=[], result=[];
+            let response = {
+                "existing_pipeLeads": existing,
+                "pipeLeads_added_to_db": result
+            }
+        let pipeLeads =[];
+        let all_promise = [];
+        async function getPipeLeads(contacts){
+ 
+    
+    for (i in contacts)
+    {
+       var pipeLead ={
+        name: contacts[i].name,
+        email: contacts[i].email,
+        phone: contacts[i].phone,
+        phoneCode:contacts[i].phoneCode,
+        isKanban: "false",
+        isHidden: "false",
+        status:"NEW_LEAD",
+        degree:"COLD",
+        media:{facebook: "", linkedIn: "", instagram: "", skype: "", other: ""},
+        additionalInfo: contacts[i].additionalInfo,
+        createdBy: user.email,
+        lastModifiedBy: user.email,
+        }
+        pipeLeads.push(pipeLead);
+    }
+        
+
+        if (assignedTo!==undefined){
+            pipeLeads.forEach(pipeLead => {
+                pipeLead['assigned'] = assignedTo
+            });
+        }
+        else{
+            pipeLeads.forEach(pipeLead => {
+                pipeLead['assigned'] = user.userId
+            });
+        }
+
+        if(accountId!==undefined){
+            pipeLeads.forEach(pipeLead => {
+                pipeLead['account_id'] = accountId;
+            })
+        }
+        else{
+            pipeLeads.forEach(pipeLead => {
+                pipeLead['account_id'] = "0123456789" 
+            });
+        }
+        for (i in pipeLeads){
+            let pipeLeadsearch = await pipeLeadModel.searchOne({ email: pipeLeads[i].email });
+                if(pipeLeadsearch){
+                    existing.push(pipeLeads[i]);
+                    }
+                }
+             toBeAdded = _.difference(pipeLeads, existing);
+             data = await pipeLeadModel.import(toBeAdded);
+                for(i in data){
+                    result.push(data[i]);
+                }
+            }
+            getPipeLeads(contacts).then(()=>{resolve(response);})
     })
 }
 

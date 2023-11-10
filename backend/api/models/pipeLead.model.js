@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 var uuid = require('node-uuid');
+var currentContext = require('../../common/currentContext');
 const LeadStatus = require('../../common/constants/LeadStatus');
 var uniqueValidator = require('mongoose-unique-validator');
 const LeadDegree = require('../../common/constants/LeadDegree');
@@ -100,36 +101,50 @@ pipeLeadSchema.plugin(uniqueValidator);
 pipeLeadSchema.statics = {
 
   targetSearch : function ( query ){
-    return this.find(query);
+    // console.log("Eh")
+    var context = currentContext.getCurrentContext();
+    var conn = this.db.useDb(context.workspaceId).model(modelName);
+    return conn.find(query);
   },
   getById: function (id) {
-    return this.findById(id).populate('assigned');
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).findById(id).populate('assigned');
   },
   search: function (query) {
-    return this.find(query).populate('assigned').populate('account_id');
+    var context = currentContext.getCurrentContext();
+    var conn = this.db.useDb(context.workspaceId).model(modelName);
+    return conn.find(query).populate('assigned').populate('account_id');
   },
   searchOne: function (query) {
-    return this.findOne(query).populate('assigned').populate('account_id');
+    var context = currentContext.getCurrentContext();
+    var conn = this.db.useDb(context.workspaceId).model(modelName);
+    return conn.findOne(query).populate('assigned').populate('account_id');
   },
   updateById: function (id, updateData) {
+    var context = currentContext.getCurrentContext();
     var options = { new: true };
-    return this.findOneAndUpdate({ _id: id }, { $set: updateData }, options);
+    return this.db.useDb(context.workspaceId).model(modelName).findOneAndUpdate({ _id: id }, { $set: updateData }, options);
   },
   deletebyId: function (id) {
-    return this.findByIdAndDelete(id);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).findByIdAndDelete(id);
   },
   create: function (data) {
-    var entity = new this(data);
+    var context = currentContext.getCurrentContext();
+    var entityModel = this.db.useDb(context.workspaceId).model(modelName);
+    var entity = new entityModel(data);
     return entity.save();
   },
   getPaginatedResult: function (query, options) {
-    return this.find(query, null, options).populate('assigned').populate('account_id');
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).find(query, null, options).populate('assigned').populate('account_id');
   },
   /********************************
    * ADDITION BY SHUBHAM
    ********************************/
   getPaginatedResultWithNotesAndFollowups : function ( filters, options ) {
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {
          $lookup:{
             from: "notes",
@@ -149,33 +164,42 @@ pipeLeadSchema.statics = {
   ]);
   },
   countDocuments: function (query) {
-    return this.count(query);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).count(query);
   },
   estimatedDocumentCount: function (query) {
-    return this.estimatedDocumentCount(query);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).estimatedDocumentCount(query);
   },
   getAggregateCount: function (query) {
-    return this.aggregate(query);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate(query);
   },
   groupByKeyAndCountDocuments: function (key) {
-    return this.aggregate([{ $group: { _id: '$' + key, count: { $sum: 1 } } }]);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([{ $group: { _id: '$' + key, count: { $sum: 1 } } }]);
   },
   import: function (items) {
-    return this.insertMany(items);
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).insertMany(items);
   },
   export: function () {
-    return this.find({}).lean();
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).find({}).lean();
   },
   createEmptyCollection: function(){
-    this.createCollection();
-    this.createIndexes();
+    var context = currentContext.getCurrentContext();
+    this.db.useDb(context.workspaceId).model(modelName).createCollection();
+    this.db.useDb(context.workspaceId).model(modelName).createIndexes();
   },
   getTextSearchResult: function(text){
-    return this.find(
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).find(
       {$text: {$search: text}}, {score: {$meta: "textScore"}}).sort({score:{$meta:"textScore"}}
     ).populate('assigned');
   },
   groupByKeyAndCountDocumentsByYears: function (key, sumBy, qassigned) {
+    var context = currentContext.getCurrentContext();
     let queryKey = '$' + key;
     if(sumBy == undefined){
       sumBy = 1;
@@ -186,13 +210,16 @@ pipeLeadSchema.statics = {
       filter['assigned'] = qassigned;
     }
 
-    return this.aggregate([
+
+    return this.db.useDb(context.workspaceId).model(modelName)
+    .aggregate([
       {$project: {year: {$year: queryKey}, month: {$month: queryKey}, createdAt: 1, worth:1, convertedDate: 1, assigned: 1}},
       {$match: filter},
       {$group: {_id: {$year: queryKey},count: {$sum: sumBy}}
      }]);
   },
   groupByKeyAndCountDocumentsByMonth: function (key, qyear, sumBy, qassigned, qstatus) {
+    var context = currentContext.getCurrentContext();
     let queryKey = '$' + key;
     if(sumBy == undefined){
       sumBy = 1;
@@ -208,7 +235,8 @@ pipeLeadSchema.statics = {
          }
       });
     }
-    return this.aggregate([
+    return this.db.useDb(context.workspaceId).model(modelName)
+    .aggregate([
       {$project: {year: {$year: queryKey}, month: {$month: queryKey}, createdAt: 1, worth:1, convertedDate: 1, assigned: 1, status: 1}},
       {$match: filter},
       {$group: {_id: {$month: queryKey},count: {$sum: sumBy}}
@@ -219,6 +247,7 @@ pipeLeadSchema.statics = {
    * @DESC - EDIT BY SHUBHAM - groupByKeyAndCountDocumentsByMonth
    **************************************************************/
   groupByKeyAndCountDocumentsByMonth_v2 : function (key, qyear, sumBy, qassigned, qstatus) {
+    var context = currentContext.getCurrentContext();
     let queryKey = '$' + key;
     if(sumBy == undefined){
       sumBy = 1;
@@ -234,7 +263,8 @@ pipeLeadSchema.statics = {
          }
       });
     }
-    return this.aggregate([
+    return this.db.useDb(context.workspaceId).model(modelName)
+    .aggregate([
       { $match : { convertedDate : { $exists : true } } },
       {$project: {year: {$year: queryKey}, month: {$month: queryKey}, createdAt: 1, worth:1, convertedDate: 1, assigned: 1, status: 1}},
       {$match: filter},
@@ -247,6 +277,7 @@ pipeLeadSchema.statics = {
   },
 
   groupByKeyAndCountDocumentsByWeek: function (key, qyear, qmonth, sumBy, qassigned) {
+    var context = currentContext.getCurrentContext();
     let queryKey = '$' + key;
     if(sumBy == undefined){
       sumBy = 1;
@@ -256,13 +287,15 @@ pipeLeadSchema.statics = {
     if(qassigned != undefined){
       filter['assigned'] = qassigned;
     }
-    return this.aggregate([
+    return this.db.useDb(context.workspaceId).model(modelName)
+    .aggregate([
       {$project: {year: {$year: queryKey}, month: {$month: queryKey}, createdAt: 1, worth:1, convertedDate: 1, assigned: 1}},
       {$match: filter},
       {$group: {_id: {$week: queryKey},count: {$sum: sumBy}}
      }]);
   },
   groupByKeyAndCountDocumentsByDay: function (key, qyear, qmonth, qweek, sumBy, qassigned) {
+    var context = currentContext.getCurrentContext();
     let queryKey = '$' + key;
     if(sumBy == undefined){
       sumBy = 1;
@@ -271,7 +304,8 @@ pipeLeadSchema.statics = {
     if(qassigned != undefined){
       filter['assigned'] = qassigned;
     }
-    return this.aggregate([
+    return this.db.useDb(context.workspaceId).model(modelName)
+    .aggregate([
       {$project: {year: {$year: queryKey}, month: {$month: queryKey}, week: {$week: queryKey}, createdAt: 1, worth:1, convertedDate: 1, assigned: 1}},
       {$match: {year: parseInt(qyear), week: parseInt(qweek)}},
       {$group: {_id: queryKey,count: {$sum: sumBy}}
@@ -283,6 +317,7 @@ pipeLeadSchema.statics = {
    * @DESC - EDIT BY SHUBHAM - groupByKeyAndCountDocumentsByMonth
    **************************************************************/
   groupByKeyAndCountDocumentsByMonth_v3 : function (key, qyear, sumBy, qassigned, qstatus) {
+    var context = currentContext.getCurrentContext();
     let queryKey = '$' + key;
     if(sumBy == undefined){
       sumBy = 1;
@@ -296,7 +331,8 @@ pipeLeadSchema.statics = {
       filter['$and'].push({'status': qstatus
       });
     }
-    return this.aggregate([
+    return this.db.useDb(context.workspaceId).model(modelName)
+    .aggregate([
       {$project: {year: {$year: queryKey}, month: {$month: queryKey}, createdAt: 1, worth:1, convertedDate: 1, assigned: 1, status: 1}},
       {$match: filter},
       {$group: {
@@ -307,7 +343,8 @@ pipeLeadSchema.statics = {
      }]);
   },
   closedPercentage: function (member) {
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$match:{"assigned":member}},
       {$group:{_id:null, count:{$sum:1}, data:{$push:"$$ROOT"}}},{$unwind:"$data"},
       {$group:{_id:"$data.status", count:{"$sum":1},total:{$first:"$count"}}},
@@ -316,12 +353,14 @@ pipeLeadSchema.statics = {
       ]);
     },
   pipeLeadsByAccountId: function(account){
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$match:{"account_id":account}}
       ]);
   },
   usersForAccount: function(account){ //caution - function exists only at model level
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$match:{"account_id":account}},
       {$lookup:{from:"users",localField:"assigned",foreignField:"_id",as:"userdata"}},
       {$unwind:"$userdata"},
@@ -329,13 +368,15 @@ pipeLeadSchema.statics = {
       ])
   },
   countAcc: function(accountId){
-    return this.aggregate([
+    var context = currentContext.getCurrentContext();
+    return this.db.useDb(context.workspaceId).model(modelName).aggregate([
       {$match:{"account_id":accountId}},
       {$group:{_id:"",count:{$sum:1}}},{$project:{"_id":0}}
       ])
     },
   userAccCount: function(user, startDate, endDate){
-      return this.aggregate([
+      var context = currentContext.getCurrentContext();
+      return this.db.useDb(context.workspaceId).model(modelName).aggregate([
         {$match:{"assigned":user}},
         {$lookup: {from:"accounts",localField:"account_id",foreignField:"_id",as:"account"}},
         {$unwind:{path:"$account",preserveNullAndEmptyArrays:true}},

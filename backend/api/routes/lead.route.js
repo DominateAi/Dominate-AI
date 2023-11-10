@@ -7,6 +7,7 @@ var errorCode = require('../../common/error-code');
 var errorMethods = require('../../common/error-methods');
 var accessResolver = require('../../common/accessResolver');
 var currentContext = require('../../common/currentContext');
+var redisUtils = require('../../common/redisUtils');
 var Multer = require("multer");
 var csv = require('fast-csv');
 var parse = csv.parse;
@@ -83,6 +84,7 @@ function init(router) {
   router.post('/leads/import/overwrite', overwrite);
   router.post('/leads/import/notoverwrite',notoverwrite);
   router.post('/leads/import/checkfields', Multer({ storage: Multer.memoryStorage(), limits: limits}).single("file"), checkFields);
+  router.post('/leads/import/contactstoleads', contactsToLeads);
 }
 
 /**
@@ -849,6 +851,17 @@ function overwrite(req, res, next) {
 function notoverwrite(req, res, next) {
   let leads = req.body;
   leadService.notoverwrite(leads).then((data) => {
+    res.json(data);
+  }).catch((err) => {
+    next(errorMethods.sendServerError(err));
+  });
+}
+
+function contactsToLeads(req, res, next) {
+  let contacts = req.body;
+  let assignedTo = req.query.assignedTo;
+  let accountId = req.query.accountId
+  leadService.contactsToLeads(contacts, assignedTo, accountId).then((data) => {
     res.json(data);
   }).catch((err) => {
     next(errorMethods.sendServerError(err));
