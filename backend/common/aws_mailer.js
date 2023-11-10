@@ -4,9 +4,9 @@ const mailcomposer = require('mailcomposer.js');
  
 
 aws.config.update({
-  accessKeyId:'AKIAWDPIYPJTOJD2A5PE',
-  secretAccessKey:'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',
-  region:'ap-south-1'
+  accessKeyId:'',
+  secretAccessKey:'',
+  region:''
 });
 
   
