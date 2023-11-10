@@ -1,0 +1,15 @@
+.no_template_selected_message {
+  display: flex;
+  padding: vw(50px);
+  padding-left: vw(20px);
+  padding-right: vw(20px);
+  width: 100%;
+  font-family: $font-family-poppins;
+  font-size: vw(18px);
+  flex-direction: column;
+  div:first-child {
+    @include fontBold700;
+    font-size: vw(24px);
+    flex-direction: column;
+  }
+}

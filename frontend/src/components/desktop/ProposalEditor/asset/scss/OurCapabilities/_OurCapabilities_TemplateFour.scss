@@ -1,0 +1,76 @@
+.our_capabilities_template_four {
+  flex-direction: column;
+  padding: vw(50px) vw(80px) vw(50px) vw(80px);
+  .our_capabilities_template_four__top {
+    display: flex;
+    height: 10%;
+    width: 100%;
+    align-items: center;
+    padding-left: vw(50px);
+    .our_capabilities_template_four__headline {
+      display: flex;
+      height: vw(72px);
+      width: 38%;
+      align-items: center;
+    }
+    .our_capabilities_template_four__top__line {
+      display: block;
+      width: vw(5px);
+      border-radius: vw(20px);
+      height: 50%;
+    }
+  }
+  .our_capabilities_template_four__bottom {
+    padding-top: vw(20px);
+    margin-top: vw(50px);
+    display: flex;
+    height: 50%;
+    width: 100%;
+    padding-left: vw(20px);
+    padding-right: vw(20px);
+    flex-direction: column;
+    justify-content: space-between;
+    .our_capabilities_template_four__bottom_blocks {
+      display: flex;
+      height: 32%;
+      width: 100%;
+      justify-content: space-between;
+      .our_capabilities_template_four__bottom_blocks_small {
+        display: flex;
+        height: 100%;
+        width: vw(440px);
+        .our_capabilities_template_four__bottom_blocks__left {
+          display: flex;
+          height: 100%;
+          width: 25%;
+        }
+        .our_capabilities_template_four__bottom_blocks__right {
+          display: flex;
+          height: 100%;
+          width: 75%;
+          justify-content: space-around;
+          //align-items: flex-start;
+          flex-direction: column;
+          padding-right: vw(30px);
+
+          .our_capabilities_template_four__bottom_blocks__right_headline {
+            display: flex;
+            height: 30%;
+            width: 100%;
+            word-break: break-all;
+          }
+          .our_capabilities_template_four__bottom_blocks__right_para {
+            display: flex;
+            padding-top: vw(10px);
+            height: 70%;
+            width: 100%;
+            word-break: break-all;
+          }
+        }
+      }
+    }
+  }
+  .text_component_main_container .cke_editable {
+    padding-left: vw(10px);
+  }
+}

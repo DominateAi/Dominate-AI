@@ -1,0 +1,59 @@
+.dashboard_row_seven_container {
+  display: flex;
+}
+// performance card
+.dashboard-overview-blocks__performanceCard {
+  margin-right: vw(19px);
+  background: #ffffff;
+  padding: vw(32px) vw(30px) vw(32px) vw(35px);
+  width: vw(707px);
+  height: vw(649px);
+
+  h3 {
+    font-size: vw(14px);
+    line-height: vw(17px);
+    @include theme-letter-spacing-28-uppercase;
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    margin: 0 vw(10px);
+  }
+
+  .font-15-light,
+  .font-40-extraBold {
+    color: $theme-text-color-white-79;
+  }
+}
+
+.no_other_employees_section_performance_scoreboard {
+  h3 {
+    text-align: center;
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    margin: 0 vw(10px);
+  }
+
+  text-align: center;
+  margin-top: vw(60px);
+  .add-form-btn {
+    // background: #453890 !important;
+    // background: linear-gradient(306deg, #502eff 0%, #d1c7ff 100%) !important;
+    border: none;
+    width: vw(235px);
+    @include theme-button-height-and-radius-3;
+    @include fontBold700;
+    font-size: vw(24px);
+    color: $theme-text-color-grey;
+    @include theme-blue-bg-radius;
+  }
+}
+
+// dashboard calender css
+@import "./dashboard_calender";
+
+@import "./_dashboard-row-seven-leaves-card.scss";
+@import "./dashboard-row-seven-calendar-data-card";
+@import "./dashboard-row-seven-illustrations";

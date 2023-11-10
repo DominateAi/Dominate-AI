@@ -1,0 +1,387 @@
+/*=================================================
+                Warning Popups css
+===================================================*/
+.warning-popup-container {
+  img {
+    width: vw(430px);
+    height: vw(320px);
+  }
+
+  h1 {
+    margin-top: vw(21px);
+    font-size: vw(43px);
+    line-height: vw(61px);
+    color: $theme-text-color-1;
+    @include fontBold700;
+  }
+  p {
+    margin-top: vw(15px);
+    color: #7d7d7d;
+    font-size: vw(21px);
+    line-height: vw(31px);
+    @include fontRegular400;
+    margin-bottom: none;
+  }
+  span {
+    color: #6648ff;
+  }
+
+  .proceed-payment {
+    background-color: #502eff;
+    // background: linear-gradient(306deg, #502eff 0%, #d1c7ff 100%) !important;
+    border: none;
+    width: vw(250px);
+    @include theme-button-height-and-radius-3;
+    color: white;
+    @include fontMedium500;
+    font-size: vw(18px);
+  }
+  .cancel {
+    background-color: transparent;
+    // border: vw(1px) solid #ff4848;
+    border: vw(1px) solid #502eff;
+    width: vw(150px);
+    @include theme-button-height-and-radius-3;
+    color: #502eff;
+    @include fontMedium500;
+    font-size: vw(18px);
+    margin-right: vw(30px);
+  }
+}
+
+// .customOverlay--warning_before_five_days {
+// box-shadow: 0 0 vw(30px) rgba(0, 0, 0, 0.05);
+// }
+
+.customeModel_warning_before_five {
+  width: vw(1124px) !important;
+  border-radius: vw(15px) !important;
+  padding: vw(47px) vw(131px) !important;
+  // box-shadow: 0 0.4vw 6.66667vw 0 rgba(0, 0, 0, 0.16) !important;
+  img {
+    width: vw(221px);
+    height: vw(79px);
+  }
+  p {
+    font-size: vw(22px);
+    line-height: vw(42px);
+    @include fontRegular400;
+    margin-top: vw(27px);
+  }
+  .button_section {
+    margin-top: vw(71px);
+    display: flex;
+    justify-content: space-between;
+
+    .later_button {
+      border: vw(1px) solid #ff4848;
+      width: vw(289px);
+      @include theme-button-height-and-radius-3;
+      background: none;
+      color: #ff4848;
+      @include fontMedium500;
+      font-size: vw(23px);
+    }
+    .upgrade_button {
+      border: vw(1px) solid #ff4848;
+      width: vw(289px);
+      @include theme-button-height-and-radius-3;
+      background: #ff4848;
+      @include fontMedium500;
+      color: white;
+      font-size: vw(23px);
+    }
+  }
+}
+
+.customeModel_warning_befor_subscription_cancel {
+  width: vw(932px) !important;
+  border-radius: vw(15px) !important;
+  padding: vw(47px) vw(131px) !important;
+  // box-shadow: 0 0.4vw 6.66667vw 0 rgba(0, 0, 0, 0.16) !important;
+  background-color: $theme-bg-color-1;
+
+  img {
+    width: vw(221px);
+    height: vw(79px);
+  }
+  p {
+    font-size: vw(22px);
+    line-height: vw(42px);
+    @include fontRegular400;
+    margin-top: vw(27px);
+    margin-bottom: vw(50px);
+  }
+  .button_section {
+    margin-top: vw(71px);
+    display: flex;
+    justify-content: space-between;
+
+    .later_button {
+      border: vw(1px) solid #ff4848;
+      width: vw(289px);
+      @include theme-button-height-and-radius-3;
+      background: none;
+      color: #ff4848;
+      @include fontMedium500;
+      font-size: vw(23px);
+    }
+    .upgrade_button {
+      border: vw(1px) solid #ff4848;
+      width: vw(289px);
+      @include theme-button-height-and-radius-3;
+      background: #ff4848;
+      @include fontMedium500;
+      color: white;
+      font-size: vw(23px);
+    }
+  }
+  .go_to_dashboard {
+    border: vw(1px) solid #ff4848;
+    width: vw(137px);
+    @include theme-button-height-and-radius-3;
+    background: #ff4848;
+    @include fontMedium500;
+    color: white;
+    font-size: vw(23px);
+  }
+}
+
+.customeModel_success_after_subscription_update {
+  width: vw(932px) !important;
+  border-radius: vw(15px) !important;
+  padding: vw(47px) vw(131px) !important;
+  // box-shadow: 0 0.4vw 6.66667vw 0 rgba(0, 0, 0, 0.16) !important;
+  p {
+    font-size: vw(22px);
+    line-height: vw(42px);
+    @include fontRegular400;
+    margin-top: vw(27px);
+    margin-bottom: vw(50px);
+  }
+  .button_section {
+    margin-top: vw(71px);
+    display: flex;
+    justify-content: center;
+
+    .okay_button {
+      border: vw(1px) solid #ff4848;
+      width: vw(289px);
+      @include theme-button-height-and-radius-3;
+      background: #ff4848;
+      @include fontMedium500;
+      color: white;
+      font-size: vw(23px);
+    }
+  }
+}
+
+/*============================================
+    Cancel subscription warning in payment failed 
+==============================================*/
+.customeModel_warning_befor_subscription_cancel_payment_failed {
+  width: vw(932px) !important;
+  border-radius: vw(15px) !important;
+  padding: vw(53px) vw(100px) !important;
+  // box-shadow: 0 0.4vw 6.66667vw 0 rgba(0, 0, 0, 0.16) !important;
+  .warning_before_plan_expired_container {
+    text-align: center;
+  }
+  img {
+    width: vw(307px);
+    height: vw(235px);
+  }
+  h3 {
+    margin-top: vw(53px);
+    font-size: vw(28px);
+    line-height: vw(42px);
+    color: $theme-text-color-1;
+    @include fontSemiBold600;
+  }
+  p {
+    font-size: vw(20px);
+    line-height: vw(35px);
+    color: $theme-text-color-1;
+    margin-bottom: 0;
+  }
+  .button_section {
+    margin-top: vw(50px);
+    .no_btn {
+      border: vw(1px) solid #ff4848;
+      width: vw(250px);
+      @include theme-button-height-and-radius-3;
+      background: none;
+      color: #ff4848;
+      @include fontMedium500;
+      font-size: vw(23px);
+    }
+    .yes-btn {
+      border: vw(1px) solid #ff4848;
+      width: vw(250px);
+      @include theme-button-height-and-radius-3;
+      background: #ff4848;
+      @include fontMedium500;
+      color: white;
+      font-size: vw(23px);
+
+      margin-left: vw(211px);
+    }
+  }
+}
+.warning_before_subscription_cancel {
+  h3 {
+    font-size: vw(28px);
+    line-height: vw(42px);
+    color: $theme-text-color-1;
+    margin-top: vw(53px);
+    @include fontSemiBold600;
+  }
+  p {
+    margin-top: vw(24px);
+    font-size: vw(20px);
+    line-height: vw(30px);
+    color: $theme-text-color-1;
+    @include fontRegular400;
+  }
+  .payment-illustration-images {
+    width: vw(327px) !important;
+    height: vw(235px) !important;
+  }
+  .button_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      font-size: vw(16px);
+      color: #3f59b8;
+      line-height: vw(25px);
+      margin-bottom: 0;
+    }
+  }
+}
+
+/*=================================================
+      MENUAL RETRY WARNING CSS
+==================================================*/
+.menual_retry_warning {
+  .no_btn {
+    border: vw(1px) solid #502eff;
+    border-radius: vw(28px);
+    width: vw(334px);
+    height: vw(56px);
+    color: #6648ff;
+    font-size: vw(23px);
+    @include fontSemiBold600;
+    margin-right: vw(72px);
+  }
+  .yes-btn {
+    background-color: #502eff;
+    border-radius: vw(28px);
+    width: vw(334px);
+    height: vw(56px);
+    color: white;
+    font-size: vw(23px);
+    @include fontSemiBold600;
+  }
+}
+/*===========================================
+
+              DELETE POPUP CSS
+
+=============================================*/
+.delete-popup-div {
+  padding: vw(50px) 0;
+
+  .delete-popup-img {
+    width: vw(256px);
+    height: auto;
+    margin-bottom: vw(6px);
+  }
+
+  .delete-popup-text1 {
+    color: $theme-text-color-1;
+    margin-bottom: vw(10px);
+  }
+
+  .delete-popup-text2 {
+    color: $theme-text-color-1;
+    margin-bottom: vw(46px);
+  }
+  .delete-popup-yes-btn {
+    border: none;
+    // color: white;
+    font-size: vw(18px);
+    line-height: vw(27px);
+    @include fontSemiBold600;
+    width: vw(185px);
+    height: vw(66px);
+    // border-radius: vw(33px);
+    // background: $theme-bg-dark-blue-to-purple-1;
+    @include theme-mixin-blue-bg-with-color;
+  }
+  .delete-popup-no-btn {
+    // color: white;
+    font-size: vw(18px);
+    line-height: vw(27px);
+    margin-right: vw(10px);
+    width: vw(185px);
+    height: vw(66px);
+    // border: vw(2px) solid $theme-bg-dark-blue-to-purple-1;
+
+    // border-radius: vw(33px);
+    // color: $theme-bg-dark-blue-to-purple-1;
+    // color: $theme-text-blue-to-white-42;
+    @include fontSemiBold600;
+    // background: $theme-bg-color-white-03;
+    @include theme-mixin-2;
+    color: $theme-text-color-grey;
+  }
+}
+/*=================================================================
+
+                    USER DASHBOARD FREE PLAN WARNING
+
+===================================================================*/
+.member-log-upgrade-img {
+  width: vw(239px);
+  height: auto;
+  margin-bottom: vw(14px);
+}
+.delete-popup-yes-btn--member {
+  width: vw(185px);
+}
+/*======================================================================
+
+                      Delete Template
+
+======================================================================*/
+.delete-popup-div--delete-template {
+  .delete-template-illustration-images {
+    width: vw(261px);
+    height: auto;
+    margin-bottom: vw(25px);
+  }
+  h3 {
+    margin-bottom: vw(13px);
+  }
+  p {
+    margin-bottom: vw(35px);
+  }
+}
+.customModal--delete-template {
+  width: vw(1082px);
+  height: auto;
+}
+/*==================================================
+                      LOGOUT CONFIRMATION
+===================================================*/
+.delete-popup-div--confirm-logout {
+  .user-logout-img {
+    width: vw(337px);
+    height: auto;
+    margin-bottom: vw(29px);
+  }
+  h3 {
+    margin-bottom: vw(65px);
+  }
+}

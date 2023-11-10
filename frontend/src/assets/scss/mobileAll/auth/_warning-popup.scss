@@ -1,0 +1,43 @@
+/*=================================================
+                Warning Popups css
+===================================================*/
+.warning-popup-container {
+  h1 {
+    font-size: mvwDivide(30px);
+    line-height: mvwDivide(46px);
+    color: $theme-text-color-1;
+    @include fontBold700;
+  }
+  p {
+    color: #7d7d7d;
+    font-size: mvwDivide(22px);
+    line-height: mvwDivide(27px);
+    @include fontRegular400;
+  }
+
+  .proceed-payment {
+    background-color: #502eff;
+    // background: linear-gradient(306deg, #502eff 0%, #d1c7ff 100%) !important;
+    border: none;
+    width: mvwDivide(250px);
+    height: mvwDivide(50px);
+    border-radius: mvwDivide(30px);
+    color: white;
+    @include fontMedium500;
+    font-size: mvwDivide(18px);
+    line-height: mvwDivide(31px);
+  }
+  .cancel {
+    background-color: transparent;
+    // border: mvwDivide(2px) solid #ff4848;
+    border: mvwDivide(2px) solid #502eff;
+    width: mvwDivide(150px);
+    height: mvwDivide(50px);
+    border-radius: mvwDivide(30px);
+    color: #502eff;
+    @include fontMedium500;
+    font-size: mvwDivide(18px);
+    line-height: mvwDivide(31px);
+    margin-right: mvwDivide(30px);
+  }
+}

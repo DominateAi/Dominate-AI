@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="320.69" height="65" viewBox="0 0 320.69 65">
+  <defs>
+    <filter id="Integrations" x="100.69" y="0" width="220" height="65" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.228" x2="1.509" y2="1.445" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#502eff"/>
+      <stop offset="1" stop-color="#d1c7ff"/>
+    </linearGradient>
+    <filter id="Rectangle_2358" x="0" y="17" width="46.69" height="31.686" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-color="gray" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_2417" x="50" y="17" width="46.69" height="31.686" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-color="gray" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-3" x1="0.772" x2="-0.509" y2="1.445" xlink:href="#linear-gradient"/>
+    <filter id="Rectangle_2357" x="32.69" y="16" width="31.686" height="31.685" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-color="gray" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_2418" x="82.69" y="16" width="31.686" height="31.685" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-5"/>
+      <feFlood flood-color="gray" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_2341" data-name="Group 2341" transform="translate(-924.31 -74)">
+    <g transform="matrix(1, 0, 0, 1, 924.31, 74)" filter="url(#Integrations)">
+      <text id="Integrations-2" data-name="Integrations" transform="translate(210.69 41)" fill="#5331ff" font-size="33" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="-100.633" y="0">Integrations</tspan></text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 924.31, 74)" filter="url(#Rectangle_2358)">
+      <rect id="Rectangle_2358-2" data-name="Rectangle 2358" width="28.69" height="13.686" rx="6.843" transform="translate(9 23)" fill="url(#linear-gradient)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 924.31, 74)" filter="url(#Rectangle_2417)">
+      <rect id="Rectangle_2417-2" data-name="Rectangle 2417" width="28.69" height="13.686" rx="6.843" transform="translate(59 23)" fill="url(#linear-gradient)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 924.31, 74)" filter="url(#Rectangle_2357)">
+      <rect id="Rectangle_2357-2" data-name="Rectangle 2357" width="13.686" height="13.685" rx="6.843" transform="translate(41.69 22)" fill="url(#linear-gradient-3)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 924.31, 74)" filter="url(#Rectangle_2418)">
+      <rect id="Rectangle_2418-2" data-name="Rectangle 2418" width="13.686" height="13.685" rx="6.843" transform="translate(91.69 22)" fill="url(#linear-gradient-3)"/>
+    </g>
+  </g>
+</svg>

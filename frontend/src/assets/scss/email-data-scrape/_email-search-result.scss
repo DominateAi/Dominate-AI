@@ -1,0 +1,18 @@
+.email-data-scrape-search-result-domain {
+  font-size: vw(20px);
+  line-height: vw(30px);
+  color: rgba(64, 64, 64, 0.29);
+  padding-left: vw(30px);
+  @include fontItalicPoppins;
+  padding-top: vw(20px);
+}
+.leads-title-block-btn-red-bg-verify-email {
+  background: linear-gradient(
+    286deg,
+    rgba(152, 144, 227, 1) 0%,
+    rgba(177, 244, 207, 1) 100%
+  );
+  border-radius: vw(50px);
+  margin-right: vw(100px);
+  @include fontMedium500;
+}

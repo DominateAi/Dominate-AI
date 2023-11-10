@@ -1,0 +1,39 @@
+.customModal--emailDataScrapeSearchResultModal {
+  width: vw(1159px) !important;
+  padding: vw(73px) vw(30px) vw(70px) vw(30px) !important;
+  border-radius: vw(20px) !important;
+}
+.email-search-result-modal-one-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.email-data-scrape-search-result-modal-img-div {
+  width: vw(272px);
+  height: vw(272px);
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.email-data-scrape-search-result-modal-text {
+  color: rgba(64, 64, 64, 1);
+  padding: vw(30px) 0;
+}
+.email-search-result-progress-text {
+  font-size: vw(24px);
+  line-height: vw(35px);
+  color: #8b65e4;
+  padding: vw(10px) 0;
+}
+.email-search-blue-line {
+  width: vw(388px);
+  height: vw(12px);
+  .progressbar-progress {
+    background: #54349f !important;
+    width: auto;
+    height: vw(12px);
+    border-radius: vw(15px) !important;
+  }
+}

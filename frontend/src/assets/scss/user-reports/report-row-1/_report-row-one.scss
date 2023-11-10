@@ -1,0 +1,24 @@
+// report row one
+
+.new-report-row-2-colm1-card1__title {
+  font-size: vw(14px);
+  line-height: vw(17px);
+  @include fontBold700;
+  @include theme-letter-spacing-28-uppercase;
+  margin-bottom: 0;
+}
+
+.new-report-row-2-colm1-card1__title--card2 {
+  margin-bottom: vw(106px);
+}
+//new css
+.reports-lead-closed-img {
+  width: vw(336px);
+  height: auto;
+  margin-bottom: vw(45px);
+}
+.reports-lead-level-img {
+  width: vw(301px);
+  height: auto;
+  margin-bottom: vw(38px);
+}

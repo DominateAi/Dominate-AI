@@ -1,0 +1,41 @@
+.model_three_container {
+  .existing_leads_table {
+    margin-top: vw(30px);
+    margin-bottom: vw(50px);
+  }
+  .file_label {
+    font-size: vw(24px);
+    line-height: vw(35px);
+    @include fontSemiBold600;
+    margin-bottom: vw(20px);
+  }
+  .table thead th {
+    vertical-align: bottom;
+    border-bottom: none;
+  }
+  .table td,
+  .table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: none;
+  }
+  .table th {
+    font-size: vw(18px) !important;
+    line-height: vw(27px) !important;
+    // color: #30303047 !important;
+    @include fontBold700;
+    color: $theme-text-color-white-42 !important;
+  }
+  table td {
+    font-size: vw(18px) !important;
+    line-height: vw(27px) !important;
+    color: $theme-text-color-black-to-white-1 !important;
+    @include fontMedium500;
+  }
+}
+
+.existing_leads_container {
+  margin-bottom: vw(20px);
+  height: 200px !important;
+  overflow: auto !important;
+}

@@ -1,0 +1,129 @@
+/*=====================
+      Header css
+=======================*/
+.my-navbar {
+  background-color: $theme-bg-color-1;
+  height: mvwDivide(80px);
+  padding: 0px !important;
+  padding-left: mvwDivide(111px) !important;
+  padding-right: mvwDivide(81px) !important;
+  // box-shadow: mvwDivide(0px) mvwDivide(3px) mvwDivide(6px) #00000017;
+
+  .nav_icons {
+    img {
+      height: auto;
+      width: mvwDivide(45px);
+      margin-left: mvwDivide(48px);
+      border-radius: 30px;
+    }
+    .fa-user {
+      font-size: mvwDivide(33px);
+      margin-left: mvwDivide(28px);
+      color: #0ccda3;
+    }
+  }
+  .logout-btn {
+    img {
+      height: auto;
+      width: mvwDivide(55px);
+    }
+    // .fa-power-off {
+    //   font-size: mvwDivide(33px);
+    //   // margin-left: mvwDivide(px) !important;
+    //   color: #ed765e;
+    //   vertical-align: bottom;
+    // }
+  }
+}
+.navbar-brand {
+  font-size: mvwDivide(30px) !important;
+  font-weight: 600;
+
+  p {
+    margin-bottom: 0 !important;
+  }
+}
+
+.dominate_header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+.dominate_header__fix {
+  padding-bottom: mvwDivide(80px);
+}
+
+/*=========================
+      top menus navbar
+  ==========================*/
+
+.menu-navbar {
+  position: relative;
+
+  &__title {
+    transition: all 0.4s ease;
+    position: absolute;
+    left: 50%;
+  }
+
+  .tooltip-new {
+    position: absolute;
+    left: 43%;
+    top: mvwDivide(13px);
+    height: 70%;
+  }
+}
+
+.menu-navbar {
+  height: mvwDivide(85px);
+  background-color: $theme-bg-color-transparent;
+  // box-shadow: mvwDivide(0px) mvwDivide(3px) mvwDivide(6px) #00000017;
+  padding: mvwDivide(0px) mvwDivide(128px) mvwDivide(0px) mvwDivide(128px) !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: mvwDivide(5px);
+
+  /* Left Menus */
+  .dominate-menus-left,
+  .dominate-menus-right {
+    list-style-type: none;
+    display: flex;
+    margin-bottom: 0;
+
+    .topmenubar-icon {
+      // background-image: linear-gradient(
+      //   to left bottom,
+      //   #003cff,
+      //   #2c60ff,
+      //   #5180ff,
+      //   #759cff,
+      //   #9ab8ff
+      // );
+      border-radius: mvwDivide(7px);
+      opacity: 0.6;
+      margin-right: mvwDivide(20px);
+    }
+
+    .topmenubar-icon--active {
+      opacity: 1;
+      // cursor: default;
+    }
+
+    li {
+      width: mvwDivide(65px);
+      height: mvwDivide(65px);
+      // padding: mvwDivide(10px);
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.main-logo-navbar {
+  height: mvwDivide(45px);
+}

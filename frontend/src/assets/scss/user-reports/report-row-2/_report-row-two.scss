@@ -1,0 +1,29 @@
+// report row two
+
+.new-report-row-2 {
+  margin-right: vw(19px) !important;
+  margin-bottom: vw(19px);
+}
+
+.new-report-row-2__colm {
+  padding: vw(57px) vw(82px) vw(27px) vw(47px);
+  width: vw(880px);
+  height: vw(506px);
+  overflow: auto;
+  // border-radius: vw(15px);
+  // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+  @include theme-mixin-1;
+  @include border-mixin-1;
+  border-radius: vw(18px);
+}
+
+.new-report-row-2-colm1-card1__title--row2-card {
+  margin-bottom: vw(61px);
+}
+//new css
+.reports-reasons-for-leads-drop-img {
+  width: vw(306px);
+  height: auto;
+  margin-top: vw(43px);
+  margin-bottom: vw(45px);
+}

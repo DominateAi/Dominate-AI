@@ -1,0 +1,32 @@
+// followups content css
+.line-height-normal {
+  padding-top: mvwDivide(10px);
+  line-height: mvwDivide(130px);
+}
+
+.followups-width-200 {
+  position: relative;
+  margin-top: mvwDivide(25px);
+  width: mvwDivide(230px);
+  padding-right: mvwDivide(20px);
+  margin-right: mvwDivide(37px);
+  display: flex;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: mvwDivide(10px);
+    height: mvwDivide(230px);
+    background: #ffffff;
+    display: block;
+    border-radius: mvwDivide(5px);
+  }
+}
+
+.dashboard-followups-card-msg-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}

@@ -1,0 +1,136 @@
+/* ===============================================================
+                     
+                        font size mobile
+                    
+================================================================== */
+
+// regular fontRegular400
+.font-9-regular {
+  font-size: mvw(9px);
+  @include fontRegular400;
+  line-height: mvw(13px);
+  margin-bottom: 0;
+}
+
+.font-10-regular {
+  font-size: mvw(10px);
+  @include fontRegular400;
+  line-height: mvw(16px);
+  margin-bottom: 0;
+}
+
+.resp-font-12-regular {
+  font-size: mvw(12px);
+  @include fontRegular400;
+  line-height: mvw(18px);
+  margin-bottom: 0;
+}
+
+.resp-font-12-italic {
+  font-size: mvw(12px);
+  @include fontItalicPoppins;
+  line-height: mvw(18px);
+  margin-bottom: 0;
+}
+
+// medium fontMedium500
+.resp-font-12-medium {
+  font-size: mvw(12px);
+  @include fontMedium500;
+  line-height: mvw(18px);
+  margin-bottom: 0;
+}
+
+.resp-font-18-medium {
+  font-size: mvw(18px);
+  @include fontMedium500;
+  line-height: mvw(26px);
+  margin-bottom: 0;
+}
+
+.font-15-medium {
+  font-size: mvw(15px);
+  @include fontMedium500;
+  line-height: mvw(23px);
+  margin-bottom: 0;
+}
+
+// semi bold fontSemiBold600
+.font-15-semibold {
+  font-size: mvw(15px);
+  @include fontSemiBold600;
+  line-height: mvw(23px);
+  margin-bottom: 0;
+}
+
+/* ===============================================================
+                    
+                       mobile margin, padding
+                    
+================================================================== */
+
+.color-gray-resp {
+  color: #707070;
+}
+
+// mt
+.resp-mt-10 {
+  margin-top: mvw(10px);
+}
+
+.resp-mt-20 {
+  margin-top: mvw(20px);
+}
+
+// mr
+.resp-mr-10 {
+  margin-right: mvw(10px);
+}
+
+.resp-mr-16 {
+  margin-right: mvw(16px);
+}
+
+// mb
+.resp-mb-10 {
+  margin-bottom: mvw(10px);
+}
+
+.resp-mb-15 {
+  margin-bottom: mvw(15px);
+}
+
+.resp-mb-30 {
+  margin-bottom: mvw(30px);
+}
+
+// pb
+.resp-pb-30 {
+  padding-bottom: mvw(30px);
+}
+
+/* ===============================================================
+                    
+                        other mobile
+                    
+================================================================== */
+
+.resp-top-header {
+  width: 100%;
+  // padding: mvw(40px) mvw(26px) mvw(23px) mvw(25px);
+  padding: 0;
+  // height: mvw(100px);
+  height: 0;
+  overflow: auto;
+  background: linear-gradient(306deg, #d1c7ff 0%, #502eff 100%) !important;
+  // box-shadow: 0 mvw(3px) mvw(6px) rgba(128, 128, 128, 0.16);
+  border-radius: 0 0 mvw(10px) mvw(10px);
+}
+
+.is-invalid {
+  color: #ff4848;
+  margin-top: mvwDivide(10px);
+  font-size: mvwDivide(15px);
+  @include fontRegular400;
+  line-height: mvwDivide(23px);
+}

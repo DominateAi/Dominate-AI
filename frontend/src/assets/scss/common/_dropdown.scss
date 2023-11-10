@@ -1,0 +1,279 @@
+/* ===============================================================
+                    
+                        dropdown
+                    
+================================================================== */
+
+.Dropdown-menu {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: vw(1px) solid rgba(255, 255, 255, 0.03) !important;
+  box-shadow: inset 0 vw(4px) vw(14px) rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(94px) !important;
+}
+
+// lead-status-dropDown
+.Dropdown-menu {
+  background-color: $theme-dropdown-bg-color !important;
+}
+
+.lead-status-dropDown {
+  .Dropdown-control {
+    cursor: pointer;
+    border: 0;
+    // background-color: transparent;
+    width: max-content;
+    max-width: max-content;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    @include theme-mixin-4;
+    border-radius: vw(18px);
+    color: $theme-text-color-white-79;
+  }
+
+  .Dropdown-menu {
+    width: vw(310px);
+    height: vw(310px);
+    max-height: vw(310px);
+    padding: vw(16px);
+    border: 0;
+    border-radius: vw(10px);
+    // box-shadow: vw(1px) vw(3px) vw(6px) rgba(0, 0, 0, 0.16);
+    margin-top: vw(25px);
+    color: $theme-text-color-white-79;
+
+    .Dropdown-option:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .Dropdown-option {
+    font-size: vw(21px);
+    line-height: vw(31px);
+    @include fontRegular400;
+    color: $theme-text-color-1;
+    padding: vw(9px);
+    border-bottom: vw(1px) solid rgba(112, 112, 112, 0.25);
+  }
+
+  // .Dropdown-control:hover {
+  //   box-shadow: 0 0 0;
+  // }
+
+  .Dropdown-option.is-selected,
+  .Dropdown-option:hover {
+    background: $theme-dropdown-hover-bg !important;
+    color: $theme-text-color-1 !important;
+    // color: $theme-text-color-on-dropdown-hover;
+  }
+
+  .Dropdown-arrow {
+    top: 41%;
+    border-color: $theme-dropdown-arrow-color transparent transparent;
+    border-width: vw(8px) vw(8px) 0;
+  }
+}
+
+.is-open .Dropdown-arrow {
+  border-color: transparent transparent $theme-dropdown-arrow-color !important;
+  border-width: 0 vw(8px) vw(8px) !important;
+}
+
+//lead-status-dropDown--importExport
+
+.lead-status-dropDown--importExport {
+  &.Dropdown-root {
+    background-color: $theme-bg-color-white-03;
+    width: vw(218px);
+    @include theme-button-height-and-radius-3;
+    display: flex;
+    justify-content: center;
+    @include border-mixin-1;
+    color: $theme-text-color-white-79;
+  }
+
+  .Dropdown-menu .Dropdown-group > .Dropdown-title,
+  .Dropdown-placeholder,
+  .Dropdown-menu > .Dropdown-option {
+    font-size: vw(21px);
+    @include fontMedium500;
+    line-height: vw(31px);
+  }
+
+  .Dropdown-menu .Dropdown-group > .Dropdown-title,
+  .Dropdown-menu > .Dropdown-option {
+    color: #050505;
+  }
+
+  .Dropdown-menu > .Dropdown-option {
+    padding: vw(15px);
+  }
+
+  .Dropdown-menu .Dropdown-group > .Dropdown-title {
+    padding: vw(10px) vw(16px);
+    padding-bottom: 0;
+    @include fontRegular400;
+  }
+
+  .Dropdown-placeholder {
+    color: $theme-text-color-dark-blue-to-white-42;
+  }
+
+  .Dropdown-control {
+    padding: 0;
+    padding-top: vw(7px);
+  }
+
+  .Dropdown-arrow {
+    display: none;
+  }
+
+  .Dropdown-menu {
+    width: vw(240px);
+    height: auto;
+    margin-top: vw(5px);
+    padding: 0 vw(10px) vw(20px) vw(10px);
+  }
+
+  .Dropdown-group:first-child {
+    padding-bottom: vw(5px);
+    border-bottom: vw(1px) solid rgba(112, 112, 112, 0.25);
+  }
+
+  .Dropdown-group {
+    .Dropdown-option {
+      color: $theme-text-color-1;
+      border-bottom: 0;
+      font-size: vw(16px);
+      line-height: vw(25px);
+      padding: vw(7px) vw(5px) vw(5px) vw(28px);
+    }
+  }
+}
+
+.lead-status-dropDown--importExport--all-lead {
+  &.Dropdown-root {
+    background: $theme-bg-color-white-03;
+    width: max-content;
+    // margin-right: vw(33px);
+    border: transparent;
+    justify-content: flex-start;
+  }
+
+  .Dropdown-arrow {
+    display: block;
+  }
+
+  .Dropdown-control {
+    padding: 0;
+    padding-top: vw(2px);
+    padding-right: vw(42px);
+    // border: vw(1px) solid #502eff;
+    padding-left: vw(30px);
+    border-radius: vw(10px);
+    // background: $theme-bg-color-1;
+    background-color: transparent;
+  }
+
+  .Dropdown-placeholder {
+    color: $theme-text-color-1;
+    font-size: vw(24px);
+    @include fontSemiBold600;
+    line-height: vw(43px);
+  }
+
+  .Dropdown-menu {
+    width: max-content;
+    padding-bottom: vw(10px);
+  }
+}
+
+.rc-dropdown {
+  @include fontRegular400Important;
+
+  .lead-new-detail-edit-button-div {
+    position: unset;
+
+    img {
+      display: none;
+    }
+  }
+  .lead-new-detail-edit-button {
+    border: none;
+    backdrop-filter: unset;
+    background: none;
+    height: max-content;
+    line-height: vw(20px);
+    text-align: left;
+    font-size: vw(18px);
+    color: $theme-text-color-white-79;
+    padding: 0;
+
+    &:hover {
+      color: $theme-text-color-on-dropdown-hover;
+    }
+  }
+}
+
+.rc-dropdown-menu > .rc-dropdown-menu-item:hover,
+.rc-dropdown-menu > .rc-dropdown-menu-item-active,
+.rc-dropdown-menu > .rc-dropdown-menu-item-selected {
+  background-color: $theme-dropdown-hover-bg !important;
+  // background-color: transparent !important;
+  // color: $theme-text-color-on-dropdown-hover !important;
+}
+
+.dashboard-profile-dropdown {
+  .rc-dropdown-menu > .rc-dropdown-menu-item-selected:after {
+    display: none !important;
+  }
+}
+
+//new css
+.rc-dropdown-menu-item-divider {
+  background-color: $theme-bg-color-white-21 !important;
+}
+
+// lead-status-dropDown--statusRow
+.lead-status-dropDown.lead-status-dropDown--statusRow {
+  .Dropdown-control {
+    width: max-content;
+    max-width: vw(330px);
+    word-break: break-all;
+    padding-right: vw(45px);
+  }
+
+  .Dropdown-menu {
+    width: vw(248px);
+    height: auto;
+    max-height: vw(405px);
+    margin-top: vw(21px);
+    padding-top: vw(18px);
+    padding-bottom: vw(18px);
+  }
+}
+
+.lead-status-dropDown.lead-status-dropDown--taskStatusRow {
+  .Dropdown-control,
+  .Dropdown-placeholder {
+    font-size: vw(21px);
+    line-height: vw(31px);
+    @include fontSemiBold600;
+  }
+
+  .Dropdown-control {
+    width: max-content;
+    max-width: max-content;
+    padding: vw(16px) vw(45px) vw(16px) vw(20px);
+    @include theme-mixin-4;
+  }
+
+  .Dropdown-menu {
+    width: vw(208px);
+    height: auto;
+    max-height: vw(405px);
+    margin-top: vw(10px);
+    padding-top: vw(15px);
+    padding-bottom: vw(15px);
+  }
+}

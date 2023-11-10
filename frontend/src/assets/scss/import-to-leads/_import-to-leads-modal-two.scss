@@ -1,0 +1,274 @@
+// .import-to-leads-modal-two-div {
+//padding: 0 0 0 vw(130px);
+// padding: 0 vw(40px) 0 vw(40px);
+// }
+.import-modal-two-img-modal {
+  width: vw(72px);
+  height: vw(72px);
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.import-leads-modal-two-sub-text {
+  padding-left: vw(13px);
+  color: $theme-text-dark-gray-to-white;
+}
+
+.import-modal-two-modal-span-img-div {
+  width: vw(30px);
+  height: vw(30px);
+  margin-left: vw(13px);
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.import-modal-two-modal-direction-img-div {
+  width: vw(40px);
+  height: vw(49px);
+  border-radius: 50%;
+  //// box-shadow: 0 vw(3px) vw(6px) rgba(144, 144, 144, 0.3);
+  margin-right: vw(17px);
+  margin-top: vw(24px);
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.import-leads-modal-two-card-outer-div {
+  width: 100%;
+  //height: vw(750px);
+  overflow-y: auto;
+  height: vw(125px);
+  overflow-x: hidden;
+}
+//===== card scss =====//
+
+.import-to-lead-modal-two-card-div {
+  width: vw(960px);
+  min-height: vw(161px);
+  border-radius: vw(20px);
+  // background: rgba(255, 255, 255, 1);
+  // box-shadow: vw(2px) vw(3px) vw(20px) rgba(144, 144, 144, 0.3);
+  display: flex;
+  flex-direction: column;
+  padding: vw(13px) vw(5px) vw(13px) 0;
+  margin: vw(20px) vw(5px);
+  @include theme-mixin-2;
+}
+.import-to-leads-modal-two-card-row {
+  padding-top: vw(15px);
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: vw(1px);
+    // background: rgba(48, 48, 48, 0.26);
+    left: 0;
+    background: $theme-bg-color-white-26;
+    top: 0;
+  }
+}
+.import-to-lead-modal-lead-name {
+  // color: $theme-text-dark-gray-to-white;
+  // color: $theme-text-dark-gray-to-white;
+  width: 100%;
+  padding-left: vw(36px);
+  word-break: break-all;
+  padding-bottom: vw(5px);
+}
+
+.import-to-leads-modal-two-card-subtitle {
+  font-size: vw(16px);
+  line-height: vw(25px);
+  text-transform: uppercase;
+  // color: rgba(48, 48, 48, 0.48);
+  color: $theme-text-color-white-42;
+}
+.import-to-leads-modal-two-card-colm {
+  width: 30%;
+  word-break: break-all;
+  padding-left: vw(36px);
+  .lead-status-dropDown--import-to-leads {
+    margin-left: 0 !important;
+  }
+}
+.import-to-leads-modal-two-card-text-div {
+  width: 100%;
+  min-height: vw(40px);
+  padding: vw(10px) vw(25px);
+  border-radius: vw(35px);
+  background: linear-gradient(
+    180deg,
+    rgba(242, 243, 246, 1) 100%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  // box-shadow: 0 vw(3px) vw(6px) rgba(128, 128, 128, 0.16);
+  text-transform: capitalize;
+  color: $theme-text-dark-gray-to-white;
+  border: none;
+}
+
+.import-to-leads-modal-two-card-save-div {
+  width: 10%;
+  height: vw(40px);
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+/*====================================================================================
+                           import to leads modal two card edit
+====================================================================================*/
+.react-tel-input .country-list .country:hover,
+.react-tel-input .country-list .country.highlight {
+  background-color: $theme-dropdown-hover-bg !important;
+}
+.import-to-leads-modal-two-card-colm-phone-input {
+  //width: vw(249px);
+  width: 100%;
+  height: vw(49px);
+  // box-shadow: 0 vw(3px) vw(6px) #80808028;
+  // border-radius: vw(25px);
+  // background: $theme-bg-color-white-03;
+  @include theme-mixin-2;
+
+  .react-tel-input {
+    width: 40%;
+  }
+  .react-tel-input .form-control {
+    width: 100% !important;
+    max-width: 100%;
+    height: 100% !important;
+    //color: $theme-text-color-black-to-white-1 !important;
+    position: relative;
+    font-size: vw(16px);
+    @include fontSemiBold600Important;
+    color: $theme-text-color-1 !important;
+    //letter-spacing: 0.01rem;
+    z-index: 0;
+    margin-top: vw(15px) !important;
+    margin-bottom: 0 !important;
+    margin-left: 0;
+    background: transparent !important;
+    border-radius: 0 !important;
+    outline: none;
+    padding: 0 !important;
+    border: none !important;
+    //padding-left: vw(60px) !important;
+    padding-left: vw(80px) !important;
+  }
+
+  .react-tel-input .form-control:focus {
+    outline: none !important;
+    box-shadow: none;
+  }
+
+  .flag-dropdown {
+    background: transparent !important;
+    border: none !important;
+    top: vw(13px) !important;
+  }
+  .react-tel-input .flag-dropdown.open .selected-flag {
+    background: none;
+    border-radius: 0 0 0 0;
+  }
+  .selected-flag {
+    padding-left: vw(30px) !important;
+  }
+  .react-tel-input .selected-flag:hover,
+  .react-tel-input .selected-flag:focus {
+    background-color: transparent;
+  }
+
+  input {
+    width: 60%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    font-size: vw(16px);
+    @include fontSemiBold600;
+    // color: $theme-text-color-white-60;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+    padding-left: vw(10px);
+    padding-right: vw(10px);
+    padding-top: vw(8px);
+  }
+}
+.import-to-leads-modal-two-card-text-div--input {
+  //width: vw(249px);
+  width: 100%;
+  height: vw(49px);
+  border: none;
+  // box-shadow: 0 vw(3px) vw(6px) #80808028;
+  // border-radius: vw(25px);
+  // background: $theme-bg-color-white-03;
+  padding: vw(10px) vw(20px);
+  font-size: vw(16px);
+  @include fontSemiBold600;
+  // color: $theme-text-color-white-60;
+  @include theme-mixin-2;
+}
+.import-to-leads-modal-two-card-subtitle--card-edit {
+  @include fontBold700;
+  padding-left: vw(10px);
+  margin-bottom: vw(6px);
+}
+.import-to-lead-modal-two-card-inner-div {
+  position: relative;
+}
+.import-to-lead-modal-two-card-close-div {
+  width: vw(50px);
+  height: vw(50px);
+  border-radius: 100%;
+  cursor: pointer;
+  position: absolute;
+  //right: vw(-15px);
+  right: vw(10px);
+  top: 40%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+  }
+}
+.import-to-leads-modal-two-card-colm-two-card-edit {
+  width: 50%;
+}
+.import-to-leads-modal-two-name-tag {
+  width: fit-content;
+  height: auto;
+  background: rgb(242, 243, 246);
+  background: linear-gradient(
+    212deg,
+    rgba(242, 243, 246, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  border: vw(1px) solid rgba(112, 112, 112, 0.19);
+  font-size: vw(12px);
+  line-height: vw(18px);
+  @include fontMedium500;
+  color: $theme-text-dark-gray-to-white;
+  padding: vw(16.5px) vw(20px);
+  padding-bottom: vw(12px);
+  margin-right: vw(15px);
+  border-radius: vw(25px);
+  min-width: vw(100px);
+  text-align: center;
+  margin-bottom: vw(15px);
+}
+.import-leads-modal-two-card-outer-div--edit {
+  height: vw(390px);
+  overflow-x: hidden;
+}

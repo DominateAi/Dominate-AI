@@ -1,0 +1,50 @@
+// new dashboard row seven calendar data card
+
+.new-dashboard-row-seven__calendar-data-card-overflow {
+  height: vw(395px);
+  display: block;
+  overflow: auto;
+  padding-right: vw(15px);
+
+  .new-dashboard-row-seven__members-img-text-block {
+    padding-bottom: vw(27px);
+  }
+}
+
+.new-dashboard-row-seven__calendar-data-text-block {
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: space-between;
+}
+
+.new-dashboard-row-seven__calendar-data-text-1 {
+  font-size: vw(16px);
+  line-height: vw(25px);
+  @include fontMedium500;
+  margin-bottom: 0;
+  margin-left: vw(17px);
+}
+
+.new-dashboard-row-seven__calendar-data-text-2 {
+  font-size: vw(14px);
+  line-height: vw(18px);
+  @include fontRegular400;
+  margin-bottom: 0;
+  margin-left: vw(17px);
+  color: $theme-text-color-white-79;
+}
+
+.new-dashboard-row-seven__calendar-data-orange-dot {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    width: vw(7px);
+    height: vw(7px);
+    border-radius: 50%;
+    background: #fc9f35;
+    margin-right: vw(10px);
+  }
+}

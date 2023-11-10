@@ -1,0 +1,551 @@
+/* ===============================================================
+                    
+                        add lead mobile
+                    
+================================================================== */
+
+@import "./addLeadProgressbar";
+@import "./addLeadPagination";
+@import "./addLead-react-select";
+
+// new edit lead form
+.new-edit-lead-form-row {
+  .add-lead-pagination .rc-pagination {
+    width: 45%;
+  }
+
+  .popup-input-fields-input-and-error-block {
+    width: 100%;
+
+    input {
+      max-width: 83%;
+    }
+  }
+
+  .react-select-follow-up-form-container {
+    max-width: 58%;
+    margin-left: mvwDivide(39px);
+  }
+
+  .add-lead-input-field--countryCode .react-tel-input input.form-control,
+  .react-tel-input input {
+    margin-top: mvwDivide(-10px) !important;
+  }
+
+  input {
+    max-width: 100%;
+  }
+
+  .react-datepicker-wrapper {
+    width: 100%;
+  }
+}
+
+.container-fluid.add-lead-modal-container
+  .phone-form-control-block__lead-profile
+  .react-tel-input
+  .form-control {
+  margin-top: mvwDivide(6px) !important;
+}
+
+// media accounts
+.all-checkbox-block {
+  .new-edit-lead-form-row {
+    padding-top: mvwDivide(20px);
+    padding-left: mvwDivide(30px);
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    img {
+      width: mvwDivide(40px);
+      margin-right: mvwDivide(20px);
+    }
+
+    input {
+      width: 93%;
+      max-width: inherit;
+      margin-top: mvwDivide(30px);
+      margin-bottom: mvwDivide(10px);
+    }
+  }
+}
+
+// shipping details
+.new-edit-lead-form-row__input {
+  input,
+  textarea {
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
+
+// about textarea
+.add-lead-input-field.new-edit-lead-form-row__input {
+  max-width: 55%;
+  margin-left: 0;
+}
+
+.new-edit-lead-form-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+
+  .add-lead-input-field {
+    margin-top: 0 !important;
+  }
+
+  label {
+    width: 25%;
+  }
+
+  .countryCode-fixed-plus {
+    top: mvwDivide(-1px);
+  }
+
+  .add-lead-input-field--countryCode input {
+    max-width: 100%;
+  }
+
+  .add-lead-input-field--phoneNumber input {
+    max-width: 88.5%;
+  }
+
+  #leadAssignRepresentative,
+  #tagsInputValue,
+  .representative-recent-img-text-block {
+    width: 100%;
+  }
+
+  label + div,
+  label + br + div,
+  label + br + input {
+    flex-grow: 1;
+    width: 30%;
+    margin-left: 0;
+
+    div,
+    input,
+    label {
+      margin-left: 0 !important;
+    }
+
+    label {
+      width: 100%;
+    }
+  }
+
+  #tagsInputValue {
+    margin-top: mvwDivide(20px) !important;
+  }
+}
+
+.new-edit-lead-form-overflow-block {
+  max-height: 70vh;
+  padding-right: mvwDivide(45px);
+  overflow: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    height: mvwDivide(5px);
+    width: mvwDivide(13px);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #80808028;
+    // box-shadow: 0 mvwDivide(3px) mvwDivide(10px) #80808028;
+    border-radius: mvwDivide(10px);
+    margin: mvwDivide(10px);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: mvwDivide(10px);
+    background: #502eff;
+    background: linear-gradient(306deg, #502eff 0%, #d1c7ff 100%);
+
+    &:hover {
+      background: #502eff;
+      background: linear-gradient(306deg, #502eff 0%, #d1c7ff 100%);
+    }
+  }
+}
+
+.new-edit-lead-form-row__emp-block {
+  input.new-edit-lead-form-row__input {
+    max-width: 45%;
+  }
+
+  .add-lead-input-field {
+    max-width: 45%;
+  }
+}
+
+.new-edit-lead-form-row__task-block {
+  .task-edit-status {
+    align-items: center;
+  }
+
+  .new-edit-lead-form-row__input {
+    max-width: 62%;
+  }
+
+  .leads-title-block-container__date-picker {
+    margin-top: mvwDivide(20px);
+    margin-bottom: mvwDivide(10px);
+  }
+
+  .react-datepicker__input-container {
+    input {
+      max-width: 100%;
+    }
+  }
+
+  .new-edit-lead-form-row {
+    .main-dropdown-class {
+      width: 60%;
+      max-width: 57%;
+      margin-left: mvwDivide(82px);
+
+      input {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.new-edit-lead-form-row__holiday-edit {
+  .type-of-leave-select {
+    margin-top: mvwDivide(10px);
+
+    input {
+      padding-left: mvwDivide(30px);
+    }
+  }
+  .new-edit-lead-form-row {
+    label {
+      width: 19%;
+    }
+  }
+  .react-datepicker-wrapper {
+    width: 100%;
+  }
+
+  input {
+    max-width: 100%;
+  }
+}
+
+// new edit lead form end
+
+.is-invalid {
+  color: #ff4848;
+  margin-top: mvwDivide(10px);
+  font-size: mvwDivide(15px);
+  @include fontRegular400;
+  line-height: mvwDivide(23px);
+}
+
+.add-lead-modal-container {
+  .add-lead-input-field {
+    background-color: $theme-bg-color-transparent;
+  }
+}
+
+.container-fluid.add-lead-modal-container {
+  padding-left: 0;
+  padding-top: mvwDivide(9px);
+  align-items: flex-end;
+
+  .react-tel-input .form-control {
+    // width: mvwDivide(170px) !important;
+    color: $theme-text-color-black-to-white-1 !important;
+    max-width: 100%;
+    position: relative;
+    font-size: mvwDivide(18px);
+    @include fontRegular400Important;
+    margin-bottom: mvwDivide(30px);
+    letter-spacing: 0.01rem;
+    z-index: 0;
+    margin-top: mvwDivide(35px) !important;
+    margin-bottom: 0 !important;
+    padding-left: mvwDivide(101px);
+    margin-left: 0;
+    background: $theme-bg-color-transparent;
+    border: mvwDivide(5px) solid #cccccc;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    height: mvwDivide(35px);
+    width: mvwDivide(300px);
+    outline: none;
+    padding-top: mvwDivide(25px) !important;
+    padding-bottom: mvwDivide(25px) !important;
+  }
+
+  .react-tel-input .form-control:focus {
+    outline: none !important;
+    box-shadow: none;
+  }
+
+  // .react-tel-input .flag {
+  //   width: mvwDivide(22px);
+  //   height: mvwDivide(18px);
+  // }
+
+  .react-tel-input .flag-dropdown {
+    border: mvwDivide(5px) solid transparent;
+    border-bottom: mvwDivide(5px) solid #cccccc;
+    background-color: transparent;
+
+    &:focus {
+      border: mvwDivide(5px) solid #cccccc !important;
+    }
+  }
+
+  .react-tel-input .selected-flag {
+    position: relative;
+    width: mvwDivide(86px) !important;
+    height: 100%;
+    padding: 0 mvwDivide(17px);
+    border-radius: 0;
+    border: 0 !important;
+  }
+}
+
+.add-lead-form-field-block {
+  padding-left: mvwDivide(15px);
+  padding-right: mvwDivide(33px);
+  position: relative;
+  padding-bottom: mvwDivide(53px);
+}
+
+.add-lead-prev-icon,
+.add-lead-next-icon {
+  cursor: pointer;
+  z-index: 1;
+  //opacity: 0.6;
+  //width: mvwDivide(28px) !important;
+  font-size: mvwDivide(24px) !important;
+  line-height: mvwDivide(35px) !important;
+  position: absolute;
+  //top: 92%;
+  width: mvwDivide(68px) !important;
+  height: mvwDivide(68px);
+  border-radius: 50%;
+  background: #483ca6;
+  // box-shadow: 0 mvwDivide(4px) mvwDivide(16px) mvwDivide(-1px) rgba(14, 7, 61, 0.1);
+  top: 13%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: mvwDivide(26px);
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.add-lead-prev-icon {
+  //left: 35%;
+  left: mvw(-30px);
+}
+
+.add-lead-next-icon {
+  right: mvw(-30px);
+}
+
+.add-lead-label {
+  margin-bottom: 0;
+  margin-left: mvwDivide(38px);
+  margin-right: mvwDivide(38px);
+  vertical-align: text-top;
+}
+
+.add-lead-form-field-errors {
+  margin-bottom: 0;
+  margin-left: mvwDivide(43px);
+  margin-right: mvwDivide(63px);
+  vertical-align: text-top;
+}
+
+// .border-bottom-span,
+.add-lead-input-field {
+  width: 93%;
+}
+
+.kanban-add-deal-react-select-outerblock {
+  width: 93%;
+
+  .react-select-container {
+    margin-top: mvwDivide(36px);
+    margin-bottom: mvwDivide(30px);
+  }
+}
+
+.add-lead-input-field {
+  margin-left: mvwDivide(38px);
+  margin-top: mvwDivide(35px);
+  padding: 0 mvwDivide(10px) mvwDivide(15px) mvwDivide(10px);
+  border: 0;
+  transition: border-bottom-color 0.4s ease;
+  border-bottom: mvwDivide(4px) solid #cccccc;
+
+  &:focus {
+    outline: none;
+    // border-bottom-color: rgba(48, 48, 48, .9);
+  }
+}
+
+.add-lead-input-field--countryCode {
+  margin-left: mvwDivide(48px);
+  width: 35%;
+}
+
+.add-lead-input-field--phoneNumber {
+  margin-left: mvwDivide(20px);
+  width: 63%;
+}
+
+// media account
+.all-checkbox-block {
+  margin-left: mvwDivide(50px);
+  padding-bottom: mvwDivide(15px);
+}
+
+.add-lead-input-field--checkbox-label-input {
+  label,
+  br {
+    display: none;
+  }
+
+  input {
+    margin-top: 0;
+    margin-left: mvwDivide(30px);
+  }
+}
+
+// shipping details
+.shipping-form-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: mvwDivide(10px);
+  width: 96%;
+
+  div {
+    width: 100%;
+  }
+
+  input {
+    margin-top: mvwDivide(15px);
+  }
+}
+
+/*========================
+    Leads followups date 
+  =========================*/
+.add-follow-up-main-container {
+  // .follow-up-select {
+
+  //   &>div {
+  //     height: mvwDivide(50px);
+  //   }
+
+  //   .css-yk16xz-control {
+  //     border: none;
+  //     border-bottom: vw(1px) solid;
+  //     border-radius: 0px;
+  //     border-bottom: mvwDivide(4px) solid #cccccc;
+  //   }
+
+  //   .css-1wa3eu0-placeholder {
+  //     color: $theme-text-color-1;
+  //     font-size: mvwDivide(18px);
+  //     line-height: mvwDivide(27px);
+  //   }
+
+  //   .css-1okebmr-indicatorSeparator {
+  //     color: #cccccc;
+  //   }
+
+  //   .css-tlfecz-indicatorContainer {
+  //     color: #cccccc;
+  //   }
+  // }
+
+  .follow-up-date-time-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 77%;
+    margin-bottom: 0;
+
+    .follow-up-date,
+    .follow-up-time {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: mvwDivide(30px);
+    }
+
+    .react-datepicker-wrapper {
+      input {
+        border-radius: mvwDivide(25px);
+        border: none;
+        text-align: center;
+        height: mvwDivide(50px);
+      }
+    }
+
+    label {
+      margin-bottom: mvwDivide(10px);
+    }
+  }
+}
+
+.add-lead-modal-container--followUp {
+  padding: mvwDivide(28px) mvwDivide(16px) mvwDivide(3px) mvwDivide(54px);
+}
+
+.leads-title-block-container__date-picker {
+  .react-datepicker-time__header {
+    font-size: mvwDivide(18px);
+    @include fontMedium500;
+  }
+
+  .react-datepicker__time-container
+    .react-datepicker__time
+    .react-datepicker__time-box
+    ul.react-datepicker__time-list
+    li.react-datepicker__time-list-item {
+    height: mvwDivide(45px);
+    padding: mvwDivide(8px);
+    font-size: mvwDivide(18px);
+    @include fontRegular400;
+  }
+
+  .react-datepicker__time-container
+    .react-datepicker__time
+    .react-datepicker__time-box
+    ul.react-datepicker__time-list
+    li.react-datepicker__time-list-item--selected:hover,
+  .react-datepicker__time-container
+    .react-datepicker__time
+    .react-datepicker__time-box
+    ul.react-datepicker__time-list
+    li.react-datepicker__time-list-item--selected {
+    // background-color: #00e15a;
+    background-color: #6266e1;
+  }
+
+  .react-datepicker__header--time {
+    padding: mvwDivide(10px);
+  }
+
+  .react-datepicker__time-container,
+  .react-datepicker__time-container
+    .react-datepicker__time
+    .react-datepicker__time-box {
+    width: mvwDivide(160px);
+  }
+}

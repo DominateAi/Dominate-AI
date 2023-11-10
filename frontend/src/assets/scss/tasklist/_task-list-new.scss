@@ -1,0 +1,187 @@
+.task-progress-title {
+  padding-right: vw(25px);
+  margin-right: vw(32px);
+  font-size: vw(14px);
+  line-height: vw(17px);
+  @include fontSemiBold600;
+  color: $theme-text-color-white-42;
+  @include theme-letter-spacing-28-uppercase;
+  margin-bottom: 0;
+
+  .fa {
+    margin-right: vw(20px);
+    font-size: vw(20px);
+  }
+}
+
+.new-task-content {
+  padding-right: vw(84px);
+  padding-left: vw(79px);
+
+  .leads-new-filter-button-block {
+    margin-bottom: vw(55px);
+  }
+
+  .leads-content-container__colms {
+    width: vw(565px);
+    background: transparent;
+    backdrop-filter: none;
+    border-right: vw(2px) solid $theme-border-color-white-11;
+  }
+
+  .leads-content-container .heads .heads__title {
+    padding-top: 0;
+    padding-right: vw(26px);
+    padding-bottom: vw(49px);
+    padding-left: vw(32px);
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .leads-content-container .heads .heads__title {
+    background: transparent;
+    backdrop-filter: none;
+    border: none;
+  }
+
+  .leads-content-container .leads-content-container__colms:last-child {
+    border-right: none;
+  }
+
+  .lead-single-card-container-task {
+    cursor: grab;
+    padding: vw(23px) vw(43px) vw(23px) vw(20px);
+    margin-bottom: vw(23px);
+    @include theme-mixin-2-important;
+    width: vw(530px);
+    position: relative;
+
+    font-size: vw(18px);
+    line-height: vw(22px);
+    color: rgba(255, 255, 255, 0.79) !important;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .accordion__panel {
+    margin-top: vw(28px);
+    padding-top: vw(24px);
+    border-top: vw(2px) solid $theme-border-color-grey-1;
+  }
+}
+
+.lead-single-card-container-task__editDropdown {
+  position: absolute;
+  top: vw(17px);
+  right: vw(20px);
+}
+
+.task-new-accordion-6-dots-img {
+  width: vw(10px);
+  height: auto;
+  margin-right: vw(11px);
+}
+
+.task-new-accordion-arrow-up-img,
+.task-new-accordion-arrow-down-img {
+  width: vw(25px);
+  height: auto;
+}
+
+.task-new-accordion-desc-text-1 {
+  color: $theme-text-color-white-79;
+  line-height: vw(30px) !important;
+}
+
+.task-new-accordion-desc-text-1__span-1 {
+  font-size: vw(14px);
+  @include fontSemiBold600;
+  @include theme-letter-spacing-28-uppercase;
+  color: $theme-text-color-white-42;
+}
+
+.task-new-accordion-desc-text-1__span-2 {
+  color: $theme-text-color-white-42;
+  margin-right: vw(11px);
+  margin-left: vw(33px);
+}
+
+.task-new-accordion-desc-block {
+  padding-right: vw(5px);
+  padding-bottom: vw(15px);
+  padding-left: vw(10px);
+  margin-bottom: vw(25px);
+  border-bottom: vw(2px) solid $theme-border-color-grey-1;
+}
+
+.task-new-accordion-assign-text-1 {
+  font-size: vw(14px);
+  line-height: vw(17px);
+  @include fontSemiBold600;
+  @include theme-letter-spacing-28-uppercase;
+  color: $theme-text-color-blue-5;
+  margin-bottom: vw(10px);
+
+  img {
+    vertical-align: text-top;
+    width: vw(15px);
+    margin-right: vw(15px);
+    margin-bottom: vw(4px);
+  }
+
+  .task-new-accordion-assign-text-1__span-1 {
+    font-size: vw(18px);
+    line-height: vw(22px);
+    @include fontRegular400;
+    margin-left: vw(18px);
+    letter-spacing: 0;
+    text-transform: capitalize;
+  }
+}
+
+.task-new-accordion-date-text-1 {
+  font-size: vw(18px);
+  line-height: vw(22px);
+  @include fontRegular400;
+  color: $theme-text-color-white-79;
+  margin-bottom: vw(19px);
+  white-space: nowrap;
+
+  img {
+    vertical-align: text-top;
+    width: vw(18px);
+    margin-right: vw(14px);
+  }
+
+  .task-new-accordion-date-text-1__span-1 {
+    margin-right: vw(11px);
+    margin-left: vw(15px);
+    color: $theme-text-color-white-42;
+    @include theme-letter-spacing-28-uppercase;
+  }
+}
+
+.task-new-accordion-text-block-1 {
+  padding-right: vw(5px);
+  padding-left: vw(10px);
+}
+
+.task-new-accordion-text-block-1__colm1 {
+  padding-right: vw(18px);
+  margin-right: vw(10px);
+  position: relative;
+
+  &::after {
+    content: " ";
+    width: vw(2px);
+    height: 70%;
+    position: absolute;
+    right: 0;
+    top: 15%;
+    display: block;
+    background: $theme-border-color-white-11;
+  }
+}

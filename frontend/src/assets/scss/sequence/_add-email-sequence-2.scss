@@ -1,0 +1,66 @@
+.mail_sequence_main_container {
+  #leftcard {
+    border: none;
+    // box-shadow: 0 vw(3px) vw(6px) #80808028;
+  }
+
+  .blockelem--canvas {
+    margin-bottom: vw(35px);
+    cursor: pointer;
+    position: relative;
+  }
+
+  .blockin {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .blocktext {
+    width: 100%;
+    display: block;
+    padding: vw(25px) vw(34px);
+    // background: #f2f3f6;
+    // box-shadow: vw(1px) vw(3px) (20px) #90909012;
+    margin-left: 0;
+    // background-color: #fafaff;
+    // border: vw(1px) solid rgba(132, 132, 132, 0.27);
+    // border-radius: vw(10px);
+    @include theme-mixin-2;
+  }
+
+  .blocktitle {
+    // color: $theme-text-color-1;
+    font-size: vw(22px);
+    line-height: vw(33px);
+    @include fontMedium500;
+    margin-bottom: 0;
+    color: $theme-text-color-white-79;
+    text-align: center;
+  }
+
+  .blocktext--addnextstep {
+    // background: $theme-tab-bg-color-1;
+    // border: vw(1px) dashed rgba(134, 116, 167, 0.26);
+    cursor: pointer;
+    @include theme-mixin-1;
+    @include border-mixin-1--dashed;
+  }
+
+  .blockico {
+    background: linear-gradient(308deg, #502eff 0%, #d1c7ff 100%);
+    // box-shadow: 0 vw(3px) vw(6px) #80808029;
+    border-radius: vw(7px) 0 0 vw(7px);
+    width: vw(43px);
+    height: vw(43px);
+    padding-right: vw(5px);
+
+    span {
+      font-size: vw(22px);
+      line-height: vw(43px);
+      @include fontMedium500;
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+  }
+}

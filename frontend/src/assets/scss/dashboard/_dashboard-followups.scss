@@ -1,0 +1,32 @@
+// followups content css
+.line-height-normal {
+  padding-top: vw(10px);
+  line-height: vw(130px);
+}
+
+.followups-width-200 {
+  position: relative;
+  margin-top: vw(25px);
+  width: vw(230px);
+  padding-right: vw(20px);
+  margin-right: vw(37px);
+  display: flex;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: vw(10px);
+    height: vw(230px);
+    background: #ffffff;
+    display: block;
+    border-radius: vw(5px);
+  }
+}
+
+.dashboard-followups-card-msg-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}

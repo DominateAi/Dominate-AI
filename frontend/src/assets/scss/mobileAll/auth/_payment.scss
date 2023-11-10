@@ -1,0 +1,397 @@
+/*==================================
+            Payment Css
+===================================*/
+
+.expired-plans-update-sections {
+  background-image: url("/static/media/dominate-auth-bg.ba9b293c.svg") !important;
+  background-position: inherit !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.free-triel-subscription-ended-section {
+  background-image: url("/static/media/dominate-auth-bg.ba9b293c.svg") !important;
+  background-position: inherit !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.payment-main-conatiner {
+  /*========================
+        subscription fields css
+      ===========================*/
+  label {
+    color: $theme-text-color-1;
+    font-size: mvwDivide(30px);
+    line-height: mvwDivide(46px);
+    @include fontBold700;
+    margin-bottom: mvwDivide(26px);
+  }
+  .subscription {
+    // display: flex;
+
+    // justify-content: center;
+
+    .subscription-box {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      padding: 0 mvwDivide(50px);
+
+      width: mvwDivide(477px);
+      height: mvwDivide(150px);
+      // background-color: $theme-bg-color-1;
+      // box-shadow: 0px 0px mvwDivide(20px) #80808017;
+      // border-radius: mvwDivide(20px);
+      background-color: transparent;
+      box-shadow: 0 0 0;
+      border-radius: 0;
+      margin-left: mvwDivide(40px);
+      margin-right: mvwDivide(40px);
+      margin-top: 0;
+      margin-bottom: mvwDivide(5px);
+      // background: linear-gradient(305deg, #ff8917 0%, #ffd49b 100%);
+      // background: linear-gradient(305deg, #57a1e6, #acedfc);
+      background-image: url("../../../img/plans/plans-bg.svg");
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+
+      // color: white;
+      color: #502eff;
+    }
+    .plan-content {
+      width: mvwDivide(140px);
+      margin-left: mvwDivide(40px);
+      margin-right: mvwDivide(40px);
+    }
+    .plan-price {
+      @include fontItalicPoppins;
+      font-size: mvwDivide(24px);
+      line-height: mvwDivide(35px);
+      margin-bottom: 0;
+      // margin-top: mvwDivide(15px);
+    }
+    .plan-name {
+      @include fontBold700;
+      font-size: mvwDivide(24px);
+      line-height: mvwDivide(35px);
+      margin-bottom: 0;
+      // margin-top: mvwDivide(15px);
+    }
+    .plan-users {
+      @include fontMediumItalicPoppins;
+      font-size: mvwDivide(15px);
+      line-height: mvwDivide(23px);
+      margin-bottom: 0;
+      // margin-top: mvwDivide(15px);
+    }
+  }
+
+  .subscription-box.active-plan {
+    // border: mvwDivide(3px) solid greenyellow;
+    background-image: url("../../../img/plans/active-plans-bg.svg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    color: $color-white;
+  }
+
+  .subscription-box:hover {
+    cursor: pointer;
+  }
+  .subscription-box-1:hover {
+    cursor: pointer;
+  }
+
+  .buttons-section {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    margin-top: vw(20px);
+    padding: 0 mvwDivide(70px);
+    .make-payment {
+      margin-left: mvwDivide(30px);
+      // background: $theme-bg-dark-blue-to-purple-1 !important;
+      background: linear-gradient(306deg, #502eff 0%, #d1c7ff 100%) !important;
+      border: none;
+      width: mvwDivide(235px);
+      height: mvwDivide(50px);
+      border-radius: mvwDivide(30px);
+      color: white;
+      @include fontBold700;
+      font-size: mvwDivide(24px);
+      // line-height: mvwDivide(31px);
+    }
+    .cancel-payment {
+      background-color: transparent;
+      border: mvwDivide(2px) solid #502eff;
+      width: mvwDivide(150px);
+      height: mvwDivide(50px);
+      border-radius: mvwDivide(30px);
+      color: #502eff;
+      @include fontMedium500;
+      font-size: mvwDivide(18px);
+      line-height: mvwDivide(31px);
+      margin-right: mvwDivide(30px);
+    }
+  }
+}
+
+/*===============================
+    Delete Employee Popup css
+  =================================*/
+.employee-delete-popup {
+  width: mvwDivide(600px) !important;
+}
+
+.employee-delete-popup-container {
+  li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+  img {
+    height: auto;
+    width: mvwDivide(50px);
+    margin-left: mvwDivide(40px);
+    margin-right: mvwDivide(20px);
+  }
+  p {
+    margin: 0;
+    font-size: mvwDivide(24px);
+    line-height: mvwDivide(35px);
+    color: $theme-text-color-1;
+    @include fontRegular400;
+  }
+  button {
+    background-color: #ff4848;
+    border: none;
+    width: mvwDivide(150px);
+    height: mvwDivide(40px);
+    border-radius: mvwDivide(30px);
+    color: white;
+    @include fontMedium500;
+    font-size: mvwDivide(18px);
+    line-height: mvwDivide(31px);
+  }
+}
+
+/*================================
+      Warning employee css
+  =================================*/
+.customModal--addLead.customModal-warning {
+  max-width: 90%;
+  height: fit-content;
+  width: 60.35417vw !important;
+  border-radius: 1.78125vw;
+  padding: 0 !important;
+  // box-shadow: 0 0.15625vw 2.60417vw 0 rgba(0, 0, 0, 0.16);
+}
+
+.warning-employee-model {
+  width: mvwDivide(587px) !important;
+
+  // height: mvwDivide(471px);
+  .employee-warning-popup-container {
+    h3 {
+      @include fontBold700;
+      font-size: mvwDivide(32px);
+      color: #333333;
+      line-height: mvwDivide(30px);
+    }
+
+    padding: mvwDivide(30px);
+  }
+  .warning-downgarade-section {
+    padding-bottom: mvwDivide(30px);
+    background-color: #d3d3d329;
+    height: 100%;
+  }
+  .current-plan-section {
+    .detail-section {
+      h4 {
+        margin-bottom: 0;
+        font-size: mvwDivide(18px);
+        color: #333333;
+        margin-left: mvwDivide(30px);
+        @include fontSemiBold600;
+      }
+      p {
+        margin-left: mvwDivide(30px);
+        margin-bottom: 0;
+        font-size: mvwDivide(18px);
+        color: #333333;
+        @include fontRegular400;
+      }
+      img {
+        width: mvwDivide(109px);
+        height: mvwDivide(81px);
+      }
+      display: flex;
+      margin-top: mvwDivide(20px);
+    }
+    padding: mvwDivide(30px);
+    h3 {
+      font-size: mvwDivide(24px);
+      line-height: mvwDivide(30px);
+      color: #333333;
+      @include fontSemiBold600;
+    }
+  }
+  .downgrading-plan-section {
+    .detail-section {
+      h4 {
+        margin-bottom: 0;
+        font-size: mvwDivide(18px);
+        color: #333333;
+        margin-left: mvwDivide(30px);
+        @include fontSemiBold600;
+      }
+      p {
+        margin-left: mvwDivide(30px);
+        margin-bottom: 0;
+        font-size: mvwDivide(18px);
+        color: #333333;
+        @include fontRegular400;
+      }
+      img {
+        width: mvwDivide(109px);
+        height: mvwDivide(81px);
+      }
+      display: flex;
+      margin-top: mvwDivide(20px);
+    }
+    padding: mvwDivide(30px);
+    h3 {
+      font-size: mvwDivide(24px);
+      line-height: mvwDivide(30px);
+      color: #333333;
+      @include fontSemiBold600;
+    }
+  }
+
+  .btn-section {
+    text-align: center;
+
+    .cancel-btn {
+      width: mvwDivide(170px);
+      height: mvwDivide(50px);
+      background-color: transparent;
+      border: 2px solid #502eff;
+      color: #502eff;
+      border-radius: mvwDivide(34px);
+      font-size: mvwDivide(21px);
+      line-height: mvwDivide(31px);
+      @include fontBold700;
+      margin-right: mvwDivide(20px);
+    }
+    .continue-btn {
+      width: mvwDivide(170px);
+      height: mvwDivide(50px);
+      background-color: #502eff;
+      // background: linear-gradient(306deg, #502eff 0%, #d1c7ff 100%) !important;
+      border: 2px solid #502eff;
+      color: white;
+      border-radius: mvwDivide(34px);
+      font-size: mvwDivide(21px);
+      line-height: mvwDivide(31px);
+      @include fontBold700;
+    }
+  }
+}
+
+.payment-success-main-container {
+  padding-top: mvwDivide(120px);
+  padding-bottom: mvwDivide(80px);
+  min-height: 100vh;
+  background-image: url("../../../img/auth/dominate-auth-bg.svg");
+  background-position: inherit;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  // box-shadow: mvwDivide(0px) mvwDivide(0px) mvwDivide(40px) #0000000c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  .payment-success-box {
+    width: mvwDivide(586px);
+    height: mvwDivide(300px);
+  }
+  .heading {
+    border-top-left-radius: mvwDivide(40px);
+    border-top-right-radius: mvwDivide(40px);
+    background-color: $theme-bg-color-1;
+    padding: mvwDivide(30px);
+    h3 {
+      color: #333333;
+      font-size: mvwDivide(30px);
+      line-height: mvwDivide(31px);
+      @include fontBold700;
+    }
+  }
+  .confirm-message {
+    padding-top: mvwDivide(40px);
+    padding-left: mvwDivide(30px);
+    padding-bottom: mvwDivide(30px);
+    border-bottom-left-radius: mvwDivide(25px);
+    border-bottom-right-radius: mvwDivide(25px);
+    background-color: #fafafa;
+    p {
+      font-size: mvwDivide(21px);
+      line-height: mvwDivide(30px);
+      color: #333333;
+      @include fontRegular400;
+      margin-bottom: mvwDivide(30px);
+    }
+    button {
+      width: mvwDivide(200px);
+      height: mvwDivide(50px);
+      border-radius: mvwDivide(34px);
+      color: white;
+      border: none;
+      font-size: mvwDivide(21px);
+      line-height: mvwDivide(31px);
+      background: -moz-linear-gradient(
+        107deg,
+        rgba(140, 217, 250, 1) 0%,
+        rgba(36, 136, 203, 1) 100%
+      ); /* ff3.6+ */
+      background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0%, rgba(36, 136, 203, 1)),
+        color-stop(100%, rgba(140, 217, 250, 1))
+      ); /* safari4+,chrome */
+      background: -webkit-linear-gradient(
+        107deg,
+        rgba(140, 217, 250, 1) 0%,
+        rgba(36, 136, 203, 1) 100%
+      ); /* safari5.1+,chrome10+ */
+      background: -o-linear-gradient(
+        107deg,
+        rgba(140, 217, 250, 1) 0%,
+        rgba(36, 136, 203, 1) 100%
+      ); /* opera 11.10+ */
+      background: -ms-linear-gradient(
+        107deg,
+        rgba(140, 217, 250, 1) 0%,
+        rgba(36, 136, 203, 1) 100%
+      ); /* ie10+ */
+      background: linear-gradient(
+        343deg,
+        rgba(140, 217, 250, 1) 0%,
+        rgba(36, 136, 203, 1) 100%
+      ); /* w3c */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2488CB', endColorstr='#8CD9FA',GradientType=0 ); /* ie6-9 */
+    }
+  }
+}
+
+// import payment delete modal
+
+@import "./payment-deleteModal";

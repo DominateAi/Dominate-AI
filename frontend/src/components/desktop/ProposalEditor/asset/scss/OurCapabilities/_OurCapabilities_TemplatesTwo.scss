@@ -1,0 +1,109 @@
+.our_capabilities_template_two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  word-break: break-all;
+  .our_capabilities_template_two__left__line {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: vw(49px);
+    border-radius: vw(5px);
+  }
+  .our_capabilities_template_two_top {
+    display: flex;
+    justify-content: flex-end;
+    width: 70%;
+    align-items: center;
+    height: 20%;
+  }
+  .our_capabilities_template_two_headline {
+    width: 55%;
+    height: vw(60px);
+    display: flex;
+    justify-content: flex-end;
+  }
+  .our_capabilities_template_two__top__line {
+    width: vw(5px);
+    height: vw(40px);
+    display: flex;
+    align-items: center;
+    border-radius: vw(20px);
+    margin: auto vw(10px);
+  }
+  .our_capabilities_template_two_bottom {
+    display: flex;
+    width: 100%;
+    padding: vw(30px);
+  }
+  .our_capabilities_template_two_bottom_left {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding-left: vw(80px);
+    padding-right: vw(50px);
+  }
+  .our_capabilities_template_two_bottom_right {
+    width: 40%;
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+  .our_capabilities_template_two_bottom_left_block {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-bottom: vw(15px);
+  }
+  .our_capabilities_template_two_bottom_left_icon {
+    width: 10%;
+    height: 100%;
+    .icon_selection_component_main_container {
+      width: vw(90px);
+      height: vw(90px);
+    }
+    .icon_selection_component_main_container_selected {
+      width: vw(90px);
+      height: vw(90px);
+    }
+  }
+  .our_capabilities_template_two_bottom_left_outer {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    color: white;
+    //height: vw(200px);
+  }
+
+  .our_capabilities_template_two_bottom_left_head {
+    display: flex;
+    width: 100%;
+    height: vw(35px);
+    padding-top: vw(5px);
+    margin-bottom: vw(5px);
+  }
+  .our_capabilities_template_two_bottom_left_para {
+    display: flex;
+    width: 100%;
+    height: vw(50px);
+    padding-bottom: vw(10px);
+  }
+  .our_capabilities_template_two_bottom_left_background {
+    width: 100%;
+    height: 100%;
+    height: auto;
+    display: block;
+  }
+  .our_capabilities_template_two_bottom_left_icon {
+    .icon_selection_component_main_container {
+      width: vw(90px);
+      height: vw(89.7px);
+    }
+    .icon_selection_component_main_container_selected {
+      width: vw(90px);
+      height: vw(89.7px);
+    }
+  }
+}

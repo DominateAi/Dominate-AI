@@ -1,0 +1,39 @@
+/* ===============================================================
+                    
+                            activity tabs
+
+================================================================== */
+
+.activityMenuTabs {
+  .rwt__tablist {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    // padding: 0 vw(55px) 0 vw(68px);
+    // box-shadow: vw(25px) vw(3px) vw(50px) rgba(0, 0, 0, 0.16);
+    border-bottom: vw(1px) solid $theme-border-color-white-06;
+
+    button {
+      color: $theme-blue-text-tab-color-1;
+      padding: vw(39px) vw(57px) vw(29px) vw(57px);
+      border: transparent;
+      background-color: transparent;
+      font-size: vw(21px);
+      @include fontRegular400;
+    }
+
+    button[aria-selected="true"] {
+      // @include fontBold700;
+      color: $theme-blue-text-tab-color-2;
+      @include fontMedium500;
+      border: 0;
+      margin-bottom: vw(-1px);
+      border-bottom: vw(1px) solid $theme-text-color-blue;
+    }
+  }
+
+  .rwt__tabpanel {
+    word-break: break-word;
+    padding: vw(33px) vw(55px) vw(33px) vw(68px);
+  }
+}

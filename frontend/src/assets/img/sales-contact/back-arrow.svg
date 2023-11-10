@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="39" height="40" viewBox="0 0 39 40">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffc371"/>
+      <stop offset="1" stop-color="#ff5f6d"/>
+      <stop offset="1" stop-color="#fbd786"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_9267" data-name="Group 9267" transform="translate(-5389 5338)">
+    <rect id="Rectangle_2390" data-name="Rectangle 2390" width="39" height="40" rx="19.5" transform="translate(5389 -5338)" fill="url(#linear-gradient)"/>
+    <g id="Symbol_22_6" data-name="Symbol 22 – 6" transform="translate(5401.62 -5320.879)">
+      <line id="Line_45" data-name="Line 45" x1="4.439" y2="4.439" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+      <line id="Line_46" data-name="Line 46" x1="4.439" y1="4.439" transform="translate(0 4.439)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+      <line id="Line_47" data-name="Line 47" x2="13.474" transform="translate(0.406 4.439)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

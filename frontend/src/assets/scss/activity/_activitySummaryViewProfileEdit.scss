@@ -1,0 +1,89 @@
+/* ===============================================================
+                    
+            activity : summary view profile edit
+
+================================================================== */
+
+.activityMenuTabs.activityMenuTabs--editModalViewProfile {
+  .rwt__tablist,
+  .rwt__tablist button {
+    padding: 0;
+  }
+
+  .rwt__tablist button {
+    margin-right: vw(30px);
+    margin-left: vw(30px);
+    width: vw(166px);
+    text-align: center;
+  }
+
+  .rwt__tablist {
+    text-align: center;
+    margin-top: vw(16px);
+    box-shadow: 0 0 0;
+  }
+
+  .rwt__tablist button[aria-selected="true"]::after {
+    content: "";
+    display: block;
+    width: vw(166px);
+    height: vw(5px);
+    margin-top: vw(16px);
+    background-color: $theme-bg-color-tab-after-block;
+  }
+
+  .rwt__tabpanel {
+    padding: vw(35px) 0 0 0;
+  }
+
+  label,
+  input,
+  textarea {
+    margin-left: 0;
+  }
+
+  textarea {
+    width: 95%;
+    margin-top: vw(15px);
+  }
+
+  input {
+    margin-top: vw(15px);
+  }
+
+  .shipping-form-flex {
+    width: 98%;
+
+    div {
+      width: 50%;
+    }
+  }
+}
+
+.edit-profile-modal-outer-div {
+  padding-left: vw(58px);
+  padding-right: vw(18px);
+  padding-top: vw(9px);
+}
+
+.view-profile-basic-edit-acc {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: vw(10px);
+  width: 98%;
+
+  .summary-outlookImg {
+    margin-right: vw(15px);
+    border-radius: vw(7px);
+    margin-bottom: vw(10px);
+  }
+
+  input {
+    margin-right: vw(35px);
+  }
+}
+
+.overflow-form {
+  max-height: vw(600px);
+  overflow: auto;
+}

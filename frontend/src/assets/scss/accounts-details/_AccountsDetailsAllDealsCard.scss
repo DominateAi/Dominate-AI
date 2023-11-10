@@ -1,0 +1,234 @@
+.accounts-details-all-deals-card {
+  margin-top: vw(20px);
+  margin-bottom: vw(25px);
+  margin-top: vw(25px);
+  width: vw(1808px);
+  height: auto;
+  // border-radius: vw(20px);
+  // box-shadow: vw(1px) vw(3px) vw(20px) #24415d4d;
+  padding: vw(30px);
+  // background: linear-gradient(
+  //   277deg,
+  //   rgba(242, 243, 246, 1) 0%,
+  //   rgba(255, 255, 255, 1) 100%
+  // );
+  @include theme-mixin-1;
+  @include border-mixin-1;
+  border-radius: vw(18px);
+
+  position: relative;
+
+  // &::after {
+  //   content: "";
+  //   width: 90%;
+  //   height: vw(8px);
+  //   //background: rgb(101, 78, 163);
+  //   background: linear-gradient(
+  //     90deg,
+  //     rgba(101, 78, 163, 1) 0%,
+  //     rgba(75, 108, 183, 1) 0%,
+  //     rgba(234, 175, 200, 1) 100%
+  //   );
+  //   border-radius: vw(4px);
+  //   position: absolute;
+  //   bottom: vw(-4px);
+  //   left: 5%;
+  // }
+
+  .accounts-details-all-deals-card-profileImg-div {
+    width: vw(71px);
+    height: vw(71px);
+    border-radius: 100%;
+    margin-right: vw(16px);
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      // box-shadow: 0 vw(4px) vw(6px) #00000028;
+      //border-radius: 50%;
+    }
+  }
+}
+.accounts-details-all-deals-card-title {
+  color: $theme-text-color-1;
+}
+.accounts-details-all-deals-card-subtitle {
+  // color: rgba(48, 48, 48, 0.48);
+  color: $theme-text-color-white-42;
+  // text-transform: uppercase;
+  @include theme-letter-spacing-28-uppercase;
+}
+.accounts-details-all-deals-card-subtitle-data {
+  // color: $theme-text-dark-gray-to-white;
+  padding-left: vw(30px);
+  color: $theme-text-color-white-79;
+}
+.accounts-details-all-deals-card-subtitle-data-type {
+  // color: $theme-text-dark-gray-to-white;
+  // padding: vw(10px) vw(20px);
+  padding: vw(22px) vw(34px);
+  // border-radius: vw(25px);
+  margin-left: vw(10px);
+  // background: $theme-bg-color-white-03;
+  // box-shadow: 0 vw(3px) vw(6px) #80808028;
+  color: $theme-text-color-white-79;
+  @include theme-mixin-4;
+  border-radius: vw(18px);
+}
+.accounts-details-all-deals-card-details-div-middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: vw(30px);
+}
+.accounts-details-all-deals-card-details-div {
+  // display: flex;
+  // flex-direction: column;
+  // width: 95%;
+  width: 20%;
+}
+.accounts-details-all-deals-card-details-div-middle-colm-1,
+.accounts-details-all-deals-card-details-div-middle-colm-2,
+.accounts-details-all-deals-card-details-div-middle-colm-3,
+.accounts-details-all-deals-card-details-div-middle-colm-4,
+.accounts-details-all-deals-card-details-div-middle-colm-5 {
+  justify-content: flex-start;
+  padding: vw(10px) vw(30px);
+  flex-wrap: nowrap !important;
+  width: 20%;
+}
+.accounts-details-all-deals-card-details-div-middle-colm-2 {
+  width: 15%;
+}
+.accounts-details-all-deals-card-details-div-middle-colm-2 {
+  //width: 15%;
+  padding: 0 vw(10px);
+  align-items: center;
+}
+/*.accounts-details-all-deals-card-details-div-middle-colm-1,
+.accounts-details-all-deals-card-details-div-middle-colm-3,
+.accounts-details-all-deals-card-details-div-middle-colm-4 {
+  //width: 20%;
+}*/
+.accounts-details-all-deals-card-details-div-middle-colm-5 {
+  padding-right: vw(10px);
+}
+
+.accounts-details-all-deals-card-details-div-middle-colm-1 {
+  padding-left: 0;
+}
+.accounts-details-all-deals-card-details-button-div {
+  // width: 18%;
+  // width: 15%;
+  .accounts-card-list-btn--view {
+    width: vw(161px);
+    height: vw(63px);
+  }
+  .accounts-card-list-btn--edit {
+    background: transparent;
+    border: none;
+    img {
+      width: vw(24px);
+    }
+  }
+}
+
+/*.accounts-details-all-deals-card-details-div-middle-left {
+  width: 82%;
+}*/
+.accounts-details-all-deals-card-details-bottom-div {
+  display: flex;
+}
+
+.accounts-details-all-deals-bottom-img {
+  // width: vw(35px);
+  // height: vw(35px);
+
+  //new css
+  width: vw(66px);
+  height: vw(66px);
+}
+.accounts-details-all-deals-card-details-bottom-div {
+  padding-top: vw(25px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  // width: 95%;
+  // border-top: solid vw(1px) rgba(48, 48, 48, 0.28);
+  width: 100%;
+  margin-top: vw(43px);
+  border-top: vw(2px) solid $theme-border-color-white-26;
+}
+
+.accounts-details-all-deals-card-details-bottom-block-text {
+  // font-size: vw(47px);
+  // line-height: vw(70px);
+  text-transform: capitalize;
+  // color: rgba(84, 52, 159, 0.86);
+  // @include fontSemiBold600;
+  color: $theme-text-color-white-79;
+  font-size: vw(36px);
+  line-height: vw(44px);
+  @include fontBold700;
+}
+//.accounts-details-all-deals-card-details-bottom-block {
+// width: 10%;
+//}
+.accounts-details-all-deals-card-details-bottom-block-1 {
+  // width: 20%;
+  width: 20%;
+  .accounts-details-all-deals-card-subtitle-data {
+    width: 95%;
+    word-break: break-word;
+  }
+}
+.accounts-details-all-deals-card-details-bottom-block-2 {
+  // width: 33%;
+  width: 20%;
+  .accounts-details-all-deals-card-subtitle-data {
+    width: 95%;
+    word-break: break-word;
+  }
+}
+.accounts-details-all-deals-card-details-bottom-block--worth-amount {
+  width: 15%;
+}
+.accounts-details-all-deals-card-details-bottom-block-3 {
+  // width: 35%;
+  width: 15%;
+}
+.leads-archived-div--accounts-details {
+  margin-top: vw(30px);
+  position: absolute;
+  right: vw(110px);
+  bottom: vw(-80px);
+}
+.accounts-details-leads-card-container--middel-div {
+  position: relative;
+}
+.accounts-details-all-deals-card-title-div {
+  @include theme-letter-spacing-28-uppercase;
+  color: $theme-text-color-white-42;
+  padding-top: vw(70px);
+  padding-bottom: vw(27px);
+}
+.accounts-details-all-deals-card-title-1 {
+  width: 20%;
+  padding-left: vw(90px);
+}
+// .accounts-details-all-deals-card-title-5,
+.accounts-details-all-deals-card-title-4 {
+  width: 15%;
+}
+.accounts-details-all-deals-card-title-2 {
+  width: 20%;
+  padding-left: vw(20px);
+}
+.accounts-details-all-deals-card-title-3 {
+  width: 15%;
+}
+.accounts-details-all-deals-card-title-4 {
+  padding-left: vw(20px);
+}

@@ -1,0 +1,34 @@
+.thank_you_three {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  .thank_you_three_headline {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    height: vw(60px);
+    margin-bottom: vw(20px);
+  }
+  .thank_you_three_para {
+    width: 20%;
+    height: vw(20px);
+    margin-bottom: vw(25px);
+  }
+  .thank_you_three__img {
+    width: 55%;
+    height: 60%;
+    //height: vw(450px);
+    margin: vw(35px) auto;
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+  .thank_you_three_line {
+    width: 80%;
+    height: vw(49px);
+    border-radius: vw(6px);
+  }
+}

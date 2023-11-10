@@ -1,0 +1,575 @@
+/* ===============================================================
+                    
+                        font size
+                    
+================================================================== */
+
+// light
+.font-12-light {
+  font-size: vw(12px);
+  @include fontLight300;
+  line-height: vw(18px);
+  margin-bottom: 0;
+}
+
+.font-15-light {
+  font-size: vw(15px);
+  @include fontLight300;
+  line-height: vw(23px);
+  margin-bottom: 0;
+}
+
+.font-16-light {
+  font-size: vw(16px);
+  @include fontLight300;
+  line-height: vw(25px);
+  margin-bottom: 0;
+}
+
+.font-18-light {
+  font-size: vw(18px);
+  @include fontLight300;
+  line-height: vw(27px);
+  margin-bottom: 0;
+}
+
+.font-21-light {
+  font-size: vw(21px);
+  @include fontLight300;
+  line-height: vw(31px);
+  margin-bottom: 0;
+}
+
+// regular
+.font-12-regular {
+  font-size: vw(12px);
+  @include fontRegular400;
+  line-height: vw(18px);
+  margin-bottom: 0;
+}
+
+.font-13-regular {
+  font-size: vw(13px);
+  @include fontRegular400;
+  line-height: vw(20px);
+  margin-bottom: 0;
+}
+
+.font-14-regular {
+  font-size: vw(14px);
+  @include fontRegular400;
+  line-height: vw(16px);
+  margin-bottom: 0;
+}
+
+.font-15-regular {
+  font-size: vw(15px);
+  @include fontRegular400;
+  line-height: vw(23px);
+  margin-bottom: 0;
+}
+
+.font-16-regular {
+  font-size: vw(16px);
+  @include fontRegular400;
+  line-height: vw(25px);
+  margin-bottom: 0;
+}
+
+.font-17-regular {
+  font-size: vw(17px);
+  @include fontRegular400;
+  line-height: vw(26px);
+  margin-bottom: 0;
+}
+
+.font-18-regular {
+  font-size: vw(18px);
+  @include fontRegular400;
+  line-height: vw(27px);
+  margin-bottom: 0;
+}
+
+.font-20-regular {
+  font-size: vw(20px);
+  @include fontRegular400;
+  line-height: vw(30px);
+  margin-bottom: 0;
+}
+
+.font-21-regular {
+  font-size: vw(21px);
+  @include fontRegular400;
+  line-height: vw(31px);
+  margin-bottom: 0;
+}
+
+.font-24-regular {
+  font-size: vw(24px);
+  @include fontRegular400;
+  line-height: vw(36px);
+  margin-bottom: 0;
+}
+
+.font-30-regular {
+  font-size: vw(30px);
+  @include fontRegular400;
+  line-height: vw(46px);
+  margin-bottom: 0;
+}
+
+.font-36-regular {
+  font-size: vw(36px);
+  @include fontRegular400;
+  line-height: vw(47px);
+  margin-bottom: 0;
+}
+
+// medium
+.font-13-medium {
+  font-size: vw(13px);
+  line-height: vw(19px);
+  @include fontMedium500;
+  margin-bottom: 0;
+}
+
+.font-14-medium {
+  font-size: vw(14px);
+  line-height: vw(21px);
+  @include fontMedium500;
+  margin-bottom: 0;
+}
+
+.font-16-medium {
+  font-size: vw(16px);
+  @include fontMedium500;
+  line-height: vw(25px);
+  margin-bottom: 0;
+}
+
+.font-18-medium {
+  font-size: vw(18px);
+  @include fontMedium500;
+  line-height: vw(27px);
+  margin-bottom: 0;
+}
+
+.font-20-medium {
+  font-size: vw(20px);
+  @include fontMedium500;
+  line-height: vw(30px);
+  margin-bottom: 0;
+}
+
+.font-21-medium {
+  font-size: vw(21px);
+  @include fontMedium500;
+  line-height: vw(31px);
+  margin-bottom: 0;
+}
+
+.font-24-medium {
+  font-size: vw(24px);
+  @include fontMedium500;
+  line-height: vw(35px);
+  margin-bottom: 0;
+}
+
+.font-30-medium {
+  font-size: vw(30px);
+  @include fontMedium500;
+  line-height: vw(46px);
+  margin-bottom: 0;
+}
+
+.font-42-medium {
+  font-size: vw(42px);
+  @include fontMedium500;
+  line-height: vw(63px);
+  margin-bottom: 0;
+}
+
+// semi bold
+.font-13-semibold {
+  font-size: vw(13px);
+  @include fontSemiBold600;
+  line-height: vw(19px);
+  margin-bottom: 0;
+}
+
+.font-14-semibold {
+  font-size: vw(14px);
+  @include fontSemiBold600;
+  line-height: vw(21px);
+  margin-bottom: 0;
+}
+
+.font-16-semibold {
+  font-size: vw(16px);
+  @include fontSemiBold600;
+  line-height: vw(25px);
+  margin-bottom: 0;
+}
+
+.font-17-semibold {
+  font-size: vw(17px);
+  @include fontSemiBold600;
+  line-height: vw(26px);
+  margin-bottom: 0;
+}
+
+.font-18-semibold {
+  font-size: vw(18px);
+  @include fontSemiBold600;
+  line-height: vw(27px);
+  margin-bottom: 0;
+}
+
+.font-19-semibold {
+  font-size: vw(19px);
+  @include fontSemiBold600;
+  line-height: vw(28px);
+  margin-bottom: 0;
+}
+
+.font-20-semibold {
+  font-size: vw(20px);
+  @include fontSemiBold600;
+  line-height: vw(30px);
+  margin-bottom: 0;
+}
+
+.font-21-semibold {
+  font-size: vw(21px);
+  @include fontSemiBold600;
+  line-height: vw(31px);
+  margin-bottom: 0;
+}
+
+.font-24-semibold {
+  font-size: vw(24px);
+  @include fontSemiBold600;
+  line-height: vw(35px);
+  margin-bottom: 0;
+}
+
+.font-26-semibold {
+  font-size: vw(26px);
+  @include fontSemiBold600;
+  line-height: vw(39px);
+  margin-bottom: 0;
+}
+
+.font-28-semibold {
+  font-size: vw(28px);
+  @include fontSemiBold600;
+  line-height: vw(42px);
+  margin-bottom: 0;
+}
+// bold
+.font-12-bold {
+  font-size: vw(12px);
+  @include fontBold700;
+  line-height: vw(18px);
+  margin-bottom: 0;
+}
+
+.font-15-bold {
+  font-size: vw(15px);
+  @include fontBold700;
+  line-height: vw(23px);
+  margin-bottom: 0;
+}
+
+.font-18-bold {
+  font-size: vw(18px);
+  @include fontBold700;
+  line-height: vw(27px);
+  margin-bottom: 0;
+}
+
+.font-21-bold {
+  font-size: vw(21px);
+  @include fontBold700;
+  line-height: vw(31px);
+  margin-bottom: 0;
+}
+
+.font-24-bold {
+  font-size: vw(24px);
+  @include fontBold700;
+  line-height: vw(35px);
+  margin-bottom: 0;
+}
+
+.font-25-bold {
+  font-size: vw(25px);
+  @include fontBold700;
+  line-height: vw(38px);
+  margin-bottom: 0;
+}
+
+.font-28-bold {
+  font-size: vw(28px);
+  @include fontBold700;
+  line-height: vw(42px);
+  margin-bottom: 0;
+}
+
+.font-30-bold {
+  font-size: vw(30px);
+  @include fontBold700;
+  line-height: vw(46px);
+  margin-bottom: 0;
+}
+
+.font-33-bold {
+  font-size: vw(33px);
+  @include fontBold700;
+  line-height: vw(50px);
+  margin-bottom: 0;
+}
+
+.font-36-bold {
+  font-size: vw(36px);
+  @include fontBold700;
+  line-height: vw(42px);
+  margin-bottom: 0;
+}
+
+.font-40-bold {
+  font-size: vw(40px);
+  @include fontBold700;
+  line-height: vw(60px);
+  margin-bottom: 0;
+}
+
+// extra bold
+.font-21-extraBold {
+  font-size: vw(21px);
+  @include fontExtraBold800;
+  line-height: vw(31px);
+  margin-bottom: 0;
+}
+
+.font-24-extraBold {
+  font-size: vw(24px);
+  @include fontExtraBold800;
+  line-height: vw(36px);
+  margin-bottom: 0;
+}
+
+.font-32-extraBold {
+  font-size: vw(32px);
+  @include fontExtraBold800;
+  line-height: vw(48px);
+  margin-bottom: 0;
+}
+
+.font-36-extraBold {
+  font-size: vw(36px);
+  @include fontExtraBold800;
+  line-height: vw(55px);
+  margin-bottom: 0;
+}
+
+.font-40-extraBold {
+  font-size: vw(40px);
+  @include fontExtraBold800;
+  line-height: vw(60px);
+  margin-bottom: 0;
+}
+
+/* ===============================================================
+                    
+                        margin, padding, other
+                    
+================================================================== */
+
+// margin top
+.mt-10 {
+  margin-top: vw(10px);
+}
+
+.mt-20 {
+  margin-top: vw(20px);
+}
+
+.mt-25 {
+  margin-top: vw(25px);
+}
+
+// margin right
+.mr-15 {
+  margin-right: vw(15px);
+}
+.mr-25 {
+  margin-right: vw(25px);
+}
+
+.mr-30 {
+  margin-right: vw(30px);
+}
+
+.mr-40 {
+  margin-right: vw(40px);
+}
+
+.mr-60 {
+  margin-right: vw(60px);
+}
+
+.mr-70 {
+  margin-right: vw(70px);
+}
+
+.mr-125 {
+  margin-right: vw(125px);
+}
+
+// margin bottom
+.mb-8 {
+  margin-bottom: vw(8px);
+}
+
+.mb-10 {
+  margin-bottom: vw(10px);
+}
+
+.mb-18 {
+  margin-bottom: vw(18px);
+}
+
+.mb-21 {
+  margin-bottom: vw(21px);
+}
+
+.mb-25 {
+  margin-bottom: vw(25px);
+}
+
+.mb-30 {
+  margin-bottom: vw(30px);
+}
+
+.mb-38 {
+  margin-bottom: vw(38px);
+}
+
+.mb-42 {
+  margin-bottom: vw(42px);
+}
+
+.mb-48 {
+  margin-bottom: vw(48px);
+}
+
+.mb-61 {
+  margin-bottom: vw(61px);
+}
+
+.font-30-bold.mb-61 {
+  margin-bottom: vw(39px);
+}
+
+// margin left
+.ml-30 {
+  margin-left: vw(30px);
+}
+.ml-70 {
+  margin-left: vw(70px);
+}
+.ml-79 {
+  margin-left: vw(79px);
+}
+// padding top
+.pt-10 {
+  padding-top: vw(10px);
+}
+
+.pt-20 {
+  padding-top: vw(20px);
+}
+
+.pt-25 {
+  padding-top: vw(25px);
+}
+
+.pt-40 {
+  padding-top: vw(40px);
+}
+// padding right
+.pr-20 {
+  padding-right: vw(20px);
+}
+
+.pr-70 {
+  padding-right: vw(70px);
+}
+
+// padding bottom
+.pb-10 {
+  padding-bottom: vw(10px);
+}
+
+.pb-16 {
+  padding-bottom: vw(16px);
+}
+.pb-30 {
+  padding-bottom: vw(30px);
+}
+// padding left
+.pl-10 {
+  padding-left: vw(10px);
+}
+
+.pl-30 {
+  padding-left: vw(30px);
+}
+
+// py
+.py-6 {
+  padding-top: vw(6px);
+  padding-bottom: vw(6px);
+}
+/* ===============================================================
+                    
+                            other
+                    
+================================================================== */
+
+b {
+  @include fontSemiBold600;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+.opacity-41 {
+  opacity: 0.41;
+}
+
+.opacity-62 {
+  opacity: 0.62;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
+.color-white {
+  color: #ffffff;
+}
+
+.color-white-79 {
+  color: $theme-text-color-white-79;
+}

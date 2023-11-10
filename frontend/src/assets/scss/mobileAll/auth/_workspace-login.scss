@@ -1,0 +1,185 @@
+/*===================================
+    Workspace Login Pges css
+=====================================*/
+.forget-password-confirmation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.workspace-login-page-main-conatiner {
+  min-height: 100vh;
+  position: relative;
+  background-color: rgba(249, 222, 190, 1);
+
+  background-image: url("../../../img/auth/login-signup-bg-mobile.svg");
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding: mvw(20px);
+
+  .fa-eye,
+  .fa-eye-slash {
+    cursor: pointer;
+    position: absolute;
+    right: mvwDivide(70px);
+    font-size: mvwDivide(25px);
+    margin-top: mvwDivide(15px);
+  }
+
+  .workspace-login-page-main-conatiner__row {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .col-md-6 {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .heading {
+    text-align: center;
+    h1 {
+      color: $theme-text-color-dark-blue-to-white-42;
+      @include fontSemiBold600;
+      margin-bottom: mvwDivide(5px);
+      font-size: mvwDivide(46px);
+      line-height: mvwDivide(46px);
+    }
+    p {
+      font-size: mvwDivide(20px);
+      line-height: mvwDivide(30px);
+      @include fontMedium500;
+      color: $theme-text-color-dark-blue-to-white-42;
+      margin-bottom: mvwDivide(35px);
+      text-transform: none;
+    }
+  }
+
+  /*===========================
+            Form Css
+    =============================*/
+  .workspcae-login-form {
+    width: 100%;
+    margin-top: mvwDivide(15px);
+    padding: mvwDivide(41px) mvwDivide(50px) mvwDivide(51px) mvwDivide(50px);
+    border-radius: mvwDivide(26px);
+    background-color: rgba(249, 222, 190, 1);
+    // box-shadow: 0 vw(5px) vw(15px) rgba(189, 189, 189, 0.5);
+  }
+
+  form {
+    width: 100%;
+  }
+
+  label {
+    font-size: mvwDivide(24px);
+    line-height: mvwDivide(35px);
+    color: $theme-text-color-1;
+    @include fontRegular400;
+    margin-bottom: mvwDivide(22px);
+  }
+  .form-group {
+    margin-bottom: mvwDivide(39px);
+  }
+  .form-control-new {
+    width: 100%;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    padding-bottom: mvwDivide(15px);
+    border-bottom: mvwDivide(3px) solid rgba(84, 52, 159, 0.55);
+  }
+  .form-control-new:focus {
+    box-shadow: none;
+  }
+
+  .form-control-new:focus {
+    color: $theme-text-color-blue-to-white;
+    background-color: transparent;
+    border-color: rgba(84, 52, 159, 0.55);
+    outline: 0;
+    box-shadow: none;
+  }
+
+  input {
+    font-size: mvwDivide(32px);
+    @include fontMedium500;
+    color: $theme-text-color-blue-to-white;
+    margin: 0;
+    background-color: transparent;
+    border-bottom: vw(1px) solid rgba(84, 52, 159, 0.55);
+    padding-right: mvw(30px);
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    -webkit-text-fill-color: $theme-text-color-blue-to-white;
+    border: vw(1px) solid inherit;
+    -webkit-box-shadow: mvwDivide(1000px) transparent inset;
+    transition: background-color 10000s ease-in-out 0s;
+  }
+
+  ::placeholder {
+    font-size: mvwDivide(32px);
+    // line-height: mvwDivide(27px);
+    @include fontMedium500;
+    color: rgba(84, 52, 159, 0.55);
+  }
+  button {
+    width: mvwDivide(246px);
+    height: mvwDivide(56px);
+    background-color: $theme-text-color-blue-to-white;
+    border-radius: mvwDivide(28px);
+    font-size: mvwDivide(32px);
+    // line-height: mvwDivide(31px);
+    @include fontRegular400;
+    border: none;
+    color: $color-white;
+
+    // &:focus {
+    //   outline: mvwDivide(5px) auto #502eff !important;
+    // }
+  }
+
+  .forgot-password {
+    font-size: mvwDivide(20px);
+    line-height: mvwDivide(30px);
+    @include fontMedium500;
+    color: $theme-text-color-blue-to-white;
+    display: inline-block;
+  }
+}
+
+.dominate-login-logo {
+  text-align: center;
+  margin-bottom: mvwDivide(55px);
+  img {
+    width: mvwDivide(290px);
+    cursor: pointer;
+  }
+}
+
+.copyright_text_workspace {
+  color: $theme-text-color-dark-blue-to-white-42;
+  font-size: mvwDivide(20px);
+  @include fontLight300;
+}
+
+.heading-divider-workspace {
+  width: mvwDivide(175px);
+  margin: 0 auto;
+  height: mvwDivide(23px);
+  margin-top: 0;
+  margin-bottom: mvwDivide(10px);
+  display: block;
+  background-image: url("../../../img/auth/yellow-underline.svg");
+  background-position: top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}

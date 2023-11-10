@@ -1,0 +1,67 @@
+/* ===============================================================
+
+                   dashboard 
+
+================================================================== */
+
+.bg-mobile {
+  background: url("../../../../assets/img/mobile-new/background/bg1.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  min-height: 100vh;
+  padding: mvw(20px);
+  padding-bottom: 0;
+}
+
+.dashboard-mobile-card-row {
+  justify-content: space-around;
+}
+
+.dashboard-mobile-card {
+  width: mvw(143px);
+  height: mvw(143px);
+  border-radius: mvw(13px);
+  // box-shadow: 0 mvw(3px) mvw(6px) #00000029;
+  background: #ffffff;
+  color: #502eff;
+  font-size: mvw(18px);
+  line-height: mvw(27px);
+  @include fontBold700;
+  margin-bottom: mvw(19px);
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    height: mvw(50px);
+    margin-bottom: mvw(10px);
+  }
+}
+
+.dashboard-mobile-text-block {
+  color: $color-white;
+  padding: mvw(10px) mvw(20px);
+}
+
+.dashboard-mobile__title {
+  font-size: mvw(28px);
+  line-height: mvw(42px);
+  @include fontSemiBold600;
+}
+
+.dashboard-mobile__title1 {
+  font-size: mvw(30px);
+  line-height: mvw(46px);
+  @include fontMedium500;
+  vertical-align: middle;
+  margin-right: mvw(14px);
+}
+
+.dashboard-mobile__title2 {
+  font-size: mvw(16px);
+  line-height: mvw(25px);
+  @include fontLight300;
+}

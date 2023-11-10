@@ -1,0 +1,75 @@
+// payment delete modal
+.employee-delete-popup {
+  padding: 0;
+  border-radius: vw(20px);
+}
+
+.paymentDeleteModalContentTitleBlock {
+  padding: vw(30px);
+}
+
+.paymentDeleteModalContentTitle {
+  font-size: vw(31px);
+  @include fontBold700;
+  line-height: vw(30px);
+  margin-bottom: 0;
+}
+
+.paymentDeleteModalContent__textBlock {
+  padding: vw(17px) vw(30px) 0 vw(30px);
+}
+
+.paymentDeleteModalContent {
+  background-color: #fafafa;
+  border-radius: 0 0 vw(20px) vw(20px);
+
+  ul {
+    max-height: vw(480px);
+    overflow: auto;
+    padding: vw(20px);
+    margin: vw(5px) vw(10px);
+  }
+  li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: vw(37px) vw(30px);
+    background: #ffffff;
+    // box-shadow: 0 vw(3px) vw(50px) rgba(128, 128, 128, 0.16);
+    border-radius: vw(10px);
+    margin-bottom: vw(10px);
+  }
+  img {
+    height: auto;
+    width: vw(75px);
+    margin-left: vw(30px);
+    margin-right: vw(45px);
+    border-radius: 50%;
+  }
+}
+
+.cancelBtnDeleteModal {
+  width: vw(227px);
+  height: vw(67px);
+  color: #502eff;
+  background: transparent;
+  border: vw(4px) solid #502eff;
+  border-radius: vw(34px);
+  font-size: vw(21px);
+  @include fontBold700;
+}
+
+.paymentDeleteModalContent__buttonBlock {
+  margin-top: vw(60px);
+  padding: 0 vw(51px) vw(30px) vw(51px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancelBtnDeleteModal--delete {
+  color: $color-white;
+  border: transparent;
+  // background: transparent linear-gradient(107deg, #8cd9fa 0%, #2488cb 100%) 0%
+  //   0% no-repeat padding-box;
+  background: #502eff;
+}

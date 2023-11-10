@@ -1,0 +1,88 @@
+/*===============================================
+              Employee data css
+================================================*/
+
+.employee-data-container {
+  margin-top: vw(2px);
+  .rwt__tablist {
+    text-align: center;
+  }
+  .icon-table-column {
+    width: vw(100px);
+  }
+  .content-column {
+    width: vw(500px);
+  }
+  .time-column {
+    width: vw(60px);
+    vertical-align: inherit !important;
+  }
+  .table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  .table td,
+  .table th {
+    padding: vw(20px);
+    vertical-align: top;
+    // border-bottom: vw(2px) solid #dee2e6;
+    // border-top: 0;
+  }
+  .employee-data-activity {
+    p {
+      font-size: vw(18px);
+      line-height: vw(27px);
+      @include fontRegular400;
+      margin: 0;
+      color: $theme-text-color-1;
+    }
+    span {
+      @include fontSemiBold600;
+    }
+  }
+  .employee-data-leads-own {
+    th,
+    td {
+      width: 20%;
+      word-break: break-all;
+    }
+    img {
+      height: auto;
+      width: vw(50px);
+      margin-right: vw(15px);
+      border-radius: vw(50px);
+    }
+    th {
+      font-size: vw(21px);
+      line-height: vw(31px);
+      // color: $theme-text-color-1;
+      @include fontBold700;
+      color: $theme-text-color-white-42;
+      border-bottom: 0;
+      border-top: 0;
+    }
+    td {
+      font-size: vw(21px);
+      line-height: vw(31px);
+      @include fontMedium500;
+      vertical-align: inherit !important;
+    }
+  }
+  tbody {
+    td {
+      @include border-mixin-1;
+      border-style: solid solid solid none;
+      border-right-style: none;
+
+      &:first-child {
+        border-left-style: solid;
+        border-radius: vw(25px) 0 0 vw(25px);
+      }
+
+      &:last-child {
+        border-right-style: solid;
+        border-radius: 0 vw(25px) vw(25px) 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,551 @@
+// extra light
+$font-Poppins-to-Inter_ExtraLight: "Inter-ExtraLight";
+$font-weight-Poppins-to-Inter_ExtraLight: 200;
+
+// light
+$font-Poppins-to-Inter_Light: "Inter-Light";
+$font-weight-Poppins-to-Inter_Light: 300;
+
+// regular
+$font-Poppins-to-Inter_Regular: "Inter-Regular";
+$font-weight-Poppins-to-Inter_Regular: 400;
+
+// medium
+$font-Poppins-to-Inter_Medium: "Inter-Medium";
+$font-weight-Poppins-to-Inter_Medium: 500;
+
+// semi bold
+// $font-Poppins-to-Inter_SemiBold: "Inter-SemiBold";
+// $font-weight-Poppins-to-Inter_SemiBold: 600;
+$font-Poppins-to-Inter_SemiBold: "Inter-Medium";
+$font-weight-Poppins-to-Inter_SemiBold: 500;
+
+// bold
+// $font-Poppins-to-Inter_Bold: "Inter-Bold";
+// $font-weight-Poppins-to-Inter_Bold: 700;
+$font-Poppins-to-Inter_Bold: "Inter-Medium";
+$font-weight-Poppins-to-Inter_Bold: 500;
+
+// extra bold
+// $font-Poppins-to-Inter_ExtraBold: "Inter-ExtraBold";
+// $font-weight-Poppins-to-Inter_ExtraBold: 800;
+$font-Poppins-to-Inter_ExtraBold: "Inter-Medium";
+$font-weight-Poppins-to-Inter_ExtraBold: 500;
+
+// black
+$font-Poppins-to-Inter_Black: "Inter-Black";
+$font-weight-Poppins-to-Inter_Black: 900;
+
+$font-fallback-1: sans-serif;
+$font-fallback-2: "Helvetica";
+
+// mixin poppins
+@mixin fontExtraLight200 {
+  font-weight: $font-weight-Poppins-to-Inter_ExtraLight;
+  font-family: $font-Poppins-to-Inter_ExtraLight, $font-fallback-1,
+    $font-fallback-2;
+}
+
+@mixin fontLight300 {
+  font-weight: $font-weight-Poppins-to-Inter_Light;
+  font-family: $font-Poppins-to-Inter_Light, $font-fallback-1, $font-fallback-2;
+}
+
+@mixin fontRegular400 {
+  font-weight: $font-weight-Poppins-to-Inter_Regular;
+  font-family: $font-Poppins-to-Inter_Regular, $font-fallback-1,
+    $font-fallback-2;
+}
+
+@mixin fontRegular400Important {
+  font-weight: $font-weight-Poppins-to-Inter_Regular !important;
+  font-family: $font-Poppins-to-Inter_Regular, $font-fallback-1,
+    $font-fallback-2 !important;
+}
+
+@mixin fontItalicPoppins {
+  font-weight: $font-weight-Poppins-to-Inter_Regular;
+  font-family: $font-Poppins-to-Inter_Regular, $font-fallback-1,
+    $font-fallback-2;
+  font-style: italic;
+}
+
+@mixin fontMedium500 {
+  font-weight: $font-weight-Poppins-to-Inter_Medium;
+  font-family: $font-Poppins-to-Inter_Medium, $font-fallback-1, $font-fallback-2;
+}
+
+@mixin fontMedium500Important {
+  font-weight: $font-weight-Poppins-to-Inter_Medium !important;
+  font-family: $font-Poppins-to-Inter_Medium, $font-fallback-1, $font-fallback-2 !important;
+}
+
+@mixin fontMediumItalicPoppins {
+  font-weight: $font-weight-Poppins-to-Inter_Medium;
+  font-family: $font-Poppins-to-Inter_Medium, $font-fallback-1, $font-fallback-2;
+  font-style: italic;
+}
+
+@mixin fontSemiBold600 {
+  font-weight: $font-weight-Poppins-to-Inter_SemiBold;
+  font-family: $font-Poppins-to-Inter_SemiBold, $font-fallback-1,
+    $font-fallback-2;
+}
+
+@mixin fontSemiBold600Important {
+  font-weight: $font-weight-Poppins-to-Inter_SemiBold !important;
+  font-family: $font-Poppins-to-Inter_SemiBold, $font-fallback-1,
+    $font-fallback-2 !important;
+}
+
+@mixin fontBold700 {
+  font-weight: $font-weight-Poppins-to-Inter_Bold;
+  font-family: $font-Poppins-to-Inter_Bold, $font-fallback-1, $font-fallback-2;
+}
+
+@mixin fontBold700Important {
+  font-weight: $font-weight-Poppins-to-Inter_Bold !important;
+  font-family: $font-Poppins-to-Inter_Bold, $font-fallback-1, $font-fallback-2 !important;
+}
+
+@mixin fontExtraBold800 {
+  font-weight: $font-weight-Poppins-to-Inter_ExtraBold;
+  font-family: $font-Poppins-to-Inter_ExtraBold, $font-fallback-1,
+    $font-fallback-2;
+}
+
+@mixin fontExtraBold800Important {
+  font-weight: $font-weight-Poppins-to-Inter_ExtraBold !important;
+  font-family: $font-Poppins-to-Inter_ExtraBold, $font-fallback-1,
+    $font-fallback-2 !important;
+}
+
+@mixin fontBlack900 {
+  font-weight: $font-weight-Poppins-to-Inter_Black;
+  font-family: $font-Poppins-to-Inter_Black, $font-fallback-1, $font-fallback-2;
+}
+
+// opensans bold
+// $font-OpenSans-to-Inter_Bold: "Inter-Bold";
+// $font-weight-OpenSans-to-Inter_Bold: 700;
+$font-OpenSans-to-Inter_Bold: "Inter-Medium";
+$font-weight-OpenSans-to-Inter_Bold: 500;
+
+// rubik regular
+$font-Rubik-to-Inter_Regular: "Inter-Regular";
+$font-weight-Rubik-to-Inter_Regular: 400;
+
+// rubik bold
+// $font-Rubik-to-Inter_Bold: "Inter-Bold";
+// $font-weight-Rubik-to-Inter_Bold: 700;
+$font-Rubik-to-Inter_Bold: "Inter-Medium";
+$font-weight-Rubik-to-Inter_Bold: 500;
+
+// roboto bold
+// $font-Roboto-to-Inter_Bold: "Inter-Bold";
+// $font-weight-Roboto-to-Inter_Bold: 700;
+$font-Roboto-to-Inter_Bold: "Inter-Medium";
+$font-weight-Roboto-to-Inter_Bold: 500;
+
+// roboto medium
+$font-Roboto-to-Inter_Medium: "Roboto-Medium";
+$font-weight-Roboto-to-Inter_Medium: 500;
+
+// montserrat semi bold
+// $font-Montserrat-to-Montserrat_SemiBold: "Inter-SemiBold";
+// $font-weight-Montserrat-to-Montserrat_SemiBold: 600;
+$font-Montserrat-to-Montserrat_SemiBold: "Inter-Medium";
+$font-weight-Montserrat-to-Montserrat_SemiBold: 500;
+
+// montserrat extra bold
+// $font-Montserrat-to-Inter_ExtraBold: "Inter-ExtraBold";
+// $font-weight-Montserrat-to-Inter_ExtraBold: 800;
+$font-Montserrat-to-Inter_ExtraBold: "Inter-Medium";
+$font-weight-Montserrat-to-Inter_ExtraBold: 500;
+
+// worksans medium
+$font-WorkSans-to-Inter_Medium: "Inter-Medium";
+$font-weight-WorkSans-to-Inter_Medium: 500;
+
+// open sans
+@mixin fontOpenSansBold {
+  font-weight: $font-weight-OpenSans-to-Inter_Bold;
+  font-family: $font-OpenSans-to-Inter_Bold, $font-fallback-1, $font-fallback-2;
+}
+
+// mixin rubik
+@mixin fontRubikRegular {
+  font-weight: $font-weight-Rubik-to-Inter_Regular;
+  font-family: $font-Rubik-to-Inter_Regular, $font-fallback-1, $font-fallback-2;
+}
+@mixin fontRubikRegularImportant {
+  font-weight: $font-weight-Rubik-to-Inter_Regular !important;
+  font-family: $font-Rubik-to-Inter_Regular, $font-fallback-1, $font-fallback-2 !important;
+}
+@mixin fontRubikBold {
+  font-weight: $font-weight-Rubik-to-Inter_Bold;
+  font-family: $font-Rubik-to-Inter_Bold, $font-fallback-1, $font-fallback-2;
+}
+
+// roboto
+@mixin fontRobotoBold {
+  font-weight: $font-weight-Roboto-to-Inter_Bold;
+  font-family: $font-Roboto-to-Inter_Bold, $font-fallback-1, $font-fallback-2;
+}
+@mixin fontRobotoMedium {
+  font-weight: $font-weight-Roboto-to-Inter_Medium;
+  font-family: $font-Roboto-to-Inter_Medium, $font-fallback-1, $font-fallback-2;
+}
+
+@mixin fontRobotoMediumImportant {
+  font-weight: $font-weight-Roboto-to-Inter_Medium !important;
+  font-family: $font-Roboto-to-Inter_Medium, $font-fallback-1, $font-fallback-2 !important;
+}
+
+// mixin montserrat
+@mixin fontMontserratSemiBold {
+  font-weight: $font-weight-Montserrat-to-Montserrat_SemiBold;
+  font-family: $font-Montserrat-to-Montserrat_SemiBold, $font-fallback-1,
+    $font-fallback-2;
+}
+@mixin fontMontserratExtraBold {
+  font-weight: $font-weight-Montserrat-to-Inter_ExtraBold;
+  font-family: $font-Montserrat-to-Inter_ExtraBold, $font-fallback-1,
+    $font-fallback-2;
+}
+
+// WorkSans-Medium
+@mixin fontWorkSansMedium {
+  font-weight: $font-weight-WorkSans-to-Inter_Medium;
+  font-family: $font-WorkSans-to-Inter_Medium, $font-fallback-1,
+    $font-fallback-2;
+}
+
+// Comfortaa regular
+@mixin fontComfortaaRegular {
+  font-weight: 400;
+  font-family: "Comfortaa-Regular", $font-fallback-1, $font-fallback-2;
+}
+
+/* ===============================================================
+                    
+                            Mixins box-shadow
+
+================================================================== */
+
+@mixin box-shadow-1 {
+  // box-shadow: vw(-5px) vw(5px) vw(4px) rgba(200, 200, 207, 0.2),
+  //   vw(5px) vw(-5px) vw(10px) rgba(207, 207, 221, 0.2),
+  //   vw(-5px) vw(-5px) vw(10px) rgba(254, 254, 255, 0.9),
+  //   inset vw(-1px) vw(-1px) vw(2px) rgba(244, 244, 246, 0.5);
+  box-shadow: 0 0 0;
+}
+
+/* ===============================================================                  
+                      Mixins theme mixins
+     border , shadow , radius , background combine theme mixins
+================================================================== */
+
+@mixin theme-mixin-1 {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(56px);
+}
+
+@mixin theme-mixin-tabs {
+  background: rgba(255, 255, 255, 0.02);
+  // backdrop-filter: blur(56px);
+}
+
+@mixin theme-mixin-1-blur {
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(56px);
+  border-radius: vw(25px);
+}
+
+@mixin theme-mixin-4 {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(392px);
+}
+
+@mixin theme-mixin-2 {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(56px);
+  border: vw(1px) solid rgba(229, 229, 229, 0.19);
+  border-radius: vw(25px);
+}
+
+@mixin theme-mixin-modal-bg {
+  background-color: $theme-bg-color-1;
+  // background-color: rgba(6, 5, 22, 0.25);
+  // backdrop-filter: blur(153px);
+}
+
+@mixin theme-mixin-blue-border-2 {
+  background: rgba(161, 142, 255, 0.15);
+  border: vw(1px) solid $theme-border-blue;
+  backdrop-filter: blur(56px);
+  border-radius: vw(25px);
+}
+
+@mixin theme-mixin-2-without-backdrop {
+  background: rgba(255, 255, 255, 0.03);
+  border: vw(1px) solid rgba(229, 229, 229, 0.19);
+  border-radius: vw(25px);
+}
+
+@mixin theme-mixin-without-border-and-backdrop {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: vw(25px);
+}
+
+@mixin theme-mixin-2-important {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(56px);
+  border: vw(1px) solid rgba(229, 229, 229, 0.19) !important;
+  border-radius: vw(25px);
+}
+
+@mixin theme-mixin-dark-bg {
+  background: rgba(6, 5, 22, 0.43);
+  backdrop-filter: blur(53px);
+  border-radius: vw(14px);
+}
+
+@mixin theme-blue-bg-btn {
+  color: $theme-text-gray-color-1;
+  background: $theme-bg-blue-btn;
+  border-radius: vw(25px);
+}
+@mixin theme-blue-bg-btn-important {
+  color: $theme-text-gray-color-1;
+  background: $theme-bg-blue-btn !important;
+  border-radius: vw(25px) !important;
+}
+
+@mixin theme-mixin-purple-gradient-bg-btn {
+  border: none;
+  color: $theme-text-gray-color-1;
+  background: $theme-bg-blue-btn;
+  //   color: $theme-text-color-white-79;
+  //   background: linear-gradient(270deg, $theme-text-color-blue 0%, $theme-text-color-blue-2 100%);
+}
+
+@mixin theme-mixin-purple-gradient-bg-btn-important {
+  border: none;
+  color: $theme-text-gray-color-1;
+  background: $theme-bg-blue-btn !important;
+  //   color: $theme-text-color-white-79;
+  //   background: linear-gradient(270deg, $theme-text-color-blue 0%, $theme-text-color-blue-2 100%) !important;
+}
+
+@mixin theme-mixin-count-card-border {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: vw(3px);
+    height: 100%;
+    border-radius: 0;
+    background: linear-gradient(360deg, #3a366a, #5548a4);
+  }
+}
+
+@mixin theme-mixin-dark-bg-important {
+  background: rgba(6, 5, 22, 0.43) !important;
+  backdrop-filter: blur(53px);
+  border-radius: vw(14px);
+}
+
+@mixin theme-mixin-dashed-border-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: vw(1px) dashed rgba(229, 229, 229, 0.19);
+  backdrop-filter: blur(56px);
+  border-radius: vw(18px);
+}
+
+@mixin theme-mixin-3 {
+  background: rgba(6, 5, 22, 0.12);
+  backdrop-filter: blur(153px);
+  border-radius: vw(10px);
+}
+
+@mixin theme-mixin-green-tag {
+  background: $theme-tag-bg-green-color;
+  border: vw(1px) solid $theme-border-color-green-1;
+  backdrop-filter: blur(392px);
+  /* Note: backdrop-filter has minimal browser support */
+  color: $theme-text-color-green-1;
+  border-radius: vw(18px);
+}
+
+@mixin theme-mixin-blue-tag {
+  background: rgba(207, 214, 255, 0.1);
+  border: vw(1px) solid $theme-text-color-blue;
+  backdrop-filter: blur(392px);
+  color: $theme-text-color-blue;
+  border-radius: vw(18px);
+}
+
+@mixin theme-mixin-blue-bg-with-color {
+  background: rgba(111, 90, 220, 0.29);
+  border: vw(1px) solid $theme-text-color-blue;
+  color: #c3b8ff;
+  border-radius: vw(25px);
+}
+
+@mixin theme-mixin-blue-bg-with-color-important {
+  background: rgba(111, 90, 220, 0.29) !important;
+  border: vw(1px) solid $theme-text-color-blue !important;
+  color: #c3b8ff !important;
+  border-radius: vw(25px);
+}
+
+@mixin theme-blue-bg-radius {
+  background-color: $theme-bg-blue-1;
+  border-radius: vw(25px);
+}
+@mixin popup-bg-mixin {
+  background: rgba(6, 5, 22, 0.25) !important;
+  backdrop-filter: blur(153px);
+  border-radius: vw(10px) !important;
+}
+@mixin theme-email-blue-bg-mixin {
+  background: rgba(161, 142, 255, 0.08);
+  border: vw(1px) solid $theme-text-color-blue;
+  backdrop-filter: blur(56px);
+  border-radius: vw(25px);
+}
+@mixin theme-workspace-bg-mixin {
+  background: rgba(199, 188, 255, 0.48);
+  border: vw(1px) solid #c7bcff;
+  border-radius: vw(8px);
+}
+/* ===============================================================
+
+          border theme mixins
+
+================================================================== */
+@mixin border-mixin-1 {
+  border: vw(1px) solid rgba(229, 229, 229, 0.19);
+}
+@mixin border-mixin-1--dashed {
+  border: vw(1px) dashed rgba(229, 229, 229, 0.19);
+}
+/*==================================================================
+                   color
+==================================================================*/
+@mixin theme-mixin-blue-text-color {
+  background: rgb(161, 142, 255);
+  background: linear-gradient(
+    97deg,
+    rgba(161, 142, 255, 1) 42%,
+    rgba(111, 90, 220, 1) 126%
+  );
+}
+@mixin theme-mixin-blue-bg-color {
+  background: rgb(161, 142, 255);
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    #a18eff 0deg,
+    #ae9aff 159.38deg,
+    #502eff 258.75deg,
+    #d1c7ff 360deg
+  );
+}
+@mixin theme-mixin-blue-bg-color-2 {
+  background: #6f5adc;
+  background: radial-gradient(
+    123.78% 111.9% at 43.84% 32.99%,
+    #6f5adc 0%,
+    rgba(111, 90, 220, 0) 100%
+  );
+}
+
+@mixin theme-mixin-blue-bg-color-3 {
+  background: rgb(192, 180, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(192, 180, 255, 1) 0%,
+    rgba(78, 45, 251, 0.96) 100%
+  );
+}
+// letter spacing
+@mixin theme-letter-spacing-28-uppercase {
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+@mixin theme-letter-spacing-10-uppercase {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+// button height
+@mixin theme-button-height-1 {
+  height: vw(65px);
+  line-height: vw(61px);
+}
+
+@mixin theme-button-height-and-radius-1 {
+  height: vw(65px);
+  line-height: vw(61px);
+  border-radius: vw(25px);
+}
+
+@mixin theme-button-height-2 {
+  height: vw(63px);
+  line-height: vw(59px);
+}
+
+@mixin theme-button-height-and-radius-2 {
+  height: vw(63px);
+  line-height: vw(59px);
+  border-radius: vw(25px);
+}
+
+@mixin theme-button-height-3 {
+  height: vw(60px);
+  line-height: vw(56px);
+}
+
+@mixin theme-button-height-and-radius-3 {
+  height: vw(60px);
+  line-height: vw(56px);
+  border-radius: vw(25px);
+}
+
+@mixin theme-button-height-4 {
+  height: vw(45px);
+  line-height: vw(41px);
+}
+
+@mixin theme-button-height-and-radius-4 {
+  height: vw(45px);
+  line-height: vw(41px);
+  border-radius: vw(25px);
+}
+
+@mixin theme-button-height-5 {
+  height: vw(55px);
+  line-height: vw(50px);
+}
+
+@mixin theme-button-height-and-radius-5 {
+  height: vw(55px);
+  line-height: vw(50px);
+  border-radius: vw(25px);
+}
+@mixin theme-button-height-6 {
+  height: vw(74px);
+  line-height: vw(74px);
+}
+
+/*************************************
+      backdrop-filter
+***********************************/
+@mixin backdrop-filter-none {
+  backdrop-filter: none;
+}

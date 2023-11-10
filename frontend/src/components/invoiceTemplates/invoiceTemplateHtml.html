@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      body {
+        margin: 0 !important;
+        padding: 0;
+        background-color: #ffffff;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .invoice-table {
+        width: 100%;
+        max-width: 595px;
+        /* margin: 0 auto; */
+        border-collapse: collapse !important;
+      }
+
+      .thead-image {
+        box-shadow: 0 3px 6px #80808029;
+      }
+
+      .tbody-td {
+        padding: 67px 45px 0 42px;
+      }
+
+      .tbody-table {
+        width: 100%;
+        max-width: 100%;
+        border-collapse: collapse !important;
+      }
+
+      /* fold1 */
+      .fold1-row__td1 {
+        width: 32%;
+        max-width: 32%;
+        word-break: break-all;
+        color: #000000;
+        font-size: 15px;
+        line-height: 23px;
+        font-family: "Poppins", sans-serif, Helvetica;
+        font-weight: 600;
+        text-align: left;
+        padding-bottom: 36px;
+      }
+
+      .fold1-row__td2 {
+        width: 68%;
+        max-width: 68%;
+        word-break: break-all;
+        color: #502eff;
+        font-size: 18px;
+        line-height: 27px;
+        font-family: "Poppins", sans-serif, Helvetica;
+        font-weight: 600;
+        text-align: right;
+        padding-bottom: 36px;
+        word-spacing: 21px;
+        padding-left: 20px;
+      }
+
+      /* fold2 */
+      .fold2-row__to {
+        word-break: break-all;
+        color: #502eff;
+        font-size: 18px;
+        line-height: 27px;
+        font-family: "Poppins", sans-serif, Helvetica;
+        font-weight: 700;
+        text-align: left;
+        padding-bottom: 11px;
+        padding-right: 30px;
+      }
+
+      .fold2-row__address {
+        word-break: break-all;
+        color: #000000;
+        font-size: 15px;
+        line-height: 23px;
+        font-family: "Poppins", sans-serif, Helvetica;
+        font-weight: 600;
+        text-align: left;
+        padding-bottom: 36px;
+      }
+
+      /* fold3 */
+      .fold3-table__head-row {
+        background-color: #f8f8f8;
+        color: #000000;
+        font-size: 15px;
+        line-height: 23px;
+        font-family: "Poppins", sans-serif, Helvetica;
+        font-weight: 600;
+        text-align: left;
+      }
+
+      .fold3-table__head-th1,
+      .fold3-table__head-th2,
+      .fold3-table__head-th3 {
+        padding: 15px 20px;
+      }
+
+      .fold3-table__head-th1 {
+        width: 40%;
+        max-width: 40%;
+      }
+
+      .fold3-table__head-th2,
+      .fold3-table__head-th3 {
+        width: 30%;
+        max-width: 30%;
+      }
+
+      .fold3-table__content-row {
+        color: #000000;
+        font-size: 15px;
+        line-height: 23px;
+        font-family: "Poppins", sans-serif, Helvetica;
+        font-weight: 400;
+        text-align: left;
+      }
+      .fold3-table__content-row td {
+        padding: 20px;
+      }
+
+      .fold3-table__totalAmt {
+        background-color: #f8f8f8;
+        color: #000000;
+        font-size: 15px;
+        line-height: 23px;
+        font-family: "Poppins", sans-serif, Helvetica;
+        font-weight: 600;
+        text-align: left;
+      }
+
+      .fold3-table__totalAmt__tdText {
+        padding: 15px 20px 10px 20px;
+      }
+
+      .fold3-table__totalAmt__tdAmt {
+        text-align: center;
+        padding: 0 20px 20px 20px;
+      }
+
+      .tfoot-tr {
+        color: #808080;
+        font-size: 15px;
+        line-height: 23px;
+        font-family: "Poppins", sans-serif, Helvetica;
+        font-weight: 400;
+        text-align: center;
+        padding-top: 179px;
+        padding-bottom: 22px;
+      }
+
+      .tfoot-tr td {
+        text-align: center;
+        padding-top: 179px;
+        padding-bottom: 22px;
+      }
+
+      @media screen and (max-width: 595px) {
+        .invoice-table {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table class="invoice-table">
+      <thead>
+        <tr>
+          <td>
+            <img
+              class="thead-image"
+              src="../../assets/img/logo-new/invoice-logo.svg"
+              alt="logo"
+              width="100%"
+              height="auto"
+            />
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tbody-td">
+            <table class="tbody-table">
+              <tbody>
+                <!-- fold1 -->
+                <tr class="fold1-row">
+                  <td class="fold1-row__td1">
+                    17th Jan 2020
+                  </td>
+                  <td class="fold1-row__td2">
+                    Invoice #012312
+                  </td>
+                </tr>
+                <!-- fold2 -->
+                <tr>
+                  <td colspan="2" class="fold2-row__to">
+                    To, <br />
+                    Kiran Singh
+                  </td>
+                </tr>
+                <tr>
+                  <td class="fold2-row__address">
+                    Billing Address Line1, Billing Address Line2, Billing
+                    Address Line3,
+                  </td>
+                  <td></td>
+                </tr>
+                <!-- fold3 -->
+                <tr>
+                  <td colspan="2">
+                    <table class="tbody-table">
+                      <tbody>
+                        <tr class="fold3-table__head-row">
+                          <td class="fold3-table__head-th1">
+                            Description
+                          </td>
+                          <td class="fold3-table__head-th2">
+                            Plan Type
+                          </td>
+                          <td class="fold3-table__head-th3 text-center">
+                            Price
+                          </td>
+                        </tr>
+                        <tr class="fold3-table__content-row">
+                          <td>
+                            Dominate Monthly Subscription
+                          </td>
+                          <td>Astronaut</td>
+                          <td class="text-center">
+                            $15
+                          </td>
+                        </tr>
+                        <tr class="fold3-table__totalAmt">
+                          <td></td>
+                          <td></td>
+                          <td class="fold3-table__totalAmt__tdText">
+                            Total Amount
+                          </td>
+                        </tr>
+                        <tr class="fold3-table__totalAmt">
+                          <td></td>
+                          <td></td>
+                          <td class="fold3-table__totalAmt__tdAmt">
+                            $15
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr class="tfoot-tr">
+          <td colspan="2">
+            Copyright &copy; 2019. Dominate. All Rights Reserved
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

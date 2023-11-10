@@ -1,0 +1,267 @@
+/*============================
+    Customers CSS
+=============================*/
+
+.customers-overview-container {
+  padding-left: vw(141px);
+  padding-top: vw(25px);
+}
+
+.customers-search-block {
+  display: flex;
+}
+
+.fa-search,
+.fa-list:hover {
+  cursor: pointer !important;
+}
+
+/*==========================
+  Customers Block veiw css
+============================*/
+.customers-block-view-conatiner {
+  padding-left: vw(141px) !important;
+  padding-right: vw(141px) !important;
+  margin-top: vw(30px);
+
+  .customers-card {
+    display: flex;
+    align-items: center;
+    background-color: $theme-bg-color-1;
+    justify-content: center;
+    // box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16);
+    width: vw(387px);
+    height: vw(150px);
+    border-radius: vw(10px);
+    margin-bottom: vw(30px);
+  }
+
+  .card-avatar-section {
+    margin-right: vw(45px);
+
+    img {
+      height: auto;
+      width: vw(75px);
+      border-radius: 50px;
+    }
+  }
+
+  .card-content-section {
+    h3 {
+      font-size: vw(24px);
+      line-height: vw(35px);
+      margin-top: 0;
+      color: $theme-text-color-1;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: vw(21px);
+      line-height: vw(31px);
+      color: $theme-text-color-1;
+      margin-bottom: 0;
+    }
+
+    .status {
+      font-size: vw(18px);
+      color: $theme-text-color-1;
+      line-height: vw(27px);
+    }
+  }
+}
+
+/*==========================
+  Customers List veiw css
+============================*/
+
+.customer-list-view-outer-block {
+  width: 100%;
+  table {
+    color: $theme-text-color-1;
+  }
+
+  table th:nth-child(1),
+  table th:nth-child(3),
+  table td:nth-child(1),
+  table td:nth-child(3) {
+    width: vw(305px);
+  }
+
+  table th:nth-child(4),
+  table td:nth-child(4) {
+    width: vw(330px);
+  }
+
+  table th,
+  table td {
+    font-size: vw(21px);
+    line-height: vw(31px);
+    width: vw(270px);
+    vertical-align: middle;
+  }
+
+  table th {
+    padding: vw(23px);
+    @include fontBold700;
+  }
+
+  table td {
+    padding: vw(25px) vw(23px) !important;
+    @include fontMedium500;
+  }
+
+  table tr:last-child {
+    td {
+      border-bottom: 0;
+    }
+  }
+}
+
+.customers-list-view-container {
+  width: 100%;
+  background-color: $theme-bg-color-1;
+  border-radius: vw(15px);
+  padding-left: vw(28px);
+  padding-right: vw(28px);
+  margin-bottom: vw(50px);
+  // box-shadow: 0 0.15625vw 2.60417vw 0 rgba(0, 0, 0, 0.16);
+  // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+
+  .table td {
+    border-top: 0;
+    border-bottom: vw(1px) solid rgba(48, 48, 48, 0.4);
+    font-size: vw(21px);
+    line-height: vw(31px);
+    @include fontMedium500;
+    color: $theme-text-color-1;
+    padding-top: vw(34px);
+    padding-bottom: vw(34px);
+  }
+
+  .table td,
+  .table th {
+    padding: 0.75rem;
+    vertical-align: baseline;
+    border-top: transparent;
+  }
+
+  img {
+    height: auto;
+    width: vw(55px);
+    margin-right: vw(22px);
+    border-radius: vw(25px);
+  }
+  .edit-img-customer {
+    height: auto;
+    width: vw(30px);
+    margin-left: 0;
+    position: absolute;
+    right: 0;
+    margin-right: 0;
+    // top: vw(685px);
+  }
+
+  .edit-img {
+    height: auto;
+    width: vw(30px);
+    margin-left: 0;
+    position: absolute;
+    right: 0;
+    margin-right: 0;
+  }
+
+  /*======================
+    Toggle Switch CSS
+  =======================*/
+  .toggle-switch-section {
+    display: flex;
+    align-items: center;
+    p {
+      margin: 0;
+    }
+    label {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.customers-table-title {
+  .table,
+  thead th {
+    vertical-align: bottom;
+    border-bottom: 0 !important;
+    border-top: 0 !important;
+    font-size: vw(21px);
+    line-height: vw(31px);
+    @include fontBold700;
+    font-style: italic;
+  }
+}
+
+/************************************
+       Sliding Component Css
+************************************/
+.toggle {
+  .toggle-chk-circle {
+    position: relative;
+    // background-color: $theme-bg-color-1;
+    // position: absolute;
+    appearance: none;
+    width: vw(53px);
+    height: vw(27px);
+    // border-radius: vw(60px);
+    // border: 3px solid silver;
+    position: relative;
+    outline: none;
+    // background-color: rgba(255, 255, 255, 0.6);
+    // box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    // cursor: pointer;
+    transition: all 0.3s linear;
+    margin-left: vw(10px);
+    margin-right: vw(10px);
+    background: $theme-toggle-bg;
+    border-radius: vw(25px);
+  }
+
+  input {
+    cursor: pointer;
+    width: 100%;
+    height: vw(27px);
+    position: absolute;
+    z-index: 1;
+    // background: black;
+    opacity: 0;
+  }
+
+  input:checked + .toggle__switch {
+    // background-color: $theme-bg-color-1;
+    background-color: $theme-toggle-check-bg;
+
+    &:after {
+      left: 7%;
+      // background-color: #72ff5a;
+      background-color: $theme-toggle-check-bg;
+    }
+  }
+
+  .toggle__switch {
+    &:after {
+      content: "";
+      display: block;
+      width: vw(21px);
+      height: vw(21px);
+      // background-color: #cccccc;
+      // box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      background-color: $theme-toggle-check-bg;
+      border-radius: vw(60px);
+      position: absolute;
+      margin: auto;
+      bottom: 0;
+      top: 0;
+      left: calc(100% - 1.3vw);
+      transition: all 0.3s linear;
+    }
+  }
+}

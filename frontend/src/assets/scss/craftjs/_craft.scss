@@ -1,0 +1,188 @@
+// craftjs header css
+@import "./craft-new";
+
+.viewport {
+  .header {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $theme-bg-color-1;
+    background-color: $theme-bg-color-1;
+    // height: vw(80px);
+    // padding: 0 !important;
+    padding-left: vw(141px) !important;
+    padding-right: vw(141px) !important;
+    // box-shadow: 0 vw(3px) vw(6px) #00000017;
+    width: 100%;
+  }
+}
+
+.toolbox {
+  height: vw(700px);
+  .fa-image {
+    font-size: vw(30px);
+  }
+}
+
+// pdf download button css
+.craftjs-pdf-download-btn {
+  .fa-download {
+    margin-right: vw(10px);
+  }
+
+  // width: vw(170px);
+  // height: vw(41px);
+  position: absolute;
+  z-index: 9999999999;
+  // right: vw(180px);
+  // margin-top: vw(18px);
+  border-collapse: collapse;
+  border: none;
+  align-items: center;
+  // box-shadow: 0 3px 6px #80808028;
+  border-radius: vw(25px);
+  align-items: center;
+  justify-content: center;
+  // background: linear-gradient(
+  //   217deg,
+  //   rgba(80, 46, 255, 1) 0%,
+  //   rgba(209, 199, 255, 1) 95%,
+  //   rgba(209, 199, 255, 1) 100%
+  // ); /* w3c */
+  // color: white;
+  border: none;
+  font-size: vw(18px);
+  @include fontMedium500;
+  @include theme-mixin-2-important;
+  color: $theme-text-color-grey;
+}
+
+.send_draft_btn_container {
+  position: absolute;
+  right: vw(350px);
+}
+.send_draft_btn_container_normal_possition {
+  position: absolute;
+  right: vw(180px);
+}
+
+.craftjs_send_btn {
+  // width: vw(170px);
+  // height: vw(41px);
+  // @include theme-blue-bg-btn;
+  border-radius: vw(25px);
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: vw(18px);
+  @include fontMedium500;
+  margin-right: vw(30px);
+  @include theme-mixin-blue-bg-with-color;
+}
+.craftjs_save_draft_btn {
+  .fa-save {
+    margin-right: vw(10px);
+  }
+
+  // width: vw(200px);
+  // height: vw(41px);
+  // @include theme-blue-bg-btn;
+  // border-radius: vw(25px);
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: vw(18px);
+  @include fontMedium500;
+  margin-right: vw(30px);
+  @include theme-mixin-2;
+  border-radius: vw(12px);
+}
+
+.craftjs_preview_chnages_btn {
+  width: vw(280px);
+  // height: vw(41px);
+  // @include theme-blue-bg-btn;
+  // border-radius: vw(38px) !important;
+  border-radius: vw(25px) !important;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: vw(18px) !important;
+  @include fontMedium500;
+  margin-right: vw(30px);
+  @include theme-mixin-blue-bg-with-color;
+  color: $theme-text-color-blue-3 !important;
+  svg {
+    width: vw(18px) !important;
+    height: auto !important;
+  }
+}
+
+.craftjs_edit_btn {
+  // width: vw(150px);
+  // height: vw(41px);
+  // @include theme-blue-bg-btn;
+  // border-radius: vw(38px) !important;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: vw(18px);
+  @include fontMedium500;
+  margin-right: vw(30px);
+  @include theme-mixin-2;
+  color: $theme-text-color-grey;
+}
+
+// editor background class
+.custom-background-class {
+  background-color: rgb(224, 224, 224);
+}
+
+// select template screen css
+.proposal_by_craft_slelect_template_container {
+  h3 {
+    font-size: vw(24px);
+    line-height: vw(36px);
+    @include fontSemiBold600;
+    margin-bottom: vw(47px);
+    color: $theme-text-color-white-42;
+  }
+  .template_container {
+    border-radius: vw(25px);
+    width: vw(250px);
+    line-height: vw(217px);
+    margin-right: vw(43px);
+    @include theme-mixin-2;
+    border-radius: vw(12px);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+    img:hover {
+      cursor: pointer;
+    }
+  }
+  .active_template {
+    border: vw(6px) solid #483ca6;
+  }
+}
+
+// template card css
+.proposal_craftjs_card_cover_img {
+  // height: vw(220px) !important;
+  text-align: center;
+  // background: $theme-bg-color-white-03;
+  // border-radius: vw(10px);
+  border-radius: vw(12px) vw(12px) 0 0;
+  // height: vw(433px) !important;
+
+  img {
+    width: 100% !important;
+    height: auto !important;
+    // height: 100% !important;
+    border-radius: inherit;
+  }
+}

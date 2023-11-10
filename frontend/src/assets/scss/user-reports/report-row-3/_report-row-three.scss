@@ -1,0 +1,43 @@
+// report row three
+
+.new-report-row-3 {
+  flex-wrap: nowrap !important;
+  margin-right: vw(1px) !important;
+}
+
+.new-report-row-3__colm1 {
+  padding-top: vw(45px);
+  // border-radius: vw(15px);
+  // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+  width: vw(810px);
+  height: vw(506px);
+  overflow: auto;
+  margin-right: vw(17px);
+  margin-bottom: vw(19px);
+  @include theme-mixin-1;
+  @include border-mixin-1;
+  border-radius: vw(18px);
+}
+
+.new-report-row-2-colm1-card1__title--report-row3 {
+  margin-bottom: vw(30px);
+}
+.new-report-row-3__graphBlock {
+  padding: vw(15px) vw(90px) vw(20px) vw(47px);
+}
+
+.new-report-row-3__colm1-datepicker {
+  padding: 0 vw(170px);
+  margin-bottom: vw(20px);
+}
+
+.new-report-row-3__graphBlock2 {
+  padding: vw(20px) vw(47px) vw(20px) vw(25px);
+}
+//new css
+.reports-social-media-img {
+  //width: vw(212px);
+  width: vw(193px);
+  height: auto;
+  margin-bottom: vw(15px);
+}

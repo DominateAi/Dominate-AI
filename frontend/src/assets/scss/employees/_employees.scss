@@ -1,0 +1,482 @@
+/*============================
+    Employees CSS
+=============================*/
+
+.employees-overview-container {
+  padding-left: vw(141px);
+  padding-top: vw(25px);
+}
+
+.fa-search,
+.fa-list:hover {
+  cursor: pointer !important;
+}
+
+/*==========================
+  Employees Block veiw css
+============================*/
+.employees-block-view-conatiner {
+  padding-left: vw(141px) !important;
+  padding-right: vw(141px) !important;
+  margin-top: vw(30px);
+  margin-bottom: vw(30px);
+
+  .employees-profile_card {
+    margin-bottom: vw(30px);
+    img {
+      height: vw(209px);
+      width: vw(209px);
+      border-radius: 100%;
+      margin-bottom: vw(30px);
+    }
+  }
+  h3 {
+    font-size: vw(23px);
+    line-height: vw(34px);
+    @include fontMedium500;
+    color: $theme-text-color-1;
+  }
+  p {
+    font-size: vw(18px);
+    line-height: vw(27px);
+    @include fontRegular400;
+    color: #707070;
+  }
+}
+
+.employees-large-card-popup {
+  .employees-large-card {
+    background-color: $theme-bg-color-1;
+    border-radius: vw(15px);
+    padding: vw(21px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .employees-large-card__profileImg {
+      height: auto;
+      width: vw(280px);
+      border-radius: 50%;
+    }
+
+    .button-section {
+      margin-top: vw(14px);
+      h2 {
+        font-size: vw(26px);
+        line-height: vw(39px);
+        @include fontRegular400;
+        color: $color-green-to-dark-green;
+        margin-top: vw(15px);
+        margin-bottom: vw(15px);
+      }
+
+      .btn-funnel-view--emp {
+        // background: linear-gradient(
+        //   180deg,
+        //   rgba(0, 60, 255, 0.3) 0%,
+        //   rgba(154, 184, 255, 0.3) 100%
+        // );
+        background: linear-gradient(
+          306deg,
+          rgba(80, 46, 255, 0.8) 0%,
+          rgba(209, 199, 255, 0.8) 100%
+        ) !important;
+      }
+    }
+
+    .attendance {
+      h3 {
+        font-size: vw(80px);
+        line-height: vw(90px);
+        @include fontBold700;
+        color: $theme-text-color-white-60;
+        opacity: 0.6;
+        margin-bottom: 0;
+      }
+      p {
+        font-size: vw(20px);
+        line-height: vw(31px);
+        color: $theme-text-color-1;
+        margin-top: 0;
+      }
+      .leaves-taken {
+        margin-bottom: vw(35px);
+      }
+    }
+    .lead-closure-rate-sphere {
+      // display: flex;
+      // align-items: center;
+
+      p {
+        font-size: vw(20px);
+        line-height: vw(31px);
+        color: $theme-text-color-1;
+        margin-top: vw(15px);
+      }
+
+      .circle {
+        display: block;
+
+        border-radius: 50%;
+        height: vw(239px);
+        width: vw(239px);
+        margin: 0;
+        background-image: linear-gradient(
+          to bottom,
+          #dca3ff,
+          #c9acff,
+          #b7b3ff,
+          #a7baff,
+          #9cbfff,
+          #8bc7ff,
+          #7cceff,
+          #71d5ff,
+          #5ee0ff,
+          #50ebff,
+          #4ef6f8,
+          #5dffed
+        );
+      }
+    }
+  }
+}
+
+/*==========================
+    Employees List veiw css
+============================*/
+.employees-list-view-container {
+  width: 100%;
+  background-color: $theme-bg-color-1;
+  border-radius: vw(15px);
+  padding-left: vw(28px);
+  padding-right: vw(28px);
+  margin-bottom: vw(50px);
+  // box-shadow: 0 0.15625vw 2.60417vw 0 rgba(0, 0, 0, 0.16);
+
+  .table td {
+    border-top: 0;
+    border-bottom: vw(1px) solid rgba(48, 48, 48, 0.4);
+    font-size: vw(21px);
+    line-height: vw(31px);
+    color: $theme-text-color-1;
+    padding-top: vw(34px);
+    padding-bottom: vw(34px);
+  }
+  .table td,
+  .table th {
+    padding: 0.75rem;
+    vertical-align: baseline;
+    border-top: transparent;
+  }
+  img {
+    height: auto;
+    width: vw(55px);
+    margin-right: vw(22px);
+  }
+}
+.edit-img-employee {
+  height: auto !important;
+  width: vw(30px) !important;
+  margin-right: 0 !important;
+  float: right;
+}
+.edit-img-employee-column {
+  width: vw(10px) !important;
+}
+
+.employees-table-title {
+  .name-heading {
+    width: vw(790px);
+    padding-left: vw(50px);
+  }
+  .position-heading {
+    width: vw(340px);
+  }
+
+  .table,
+  thead th {
+    vertical-align: bottom;
+    border-bottom: 0 !important;
+    border-top: 0 !important;
+    font-size: vw(24px);
+    line-height: vw(35px);
+  }
+}
+
+/*===========================
+    employees card modal
+=============================*/
+
+.skylight-dialog {
+  width: vw(1361px) !important;
+  min-height: vw(418px) !important;
+  position: fixed;
+  top: 20% !important;
+  left: 14% !important;
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+  background-color: rgb(255, 255, 255);
+  border-radius: vw(15px) !important;
+  z-index: 100;
+  padding: 15px;
+  // box-shadow: rgba(0, 0, 0, 0.14) 0 0 4px, rgba(0, 0, 0, 0.28) 0 4px 8px;
+  transform: scale(1);
+  transition-property: transform;
+  transition-timing-function: ease;
+  transition-duration: 1200ms;
+}
+
+/*================================
+     Employee Approval Card css
+=================================*/
+.employee-appreoval-card {
+  margin-bottom: vw(30px);
+  .card {
+    background-color: $theme-bg-color-1;
+    border-radius: vw(10px);
+    padding: vw(30px);
+    width: vw(526px);
+    height: auto;
+    border: none;
+    // box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.16);
+  }
+  .card-header {
+    display: flex;
+    background-color: transparent;
+    padding: vw(18px);
+    border-bottom: vw(1px) solid #30303047;
+  }
+  .employee-appreoval-card__profile-img {
+    height: auto;
+    width: vw(75px);
+    margin-right: vw(30px);
+    border-radius: vw(50px);
+  }
+  h3 {
+    font-size: vw(24px);
+    line-height: vw(35px);
+    color: $theme-text-color-1;
+    @include fontBold700;
+  }
+  p {
+    font-size: vw(21px);
+    line-height: vw(31px);
+    color: $theme-text-color-1;
+    @include fontRegular400;
+  }
+  h4 {
+    font-size: vw(21px);
+    line-height: vw(31px);
+    color: $theme-text-color-1;
+    @include fontBold700;
+  }
+  .leave-type-and-time {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: vw(25px);
+  }
+  button {
+    margin-top: vw(5px);
+    width: vw(177px);
+    @include theme-button-height-and-radius-3;
+    background-color: $theme-bg-color-1;
+    color: $theme-text-color-1;
+    border: vw(1px) solid #303030;
+    font-size: vw(24px);
+    @include fontSemiBold600;
+  }
+  .card-footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent;
+    border-top: vw(1px) solid #30303047;
+  }
+}
+
+.approval-pending-title {
+  font-size: vw(24px);
+  line-height: vw(35px);
+  color: $theme-text-color-1;
+  @include fontSemiBold600;
+  margin-bottom: vw(30px);
+}
+
+/*==================================
+      Set Employee Password
+====================================*/
+
+.set-password-modal {
+  width: vw(803px) !important;
+  // height: vw(398px) !important;
+  padding: 0 !important;
+  border-radius: vw(20px);
+}
+
+.set-employee-password {
+  .heading {
+    // border-top-left-radius: vw(20px);
+    // border-top-right-radius: vw(20px);
+    // background-color: $theme-bg-color-1;
+    // padding-left: vw(50px);
+    // padding-top: vw(30px);
+    // padding-bottom: vw(30px);
+
+    font-size: vw(24px);
+    // color: $theme-text-color-1;
+    @include fontBold700;
+    @include theme-mixin-2;
+    border-bottom: none;
+    border-radius: vw(58px) vw(58px) 0 0;
+    text-align: center;
+    padding-top: vw(67px);
+    color: $theme-text-color-white-79;
+    padding-left: vw(82px);
+    padding-right: vw(82px);
+    padding-bottom: vw(7px);
+    h3 {
+      border-bottom: vw(1px) solid $theme-border-color-white-22;
+      padding-bottom: vw(37px);
+    }
+  }
+  .password-content {
+    padding-top: vw(20px);
+    // height: vw(420px);
+    // background-color: hsla(0, 0%, 82.7%, 0.16);
+    padding-right: vw(50px);
+    // padding-left: vw(50px);
+    padding-left: vw(82px);
+    @include theme-mixin-2;
+    border-radius: vw(4px) vw(4px) vw(58px) vw(58px);
+    border-top: none;
+    padding-bottom: vw(37px);
+    height: vw(610px);
+
+    .add-lead-input-field {
+      margin: 0;
+      // background-color: transparent;
+      // border-bottom: vw(1px) solid #303030;
+      @include theme-mixin-1;
+      border-radius: vw(25px);
+      border: none;
+      height: vw(75px);
+      padding: 0 vw(37px);
+    }
+    h3 {
+      font-size: vw(24px);
+      line-height: vw(35px);
+      // color: $theme-text-color-1;
+      @include fontRegular400;
+      color: $theme-text-color-white-60;
+    }
+    p {
+      font-size: vw(18px);
+      line-height: vw(27px);
+      color: $theme-text-color-1;
+      // color: $theme-text-color-white-79;
+      @include fontRegular400;
+      margin-bottom: vw(20px);
+    }
+
+    button {
+      width: vw(160px);
+      // height: vw(40px);
+      // border-radius: vw(20px);
+      // background-color: #6266e1;
+      // color: white;
+      // border: vw(1px) solid #303030;
+      height: vw(60px);
+      font-size: vw(21px);
+      line-height: vw(31px);
+      @include fontMedium500;
+      float: right;
+      border: none;
+      margin-right: vw(35px);
+      @include theme-mixin-blue-bg-with-color;
+      margin-top: vw(50px);
+    }
+  }
+}
+
+.set-password-broken-link {
+  .heading {
+    // border-top-left-radius: vw(20px);
+    // border-top-right-radius: vw(20px);
+    // background-color: $theme-bg-color-1;
+    // padding-left: vw(50px);
+    // padding-top: vw(30px);
+    // padding-bottom: vw(30px);
+    font-size: vw(24px);
+    // color: $theme-text-color-1;
+    @include fontBold700;
+    @include theme-mixin-2;
+    border-bottom: none;
+    border-radius: vw(58px) vw(58px) 0 0;
+    text-align: center;
+    padding-top: vw(67px);
+    color: $theme-text-color-white-79;
+    padding-left: vw(82px);
+    padding-right: vw(82px);
+    padding-bottom: vw(7px);
+
+    h3 {
+      border-bottom: vw(1px) solid $theme-border-color-white-22;
+      padding-bottom: vw(37px);
+    }
+  }
+  .password-content {
+    padding-top: vw(20px);
+    // height: vw(180px);
+    // background-color: hsla(0, 0%, 82.7%, 0.16);
+    padding-right: vw(50px);
+    // padding-left: vw(50px);
+    padding-left: vw(82px);
+    @include theme-mixin-2;
+    border-radius: vw(4px) vw(4px) vw(58px) vw(58px);
+    border-top: none;
+    padding-bottom: vw(37px);
+    text-align: center;
+    height: vw(270px);
+
+    .add-lead-input-field {
+      margin: 0;
+      background-color: transparent;
+      border-bottom: vw(1px) solid #303030;
+    }
+    h3 {
+      font-size: vw(24px);
+      line-height: vw(35px);
+      color: $theme-text-color-1;
+      @include fontRegular400;
+    }
+    p {
+      font-size: vw(18px);
+      line-height: vw(27px);
+      // color: $theme-text-color-1;
+      @include fontRegular400;
+      margin-bottom: vw(20px);
+      color: $theme-text-color-white-80;
+    }
+
+    button {
+      width: vw(160px);
+      // height: vw(40px);
+      // border-radius: vw(20px);
+      // background-color: #6266e1;
+      // color: white;
+      // border: vw(1px) solid #303030;
+      font-size: vw(21px);
+      line-height: vw(31px);
+      @include fontMedium500;
+      // float: left;
+      // border: none;
+      margin-right: vw(35px);
+      @include theme-mixin-blue-bg-with-color;
+      margin-top: vw(50px);
+      height: vw(60px);
+    }
+  }
+}
+
+/*=====================================
+    employee password set broken link
+======================================*/

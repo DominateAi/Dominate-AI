@@ -1,0 +1,271 @@
+/*============================
+    Customers CSS
+=============================*/
+
+.customers-overview-container {
+  padding-left: mvwDivide(141px);
+  padding-top: mvwDivide(25px);
+}
+
+.customers-search-block {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fa-search,
+.fa-list:hover {
+  cursor: pointer !important;
+}
+
+/*==========================
+    Customers Block veiw css
+  ============================*/
+.customers-block-view-conatiner {
+  padding-left: mvwDivide(41px) !important;
+  padding-right: mvwDivide(41px) !important;
+  margin-top: mvwDivide(30px);
+
+  .customers-card {
+    display: flex;
+    align-items: center;
+    background-color: $theme-bg-color-1;
+    justify-content: center;
+    // box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.16);
+    width: mvwDivide(287px);
+    height: mvwDivide(150px);
+    border-radius: mvwDivide(10px);
+    margin-bottom: mvwDivide(30px);
+    overflow: auto;
+  }
+
+  .card-avatar-section {
+    margin-left: mvw(5px);
+    margin-right: mvwDivide(25px);
+
+    img {
+      height: auto;
+      width: mvwDivide(75px);
+      border-radius: 50px;
+    }
+  }
+
+  .card-content-section {
+    word-break: break-all;
+    // padding: mvw(20px) mvw(10px);
+
+    h3 {
+      font-size: mvwDivide(24px);
+      line-height: mvwDivide(35px);
+      margin-top: mvwDivide(0px);
+      color: $theme-text-color-1;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: mvwDivide(21px);
+      line-height: mvwDivide(31px);
+      color: $theme-text-color-1;
+      margin-bottom: 0;
+    }
+
+    .status {
+      font-size: mvwDivide(18px);
+      color: $theme-text-color-1;
+      line-height: mvwDivide(27px);
+    }
+  }
+}
+
+/*==========================
+    Customers List veiw css
+  ============================*/
+
+.customer-list-view-outer-block {
+  overflow: auto;
+  width: 100%;
+  table {
+    color: $theme-text-color-1;
+    table-layout: fixed;
+    word-break: break-all;
+  }
+
+  table th:nth-child(1),
+  table th:nth-child(3),
+  table td:nth-child(1),
+  table td:nth-child(3) {
+    width: mvwDivide(305px);
+  }
+
+  table th:nth-child(4),
+  table td:nth-child(4) {
+    width: mvwDivide(350px);
+  }
+
+  table th,
+  table td {
+    font-size: mvwDivide(21px);
+    line-height: mvwDivide(31px);
+    width: mvwDivide(270px);
+    vertical-align: middle;
+  }
+
+  table th {
+    padding: mvwDivide(23px);
+    @include fontBold700;
+  }
+
+  table td {
+    padding: mvwDivide(25px) mvwDivide(23px) !important;
+    @include fontMedium500;
+  }
+
+  table tr:last-child {
+    td {
+      border-bottom: 0;
+    }
+  }
+}
+
+.customers-list-view-container {
+  width: 100%;
+  background-color: $theme-bg-color-1;
+  border-radius: mvwDivide(15px);
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: mvwDivide(50px);
+  box-shadow: 0 0 0;
+
+  .table td {
+    border-top: 0;
+    border-bottom: mvwDivide(1px) solid rgba(48, 48, 48, 0.4);
+    font-size: mvwDivide(21px);
+    line-height: mvwDivide(31px);
+    @include fontMedium500;
+    color: $theme-text-color-1;
+    padding-top: mvwDivide(34px);
+    padding-bottom: mvwDivide(34px);
+  }
+
+  .table td,
+  .table th {
+    padding: 0.75rem;
+    vertical-align: baseline;
+    border-top: transparent;
+  }
+
+  img {
+    height: auto;
+    width: mvwDivide(55px);
+    margin-right: mvwDivide(22px);
+    border-radius: mvwDivide(30px);
+  }
+  .edit-img-customer {
+    height: auto;
+    width: mvwDivide(30px);
+    margin-left: mvwDivide(0px);
+    position: absolute;
+    top: mvw(2px);
+    right: 0;
+    margin-right: 0;
+    // top: mvwDivide(685px);
+  }
+
+  .edit-img {
+    height: auto;
+    width: mvwDivide(30px);
+    margin-left: mvwDivide(0px);
+    position: absolute;
+    right: 0;
+    margin-right: 0;
+  }
+
+  /*======================
+      Toggle Switch CSS
+    =======================*/
+  .toggle-switch-section {
+    display: flex;
+    align-items: center;
+    p {
+      margin: 0;
+    }
+    label {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.customers-table-title {
+  .table,
+  thead th {
+    vertical-align: bottom;
+    border-bottom: 0 !important;
+    border-top: 0 !important;
+    font-size: mvwDivide(21px);
+    line-height: mvwDivide(31px);
+    @include fontBold700;
+    font-style: italic;
+  }
+}
+
+/************************************
+         Sliding Component Css
+  ************************************/
+.toggle {
+  .toggle-chk-circle {
+    position: relative;
+    background-color: $theme-bg-color-1;
+    // position: absolute;
+    appearance: none;
+    width: mvwDivide(53px);
+    height: mvwDivide(27px);
+    border-radius: mvwDivide(60px);
+    // border: 3px solid silver;
+    position: relative;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.6);
+    // box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    // cursor: pointer;
+    transition: all 0.3s linear;
+    margin-left: mvwDivide(10px);
+    margin-right: mvwDivide(10px);
+  }
+
+  input {
+    cursor: pointer;
+    width: mvwDivide(53px);
+    height: mvwDivide(27px);
+    position: absolute;
+    z-index: 1;
+    background: black;
+    opacity: 0;
+  }
+
+  input:checked + .toggle__switch {
+    background-color: $theme-bg-color-1;
+
+    &:after {
+      left: 7%;
+      background-color: #72ff5a;
+    }
+  }
+
+  .toggle__switch {
+    &:after {
+      content: "";
+      display: block;
+      width: mvwDivide(21px);
+      height: mvwDivide(21px);
+      background-color: #cccccc;
+      // box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      border-radius: mvwDivide(60px);
+      position: absolute;
+      margin: auto;
+      bottom: 0;
+      top: 0;
+      left: calc(100% - 2.9vw);
+      transition: all 0.3s linear;
+    }
+  }
+}

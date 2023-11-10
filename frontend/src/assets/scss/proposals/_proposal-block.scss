@@ -1,0 +1,29 @@
+.proposal-block-view__block {
+  width: vw(387px);
+  height: vw(450px);
+  margin-right: vw(29px);
+  overflow: auto;
+  background: #ffffff;
+  // box-shadow: 0 vw(3px) vw(50px) rgba(128, 128, 128, 0.16);
+  border-radius: vw(15px);
+}
+
+.proposal-block-view__block-title-row {
+  padding: vw(30px) vw(28px) vw(26px) vw(28px);
+  align-items: center;
+}
+
+.proposal-block-view__block-person-img {
+  width: vw(50px);
+  border-radius: 50%;
+  margin-right: vw(30px);
+}
+
+.proposal-block-view__block-proposal-img {
+  width: auto;
+  height: vw(218px);
+}
+
+.proposal-block-view__block-desc {
+  padding: vw(30px);
+}

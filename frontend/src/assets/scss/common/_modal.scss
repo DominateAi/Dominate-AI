@@ -1,0 +1,202 @@
+/* ===============================================================
+                    
+                        modal
+                    
+================================================================== */
+
+.customOverlay {
+  background: $theme-bg-color-overlay;
+  z-index: 0;
+}
+
+.customModal {
+  -webkit-box-shadow: 0 0 0;
+  box-shadow: 0 0 0;
+  max-width: 90%;
+  height: fit-content;
+  width: 56.35417vw;
+  border-radius: vw(10px);
+  padding: 1.5625vw;
+  @include theme-mixin-modal-bg;
+  // box-shadow: 0 0.15625vw 2.60417vw 0 rgba(0, 0, 0, 0.16);
+  padding-left: vw(37px);
+  padding-right: vw(63px);
+}
+
+.customCloseButton {
+  display: none;
+}
+
+.customOverlay {
+  z-index: 9999 !important;
+}
+
+.closeIconInModal {
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: " ";
+    position: absolute;
+    // top: vw(30px);
+    // right: vw(30px);
+    // background-color: #848484;
+    top: vw(60px);
+    right: vw(90px);
+    background-color: $theme-text-color-popup-close;
+    height: vw(25px);
+    width: vw(4px);
+    z-index: 111 !important;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+// following for (px value)refernce the (px relative vw value)
+// css present in customModal
+// desktop/common/CustomModalStyle.css
+// .customModal--addLead {
+//     width: vw(1082px) !important;
+//     border-radius: vw(15px) !important;
+//     padding: vw(30px) !important;
+//     // box-shadow: 0 vw(3px) vw(50px) 0 rgba(0, 0, 0, 0.16) !important;
+// }
+
+.customModal--addLead--thankYouMsg {
+  width: vw(782px) !important;
+}
+
+.customModal--editLeadNew {
+  width: vw(1523px) !important;
+}
+
+.customModal--editLeadNew--emp {
+  width: vw(1100px) !important;
+}
+
+.customModal--overviewDemo {
+  width: vw(1768px) !important;
+  height: vw(975px) !important;
+  overflow: auto;
+}
+
+.customModal--closedLead {
+  width: vw(1203px) !important;
+  height: vw(615px) !important;
+}
+
+.customModal--importLeads-select-filetype {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  width: vw(1203px) !important;
+  // height: vw(588px) !important;
+  height: auto !important;
+  // background: url("../../img/background-new-design/new-modal-bg.svg");
+  @include theme-mixin-modal-bg;
+  background-repeat: no-repeat;
+}
+
+.customModal--edit_contact,
+.customModal--select_sender_mail,
+.customModal--verify-email-suggest {
+  // background: url("../../img/background-new-design/new-modal-bg.svg");
+  background-position: inherit;
+  @include theme-mixin-modal-bg;
+}
+
+.customModal--edit_contact {
+  width: vw(1203px) !important;
+  // height: vw(750px) !important;
+  height: auto !important;
+}
+
+.customModal--select_sender_mail {
+  width: vw(1203px) !important;
+  height: vw(645px) !important;
+  padding: vw(56px) !important;
+}
+.customModal--verify-email-suggest {
+  //width: vw(813px) !important;
+  //height: vw(500px) !important;
+  //new css
+  width: vw(973px) !important;
+  height: vw(634px) !important;
+  backdrop-filter: blur(300px);
+  border-radius: vw(30px) vw(30px) vw(15px) vw(15px) !important;
+}
+
+.customModal--cmd-member-roles {
+  // background: url("../../img/background-new-design/new-modal-bg.svg");
+  background-position: inherit;
+  background-size: cover;
+  background-color: $theme-bg-color-1;
+
+  width: vw(1203px) !important;
+}
+
+.customModal--card-details {
+  padding: vw(30px) !important;
+  width: vw(1000px) !important;
+  height: vw(600px) !important;
+}
+
+.customModal--saveCards {
+  padding: vw(30px) !important;
+  width: vw(1000px) !important;
+  // height: vw(470px) !important;
+  height: auto !important;
+}
+
+.customModal--quotation_edit_discount {
+  padding: vw(30px) !important;
+  width: vw(500px) !important;
+  //height: vw(200px) !important;
+  @include theme-mixin-modal-bg;
+}
+
+.customModal--quotation_edit_tax {
+  padding: vw(30px) !important;
+  width: vw(611px) !important;
+  height: auto !important;
+  //height: vw(460px) !important;
+  @include theme-mixin-modal-bg;
+}
+.customModal--delete-popup {
+  width: vw(932px) !important;
+  height: vw(492px) !important;
+  max-width: vw(932px) !important;
+}
+.customModal--member-log-limit-reached {
+  width: vw(932px) !important;
+  height: vw(520px) !important;
+  max-width: vw(932px) !important;
+}
+
+.customModal--addNewEmailList {
+  min-width: vw(1082px) !important;
+  min-height: vw(349px) !important;
+  width: max-content !important;
+  height: max-content !important;
+  max-width: max-content !important;
+}
+.customModal--change-password {
+  width: vw(1082px) !important;
+  height: auto !important;
+  padding: 0 !important;
+  @include theme-mixin-modal-bg;
+}
+.customModal--referrals {
+  width: vw(1093px) !important;
+  height: auto !important;
+  max-width: vw(1093px) !important;
+  background-image: url("../../img/background-bg-dark-ui/referrals-modal-bg.png");
+  background-position: top;
+  background-size: cover;
+}

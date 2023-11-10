@@ -1,0 +1,40 @@
+.customModal--import-to-leads-modal {
+  width: vw(1203px) !important;
+  min-height: vw(427px);
+  border-radius: vw(15px) !important;
+  // padding: vw(65px) vw(30px) !important;
+  padding: vw(65px) vw(50px) !important;
+  // background: url("../../img/background-new-design/new-modal-bg.svg");
+  // background-size: cover;
+  // background-position: inherit;
+  @include theme-mixin-modal-bg;
+}
+.import-to-leads-modal-title {
+  // text-align: center;
+  // color: rgba(48, 48, 48, 1);
+  color: $theme-text-color-1;
+  border-bottom: vw(2px) solid $theme-border-color-white-26;
+  padding-bottom: vw(39px);
+}
+.leads-title-block-btn-red-bg--verify-fields {
+  font-size: vw(17px);
+  line-height: vw(26px);
+  width: vw(213px);
+  text-transform: capitalize;
+}
+.mt-45 {
+  margin-top: vw(45px);
+}
+.pl-140 {
+  padding-left: vw(140px);
+}
+.pr-55 {
+  padding-right: vw(55px);
+}
+.customModal--import-to-leads-modal--two {
+  // background: url("../../img/background-new-design/new-modal-bg.svg");
+  @include theme-mixin-modal-bg;
+  // background-size: inherit;
+  // background-position: inherit;
+  // background-repeat: no-repeat;
+}

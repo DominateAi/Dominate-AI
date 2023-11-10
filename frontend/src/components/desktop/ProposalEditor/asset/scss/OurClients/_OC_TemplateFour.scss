@@ -1,0 +1,29 @@
+.our_clients_template_four {
+  flex-direction: column;
+  padding: vw(50px) vw(50px) vw(20px) vw(20px);
+  .our_clients_template_four_top {
+    width: 35%;
+    height: vw(79px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .our_clients_template_four_bottom_container {
+    flex-direction: column;
+    padding: vw(20px) vw(60px) vw(10px) vw(70px);
+  }
+  .our_clients_template_four__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: vw(13px) 0 vw(13px) 0;
+  }
+  .our_clients_template_four__bottom_img {
+    width: 50%;
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+}

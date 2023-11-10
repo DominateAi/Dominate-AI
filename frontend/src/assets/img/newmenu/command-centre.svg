@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="133" height="131" viewBox="0 0 133 131">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.94" y1="1" x2="-0.182" y2="-0.337" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#502eff"/>
+      <stop offset="1" stop-color="#d1c7ff"/>
+    </linearGradient>
+  </defs>
+  <g id="command_centre_icon" data-name="command centre icon" transform="translate(-233 2314)">
+    <g id="Group_1494" data-name="Group 1494" transform="translate(284 -21078)" opacity="0.87">
+      <rect id="Rectangle_2201" data-name="Rectangle 2201" width="133" height="131" rx="15" transform="translate(-51 18764)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="noun_Mountain_2605222" transform="translate(252.382 -2296.1)">
+      <path id="Path_864" data-name="Path 864" d="M62.623,34.3,57.76,46.829,47.471,28.31,39.238,43.327,35.24,27,5.1,81.811H89.187ZM13.05,77.134,34.492,37.944l1.846,10.715L20.533,77.134Zm12.814,0,21.7-39.191,21.7,39.191Zm48.638,0L60.659,52.161l2.712-6.922,17.771,31.9H74.5Z" transform="translate(0 -1.424)" fill="#fff"/>
+      <rect id="Rectangle_2239" data-name="Rectangle 2239" width="4.583" height="18.52" transform="translate(45.226 15.1)" fill="#fff"/>
+      <path id="Path_865" data-name="Path 865" d="M54.9,15.1V26.043H68.556l-4.022-5.425L68.556,15.1Z" transform="translate(-3.22)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

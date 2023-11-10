@@ -1,0 +1,428 @@
+/* ===============================================================
+                    
+                        dashboard alerts
+                    
+================================================================== */
+.dashboard-meeting-count {
+  font-size: vw(130px);
+  text-align: center;
+  @include fontBlack900;
+}
+
+.leads-content-container--dashboard {
+  flex-wrap: wrap;
+}
+
+// alert fold
+.dashboard-alert {
+  padding: vw(38px) vw(141px);
+}
+
+.dashboard-alert__element {
+  padding: vw(10px) vw(31px) vw(10px) vw(24px);
+  background: #ffffff;
+  // box-shadow: 0 vw(3px) vw(50px) rgba(128, 128, 128, 0.16);
+  border-radius: vw(15px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: vw(10px);
+}
+
+.dashboard-alert__element__imgText {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-alert__bellIcon {
+  width: vw(40px);
+  height: vw(40px);
+  margin-right: vw(46px);
+}
+
+.dashboard-alert__deleteIcon {
+  width: vw(15px);
+  height: vw(15px);
+  cursor: pointer;
+}
+
+.dashboard-alert__deleteIcon-customize {
+  width: vw(25px);
+  margin-right: vw(85px);
+  cursor: pointer;
+}
+
+.reschedule {
+  color: #ff3636;
+  margin-right: vw(66px);
+}
+.reschedule:hover {
+  cursor: pointer;
+}
+
+// overview fold
+.content-space-between {
+  display: flex;
+  justify-content: space-between;
+  h3 {
+    margin-left: vw(504px);
+    font-size: vw(28px);
+  }
+}
+
+.btn-funnel-view--customize {
+  width: vw(180px);
+  @include theme-button-height-and-radius-3;
+  border: none;
+  color: white;
+  background: $theme-bg-dark-blue-to-purple-1;
+  font-size: vw(20px);
+  @include fontMedium500;
+}
+
+.dashboard-widget-list {
+  display: flex;
+  overflow: auto;
+  width: 100%;
+}
+
+.dashboard-widget-list-block {
+  padding: vw(20px) vw(50px) vw(20px) vw(76px);
+  background: #ffffff;
+  // box-shadow: vw(1px) vw(3px) vw(6px) rgba(0, 0, 0, 0.16);
+
+  h6 {
+    padding-left: vw(90px);
+  }
+}
+
+// widget list slider
+.widgetListSlider {
+  margin-top: vw(20px);
+  margin-bottom: vw(10px);
+
+  .slick-prev:before,
+  .slick-next:before {
+    content: "" !important;
+    width: vw(15px) !important;
+    height: vw(15px) !important;
+    border: vw(2px) solid #707070 !important;
+    display: block !important;
+    border-top: 0 !important;
+    border-right: 0 !important;
+  }
+
+  .slick-prev {
+    left: vw(-45px) !important;
+  }
+  .slick-prev,
+  .slick-next {
+    top: 45% !important;
+  }
+  .slick-prev:before {
+    transform: rotate(45deg);
+  }
+  .slick-next:before {
+    transform: rotate(225deg);
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    color: #707070 !important;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: vw(30px) !important;
+  }
+}
+
+.dashboard-overview-blocks {
+  padding: vw(10px) vw(111px) vw(10px) vw(141px);
+  // display: flex;
+  // flex-wrap: wrap;
+}
+
+.dashboard-overview-blocks--new {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.dashboard-overview-blocks__diamondIcon {
+  width: vw(16px);
+  position: absolute;
+  top: vw(14px);
+  right: vw(21px);
+  cursor: grab;
+}
+
+// common cards class
+.dashboard-overview-blocks__predictions,
+.dashboard-overview-blocks__simpleCard,
+.dashboard-overview-blocks__widgetCard,
+// .dashboard-overview-blocks__performanceCard,
+.dashboard-overview-blocks__calendarCard,
+.dashboard-overview-blocks__salesCard,
+.dashboard-overview-blocks__meetingsCard,
+.dashboard-overview-blocks__followupsCard,
+.dashboard-overview-blocks__messagesCard {
+  position: relative;
+  // box-shadow: 0 vw(3px) vw(50px) rgba(0, 0, 0, 0.16);
+  border-radius: vw(15px);
+  margin: 0 vw(30px) vw(30px) 0;
+  overflow: auto;
+}
+
+// predictions
+.dashboard-overview-blocks__predictions {
+  padding: vw(25px);
+  width: vw(1156px);
+  height: vw(554px);
+  background: #ffffff;
+}
+
+// simple cards
+.dashboard-overview-blocks__simpleCard {
+  width: vw(444px);
+  height: vw(254px);
+  padding: vw(10px) vw(43px);
+  background: linear-gradient(
+    298deg,
+    #01008e 0%,
+    #c601bb 44%,
+    #e50198 67%,
+    #edd5c9 100%
+  );
+  color: $color-white;
+}
+
+// widget card
+.dashboard-overview-blocks__widgetCard {
+  width: vw(315px);
+  height: vw(231px);
+  padding: vw(28px) vw(23px) vw(20px) vw(23px);
+  background: linear-gradient(
+    306deg,
+    rgba(255, 38, 38, 1) 0%,
+    rgba(255, 165, 165, 1) 100%
+  );
+  // box-shadow: vw(5px) vw(5px) vw(10px) rgba(0, 0, 0, 0.16);
+  color: $color-white;
+}
+.dashboard-overview-blocks__widgetCard-hot {
+  width: vw(315px);
+  height: vw(231px);
+  padding: vw(28px) vw(23px) vw(20px) vw(23px);
+  background: linear-gradient(305deg, #ed765e, #fea858);
+  // box-shadow: vw(5px) vw(5px) vw(10px) rgba(0, 0, 0, 0.16);
+  color: $color-white;
+  border-radius: vw(15px);
+}
+.dashboard-overview-blocks__widgetCard-warm {
+  width: vw(315px);
+  height: vw(231px);
+  padding: vw(28px) vw(23px) vw(20px) vw(23px);
+  background: linear-gradient(305deg, #f6d365, #fda085);
+  // box-shadow: vw(5px) vw(5px) vw(10px) rgba(0, 0, 0, 0.16);
+  color: $color-white;
+  border-radius: vw(15px);
+}
+.dashboard-overview-blocks__widgetCard-cold {
+  width: vw(315px);
+  height: vw(231px);
+  padding: vw(28px) vw(23px) vw(20px) vw(23px);
+  background: linear-gradient(305deg, #57a1e6, #acedfc);
+  // box-shadow: vw(5px) vw(5px) vw(10px) rgba(0, 0, 0, 0.16);
+  color: $color-white;
+  border-radius: vw(15px);
+}
+.dashboard-overview-blocks__widgetCard-allLeads {
+  width: vw(315px);
+  height: vw(231px);
+  padding: vw(28px) vw(23px) vw(20px) vw(23px);
+  background: -moz-linear-gradient(
+    118deg,
+    rgba(182, 16, 254, 1) 0%,
+    rgba(240, 173, 255, 1) 100%
+  ); /* ff3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(0%, rgba(240, 173, 255, 1)),
+    color-stop(100%, rgba(182, 16, 254, 1))
+  ); /* safari4+,chrome */
+  background: -webkit-linear-gradient(
+    118deg,
+    rgba(182, 16, 254, 1) 0%,
+    rgba(240, 173, 255, 1) 100%
+  ); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(
+    118deg,
+    rgba(182, 16, 254, 1) 0%,
+    rgba(240, 173, 255, 1) 100%
+  ); /* opera 11.10+ */
+  background: -ms-linear-gradient(
+    118deg,
+    rgba(182, 16, 254, 1) 0%,
+    rgba(240, 173, 255, 1) 100%
+  ); /* ie10+ */
+  background: linear-gradient(
+    332deg,
+    rgba(182, 16, 254, 1) 0%,
+    rgba(240, 173, 255, 1) 100%
+  ); /* w3c */
+  // box-shadow: vw(5px) vw(5px) vw(10px) rgba(0, 0, 0, 0.16);
+  color: $color-white;
+  border-radius: vw(15px);
+}
+
+.dashboard-overview-blocks__performanceCardOverflowDiv {
+  overflow: auto;
+  height: 73%;
+  padding-right: 2%;
+}
+
+// calendar card
+.dashboard-overview-blocks__calendarCard {
+  background: #ffffff;
+  padding: vw(44px) vw(22px) vw(10px) vw(30px);
+  width: vw(742px);
+  height: vw(721px);
+}
+
+// sales card
+.dashboard-overview-blocks__salesCard {
+  background: #ffffff;
+  padding: vw(56px) vw(52px) vw(32px) vw(48px);
+  width: 100%;
+  height: vw(678px);
+  margin-right: vw(30px);
+}
+
+// meetings card
+// followups card
+.dashboard-overview-blocks__meetingsCard,
+.dashboard-overview-blocks__followupsCard {
+  width: vw(526px);
+  height: vw(345px);
+  color: $color-white;
+  // box-shadow: 0 0 vw(50px) rgba(0, 0, 0, 0.16);
+}
+
+// meetings card
+.dashboard-overview-blocks__meetingsCard {
+  padding: vw(44px) vw(64px) vw(15px) vw(62px);
+  background: linear-gradient(122deg, #b610fe 0%, #f0adff 100%);
+}
+
+// followups card
+.dashboard-overview-blocks__followupsCard {
+  padding: vw(27px) vw(80px) vw(20px) vw(48px);
+  // background: linear-gradient(
+  //   122deg,
+  //   rgba(255, 137, 23, 1) 0%,
+  //   rgba(255, 212, 155, 1) 100%
+  // );
+  background: linear-gradient(
+    328deg,
+    rgba(177, 244, 207, 1) 0%,
+    rgba(152, 144, 227, 1) 100%
+  ); /* w3c */
+}
+
+.dashboard-overview-blocks__messagesCard {
+  padding: vw(30px);
+  background: #ffffff;
+  width: vw(1069px);
+  height: vw(725px);
+}
+
+// widgets css
+.purple-widget-card {
+  background: linear-gradient(
+    126deg,
+    rgba(182, 16, 254, 1) 0%,
+    rgba(240, 173, 255, 1) 100%
+  );
+}
+
+.blue-widget-card {
+  background: linear-gradient(
+    126deg,
+    rgba(0, 60, 255, 1) 0%,
+    rgba(154, 184, 255, 1) 100%
+  );
+}
+
+.white-widget-card {
+  background: #ffffff;
+  color: $theme-text-color-1;
+}
+
+// simple cards css
+.purple-simple-card {
+  background: linear-gradient(119deg, #003cff 0%, #9ab8ff 100%);
+}
+
+.simple-card-count-text {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.dashboard-card-font-100,
+.dashboard-card-font-130 {
+  @include fontBlack900;
+  margin-bottom: 0;
+}
+
+.dashboard-card-font-100 {
+  font-size: vw(100px);
+  line-height: vw(150px);
+}
+
+.dashboard-card-font-130 {
+  font-size: vw(130px);
+  line-height: vw(196px);
+  margin-right: vw(10px);
+}
+
+.dashboard-card-font-50 {
+  font-size: vw(50px);
+  line-height: vw(76px);
+  @include fontBlack900;
+  margin-bottom: 0;
+}
+
+// static graphs
+.predictions-graph {
+  width: 90%;
+  height: 85%;
+}
+
+// .dashboard-overview-container {
+//   margin-left: vw(20px) !important;
+// }
+
+.dashboard-overview-block {
+  width: 100%;
+  height: vw(230px);
+  .leads-gradient-block-font-100 {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+  p {
+    font-size: vw(20px);
+    margin-left: vw(20px);
+  }
+}
+
+// imports
+@import "./dashboard-performance";
+@import "./dashboard-meetings";
+@import "./dashboard-followups";
+@import "./dashboard-calendar";
+@import "./dashboardSalesReport";
+@import "./dashboardPerformanceNew";

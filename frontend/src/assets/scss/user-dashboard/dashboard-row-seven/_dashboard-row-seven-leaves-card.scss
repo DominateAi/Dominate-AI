@@ -1,0 +1,88 @@
+// new dashboard row seven leaves card
+
+.new-dashboard-row-seven__leaves-card-title {
+  font-size: vw(11px);
+  line-height: vw(13px);
+  @include fontRegular400;
+  @include theme-letter-spacing-28-uppercase;
+  margin-bottom: vw(12px);
+  color: $theme-text-color-white-42;
+}
+
+.new-dashboard-row-seven__leaves-blue-text {
+  color: #00e8d3;
+  font-size: vw(32px);
+  line-height: vw(48px);
+  @include fontBold700;
+}
+
+.new-dashboard-row-seven__leaves-black-text {
+  color: $theme-text-color-1;
+  font-size: vw(17px);
+  line-height: vw(26px);
+  @include fontBold700;
+  margin-left: vw(3px);
+}
+
+.new-dashboard-row-seven__leaves-black-text-dash {
+  color: $theme-text-color-1;
+  font-size: vw(17px);
+  line-height: vw(26px);
+  @include fontBold700;
+  margin-left: vw(20px);
+  margin-right: vw(20px);
+}
+
+.new-dashboard-row-seven__leaves-name {
+  padding-top: vw(11px);
+  padding-bottom: vw(13px);
+  margin-bottom: 0;
+}
+
+.new-dashboard-row-seven__leaves-border-bottom {
+  border-bottom: vw(1px) solid #5c659d;
+  margin-bottom: vw(13px);
+}
+
+.new-dashboard-row-seven__holiday-black-text {
+  font-size: vw(12px);
+  line-height: vw(18px);
+  @include fontRegular400;
+  margin-left: vw(20px);
+  @include theme-letter-spacing-28-uppercase;
+}
+
+.new-dashboard-row-seven__members-img {
+  width: vw(53px);
+  height: auto;
+  display: block;
+  border-radius: 50%;
+}
+
+.new-dashboard-row-seven__members-img-text-block {
+  padding-bottom: vw(13px);
+  display: flex;
+  align-items: center;
+}
+
+.new-dashboard-row-seven__members-text {
+  margin-left: vw(14px);
+  font-size: vw(16px);
+  line-height: vw(25px);
+  @include fontMedium500;
+  margin-bottom: 0;
+}
+
+.new-dashboard-row-seven__leaves-overflow-block {
+  height: vw(110px);
+  overflow: auto;
+  margin-bottom: vw(5px);
+  padding-right: vw(10px);
+}
+
+.new-dashboard-row-members-overflow-block {
+  height: vw(135px);
+  overflow: auto;
+  margin-bottom: vw(5px);
+  padding-right: vw(10px);
+}

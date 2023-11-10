@@ -1,0 +1,496 @@
+/*=========================================
+        Main Calender css
+============================================*/
+
+.calendar-day-month-view {
+  padding: vw(5px) 0;
+  padding-left: vw(20px);
+  font-size: vw(18px);
+  color: $color-white;
+  background: linear-gradient(306deg, #502eff 0%, #d1c7ff 100%);
+  border: 0;
+  width: vw(320px);
+  height: vw(48px);
+  border-radius: vw(25px);
+  cursor: pointer;
+
+  span {
+    margin-right: vw(7px);
+    font-size: vw(24px) !important;
+  }
+
+  p {
+    margin-bottom: 0;
+    font-size: vw(21px) !important;
+    color: #ffffff !important;
+  }
+}
+
+.main-calender-tabs-container {
+  background-color: $theme-bg-color-1;
+  height: auto;
+  padding-left: vw(139px) !important;
+  padding-right: vw(139px) !important;
+  padding-top: vw(25px);
+  padding-bottom: vw(23px);
+
+  /*=========================
+          Tabs Css
+  ==========================*/
+
+  .rwt__tab[aria-selected="true"] {
+    position: relative;
+    color: black !important;
+  }
+
+  .rwt__tablist {
+    text-align: center;
+  }
+
+  .rwt__tab {
+    background: transparent;
+    border: 0;
+    @include fontBold700;
+
+    line-height: vw(31px);
+    font-size: vw(21px);
+    padding: 1rem 2rem;
+    transition: background 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+    color: gray !important;
+  }
+
+  .rwt__tablist:not([aria-orientation="vertical"])
+    .rwt__tab[aria-selected="true"]:after {
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    border-bottom: vw(1px) solid #000000;
+  }
+
+  .rwt__tab[aria-selected="true"]:after {
+    content: "";
+    position: absolute;
+  }
+
+  /*=======================
+        Table Border
+  ========================*/
+
+  .table-bordered td,
+  .table-bordered th {
+    border: vw(10px) solid #f7f7f7;
+  }
+
+  /*=====================
+      Top Month slider
+  ======================*/
+  .calender-month-slider {
+    margin-bottom: vw(51px);
+    margin-top: vw(46px);
+    color: $theme-text-color-white-49;
+
+    tr {
+      display: flex;
+      justify-content: space-between;
+      color: $theme-text-color-1;
+      font-size: vw(18px);
+      line-height: vw(27px);
+      @include fontMedium500;
+    }
+    button {
+      background-color: transparent;
+      border: none;
+      margin: vw(10px);
+    }
+    h3 {
+      font-size: vw(24px);
+      line-height: vw(35px);
+      color: $theme-text-color-1;
+      @include fontBold700;
+    }
+    p {
+      font-size: vw(24px);
+      line-height: vw(35px);
+      color: $theme-text-color-1;
+      @include fontRegular400;
+    }
+    .current-date-time {
+      padding-left: vw(20px);
+
+      button {
+        color: $theme-text-color-1;
+        border: vw(1px) solid #303030;
+        border-radius: vw(19px);
+        @include fontRegular400;
+        font-size: vw(21px);
+        line-height: vw(31px);
+        width: vw(150px);
+        height: vw(40px);
+        // margin-top: vw(30px);
+      }
+    }
+    .day-and-date-view {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  /*========================
+        Day view css
+    ==========================*/
+  .day-view-container {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+
+    .table thead th {
+      vertical-align: bottom;
+      border-bottom: 0;
+    }
+    .table th {
+      padding: 0.75rem;
+      vertical-align: top;
+      border-top: none;
+    }
+    .table td,
+    .table th {
+      padding: 0.75rem;
+      vertical-align: top;
+      border-top: none;
+    }
+
+    .employee-appreoval-card .card {
+      background-color: $theme-bg-color-1;
+      border-radius: 0.52083vw;
+      width: auto;
+      padding: 1.5625vw;
+      height: auto;
+      border: none;
+      // box-shadow: 0 3px 50px #80808017;
+      // box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.16);
+    }
+
+    .dates {
+      width: vw(122px);
+      height: vw(171px) !important;
+      color: $theme-text-color-1;
+      font-size: vw(122px);
+      @include fontBold700;
+    }
+
+    .slick-prev:before {
+      font-size: 20px;
+      line-height: 1;
+      opacity: 0.75;
+      color: $theme-text-color-1;
+    }
+    .slick-next:before {
+      font-size: 20px;
+      line-height: 1;
+      opacity: 0.75;
+      color: $theme-text-color-1;
+    }
+
+    .holiday_card {
+      width: vw(518px);
+      height: vw(256px);
+      list-style-type: none;
+      .card-info-section__1 {
+        width: 100%;
+        display: block;
+      }
+      .edit-delete-button-section {
+        text-align: right;
+        font-size: vw(30px);
+        color: $theme-text-color-1;
+        .fa-pencil {
+          margin-right: vw(66px);
+        }
+        i:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .all-holiday-list-year-section {
+      height: vw(700px);
+      margin-top: vw(35px);
+      padding-left: vw(60px);
+      border-left: vw(1px) solid #303030;
+      text-align: left;
+      h2 {
+        font-size: vw(21px);
+        line-height: vw(31px);
+        color: $theme-text-color-1;
+        @include fontRegular400;
+      }
+      th {
+        font-size: vw(21px);
+        line-height: vw(31px);
+        @include fontSemiBold600;
+      }
+      td {
+        font-size: vw(21px);
+        line-height: vw(31px);
+        @include fontRegular400;
+      }
+    }
+  }
+
+  /*===========================
+    Bottom date and day section
+  ============================*/
+
+  .calender-date-section {
+    width: 100%;
+
+    .days_name {
+      color: $theme-text-color-1;
+      @include fontBold700;
+      font-size: vw(19px);
+      line-height: vw(29px);
+      width: vw(194px);
+      height: vw(56px);
+      padding: 0;
+      vertical-align: middle;
+      border: vw(10px) solid #f7f7f7;
+    }
+    .dayDisabled {
+      // border:vw(2px)solid;
+      // border-color: rgba($color: #000000, $alpha: 0.2);
+      color: rgba($color: #000000, $alpha: 0.2);
+      padding-right: vw(22px);
+      padding-bottom: vw(22px);
+      @include fontBold700;
+      font-size: vw(22px);
+      line-height: vw(29px);
+      width: vw(194px);
+      height: vw(172px);
+      vertical-align: bottom;
+      text-align: right;
+      background-color: #d3d3d31f;
+    }
+    .dates {
+      color: $theme-text-color-1;
+      padding-right: vw(22px);
+      padding-bottom: vw(22px);
+      @include fontBold700;
+      font-size: vw(22px);
+      line-height: vw(29px);
+      width: vw(194px);
+      height: vw(172px);
+      vertical-align: bottom;
+      text-align: right;
+    }
+    .follo-up-border {
+      color: #5789ff;
+      padding-right: vw(22px);
+      padding-bottom: vw(22px);
+      @include fontBold700;
+      font-size: vw(22px);
+      line-height: vw(29px);
+      width: vw(194px);
+      height: vw(172px);
+      vertical-align: bottom;
+      text-align: right;
+      // border:vw(2px)solid #5789ff;
+    }
+    .current-date-border {
+      color: #ff3535;
+      padding-right: vw(22px);
+      padding-bottom: vw(22px);
+      @include fontBold700;
+      font-size: vw(22px);
+      line-height: vw(29px);
+      width: vw(194px);
+      height: vw(172px);
+      vertical-align: bottom;
+      text-align: right;
+      // border:vw(2px)solid #ff3535;
+    }
+
+    .event-name {
+      display: flex;
+      width: 100%;
+      background-color: $theme-bg-color-1;
+      color: #5789ff;
+      flex-direction: column;
+      align-items: baseline;
+      @include fontMedium500;
+      font-size: vw(18px);
+      margin-bottom: vw(60px);
+      p {
+        margin-bottom: 0;
+        background: $theme-bg-dark-blue-to-purple-1;
+        padding: vw(4px);
+        border-radius: vw(200px);
+        color: white;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.save-leaves-btn {
+  width: vw(111px);
+  @include theme-button-height-and-radius-3;
+  color: $theme-text-color-1;
+  background-color: transparent;
+  border: vw(1px) solid #303030;
+  font-size: vw(24px);
+  @include fontSemiBold600;
+}
+
+/*=========================
+          Model css 
+  ==========================*/
+
+.type-of-leave-select {
+  // margin-left: vw(58px);
+  margin-top: vw(45px);
+}
+
+/*=======================================
+              Day view cards
+=========================================*/
+.edit-img-followup-card {
+  width: vw(30px);
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.card-info-section-emp {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.card-info-section-emp__1 {
+  display: flex;
+  align-items: flex-start;
+}
+
+.day-view-calender-card {
+  border-radius: vw(10px);
+  // box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.16);
+  margin-top: vw(30px);
+  padding: vw(30px);
+  // width: vw(526px);
+  // height: vw(317px);
+  text-align: left;
+
+  img {
+    border-radius: vw(25px);
+  }
+
+  .card-info-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .card-info-section__1 {
+      display: flex;
+      align-items: flex-start;
+    }
+    h4 {
+      font-size: vw(24px);
+      line-height: vw(35px);
+      color: $theme-text-color-1;
+      @include fontBold700;
+    }
+    p {
+      font-size: vw(21px);
+      line-height: vw(31px);
+      color: $theme-text-color-1;
+      @include fontRegular400;
+    }
+  }
+  .lead-list-view-img {
+    height: auto;
+    margin-right: 2.1875vw;
+  }
+  .content-section {
+    p {
+      font-size: vw(21px);
+      line-height: vw(31px);
+      @include fontSemiBold600;
+    }
+    span {
+      font-size: vw(21px);
+      color: $theme-text-color-1;
+      line-height: vw(31px);
+      @include fontRegular400;
+    }
+    display: flex;
+    margin-top: vw(15px);
+    justify-content: space-between;
+  }
+}
+
+.holiday_input {
+  border: none;
+  // background: $theme-bg-color-1;
+  // border-radius: vw(25px);
+  // height: vw(50px);
+  padding: vw(15px) vw(20px);
+  // width: vw(800px);
+  width: 100%;
+  @include theme-mixin-1;
+  border-radius: vw(25px);
+  height: vw(75px);
+}
+
+.hover_menu_class:hover {
+  cursor: pointer;
+}
+
+.no_data_in_calender {
+  width: 100%;
+  text-align: center;
+  @include fontBold700;
+  margin-top: vw(30px);
+}
+
+.day_view_selected_date .current-date-time h3 {
+  font-size: vw(35px);
+}
+
+.main-calender-container {
+  .calender_add_followup_btn {
+    width: vw(250px) !important;
+    height: vw(50px) !important;
+    background: $theme-bg-dark-blue-to-purple-1 !important;
+    color: $color-white !important;
+    font-size: vw(21px) !important;
+    @include fontRegular400;
+    border: 0 !important;
+    border-radius: vw(38px) !important;
+    display: inline-block !important;
+    text-align: center !important;
+    line-height: vw(45px) !important;
+    margin-right: vw(50px) !important;
+
+    img {
+      width: 22px;
+      margin-right: 5px;
+    }
+  }
+}
+.follow-up-select--add-meeting {
+  .react-select-follow-up-form-container {
+    // width: vw(880px) !important;
+    width: 100% !important;
+
+    .react-select-follow-up-form {
+      &__menu,
+      &__menu-list,
+      &__option,
+      &__option--is-focused,
+      &__option--is-selected {
+        //min-width: min-content;
+        width: vw(880px) !important;
+      }
+    }
+  }
+}

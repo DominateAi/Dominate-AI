@@ -1,0 +1,235 @@
+.products-and-services-main-div {
+  padding: 0 vw(35px) vw(10px) vw(85px);
+}
+.products-count-text {
+  font-size: vw(20px);
+  line-height: vw(30px);
+  color: rgba(64, 64, 64, 0.29);
+  @include fontItalicPoppins;
+  margin-bottom: 0;
+}
+.leads-title-block-btn-red-bg--products-and-services-bulk-import {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: vw(44px);
+  @include theme-mixin-2;
+}
+.products-bulk-import-icon-img {
+  display: none;
+}
+.products-and-services-search-block {
+  padding-left: vw(70px);
+  // padding-top: vw(63px);
+}
+/*=============================================================================
+
+                               table
+                            
+============================================================================*/
+.product-and-services-btn {
+  border-bottom: vw(1px) solid $theme-border-color-white-26;
+  width: vw(560px);
+
+  button {
+    font-size: vw(18px);
+    line-height: vw(27px);
+    @include fontMedium500;
+    margin-right: vw(28px);
+    background: transparent;
+    padding-bottom: vw(13px);
+    margin-bottom: -1px;
+  }
+}
+
+.product-and-services-btn--active {
+  border: none;
+  color: $theme-text-color-blue;
+  border-bottom: vw(3px) solid $theme-border-blue;
+}
+
+.product-and-services-btn--inactive {
+  border: none;
+  color: $theme-text-color-white-23;
+}
+
+.customModal--add-products-and-services {
+  width: vw(1203px) !important;
+  //padding-left: vw(83px) !important;
+  padding-left: vw(50px) !important;
+  // padding-right: vw(100px) !important;
+  // background: url("../../img/background-new-design/new-modal-bg.svg");
+  // background-position: inherit;
+  @include theme-mixin-modal-bg;
+  // background-size: cover;
+}
+.products-and-services-padding-div {
+  // padding-left: vw(65px);
+  .font-30-bold {
+    padding-bottom: vw(39px);
+    border-bottom: vw(2px) solid $theme-border-color-white-26;
+  }
+}
+.add-products-form-row {
+  margin-bottom: vw(50px);
+  .add-lead-input-field {
+    // width: 85%;
+    width: 100%;
+  }
+  // textarea.add-lead-input-field {
+  //   width: 90%;
+  // }
+}
+.product-and-services-details-card {
+  width: vw(1700px);
+  min-height: vw(147px);
+  //background: linear-gradient(180deg, #f2f3f6 0%, #ffffff 100%);
+  // background: $theme-bg-color-white-03;
+  // box-shadow: 0 vw(3px) vw(15px) rgba(0, 0, 0, 0.09);
+  padding: vw(20px) vw(53px) vw(16px) vw(52px);
+  // border-radius: vw(25px);
+  //margin-top: vw(36px);
+  margin-bottom: vw(8px);
+  word-break: break-all;
+  @include theme-mixin-2;
+}
+.product-and-services-details-card__row1 {
+  width: 100%;
+  padding-bottom: vw(25px);
+  // border-bottom: vw(1px) solid #edeef2;
+  border-bottom: vw(1px) solid $theme-border-color-white-11;
+  color: $theme-text-color-white-79;
+}
+.product-and-services-details-card-title-row_colm1,
+.product-and-services-details-card__row1_colm1 {
+  width: 10%;
+}
+.product-and-services-details-card-title-row_colm4,
+.product-and-services-details-card__row1_colm4 {
+  width: 20%;
+}
+
+.product-and-services-details-card-title-row_colm3,
+.product-and-services-details-card-title-row_colm5,
+.product-and-services-details-card__row1_colm3,
+.product-and-services-details-card__row1_colm5 {
+  width: 13%;
+}
+.product-and-services-details-card-title-row_colm6,
+.product-and-services-details-card__row1_colm6 {
+  width: 12%;
+  padding: 0 vw(15px);
+}
+
+// .product-and-services-details-card__row1_colm4,
+// .product-and-services-details-card__row1_colm6,
+// .product-and-services-details-card__row1_colm5 {
+//   color: #3a4759;
+// }
+
+.product-and-services-details-card-title-row_colm2,
+.product-and-services-details-card__row1_colm2 {
+  width: 20%;
+  // color: #3a4759;
+}
+
+// .product-and-services-details-card__row1_colm3,
+// .product-and-services-details-card__row1_colm1 {
+//   color: #a254f2;
+// }
+
+.product-and-services-details-card-title-row_colm7 {
+  text-align: center;
+}
+.product-and-services-details-card-title-row_colm7,
+.product-and-services-details-card__row1_colm7 {
+  width: 10%;
+  flex-wrap: nowrap !important;
+  justify-content: flex-end;
+  button {
+    border: none;
+    padding: 0;
+    // color: #6b6e72;
+    background: transparent;
+    height: auto;
+    font-size: vw(25px);
+    margin-right: vw(22px);
+    color: $theme-text-color-white-79;
+  }
+}
+
+.product-and-services-details-card__row2_colm1 {
+  width: 12%;
+  font-size: vw(14px);
+  line-height: vw(21px);
+  @include fontMedium500;
+  // color: rgba(64, 64, 64, 0.29);
+  color: $theme-text-color-white-42;
+}
+.product-and-services-details-card__row2_colm2 {
+  p {
+    font-size: vw(13px);
+    line-height: vw(19px);
+    @include fontRegular400;
+    color: $theme-text-color-1;
+    margin-bottom: 0;
+  }
+  //padding-right: vw(400px);
+  padding-right: vw(200px);
+  padding-left: vw(15px);
+}
+.product-and-services-details-card__row2 {
+  padding-top: vw(18px);
+}
+.product-and-services-desc-colon-text {
+  padding-left: vw(36px);
+  color: #3a4759;
+}
+.products-read-more-btn {
+  font-size: vw(12px);
+  line-height: vw(18px);
+  text-decoration: underline;
+  @include fontItalicPoppins;
+  background: transparent;
+  border: none;
+  color: #a254f2;
+}
+.product-and-services-details-card-title-row {
+  padding: vw(60px) vw(53px) vw(36px) vw(52px);
+  font-size: vw(21px);
+  line-height: vw(31px);
+  @include fontBold700;
+  font-style: italic;
+  // color: $theme-text-color-white-23;
+  color: $theme-text-color-white-42;
+  width: vw(1700px);
+}
+.product-not-found-img {
+  width: vw(355px);
+  height: auto;
+  margin-bottom: vw(71px);
+}
+.services-not-found-img {
+  width: vw(355px);
+  height: auto;
+  margin-bottom: vw(81px);
+}
+.product-and-services-not-found-img {
+  width: vw(356px);
+  height: auto;
+  margin-bottom: vw(28px);
+}
+.product-and-services-not-found-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: vw(150px);
+  padding-bottom: vw(30px);
+  color: $theme-text-color-1;
+  span {
+    padding-bottom: vw(28px);
+  }
+}
+// .add-product-save-btn {
+//   padding-right: vw(70px);
+// }

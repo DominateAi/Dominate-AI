@@ -1,0 +1,33 @@
+.customModal--import-to-leads-modal {
+  .leads-title-block-btn-red-bg--verify-fields {
+    @include theme-mixin-blue-bg-with-color;
+  }
+}
+.import-to-leads-modal-div {
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  width: 100%;
+}
+.import-to-leads-modal-subtitle {
+  padding-top: vw(40px);
+  text-transform: uppercase;
+  // color: rgba(48, 48, 48, 0.48);
+}
+.import-modal-one-img-div {
+  width: vw(72px);
+  height: vw(72px);
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.import-leads-modal-one-29-semibold {
+  font-size: vw(29px);
+  line-height: vw(43px);
+  text-transform: capitalize;
+  @include fontSemiBold600;
+  color: $theme-text-dark-gray-to-white;
+  padding-left: vw(20px);
+}

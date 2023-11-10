@@ -1,0 +1,148 @@
+.accounts-details-leads-card-container {
+  // width: vw(705px);
+  height: auto;
+  // border-radius: vw(16px);
+  // box-shadow: 0 vw(3px) vw(6px) rgba(0, 0, 0, 0.16);
+  // background: rgb(192, 200, 223);
+  // background: linear-gradient(
+  //   296deg,
+  //   rgba(242, 243, 246, 1) 0%,
+  //   rgba(255, 255, 255, 1) 100%
+  // );
+  // padding: vw(30px) vw(25px);
+  padding: vw(38px) vw(41px);
+  margin-right: vw(56px);
+  margin-bottom: vw(56px);
+  position: relative;
+  @include theme-mixin-1;
+  @include border-mixin-1;
+  backdrop-filter: none;
+  border-radius: vw(18px);
+  width: vw(1718px);
+  @include backdrop-filter-none;
+
+  // &::after {
+  //   content: "";
+  //   width: 80%;
+  //   height: vw(8px);
+  //   background: rgb(246, 211, 101);
+  //   background: linear-gradient(
+  //     90deg,
+  //     rgba(242, 153, 74, 1) 0%,
+  //     rgba(234, 175, 200, 1) 100%
+  //   );
+  //   border-radius: vw(4px);
+  //   position: absolute;
+  //   bottom: vw(-4px);
+  //   left: 10%;
+  // }
+
+  .lead-status-dropDown .Dropdown-arrow {
+    right: vw(20px);
+  }
+}
+.accounts-details-leads-card-container__img-block {
+  // width: vw(92px);
+  // height: vw(92px);
+  width: vw(66px);
+  height: vw(66px);
+  border-radius: 100%;
+  margin-right: vw(16px);
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    // box-shadow: 0 vw(4px) vw(6px) #00000028;
+    //border-radius: 50%;
+  }
+}
+
+.accounts-details-leads-card-container__row1 {
+  // justify-content: space-between;
+  width: 100%;
+  border-bottom: vw(2px) solid $theme-border-color-white-26;
+  padding-bottom: vw(36px);
+}
+
+.accounts-details-leads-card-container_text {
+  // color: $theme-text-color-white-23;
+  font-size: vw(24px);
+  line-height: vw(35px);
+  @include fontBold700;
+  margin-bottom: vw(5px);
+  color: $theme-text-color-white-79;
+}
+
+.accounts-details-leads-card-container_text-2 {
+  font-size: vw(19px);
+  line-height: vw(29px);
+  @include fontBold700;
+  text-transform: uppercase;
+  // color: rgba(48, 48, 48, 0.48);
+  color: $theme-text-color-white-42;
+}
+
+.accounts-details-leads-card-container_text--3 {
+  // text-transform: uppercase;
+  // color: rgba(48, 48, 48, 0.48);
+  color: $theme-text-color-white-42;
+  @include theme-letter-spacing-28-uppercase;
+}
+.accounts-details-leads-card-container_text--4 {
+  text-transform: capitalize;
+  // color: $theme-text-dark-gray-to-white;
+  // padding-top: vw(20px);
+  color: $theme-text-color-white-79;
+}
+.ml-200 {
+  margin-left: vw(200px);
+}
+
+// for leads overflow
+.accounts-details-leads-card-overflow-div {
+  height: vw(850px);
+  overflow: auto;
+}
+.accounts-details-leads-card-title-1,
+.accounts-details-leads-card-container_img-title-div {
+  width: 30%;
+}
+
+.accounts-details-leads-card-title-2,
+.accounts-details-leads-card-title-3,
+.accounts-details-leads-card-container_text--assigned,
+.accounts-details-leads-card-container_level-dropdown {
+  width: 20%;
+}
+.accounts-details-leads-card-container_status-dropdown {
+  .lead-status-dropDown .Dropdown-control {
+    // width: vw(362px);
+    // max-width: vw(362px);
+    padding-right: vw(50px);
+  }
+}
+.accounts-details-leads-card-container_deal {
+  padding-top: vw(43px);
+}
+.accounts-details-leads-card-container_text--deal-text {
+  padding-left: vw(19px);
+  text-decoration: underline;
+}
+/*=========================================================================
+                               for title
+=========================================================================*/
+.accounts-details-leads-card-title-div {
+  width: vw(1718px);
+  padding-top: vw(63px);
+  padding-bottom: vw(26px);
+  @include theme-letter-spacing-28-uppercase;
+  color: $theme-text-color-white-42;
+}
+.accounts-details-leads-card-title-2 {
+  padding-left: vw(50px);
+}
+.accounts-details-leads-card-title-1 {
+  padding-left: vw(100px);
+}

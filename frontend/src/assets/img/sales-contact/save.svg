@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="39" height="40" viewBox="0 0 39 40">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f6d365"/>
+      <stop offset="1" stop-color="#fda085"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_9269" data-name="Group 9269" transform="translate(-5389 5397)">
+    <rect id="Rectangle_2390" data-name="Rectangle 2390" width="39" height="40" rx="19.5" transform="translate(5389 -5397)" fill="url(#linear-gradient)"/>
+    <path id="Icon_awesome-save" data-name="Icon awesome-save" d="M18.162,6.349,14.651,2.838A2.009,2.009,0,0,0,13.23,2.25H2.009A2.009,2.009,0,0,0,0,4.259V18.991A2.009,2.009,0,0,0,2.009,21H16.741a2.009,2.009,0,0,0,2.009-2.009V7.77a2.009,2.009,0,0,0-.588-1.421ZM9.375,18.321a2.679,2.679,0,1,1,2.679-2.679A2.679,2.679,0,0,1,9.375,18.321ZM13.393,5.576V9.783a.5.5,0,0,1-.5.5H3.181a.5.5,0,0,1-.5-.5V5.431a.5.5,0,0,1,.5-.5h9.564a.5.5,0,0,1,.355.147l.146.146a.5.5,0,0,1,.147.355Z" transform="translate(5399 -5388)" fill="#fff"/>
+  </g>
+</svg>

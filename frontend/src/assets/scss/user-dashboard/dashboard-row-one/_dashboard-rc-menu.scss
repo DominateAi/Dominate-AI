@@ -1,0 +1,50 @@
+.rc-dropdown-menu {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  border: vw(1px) solid rgba(255, 255, 255, 0.03) !important;
+  box-shadow: inset 0 vw(4px) vw(14px) rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(94px) !important;
+  border-radius: vw(10px) !important;
+}
+
+.rc-dropdown-menu > .rc-dropdown-menu-item,
+.rc-dropdown-menu button {
+  font-size: vw(18px) !important;
+  line-height: vw(21px) !important;
+  @include fontRegular400;
+  letter-spacing: 0.03em;
+  color: $theme-text-color-white-79 !important;
+
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  text-align: left;
+
+  &:hover {
+    color: $theme-text-color-grey-2 !important;
+    background-color: transparent !important;
+  }
+}
+
+.rc-dropdown-menu > .rc-dropdown-menu-item {
+  padding: vw(15px) 0 vw(9px) vw(3px) !important;
+}
+
+.rc-dropdown-menu > .rc-dropdown-menu-item-divider {
+  margin: 0;
+  background: rgba(92, 101, 157, 0.08);
+}
+
+.add-account-dropdown {
+  .rc-dropdown-menu,
+  .rc-dropdown-menu.rc-dropdown-menu-root.rc-dropdown-menu-vertical {
+    width: vw(232px);
+  }
+
+  .rc-dropdown-menu {
+    margin-top: 0;
+    padding: vw(10px) vw(17px);
+  }
+}

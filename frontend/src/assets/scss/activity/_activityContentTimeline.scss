@@ -1,0 +1,84 @@
+/* ===============================================================
+                    
+                            activity timeline
+
+================================================================== */
+
+.leads-timeline-icons-block {
+  width: vw(25px);
+}
+
+.leads-timeline-orange-icon {
+  display: block;
+  width: vw(25px);
+  margin-bottom: vw(16px);
+}
+
+.leads-timeline-gray-icon {
+  display: block;
+  width: vw(9px);
+  // height: vw(9px);
+  // border-radius: 50%;
+  margin: 0 auto;
+  // background-color: #eaeaea;
+  // margin-bottom: vw(16px);
+  // background: rgba(78, 47, 240, 0.3);
+  background: rgba(111, 90, 220, 1);
+  height: vw(20px);
+}
+
+.leads-timeline-left-block-with-icons,
+.leads-timeline-right-block-with-icons {
+  display: flex;
+  align-items: flex-start;
+}
+
+.leads-timeline-left-block-with-icons {
+  justify-content: flex-start;
+}
+
+.leads-timeline-right-block-with-icons {
+  justify-content: flex-end;
+}
+
+.leads-timeline-left-block,
+.leads-timeline-right-block {
+  width: vw(496px);
+  height: vw(112px);
+  overflow: auto;
+  @include theme-mixin-dashed-border-card;
+  padding: vw(28px) vw(20px) vw(18px) vw(37px);
+}
+
+.leads-timeline-left-block {
+  border-radius: vw(20px) 0 vw(20px) vw(20px);
+  margin-right: vw(30px);
+}
+
+.leads-timeline-right-block {
+  border-radius: 0 vw(20px) vw(20px) vw(20px);
+  margin-left: vw(30px);
+  margin-right: vw(27px);
+}
+
+.leads-timeline-card {
+  display: flex;
+  flex-wrap: nowrap;
+
+  .leads-timeline-card__div {
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+  .leads-timeline-card__div-img {
+    width: vw(23px);
+    margin-right: vw(10px);
+    border-radius: vw(25px);
+  }
+}
+
+.leads-timeline-card {
+  .font-17-regular.pb-10 {
+    color: $theme-text-color-white-42;
+  }
+}

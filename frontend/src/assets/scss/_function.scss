@@ -1,0 +1,48 @@
+/* ===============================================================
+                    
+                    Functions
+                    
+================================================================== */
+
+@function vw($target) {
+  $vw-context: (1920 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+
+@function vh($target) {
+  $vw-context: (1080 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vh;
+}
+
+// use it when creating new scss mobile view files
+@function mvw($target) {
+  $vw-context: (375 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+
+// use it when converting the desktop scss files
+@function mvwDivide($target) {
+  $vw-context: (375 * 0.01) * 1px;
+  $target: $target / 2;
+  @return ($target / $vw-context) * 1vw;
+}
+
+@function mvw767($target) {
+  $vw-context: (767 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+
+@function mvh767($target) {
+  $vw-context: (767 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vh;
+}
+
+@function vh($target) {
+  $vw-context: (375 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vh;
+}
+
+@function rem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}

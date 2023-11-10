@@ -1,0 +1,458 @@
+/*=========================================
+        Main Calender css
+============================================*/
+
+.calendar-day-month-view {
+  padding: mvwDivide(5px) 0;
+  padding-left: mvwDivide(20px);
+  font-size: mvwDivide(18px);
+  color: $color-white;
+  background: linear-gradient(306deg, #502eff 0%, #d1c7ff 100%);
+  border: 0;
+  width: mvwDivide(320px);
+  height: mvwDivide(48px);
+  border-radius: mvwDivide(30px);
+  cursor: pointer;
+
+  span {
+    margin-right: mvwDivide(7px);
+    font-size: mvwDivide(24px) !important;
+  }
+
+  p {
+    margin-bottom: 0;
+    font-size: mvwDivide(21px) !important;
+    color: #ffffff !important;
+  }
+}
+
+.main-calender-tabs-container {
+  overflow: auto;
+  background-color: $theme-bg-color-1;
+  height: auto;
+  padding-left: mvwDivide(41px) !important;
+  padding-right: mvwDivide(41px) !important;
+  padding-top: mvwDivide(25px);
+  padding: mvwDivide(23px);
+
+  /*=========================
+            Tabs Css
+    ==========================*/
+
+  .rwt__tab[aria-selected="true"] {
+    position: relative;
+    color: black !important;
+  }
+
+  .rwt__tablist {
+    text-align: center;
+  }
+
+  .rwt__tab {
+    background: transparent;
+    border: 0;
+    @include fontBold700;
+
+    line-height: mvwDivide(31px);
+    font-size: mvwDivide(21px);
+    padding: mvw(15px) mvw(10px) mvw(7px) mvw(10px);
+    transition: background 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+    color: gray !important;
+  }
+
+  .rwt__tablist:not([aria-orientation="vertical"])
+    .rwt__tab[aria-selected="true"]:after {
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    border-bottom: mvwDivide(3px) solid #000000;
+  }
+
+  .rwt__tab[aria-selected="true"]:after {
+    content: "";
+    position: absolute;
+  }
+
+  /*=======================
+          Table Border
+    ========================*/
+
+  .table-bordered td,
+  .table-bordered th {
+    border: mvwDivide(10px) solid #f7f7f7;
+  }
+
+  /*=====================
+        Top Month slider
+    ======================*/
+  .calender-month-slider {
+    margin-bottom: mvwDivide(51px);
+    margin-top: mvwDivide(46px);
+
+    tr {
+      display: flex;
+      justify-content: space-between;
+      color: $theme-text-color-1;
+      font-size: mvwDivide(18px);
+      line-height: mvwDivide(27px);
+      @include fontMedium500;
+    }
+    button {
+      background-color: transparent;
+      border: none;
+      margin: mvwDivide(10px);
+    }
+    h3 {
+      font-size: mvwDivide(24px);
+      line-height: mvwDivide(35px);
+      color: $theme-text-color-1;
+      @include fontBold700;
+    }
+    p {
+      font-size: mvwDivide(24px);
+      line-height: mvwDivide(35px);
+      color: $theme-text-color-1;
+      @include fontRegular400;
+    }
+    .current-date-time {
+      padding-left: mvwDivide(20px);
+
+      button {
+        color: $theme-text-color-1;
+        border: mvwDivide(3px) solid #303030;
+        border-radius: mvwDivide(19px);
+        @include fontRegular400;
+        font-size: mvwDivide(21px);
+        line-height: mvwDivide(31px);
+        width: mvwDivide(150px);
+        height: mvwDivide(40px);
+        // margin-top: mvwDivide(30px);
+      }
+    }
+    .day-and-date-view {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  /*========================
+          Day view css
+      ==========================*/
+  .day-view-container {
+    padding-left: mvwDivide(0px);
+    padding-right: mvwDivide(0px);
+    text-align: center;
+
+    .table thead th {
+      vertical-align: bottom;
+      border-bottom: 0px;
+    }
+    .table th {
+      padding: 0.75rem;
+      vertical-align: top;
+      border-top: none;
+    }
+    .table td,
+    .table th {
+      padding: 0.75rem;
+      vertical-align: top;
+      border-top: none;
+    }
+
+    .employee-appreoval-card .card {
+      background-color: $theme-bg-color-1;
+      border-radius: 0.52083vw;
+      width: auto;
+      padding: 1.5625vw;
+      height: auto;
+      border: none;
+      // box-shadow: 0px 3px 50px #80808017;
+      // box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.16);
+    }
+
+    .dates {
+      width: mvwDivide(122px);
+      height: mvwDivide(171px) !important;
+      color: $theme-text-color-1;
+      font-size: mvwDivide(122px);
+      @include fontBold700;
+    }
+    .slick-prev:before {
+      font-size: 20px;
+      line-height: 1;
+      opacity: 0.75;
+      color: $theme-text-color-1;
+    }
+    .slick-next:before {
+      font-size: 20px;
+      line-height: 1;
+      opacity: 0.75;
+      color: $theme-text-color-1;
+    }
+
+    .holiday_card {
+      width: mvwDivide(518px);
+      height: mvwDivide(256px);
+      list-style-type: none;
+      .card-info-section__1 {
+        width: 100%;
+        display: block;
+      }
+      .edit-delete-button-section {
+        text-align: right;
+        font-size: mvwDivide(30px);
+        color: $theme-text-color-1;
+        .fa-pencil {
+          margin-right: mvwDivide(66px);
+        }
+        i:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .all-holiday-list-year-section {
+      height: mvwDivide(700px);
+      margin-top: mvwDivide(35px);
+      padding-left: mvwDivide(20px);
+      border-left: 0;
+      text-align: left;
+      h2 {
+        font-size: mvwDivide(21px);
+        line-height: mvwDivide(31px);
+        color: $theme-text-color-1;
+        @include fontRegular400;
+      }
+      th {
+        font-size: mvwDivide(21px);
+        line-height: mvwDivide(31px);
+        @include fontSemiBold600;
+      }
+      td {
+        font-size: mvwDivide(21px);
+        line-height: mvwDivide(31px);
+        @include fontRegular400;
+      }
+    }
+  }
+
+  /*===========================
+      Bottom date and day section
+    ============================*/
+
+  .calender-date-section {
+    width: 100%;
+
+    .days_name {
+      color: $theme-text-color-1;
+      @include fontBold700;
+      font-size: mvwDivide(19px);
+      line-height: mvwDivide(29px);
+      width: mvwDivide(14px);
+      height: mvwDivide(61px);
+      padding: 0px;
+      vertical-align: middle;
+      border: mvwDivide(10px) solid #f7f7f7;
+    }
+    .dayDisabled {
+      // border: 2px solid;
+      // border-color: rgba($color: #000000, $alpha: 0.2);
+      color: rgba($color: #000000, $alpha: 0.2);
+      // padding-right: mvwDivide(22px);
+      padding: mvwDivide(22px);
+      @include fontBold700;
+      font-size: mvwDivide(22px);
+      line-height: mvwDivide(29px);
+      width: mvwDivide(194px);
+      // height: mvwDivide(172px);
+      vertical-align: bottom;
+      text-align: right;
+      background-color: #d3d3d31f;
+    }
+    .dates {
+      color: $theme-text-color-1;
+      // padding-right: mvwDivide(22px);
+      padding: mvwDivide(22px);
+      @include fontBold700;
+      font-size: mvwDivide(22px);
+      line-height: mvwDivide(29px);
+      width: mvwDivide(194px);
+      // height: mvwDivide(172px);
+      vertical-align: bottom;
+      text-align: right;
+    }
+    .follo-up-border {
+      color: #5789ff;
+      // padding-right: mvwDivide(22px);
+      padding: mvwDivide(22px);
+      @include fontBold700;
+      font-size: mvwDivide(22px);
+      line-height: mvwDivide(29px);
+      width: mvwDivide(194px);
+      // height: mvwDivide(172px);
+      vertical-align: bottom;
+      text-align: right;
+      // border: 2px solid #5789ff;
+    }
+    .current-date-border {
+      color: #ff3535;
+      // padding-right: mvwDivide(22px);
+      padding: mvwDivide(22px);
+      @include fontBold700;
+      font-size: mvwDivide(22px);
+      line-height: mvwDivide(29px);
+      width: mvwDivide(194px);
+      // height: mvwDivide(172px);
+      vertical-align: bottom;
+      text-align: right;
+      // border: 2px solid #ff3535;
+    }
+
+    .event-name {
+      display: flex;
+      //   width: 100%;
+      width: mvw(20px);
+      height: mvw(20px);
+      overflow: hidden;
+      border-radius: 50%;
+      background-color: $theme-bg-color-1;
+      color: #5789ff;
+      flex-direction: column;
+      align-items: baseline;
+      @include fontMedium500;
+      font-size: mvwDivide(18px);
+      margin-bottom: mvwDivide(15px);
+      p {
+        margin-bottom: 0;
+        background: $theme-bg-dark-blue-to-purple-1;
+        padding: mvwDivide(6px) mvwDivide(10px) 0 mvwDivide(10px);
+        border-radius: mvwDivide(200px);
+        color: white;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.save-leaves-btn {
+  width: mvwDivide(111px);
+  height: mvwDivide(53px);
+  color: $theme-text-color-1;
+  background-color: transparent;
+  border: mvwDivide(2px) solid #303030;
+  border-radius: mvwDivide(27px);
+  font-size: mvwDivide(24px);
+  line-height: mvwDivide(35px);
+  @include fontSemiBold600;
+}
+
+/*=========================
+            Model css 
+    ==========================*/
+
+.type-of-leave-select {
+  margin-left: mvwDivide(58px);
+  margin-top: mvwDivide(45px);
+}
+
+/*=======================================
+                Day view cards
+  =========================================*/
+.edit-img-followup-card {
+  width: mvwDivide(30px);
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.card-info-section-emp {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.card-info-section-emp__1 {
+  display: flex;
+  align-items: flex-start;
+}
+
+.day-view-calender-card {
+  border-radius: mvwDivide(10px);
+  // box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.16);
+  margin-top: mvwDivide(30px);
+  padding: mvwDivide(30px);
+  // width: mvwDivide(526px);
+  // height: mvwDivide(317px);
+  text-align: left;
+
+  img {
+    border-radius: mvwDivide(30px);
+  }
+
+  .card-info-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .card-info-section__1 {
+      display: flex;
+      align-items: flex-start;
+    }
+    h4 {
+      font-size: mvwDivide(24px);
+      line-height: mvwDivide(35px);
+      color: $theme-text-color-1;
+      @include fontBold700;
+    }
+    p {
+      font-size: mvwDivide(21px);
+      line-height: mvwDivide(31px);
+      color: $theme-text-color-1;
+      @include fontRegular400;
+    }
+  }
+  .lead-list-view-img {
+    height: auto;
+    margin-right: 2.1875vw;
+  }
+  .content-section {
+    p {
+      font-size: mvwDivide(21px);
+      line-height: mvwDivide(31px);
+      @include fontSemiBold600;
+    }
+    span {
+      font-size: mvwDivide(21px);
+      color: $theme-text-color-1;
+      line-height: mvwDivide(31px);
+      @include fontRegular400;
+    }
+    display: flex;
+    margin-top: mvwDivide(15px);
+    justify-content: space-between;
+  }
+}
+
+.holiday_input {
+  border: none;
+  background: $theme-bg-color-1;
+  border-radius: mvwDivide(30px);
+  height: mvwDivide(50px);
+  padding: mvwDivide(15px) mvwDivide(20px);
+  width: 100%;
+}
+
+.hover_menu_class:hover {
+  cursor: pointer;
+}
+
+.no_data_in_calender {
+  width: 100%;
+  text-align: center;
+  @include fontBold700;
+  margin-top: mvwDivide(30px);
+}
+
+.day_view_selected_date .current-date-time h3 {
+  font-size: mvwDivide(35px);
+}

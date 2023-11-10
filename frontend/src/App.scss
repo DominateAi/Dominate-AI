@@ -1,0 +1,124 @@
+@import "../src/assets/scss/variables";
+@import "../src/assets/scss/mixins";
+@import "../src/assets/scss/function";
+@import "../src/assets/scss/typography";
+
+/*=======================
+ desktop components css
+ =======================*/
+@media screen and (min-width: 768px) {
+  @import "../src/assets/scss/global";
+  @import "../src/assets/scss/header/index";
+  @import "../src/assets/scss/common/index";
+  @import "../src/assets/scss/all-new-colors-gradients";
+  @import "../src/assets/scss/leads/addLead";
+  @import "../src/assets/scss/leads/leads";
+  @import "../src/assets/scss/customers/index";
+  @import "../src/assets/scss/login/login";
+  @import "../src/assets/scss/activity/activity";
+  @import "../src/assets/scss/employees/index";
+  @import "../src/assets/scss/activity/activityTabs";
+  @import "../src/assets/scss/leads/funnelView";
+  @import "../src/assets/scss/tasklist/index";
+  @import "../src/assets/scss/calender/calender";
+  @import "../src/assets/scss/warning-popups/warning_popups";
+  @import "../src/assets/scss/login/workspace_login";
+  @import "../src/assets/scss/payment/payment";
+  @import "../src/assets/scss/profile/index";
+  @import "../src/assets/scss/dashboard/dashboard";
+  @import "../src/assets/scss/login/success-message-modal";
+  @import "../src/assets/scss/login/forget-password";
+  @import "../src/assets/scss/admin-reports/admin-reports";
+  @import "../src/assets/scss/proposals/proposals";
+  @import "../src/assets/scss/quotation/quotation";
+  @import "../src/assets/scss/message/message";
+  @import "../src/assets/scss/login/updates-login-signup";
+  @import "../src/assets/scss/overview-demo/index";
+  @import "../src/assets/scss/overview-demo-new/index";
+  @import "../src/assets/scss/command-centre/command-centre";
+  @import "../src/assets/scss/user-dashboard/user_dashboard_main";
+  @import "../src/assets/scss/user-reports/user_reports_main";
+  @import "../src/assets/scss/backgrounds/all-backgrounds";
+  @import "../src/assets/scss/sales-centre/index";
+  @import "../src/assets/scss/accounts/Accounts";
+  @import "../src/assets/scss/accounts-details/AccountsDetails";
+  @import "../src/assets/scss/deal-pipelines/index";
+  @import "../src/assets/scss/sales-linkedin-search/index";
+  @import "../src/assets/scss/sales-contacts/index";
+  @import "../src/assets/scss/email-data-scrape/index";
+  @import "../src/assets/scss/sales-domain-based/index";
+  @import "../src/assets/scss/sales-intent-based/index";
+  @import "../src/assets/scss/sales-find-look-alike/index";
+  @import "../src/assets/scss/import-to-leads/index";
+  @import "../src/assets/scss/cube-mail/cube-mail";
+  @import "../src/assets/scss/craftjs/craft";
+  @import "../src/assets/scss/products-and-services/index";
+  @import "../src/assets/scss/vault/index";
+  @import "../src/assets/scss/calendar-new/index";
+  @import "react-big-calendar/lib/sass/styles";
+  @import "../src/assets/scss/sequence/index";
+
+  @import "../src/assets/scss/common/common-all";
+
+  /*=======================
+    super admin
+  =======================*/
+  @import "../src/assets/scss/super-admin/common/dropdown";
+  @import "../src/assets/scss/super-admin/common/gradients";
+  @import "../src/assets/scss/super-admin/common/pagination";
+  @import "../src/assets/scss/super-admin/desktop/workspaces";
+
+  /****************************
+@DESC - PROPOSALS
+****************************/
+  @import "./components/desktop/ProposalEditor/asset/scss/index";
+}
+
+/***************************
+@NYLAS
+***************************/
+
+@import "./components/desktop/ImportLeads/assets/scss/index";
+// @import "./components/desktop/Connect/assets/scss/index";
+
+/*===========================
+ desktop components css end
+ ===========================*/
+
+/*=======================
+ mobile components css
+ =======================*/
+@media screen and (max-width: 767px) {
+  // mobile old required
+  @import "../src/assets/scss/mobileAll/allMobileStylesImport";
+
+  // mobile new
+  // @import "../src/assets/scss/mobile-new/dashboard/dashboard";
+  // @import "../src/assets/scss/mobile-new/navbar/static-navbar";
+
+  // desktop
+  // @import "../src/assets/scss/calender/calender";
+  @import "../src/assets/scss/all-new-colors-gradients";
+
+  /*=======================
+    super admin
+  =======================*/
+  @import "../src/assets/scss/super-admin-mobile/common/dropdown";
+  @import "../src/assets/scss/super-admin-mobile/common/gradients";
+  @import "../src/assets/scss/super-admin-mobile/common/pagination";
+  @import "../src/assets/scss/super-admin-mobile/desktop/workspaces";
+}
+
+/*==========================
+ mobile components css end
+ ==========================*/
+
+.cke .cke_1 .cke_reset_all .cke_chrome .cke_float .cke_ltr .cke_browser_webkit {
+  padding-bottom: vw(20px) !important;
+  padding-top: vw(20px) !important;
+  // box-shadow: none !important;
+}
+
+.cke_chrome {
+  padding: 50px;
+}

@@ -1,0 +1,108 @@
+.dashboard_row_three_main_container {
+  text-align: center;
+  padding-top: vw(25px);
+  padding-bottom: vw(17px);
+  padding-left: vw(41px);
+  padding-right: vw(41px);
+  width: vw(1699px);
+  height: vw(209px);
+  // margin-top: vw(11px);
+
+  margin-bottom: vw(11px);
+  // border-radius: vw(15px);
+  // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+  // width: vw(1798px);
+
+  .leads-title-block-container__date-picker {
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  h2 {
+    font-size: vw(14px);
+    line-height: vw(17px);
+    @include theme-letter-spacing-28-uppercase;
+    color: $theme-text-color-gray-to-white;
+    @include fontBold700;
+    margin-bottom: vw(30px);
+  }
+
+  .level_count_container {
+    display: flex;
+    justify-content: center;
+    margin-top: vw(28px);
+    // opacity: 0.9;
+    // .super_hot_gradient {
+    //   background: linear-gradient(to right, #ff2626, #ffa5a5);
+    // }
+
+    // .hot_gradient {
+    //   background: linear-gradient(to right, #fea858, #ed765e);
+    // }
+
+    // .warm_gradient {
+    //   background: linear-gradient(to right, #f6d365, #fda085);
+    // }
+
+    // .new_gradient {
+    //   background: linear-gradient(to right, #acedfc, #57a1e6);
+    // }
+
+    // .qualified_gradient {
+    //   background: linear-gradient(to right, #9618f7, #d1c7ff);
+    // }
+
+    // .on_hold_gradient {
+    //   background: linear-gradient(to right, #9ef2c9, #46dcb2);
+    // }
+
+    // .drop_gradient {
+    //   background: linear-gradient(to right, #07a3b2, #d9ecc7);
+    // }
+
+    // .contacted_gradient {
+    //   background: linear-gradient(to right, #18c6f0, #8c8dac);
+    // }
+
+    .level_count_card {
+      // color: $color-white;
+      border-radius: vw(10px);
+      padding-top: vw(10px);
+      //   padding-bottom: vw(10px);
+      text-align: center;
+      margin-right: vw(11px);
+      width: vw(189px);
+      height: vw(80px);
+      @include theme-mixin-3;
+      position: relative;
+
+      color: $theme-text-color-white-79;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: vw(2px);
+        height: 100%;
+        background: $theme-bg-gardient-blue;
+        border-radius: vw(12px);
+        z-index: 99;
+      }
+
+      h3 {
+        font-size: vw(30px);
+        line-height: vw(34px);
+        @include fontMedium500;
+        margin-bottom: vw(5px);
+      }
+
+      p {
+        margin: 0;
+        font-size: vw(14px);
+
+        @include fontMedium500;
+      }
+    }
+  }
+}

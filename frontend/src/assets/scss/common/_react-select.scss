@@ -1,0 +1,151 @@
+/* ===============================================================
+                    
+                        react select
+                    
+================================================================== */
+.react-select-container {
+  width: 100% !important;
+  // height: vw(50px) !important;
+  height: vw(75px) !important;
+  box-shadow: 0 0 0 !important;
+  // border-radius: vw(1px) !important;
+  border-radius: vw(25px) !important;
+  padding: 0;
+  text-align: center !important;
+  color: $theme-text-color-black-to-white-1 !important;
+  margin-bottom: vw(10px);
+  text-transform: capitalize;
+  margin-top: vw(15px);
+  border: 0;
+  background: transparent;
+}
+
+.react-select-elements__placeholder {
+  color: #848484 !important;
+  text-align: center !important;
+  //  top: 40% !important;
+  font-size: vw(18px) !important;
+  @include fontRegular400Important;
+}
+
+.react-select-elements__value-container {
+  padding: vw(1px) vw(8px) !important;
+}
+
+.react-select-elements {
+  &__control {
+    border: 0 !important;
+    // border-bottom: vw(4px) solid #cccccc !important;
+    // border-radius: inherit !important;
+    // background-color: #ffffff !important;
+    background: $theme-bg-color-white-03 !important;
+    backdrop-filter: blur(56px) !important;
+    color: $theme-text-color-black-to-white-1 !important;
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    // min-height: vw(50px) !important;
+    min-height: vw(75px) !important;
+    //margin-top: vw(-10px);
+    box-shadow: 0 0 0 !important;
+    text-align: center !important;
+    padding-left: 0 !important;
+    border-radius: vw(25px) !important;
+    padding-left: vw(32px) !important;
+    // padding-right: vw(40px) !important;
+  }
+
+  &__indicator-separator {
+    display: none !important;
+  }
+
+  &__indicator {
+    color: $theme-text-color-black-to-white-1 !important;
+    padding: 0 !important;
+    text-align: center !important;
+
+    svg {
+      width: vw(30px) !important;
+      height: vw(30px) !important;
+      // margin-right: vw(10px) !important;
+      margin-right: vw(30px) !important;
+    }
+  }
+
+  &__control--is-focused {
+    box-shadow: 0 0 0 !important;
+    outline: none !important;
+  }
+
+  &__single-value {
+    color: $theme-text-color-black-to-white-1 !important;
+    font-size: vw(18px) !important;
+    @include fontRegular400;
+    line-height: vw(31px) !important;
+    text-align: center !important;
+    // margin-left: vw(20px) !important;
+    //margin-top: vw(px) !important;
+  }
+
+  &__menu-notice--no-options,
+  &__option,
+  &__option--is-focused,
+  &__option--is-selected {
+    // color: $theme-text-color-black-to-white-1 !important;
+    font-size: vw(18px) !important;
+    @include fontMedium500;
+    line-height: vw(24px) !important;
+    text-align: center !important;
+  }
+
+  &__option {
+    padding: vw(10px) vw(10px) !important;
+    // background: #303030;
+    text-align: left !important;
+    background-color: transparent !important;
+    padding-left: vw(35px) !important;
+    // border-bottom: vw(1px) solid rgba(0, 0, 0, 0.05) !important;
+    border-bottom: vw(1px) solid $theme-border-color-white-21 !important;
+    // &:hover {
+    //   color: $theme-text-color-on-dropdown-hover !important;
+    // }
+  }
+
+  &__menu-notice--no-options,
+  &__option:hover,
+  // &__option--is-focused,
+  &__option--is-selected {
+    color: $color-white !important;
+    background-color: $theme-dropdown-hover-bg !important;
+  }
+
+  &__menu {
+    margin-top: vw(1px) !important;
+    box-shadow: 0 0 0 !important;
+    text-align: center !important;
+    border-radius: 0 0 vw(27px) vw(27px) !important;
+    background: transparent !important;
+  }
+
+  &__menu-list {
+    // background-color: $theme-dropdown-bg-color !important;
+    // color: $theme-text-color-black-to-white-1 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    border-radius: vw(10px) !important;
+    margin-top: vw(1px);
+    // box-shadow: 0 vw(3px) vw(6px) rgba(0, 0, 0, 0.16);
+    // max-height: vw(138px) !important;
+    max-height: vw(140px) !important;
+    color: $theme-text-color-white-79 !important;
+    background: $theme-bg-color-dropdown-options-list !important;
+    border: vw(1px) solid $theme-border-color-white-03 !important;
+    // box-shadow: inset 0 vw(4px) vw(14px) rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(94px);
+
+    .react-select-elements__option:last-child,
+    .react-select-follow-up-form__option:last-child {
+      border-bottom: none !important;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+/* ===============================================================
+                    
+                    login signup
+                    
+================================================================== */
+
+.resp-auth-block {
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+.resp-auth-block__bg {
+  margin-top: mvw(79px);
+  // background-image: url("../../assets/img/mobile/login-bg.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.resp-auth-block__bg__form {
+  padding: 0 mvw(27px);
+}
+
+.resp-auth-block__input {
+  width: 100%;
+  height: mvw(26px);
+  padding-left: mvw(20px);
+  padding-right: mvw(20px);
+  border: vw(1px) solid #134151;
+  border-radius: mvw(17px);
+
+  font-size: mvw(10px);
+  @include fontLight300;
+  line-height: mvw(16px);
+  color: rgba(19, 65, 81, 0.5);
+
+  &::placeholder {
+    color: rgba(19, 65, 81, 0.21);
+  }
+}
+
+.resp-auth-block__border-gray {
+  display: block;
+  border-bottom: vw(1px) solid rgba(19, 65, 81, 1);
+  opacity: 0.21;
+  margin: mvw(25px) mvw(20px) mvw(10px) mvw(20px);
+}
+
+.resp-auth-block__signupAlreadyText {
+  color: rgba(23, 40, 48, 0.66);
+  font-size: mvw(10px);
+  @include fontRegular400;
+  line-height: mvw(16px);
+  margin-bottom: mvw(16px);
+  text-align: center;
+}
+
+.resp-auth-block__signupTitleBlock {
+  width: max-content;
+  padding: mvw(25px) mvw(10px) mvw(5px) mvw(10px);
+  margin-bottom: mvw(20px);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-bottom: vw(1px) solid rgba(19, 65, 81, 0.21);
+}
+
+// imports
+@import "./workspace-login";
+@import "./updates-login-signup";
+@import "./login-signup-new";
+@import "./forget-password";
+@import "./payment";
+@import "./reset-password";
+@import "./success-message-modal";
+@import "./warning-popup";
+@import "./overview-demo";
+@import "./header";

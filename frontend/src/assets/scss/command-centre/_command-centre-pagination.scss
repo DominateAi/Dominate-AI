@@ -1,0 +1,64 @@
+// command centre pagination
+
+.cmd-centre-team-block-team-members {
+  position: relative;
+}
+
+.add-lead-pagination.add-lead-pagination--cmd {
+  margin-bottom: 0;
+
+  .rc-pagination {
+    margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rc-pagination-prev,
+  .rc-pagination-next {
+    font-size: vw(38px) !important;
+    position: absolute;
+    top: vw(82px);
+    margin-right: 0;
+  }
+
+  .rc-pagination-prev a::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-right: vw(8px) solid #303030;
+    border-top: vw(8px) solid transparent;
+    border-bottom: vw(8px) solid transparent;
+  }
+
+  .rc-pagination-next a::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: vw(8px) solid #303030;
+    border-top: vw(8px) solid transparent;
+    border-bottom: vw(8px) solid transparent;
+  }
+
+  .rc-pagination-prev {
+    left: vw(270px);
+  }
+
+  .rc-pagination-next {
+    right: vw(260px);
+  }
+
+  .rc-pagination-item,
+  .rc-pagination-item.rc-pagination-item-active {
+    display: none;
+  }
+
+  .rc-pagination-disabled {
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+  }
+}

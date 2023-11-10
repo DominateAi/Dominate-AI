@@ -1,0 +1,84 @@
+// dashboard sales report
+
+.activityMenuTabs--dashboardSales {
+  .rwt__tablist {
+    padding: 0;
+    box-shadow: 0 0 0;
+  }
+  .rwt__tablist button {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+  .rwt__tablist button[aria-selected="true"] {
+    font-size: mvwDivide(18px);
+    line-height: mvwDivide(27px);
+    @include fontSemiBold600;
+  }
+  .rwt__tablist button {
+    font-size: mvwDivide(18px);
+    line-height: mvwDivide(27px);
+  }
+
+  .rwt__tabpanel {
+    padding: mvwDivide(20px) mvwDivide(30px);
+  }
+}
+
+// tab content
+
+.sales-report-tab-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.sales-report-tab-content__1 {
+  width: mvwDivide(991px);
+  height: mvwDivide(410px);
+  canvas {
+    // height: 330px !important;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.sales-report-tab-content__2 {
+  margin-left: mvwDivide(100px);
+  margin-right: mvwDivide(100px);
+}
+
+.sales-report-tab-content__3 {
+  width: mvwDivide(318px);
+  height: mvwDivide(410px);
+}
+
+.sales-purple-text,
+.sales-cayan-text {
+  font-size: mvwDivide(75px);
+  @include fontBold700;
+}
+
+.sales-purple-text {
+  background: linear-gradient(
+    121deg,
+    #01008e 0%,
+    #c601bb 44%,
+    #e50198 67%,
+    #edd5c9 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sales-cayan-text {
+  background: linear-gradient(180deg, #00d0bd 0%, #7dfddc 56%, #83ffdd 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+.performance-card-btn--sales {
+  width: mvwDivide(165px);
+  height: mvwDivide(40px);
+  margin-top: 0;
+}

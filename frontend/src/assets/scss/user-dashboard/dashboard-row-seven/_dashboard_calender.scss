@@ -1,0 +1,150 @@
+.dashboard_calender_card_conatiner {
+  padding: vw(34px);
+  width: vw(972px);
+  height: vw(645px);
+  // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+  // border-radius: vw(15px);
+
+  h3 {
+    text-align: center;
+    @include fontBold700;
+    font-size: vw(14px);
+    line-height: vw(17px);
+    @include theme-letter-spacing-28-uppercase;
+    color: $theme-text-color-1;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    margin: 0 vw(10px);
+  }
+
+  .current_date {
+    font-size: vw(24px);
+    @include fontBold700;
+    color: $theme-text-color-1;
+    margin-bottom: vw(7px);
+    padding-left: vw(15px);
+  }
+
+  .main-calender-container {
+    // padding-left: vw(30px);
+    padding-left: vw(10px);
+    margin-top: vw(38px);
+    width: vw(500px);
+    // border-right: 1px solid #848484;
+    border-right: vw(1px) solid $theme-border-color-white-22;
+    height: vw(500px);
+
+    table,
+    tr,
+    td {
+      border: none;
+      color: $theme-text-color-1;
+      background: transparent;
+    }
+
+    button {
+      border: none;
+      font-size: vw(15px);
+      color: $theme-text-color-1;
+    }
+    .calender-date-section {
+      margin-top: vw(42px);
+      height: vw(420px);
+      overflow-y: auto;
+    }
+    .dates_stayle {
+      // color: $theme-text-color-1;
+      @include fontBold700;
+      width: vw(66px);
+      height: vw(66px);
+      vertical-align: inherit;
+      text-align: center;
+    }
+    .days_name {
+      width: vw(66px);
+      height: vw(66px);
+      vertical-align: inherit;
+      @include fontBold700;
+    }
+    .current-date-border {
+      // border: 1px solid orange;
+      // background: -webkit-linear-gradient(
+      //   136deg,
+      //   rgba(80, 46, 255, 1) 0%,
+      //   rgba(209, 199, 255, 1) 100%
+      // ); /* safari5.1+,chrome10+ */
+      // color: white;
+      border-radius: vw(3px);
+      // box-shadow: 0 0 vw(5px) #ff003166;
+      background: rgba(80, 46, 255, 0.5);
+      border: vw(1px) solid #502eff;
+      filter: drop-shadow(0 0 vw(5px) rgba(255, 0, 49, 0.4));
+    }
+
+    // .follo-up-border {
+    //   color: #fc9f35;
+    // }
+
+    .dayDisabled {
+      color: darkgray;
+    }
+    td {
+      position: relative;
+      // padding: vw(5px);
+    }
+    .event-name {
+      color: #fc9f35;
+      // position: relative;
+      position: absolute;
+      font-size: vw(25px);
+      top: 39%;
+      // right: 23%;
+      left: 45%;
+      border-radius: 50%;
+    }
+  }
+
+  // Calender Day View Data
+  .calender_data_card {
+    width: vw(370px);
+    margin-top: vw(58px);
+    margin-left: vw(36px);
+
+    h3 {
+      font-size: vw(21px);
+      @include fontMedium500;
+      color: $theme-text-color-white-42;
+    }
+
+    .heading_section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: vw(1px) solid $theme-border-color-white-26;
+      // border-bottom: 1px solid #848484;
+      padding-bottom: vw(6px);
+      margin-bottom: vw(20px);
+
+      .fa-times {
+        cursor: pointer;
+        font-size: vw(20px);
+        margin-bottom: vw(10px);
+      }
+    }
+  }
+
+  // Leaves Holidays Card calender
+  .calender_upcominleaves_holidays_card {
+    width: vw(370px);
+    margin-top: vw(38px);
+    margin-left: vw(36px);
+    padding-right: vw(16px);
+  }
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+}

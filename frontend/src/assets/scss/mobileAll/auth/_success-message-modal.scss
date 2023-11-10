@@ -1,0 +1,65 @@
+/* ===============================================================
+                    
+                    success message modal
+                    
+================================================================== */
+
+.customModal--successMsg {
+  width: mvwDivide(725px);
+  padding: 0;
+  background: #ffffff;
+  box-shadow: 0 0 0;
+  border-radius: mvwDivide(40px);
+}
+
+.success-msg-logo-block {
+  width: 100%;
+  height: mvwDivide(153px);
+  background: rgba(255, 255, 255, 1);
+  border-radius: mvwDivide(40px) mvwDivide(40px) 0 0;
+  // box-shadow: 0 0 mvwDivide(30px) rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.success-msg-copyright-block {
+  padding-left: mvwDivide(104px);
+  padding-top: mvwDivide(34px);
+  width: 100%;
+  height: mvwDivide(91px);
+  background: rgba(255, 255, 255, 1);
+  // box-shadow: 0 0 mvwDivide(30px) rgba(0, 0, 0, 0.05);
+  border-radius: 0 0 mvwDivide(40px) mvwDivide(40px);
+}
+
+.success-msg-logo {
+  width: mvwDivide(252px);
+  height: mvwDivide(75px);
+  margin-left: mvwDivide(99px);
+  margin-top: mvwDivide(39px);
+}
+
+// .customOverlay--successMsg {
+//   background: #ffffff !important;
+// }
+
+.success-msg-grey-bg-block {
+  background: #fafafa;
+  padding: mvwDivide(44px) mvwDivide(100px) mvwDivide(47px) mvwDivide(104px);
+  // box-shadow: 0 0 mvwDivide(40px) rgba(0, 0, 0, 0.05);
+}
+
+.success-msg-btn {
+  width: mvwDivide(227px);
+  height: mvwDivide(67px);
+  background: transparent
+    linear-gradient(
+      107deg,
+      rgba(140, 217, 250, 1) 0%,
+      rgba(36, 136, 203, 1) 100%
+    );
+  border-radius: mvwDivide(34px);
+  border: 0;
+  font-size: mvwDivide(21px);
+  @include fontBold700;
+  color: $color-white;
+}

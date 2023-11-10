@@ -1,0 +1,208 @@
+/*===================================
+    Workspace Login Pges css
+=====================================*/
+.forget-password-confirmation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.workspace-login-page-main-conatiner {
+  // min-height: 100vh;
+  // position: relative;
+  // background-color: $theme-bg-color-1;
+  // background-image: url("../../img/background-new-design/new-login-sign-bg.svg");
+  // background-image: url("../../img/background-new-design/new-bg-dark-ui.svg");
+  // background-position: top;
+  // background-size: 100%;
+  // background-repeat: no-repeat;
+
+  .fa-eye {
+    cursor: pointer;
+    position: absolute;
+    // right: vw(90px);
+    right: vw(140px);
+    font-size: vw(25px);
+    margin-top: vw(25px);
+    z-index: 99;
+  }
+
+  .fa-eye-slash {
+    cursor: pointer;
+    position: absolute;
+    right: vw(140px);
+    // right: vw(90px);
+    font-size: vw(25px);
+    margin-top: vw(25px);
+    z-index: 99;
+  }
+
+  .workspace-login-page-main-conatiner__row {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    // padding: vw(25px);
+    // padding-top: vw(90px);
+  }
+
+  .col-md-6 {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .heading {
+    text-align: center;
+    .font-24-bold--signup-login {
+      padding-top: vw(61px);
+    }
+    h1 {
+      color: $theme-text-color-white-79;
+      @include fontMedium500;
+      font-size: vw(24px);
+      line-height: vw(36px);
+      margin-bottom: vw(36px);
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: vw(163px);
+        height: vw(2px);
+        background-position: bottom;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-image: url("../../img/auth/active-tab-bottom-line.svg");
+        left: 38%;
+        bottom: vw(-46px);
+        z-index: 99;
+      }
+    }
+    p {
+      font-size: vw(20px);
+      line-height: vw(30px);
+      @include fontMedium500;
+      color: $theme-text-color-dark-blue-to-white-42;
+      margin-bottom: vw(35px);
+      text-transform: none;
+    }
+  }
+
+  /*===========================
+          Form Css
+  =============================*/
+  .workspcae-login-form {
+    width: vw(834px);
+    padding: vw(0px) vw(98px) vw(0px) vw(82px);
+    // @include theme-mixin-2;
+    // border-radius: vw(58px);
+    // border-bottom-width: 1px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  label {
+    font-size: vw(24px);
+    line-height: vw(35px);
+    color: $theme-text-color-1;
+    @include fontRegular400;
+    margin-bottom: vw(22px);
+  }
+  .form-group {
+    margin-bottom: vw(39px);
+  }
+  .form-control-new {
+    width: 100%;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    // @include theme-mixin-1;
+    @include theme-mixin-1-blur;
+    border-radius: vw(25px);
+    height: vw(75px);
+  }
+  .form-control-new:focus {
+    box-shadow: none;
+  }
+
+  .form-control-new:focus {
+    color: $theme-text-color-blue-to-white;
+    background-color: transparent;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  input {
+    color: $theme-text-color-blue-to-white;
+    margin: 0;
+    background-color: transparent;
+    @include fontMedium500;
+    border: none;
+    padding-left: vw(38px);
+    padding-right: vw(138px);
+    font-size: vw(18px);
+    height: 100%;
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    -webkit-text-fill-color: $theme-text-color-blue-to-white;
+    border: vw(1px) solid inherit;
+    box-shadow: vw(1000px) transparent inset;
+    transition: background-color 10000s ease-in-out 0s;
+  }
+
+  ::placeholder {
+    @include fontMedium500;
+    font-size: vw(18px);
+    color: $theme-text-color-white-29;
+  }
+  button {
+    border: none;
+    color: $color-white;
+    //new css
+    width: vw(227px);
+    height: vw(68px);
+    font-size: vw(24px);
+    line-height: vw(36px);
+    @include fontSemiBold600;
+    @include theme-blue-bg-radius;
+    color: $theme-text-color-grey;
+
+    .workspace-login-arrow-img {
+      width: vw(57px);
+      height: auto;
+      margin-left: vw(18px);
+      display: none;
+    }
+  }
+  .forgot-password {
+    display: inline-block;
+    font-size: vw(24px);
+    line-height: vw(36px);
+    @include fontBold700;
+    color: $theme-text-color-blue-4;
+
+    span:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.dominate-login-logo {
+  text-align: center;
+  margin-bottom: vw(55px);
+  img {
+    width: vw(293px);
+    cursor: pointer;
+  }
+}
+
+.copyright_text_workspace {
+  color: $theme-text-color-dark-blue-to-white-42;
+  font-size: vw(20px);
+  @include fontLight300;
+}

@@ -1,0 +1,47 @@
+.contact_us_template_three {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  .contact_us_template_three_block {
+    width: 100%;
+    display: flex;
+    padding: vw(80px) vw(50px) vw(50px) vw(50px);
+  }
+  .contact_us_template_three_left {
+    width: 55%;
+    margin: vw(30px);
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .contact_us_template_three_right {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    padding: vw(70px) vw(30px) vw(10px) vw(20px);
+  }
+  .contact_us_template_three_headline {
+    width: 100%;
+    height: vw(79px);
+    display: flex;
+    align-items: center;
+    margin-bottom: vw(20px);
+  }
+  .contact_us_template_three_para {
+    width: 100%;
+    height: vw(100px);
+    display: flex;
+    //align-items: center;
+    padding: vw(12px) 0;
+    margin-top: vw(10px);
+    margin-bottom: vw(20px);
+  }
+  .contact_us_template_three_bottom_line {
+    display: block;
+    width: 55%;
+    height: vw(49px);
+    border-radius: vw(6px);
+  }
+}

@@ -1,0 +1,42 @@
+// meetings card content css
+.dashboard-meetings-person-img {
+  width: mvwDivide(75px);
+  margin-right: mvwDivide(30px);
+  border-radius: 50%;
+}
+
+.dashboard-meeting-time {
+  font-size: mvwDivide(75px);
+  //   line-height: mvwDivide(13px);
+  @include fontBlack900;
+  margin-top: mvwDivide(10px);
+  margin-bottom: 0;
+}
+
+.dashboard-overview-blocks__meetingsCard-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+// slider
+.dashboardMeetingsSlider {
+  .slick-dots li.slick-active button:before {
+    opacity: 1 !important;
+    color: #ffffff !important;
+  }
+
+  .slick-dots li button:before {
+    opacity: 0.5 !important;
+    color: #ffffff !important;
+  }
+
+  .slick-dots {
+    bottom: mvwDivide(-28px) !important;
+  }
+
+  .slick-dots li {
+    margin: 0 !important;
+  }
+}

@@ -1,0 +1,134 @@
+/*====================================
+          Profile Page Css
+=====================================*/
+
+.user-profile-page-main-container {
+  .next_subscription_info {
+    color: blue;
+    font-size: mvwDivide(18px);
+    @include fontSemiBold600;
+  }
+  h3 {
+    @include fontMedium500;
+    font-size: mvwDivide(28px);
+  }
+  p {
+    @include fontRegular400;
+  }
+  .employee-data-container {
+    min-height: 100vh;
+  }
+  .payment-main-conatiner {
+    width: 100%;
+    .buttons-section {
+      justify-content: left;
+    }
+  }
+  .activity-title-img-text {
+    text-align: center;
+    display: block;
+    img {
+      width: mvwDivide(150px);
+      height: mvwDivide(150px);
+      margin-right: mvwDivide(17px);
+      border-radius: 50%;
+    }
+  }
+  p {
+    margin-bottom: mvwDivide(30px);
+  }
+
+  /*========================= 
+            form css
+  ==========================*/
+
+  .edit-profile-form-container {
+    width: mvwDivide(500px);
+    margin-top: mvwDivide(30px);
+    .form-group {
+      display: grid;
+      margin-bottom: mvwDivide(30px);
+    }
+    .add-lead-label {
+      margin: 0;
+    }
+    label {
+      font-size: mvwDivide(20px);
+      @include fontSemiBold600;
+    }
+    input {
+      border: none;
+      background: $theme-bg-color-1;
+      border-radius: mvwDivide(30px);
+      height: mvwDivide(50px);
+      padding: mvwDivide(15px);
+    }
+    button {
+      // background: $theme-bg-dark-blue-to-purple-1 !important;
+      background: linear-gradient(306deg, #502eff 0%, #d1c7ff 100%) !important;
+      border: none;
+      width: mvwDivide(150px);
+      height: mvwDivide(50px);
+      border-radius: mvwDivide(30px);
+      color: white;
+      @include fontBold700;
+      font-size: mvwDivide(24px);
+      // line-height: mvwDivide(31px);
+    }
+    .disabled-field {
+      background-color: #fcfcfc;
+      user-select: none;
+    }
+  }
+
+  .justify-content-space-between {
+    justify-content: center;
+  }
+}
+.employees-delete-btn {
+  // background-color: #ff4848;
+  background: linear-gradient(306deg, #502eff 0%, #d1c7ff 100%) !important;
+  border: none;
+  width: mvwDivide(250px);
+  height: mvwDivide(50px);
+  border-radius: mvwDivide(30px);
+  color: white;
+  @include fontBold700;
+  font-size: mvwDivide(18px);
+  line-height: mvwDivide(31px);
+}
+
+// workspace info
+.user-profile-page-main-container .edit-profile-form-container--workspace {
+  width: mvwDivide(746px);
+
+  button {
+    width: mvwDivide(235px);
+    height: mvwDivide(50px);
+  }
+}
+
+.profile-info-tab-logo-block {
+  margin-bottom: mvwDivide(40px);
+  margin-right: mvwDivide(119px);
+}
+
+.user-profile-page-main-container .edit-profile-form-container {
+  .add-quotation-final-modal-logo {
+    width: mvwDivide(101px);
+    height: mvwDivide(101px);
+    font-size: mvwDivide(11px);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .quotation-upload-img__btn,
+  .quotation-upload-img__input {
+    width: mvwDivide(149px);
+    height: mvwDivide(30px);
+    font-size: mvwDivide(11px);
+    @include fontRegular400;
+  }
+}

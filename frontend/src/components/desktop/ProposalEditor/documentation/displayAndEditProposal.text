@@ -1,0 +1,55 @@
+===============================================================================
+    Display list of thumbnails
+================================================================================
+
+1) open TemplateViewComponent file
+   and add that block with importing and sending index.js prop to that component
+path: /ReusableComponents/TemplateViewComponent.js  
+eg. <SingleTemplateView
+        name="Cover Page"
+        valueTemplate={FrontPage}
+        {...props}
+      />   
+
+
+===============================================================================
+    Display FrontPage thumbnail one of id 'front_page_template_one'
+================================================================================
+
+1) Add object in index.js file of respected thumbnail folder 
+eg. for front page thumbnail add object in /thumbnail/FrontPage/index.js 
+    and id will be front_page_template_one
+
+2) Create and export template
+eg. /Templates/FrontPage/FP_TemplateOne.js here use same id front_page_template_one
+
+3) add template component in ProposalMainEditorPanel template_config object
+path: /Components/ProposalMainEditorPanel.js
+eg. const template_config =[ { name: "front_page_template_one", value: FP_TemplateOne },]
+
+
+===============================================================================
+    Edit FrontPage screen one of id 'front_page_template_one'
+================================================================================
+
+2) Open template file and add reusable component 
+   if reusable component not present create one in ReusableComponents folder 
+eg. /Templates/FrontPage/FP_TemplateOne.js here use same id front_page_template_one
+
+a) use className with prefix 'id' so it will be unique eg. front_page_template_one__left
+b) scss use proper naming refer the current files naming structure
+c) images thumbnail and in /thumnnail/img folder edit screen images just for refernce 
+...use thumnnail from respective project folder
+..actual edit screen images are need to upload on server 
+(use file upload api to upload image on server in response you will get fileUrl use that in respective src 
+eg. image_one_src: "https://login.dominate.ai/public/download?filename=file-2020-06-19T12:10:18.510Z.png")
+
+URL for file upload api:
+path: /src/store/actions/config.js
+eg. http://206.189.141.52:9010
+
+Token and Workspace Id:
+login then open bowser (chrome) =>
+=> Shift + ctrl + I => go to application tab => local storage => localhost => Data => you will get token and workspace ID
+
+

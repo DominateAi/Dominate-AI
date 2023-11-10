@@ -1,0 +1,167 @@
+/* ===============================================================
+                    
+                            variables
+
+================================================================== */
+
+// colors
+$color-white: #ffffff;
+$color-red: #ff4848;
+$color-green-to-dark-green: #0af48d;
+$color-yellow-to-dark-yellow: #ffac33;
+$light-blue: #88c9f9;
+$color-red-to-dark-red: #ff0000;
+
+/* ===============================================================
+                    
+        variables dark theme
+
+================================================================== */
+
+// background colors
+$theme-bg-color-transparent: transparent;
+$bg-container: #1e2428;
+$theme-bg-color-1: #1e2428;
+$theme-bg-color-white-01: rgba(255, 255, 255, 0.01);
+$theme-bg-color-white-03: rgba(255, 255, 255, 0.03);
+$theme-bg-color-white-48: rgba(255, 255, 255, 0.48);
+$theme-tab-bg-color-1: #1e2428;
+$theme-bg-color-tab-after-block: #1e2428;
+$theme-bg-color-overlay: rgba(255, 255, 255, 0.1);
+$theme-bg-blue-1: #6f5adc;
+$theme-scrollbar-thumb-bg: #6f5adc;
+$theme-scrollbar-track-bg: #332e34;
+$theme-bg-dark-blue-to-purple-1: #6f5adc;
+$theme-bg-blue-btn: #6f5adc;
+$theme-bg-gradient-blue-to-blue: #6f5adc;
+$theme-toggle-check-bg: #6f5adc;
+$theme-toggle-bg: rgba(25, 31, 35, 0.7);
+$theme-lead-card-bg-color: #1b2026;
+$theme-account-details-bg-color: #191f23;
+$theme-account-details-tab-color: rgba(196, 196, 196, 1);
+$theme-tag-bg-green-color: rgba(59, 191, 165, 0.07);
+$theme-bg-blue-color-29: rgba(111, 90, 220, 0.29);
+$theme-bg-color-white-26: rgba(255, 255, 255, 0.26);
+$theme-bg-color-white-21: rgba(255, 255, 255, 0.21);
+$theme-yellow-to-blue-bg-color: #6f5adc;
+$theme-bg-color-white-04: rgba(255, 255, 255, 0.04);
+$theme-bg-blue-to-blue: #6f5adc;
+$theme-bg-color-solid-gray-1: #33373d;
+$theme-bg-color-black-1: #332e34;
+$theme-bg-stack-card: rgba(6, 5, 22, 0.43);
+$theme-next-back-arrow-bg: #6f5adc;
+$theme-bg-colm1-bg: #20262a50;
+$theme-bg-colm2-bg: #1a1f2350;
+$theme-red-bg-1: #ff4b4b;
+$theme-bg-red-color: rgba(255, 192, 192, 0.07);
+$theme-checkbox-checked-background: #502eff;
+$theme-bg-color-gray-13: rgba(196, 196, 196, 0.13);
+$theme-craftjs-layer-bg-color: #191f23;
+
+//gradient bg
+$theme-bg-gardient-blue: radial-gradient(
+  123.78% 111.9% at 43.84% 32.99%,
+  #6f5adc 0%,
+  rgba(111, 90, 220, 0) 100%
+);
+$theme-bg-gardient-blue-2: linear-gradient(180deg, #a18eff 0%, #483ca6 100%);
+
+// text colors
+$theme-text-color-1: #ffffff;
+$theme-text-color-blue-to-white: #ffffff;
+$theme-text-color-black-to-white-1: #ffffff;
+$theme-text-color-light-blue-to-white: #ffffff;
+$theme-text-color-gradient-blue-to-white: #ffffff;
+$theme-text-color-gray-to-white: #ffffff;
+$theme-text-color-purple-1-to-white: #ffffff;
+$theme-text-color-dark-purple-to-white: #ffffff;
+$theme-text-color-light-purple-1-to-white: rgba(255, 255, 255, 0.26);
+$theme-text-color-white-23: rgba(255, 255, 255, 0.23);
+$theme-text-color-white-29: rgba(255, 255, 255, 0.29);
+$theme-text-color-white-03: rgba(255, 255, 255, 0.3);
+$theme-text-color-white-41: rgba(255, 255, 255, 0.41);
+$theme-text-color-white-42: rgba(255, 255, 255, 0.42);
+$theme-text-color-white-54: rgba(255, 255, 255, 0.54);
+$theme-text-color-white-72: rgba(255, 255, 255, 0.72);
+$theme-text-color-white-79: rgba(255, 255, 255, 0.79);
+$theme-text-color-white-80: rgba(255, 255, 255, 0.8);
+$theme-text-color-white-95: rgba(255, 255, 255, 0.95);
+$theme-text-color-dark-gray-to-white: rgba(255, 255, 255, 0.79);
+$theme-text-color-grey: rgba(231, 231, 231, 1);
+$theme-text-color-blue: #a18eff;
+$theme-text-blue-to-white-42: rgba(255, 255, 255, 0.42);
+$theme-text-color-dark-blue-to-white-42: rgba(255, 255, 255, 0.42);
+$theme-text-color-dark-blue-to-white: rgba(255, 255, 255, 1);
+$theme-text-color-white-49: rgba(255, 255, 255, 0.49);
+$theme-text-color-white-51: rgba(255, 255, 255, 0.51);
+$theme-text-color-white-55: rgba(255, 255, 255, 0.55);
+$theme-text-color-white-56: rgba(255, 255, 255, 0.56);
+$theme-text-color-white-60: rgba(255, 255, 255, 0.6);
+$theme-text-color-white-63: rgba(255, 255, 255, 0.63);
+$theme-text-color-white-68: rgba(255, 255, 255, 0.68);
+$theme-text-color-white-80: rgba(255, 255, 255, 0.8);
+$theme-blue-text-tab-color-1: rgba(255, 255, 255, 0.23);
+$theme-blue-text-tab-color-2: #a18eff;
+$theme-dark-blue-text-to-light-purple: #a18eff;
+$theme-text-color-blue-2: #6f5adc;
+$theme-text-color-light-purple-1: #937eff;
+$theme-text-color-green-1: #3bbfa5;
+$theme-text-color-white-87: rgba(255, 255, 255, 0.87);
+$theme-text-color-purple-2-to-white: rgba(255, 255, 255, 0.87);
+$theme-text-color-blue-3: #c3b8ff;
+$theme-text-color-blue-5: #ae9aff;
+$theme-text-color-blue-76: rgba(161, 142, 255, 0.76);
+$theme-text-dark-gray-to-white: rgba(255, 255, 255, 0.86);
+$theme-text-color-grey-2: #6f5adc;
+$theme-text-color-dark-blue-to-white-1: #6f5adc;
+$theme-text-color-grey-to-white-29: rgba(255, 255, 255, 0.29);
+$theme-sign-up-btn-text-color: #e7e7e7;
+$theme-text-gray-color-1: #e7e7e7;
+$theme-text-gray-color-2: #c3b8ff;
+$theme-text-color-blue-4: #937eff;
+$theme-text-gray-color-3: #c4c4c4;
+$theme-text-color-edito-stroke: #bcbcbc;
+$theme-red-color-1: #ff4b4b;
+$theme-checkbox-checked-color: #6a5db8;
+$theme-checkbox-color: white;
+$theme-text-color-white-79-2: rgba(253, 2535, 253, 0.79);
+// arrow
+$theme-text-color-popup-close: rgba(255, 255, 255, 0.83);
+
+// dropdown
+$theme-dropdown-bg-color: #1e2428;
+$theme-dropdown-hover-bg: rgba(255, 255, 255, 0.09);
+$theme-bg-color-dropdown-options-list: #2c3137;
+$theme-text-color-on-dropdown-hover: #6f5adc;
+$theme-dropdown-arrow-color: rgba(255, 255, 255, 0.79);
+
+//border-color
+$theme-border-color-white: rgba(255, 255, 255, 1);
+$theme-border-color-white-1: rgba(255, 255, 255, 0.12);
+$theme-border-color-white-17: rgba(255, 255, 255, 0.17);
+$theme-border-color-white-19: rgba(255, 255, 255, 0.19);
+$theme-border-color-white-11: rgba(255, 255, 255, 0.11);
+$theme-border-color-white-07: rgba(255, 255, 255, 0.07);
+$theme-border-color-white-2: rgba(255, 255, 255, 0.2);
+$theme-border-color-white-21: rgba(255, 255, 255, 0.21);
+$theme-border-color-white-22: rgba(255, 255, 255, 0.22);
+$theme-border-color-white-03: rgba(255, 255, 255, 0.3);
+$theme-border-color-white-06: rgba(255, 255, 255, 0.06);
+$theme-border-color-white-26: rgba(255, 255, 255, 0.26);
+$theme-border-color-white-3: rgba(255, 255, 255, 0.33);
+$theme-border-color-white-4: rgba(255, 255, 255, 0.48);
+$theme-border-blue: #a18eff;
+$theme-border-color-grey-1: rgba(229, 229, 229, 0.11);
+$theme-border-color-green-1: #3bbfa5;
+$theme-border-color-blue-1: #6f5adc;
+$theme-border-color-green-2: #88d3ce;
+$theme-border-color-blue-2: rgba(161, 142, 255, 1);
+$theme-border-color-green-3: rgba(59, 191, 165, 0.62);
+$theme-border-color-red: rgba(255, 75, 75, 0.62);
+$theme-border-color-grey-2: rgba(229, 229, 229, 0.19);
+$theme-border-color-grey-3: rgba(255, 255, 255, 0.28);
+// font family
+// $font-family-poppins: "Poppins", sans-serif, "Helvetica";
+// $font-family-regular-poppins: "Poppins-Regular", sans-serif, "Helvetica";
+$font-family-poppins: "Inter", sans-serif, "Helvetica";
+$font-family-regular-poppins: "Inter-Regular", sans-serif, "Helvetica";

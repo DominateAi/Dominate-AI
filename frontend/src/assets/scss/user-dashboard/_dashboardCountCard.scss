@@ -1,0 +1,31 @@
+.dashboard_card_count {
+  padding-top: vw(8px);
+  padding-bottom: vw(8px);
+  margin-right: vw(14px);
+  border-radius: vw(10px);
+  width: vw(180px);
+  height: vw(90px);
+  text-align: center;
+
+  // color: $color-white;
+  color: $theme-text-color-white-79;
+
+  p {
+    font-size: vw(12px);
+    @include fontRegular400;
+  }
+  span {
+    font-size: vw(24px);
+    @include fontBold700;
+  }
+}
+
+// .pending_leads_gradient {
+//   // opacity: 0.55;
+//   background-image: linear-gradient(to right, #f6d365, #fda085);
+// }
+
+// .leads_closed_gradient {
+//   // opacity: 0.55;
+//   background-image: linear-gradient(to right, #9618f7, #d1c7ff);
+// }

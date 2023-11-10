@@ -1,0 +1,190 @@
+// command centre organisation
+.cmd-centre-org-block {
+  padding: vw(50px) vw(29px) vw(67px) vw(71px);
+}
+
+.cmd-centre-overview__title--org {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.cmd-centre-overview__title__border {
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin-left: vw(18px);
+  margin-right: vw(18px);
+  height: vw(1px);
+  background-color: $theme-border-color-white-26;
+}
+
+.cmd-centre-leads-card1 {
+  width: vw(525px);
+  overflow: auto;
+  border-radius: vw(4px);
+  margin-bottom: vw(33px);
+  margin-left: vw(30px);
+  position: relative;
+  @include theme-mixin-1;
+  border-radius: vw(25px);
+  height: vw(212px);
+}
+
+.cmd-centre-leads-card1__row {
+  height: 100%;
+  overflow: auto;
+  padding: vw(26px) vw(43px) vw(29px) vw(23px);
+  justify-content: space-between;
+  flex-wrap: nowrap !important;
+  @include border-mixin-1;
+  border-radius: vw(25px);
+  text-align: center;
+
+  .cmd-centre-leads-card1__row__colm1 {
+    // margin-right: vw(25px);
+    width: 50%;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      top: vw(5px);
+      border-right: vw(1px) solid $theme-border-color-white-3;
+      content: "";
+      width: vw(1px);
+      height: 100%;
+    }
+  }
+
+  input {
+    border: 0;
+    margin-top: vw(23px);
+    padding-left: vw(20px);
+    padding-right: vw(20px);
+    font-size: vw(21px);
+    @include fontRegular400;
+    @include theme-mixin-2;
+    width: vw(169px);
+    height: vw(75px);
+  }
+}
+
+.cmd-centre-leads-card1__count-text1 {
+  font-size: vw(35px);
+  line-height: vw(53px);
+  @include fontBold700;
+  margin-top: vw(13px);
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cmd-centre-block__blue-btn.cmd-centre-block__blue-btn--save-btn {
+  width: vw(219px);
+  margin-bottom: vw(30px);
+}
+
+.cmd-centre-block__blue-btn.cmd-centre-block__blue-btn--reset-btn {
+  width: vw(219px);
+  margin-bottom: vw(30px);
+  color: $theme-text-color-1;
+  background: transparent;
+  border: vw(1px) solid rgba(151, 131, 255, 0.71);
+  margin-right: vw(15px);
+}
+
+.cmd-centre-block__blue-btn.cmd-centre-block__blue-btn--no-btn {
+  margin-right: vw(25px);
+  width: vw(219px);
+  color: $theme-text-color-1;
+  background: transparent;
+  border: vw(1px) solid rgba(255, 73, 100, 0.71);
+}
+
+.cmd-centre-block__blue-btn.cmd-centre-block__blue-btn--yes-btn {
+  width: vw(219px);
+  color: $color-white;
+  background: rgba(255, 0, 37, 0.71);
+}
+
+.cmd-centre-leads-card1__count-text-blue {
+  cursor: pointer;
+  font-size: vw(35px);
+  line-height: vw(53px);
+  @include fontBold700;
+  margin-top: vw(13px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+  color: $theme-text-color-gradient-blue-to-white;
+}
+
+// modal
+
+.customModal--cmd-modal {
+  width: vw(711px) !important;
+  padding: vw(39px) vw(68px) vw(20px) vw(68px) !important;
+
+  .closeIconInModal::before,
+  .closeIconInModal::after {
+    top: vw(-9px);
+    right: vw(-33px);
+    width: vw(3px);
+    height: vw(16px);
+  }
+}
+
+.cmd-centre-block__cmd-modal-title {
+  font-size: vw(20px);
+  @include fontBold700;
+  line-height: vw(25px);
+  margin-bottom: vw(33px);
+}
+.cmd-center-set-monthly-target {
+  color: $theme-text-color-dark-blue-to-white-42;
+  @include theme-letter-spacing-10-uppercase;
+  padding-left: vw(20px);
+  padding-right: vw(30px);
+}
+.command-centre-top-row-title-img {
+  display: none;
+  margin-right: vw(13px);
+}
+.cmd-center-deals-leads-btn-div {
+  width: vw(230px);
+  height: auto;
+  padding: 0;
+  border-bottom: vw(1px) solid $theme-border-color-white-1;
+}
+.cmd-centre-deals-btn {
+  font-size: vw(18px);
+  @include fontSemiBold600;
+  border: none;
+  padding: vw(5px) vw(15px);
+  background: transparent;
+  color: $theme-text-color-white-23;
+}
+.cmd-centre-deals-active-btn {
+  color: $theme-text-color-blue;
+  border-bottom: vw(1px) solid $theme-border-blue;
+}
+
+.cmd-centre-block__no-target--imgBlock {
+  min-height: vw(392px);
+  margin-top: vw(30px);
+}
+
+.command-center-no-target-img {
+  width: vw(951px);
+  height: auto;
+  margin-bottom: vw(15px);
+}
+.leads-title-block-btn-red-bg--command-center {
+  width: vw(281px);
+  margin-top: vw(23px);
+  @include fontSemiBold600;
+  font-size: vw(18px);
+  color: #e7e7e7;
+}

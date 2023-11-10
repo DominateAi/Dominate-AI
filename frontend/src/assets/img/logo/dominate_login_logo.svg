@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="219" height="72.95" viewBox="0 0 219 72.95">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.963" y1="-0.777" x2="-4.252" y2="3.913" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#d1c7ff"/>
+      <stop offset="1" stop-color="#7a64ef"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_1460" data-name="Group 1460" transform="translate(-18426 -1818)">
+    <g id="Group_1459" data-name="Group 1459" transform="translate(15193.002 1521.435)">
+      <g id="Group_1457" data-name="Group 1457" transform="translate(3106 1626)">
+        <path id="Path_6945" data-name="Path 6945" d="M699.638,160.725H678.525v-54.21h21.113a27.106,27.106,0,0,1,27.107,27.1h0a27.107,27.107,0,0,1-27.111,27.11Z" transform="translate(-551.525 -1417.31)" opacity="0.26" fill="url(#linear-gradient)"/>
+        <path id="Path_6944" data-name="Path 6944" d="M697.156,154.355H678.525v-47.84h18.631a23.92,23.92,0,0,1,23.92,23.92h0A23.92,23.92,0,0,1,697.156,154.355Z" transform="translate(-551.525 -1410.95)" opacity="0.26" fill="url(#linear-gradient)"/>
+        <path id="Path_6946" data-name="Path 6946" d="M702.235,167.4h-23.71V106.51h23.71a30.442,30.442,0,0,1,30.44,30.442v0A30.443,30.443,0,0,1,702.233,167.4Z" transform="translate(-551.525 -1423.95)" opacity="0.26" fill="url(#linear-gradient)"/>
+        <path id="Path_6947" data-name="Path 6947" d="M704.6,173.465H678.525v-66.95H704.6a33.475,33.475,0,0,1,33.476,33.476h0A33.476,33.476,0,0,1,704.6,173.465Z" transform="translate(-551.525 -1429.95)" opacity="0.26" fill="url(#linear-gradient)"/>
+        <path id="Path_6948" data-name="Path 6948" d="M706.723,178.915h-28.2v-72.4h28.2a36.2,36.2,0,0,1,36.2,36.2h0a36.2,36.2,0,0,1-36.2,36.2Z" transform="translate(-551.525 -1435.95)" opacity="0.26" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+    <text id="Dominate" transform="translate(18521 1863)" fill="#fff" font-size="28" font-family="Graphie-Regular, Graphie"><tspan x="0" y="0">Dominate</tspan></text>
+  </g>
+</svg>

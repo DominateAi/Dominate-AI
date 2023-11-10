@@ -1,0 +1,291 @@
+// command centre overview
+
+.cmd-centre-overview__block {
+  padding: vw(35px) vw(69px) vw(30px) vw(16px);
+  flex-wrap: nowrap !important;
+  height: 100%;
+
+  .no_pending_leaves,
+  .no_pending_holidays {
+    text-align: center;
+    font-size: vw(16px);
+    line-height: vw(25px);
+    @include fontSemiBold600;
+    // color: rgba(0, 0, 0, 0.3);
+    color: $theme-text-color-white-42;
+  }
+
+  .no_pending_leaves {
+    margin-top: vw(115px);
+  }
+
+  .no_pending_holidays {
+    margin-top: vw(25px);
+  }
+
+  .cmd-centre-overview__no-pending-leaves-img {
+    width: vw(420px);
+    margin-bottom: vw(28px);
+  }
+
+  .cmd-centre-overview__no-upcoming-holiday-img {
+    width: vw(215px);
+    margin-top: vw(37px);
+    margin-bottom: vw(37px);
+  }
+
+  .cmd-centre-overview__no-members-on-leave-img {
+    width: vw(202px);
+    margin-top: vw(57px);
+    margin-bottom: vw(29px);
+  }
+}
+
+.cmd-centre-overview__title {
+  font-size: vw(14px);
+  line-height: vw(17px);
+  @include theme-letter-spacing-28-uppercase;
+  @include fontBold700;
+  margin-bottom: vw(25px);
+}
+
+.cmd-centre-overview__colm1 {
+  margin-right: vw(62px);
+  margin-left: vw(52px);
+}
+
+.cmd-centre-overview__colm1-box {
+  width: vw(981px);
+  height: vw(869px);
+  overflow: auto;
+  // background: #ffffff 0% 0% no-repeat padding-box;
+  // box-shadow: 0 vw(3px) vw(15px) #0000001f;
+  // border-radius: vw(15px);
+  // margin-left: vw(38px);
+  position: relative;
+  // @include theme-mixin-1;
+  // @include border-mixin-1;
+  // border-radius: vw(25px);
+  @include theme-mixin-2;
+
+  // &::before {
+  //   content: "";
+  //   display: block;
+  //   width: vw(3px);
+  //   height: vw(364px);
+  //   background: linear-gradient(
+  //     260deg,
+  //     rgba(116, 235, 213, 1) 0%,
+  //     rgba(159, 172, 230, 1) 50%,
+  //     rgba(234, 175, 200, 1) 100%
+  //   );
+  //   border-radius: vw(25px);
+  //   // box-shadow: 0 vw(3px) vw(5px) #0000001f;
+  //   position: absolute;
+  //   top: vw(75px);
+  // }
+}
+
+.cmd-centre-overview__colm2-block1,
+.cmd-centre-overview__colm2-block2 {
+  width: vw(480px);
+  overflow: auto;
+  // box-shadow: 0 vw(3px) vw(15px) #0000001f;
+  // border-radius: vw(15px);
+  margin-bottom: vw(34px);
+  // margin-left: vw(42px);
+
+  position: relative;
+  // @include theme-mixin-1;
+  // @include border-mixin-1;
+  // border-radius: vw(25px);
+  @include theme-mixin-2;
+
+  // &::before {
+  //   content: "";
+  //   display: block;
+  //   width: vw(3px);
+  //   height: vw(141px);
+  //   border-radius: vw(25px);
+  //   // box-shadow: 0 vw(3px) vw(5px) #0000001f;
+  //   position: absolute;
+  //   top: vw(41px);
+  // }
+}
+
+.cmd-centre-overview__colm2-block1 {
+  height: vw(371px);
+  margin-top: vw(30px);
+
+  // &::before {
+  //   background: linear-gradient(
+  //     260deg,
+  //     rgba(250, 148, 114, 1) 0%,
+  //     rgba(251, 99, 148, 1) 100%
+  //   );
+  // }
+}
+
+.cmd-centre-overview__colm2-block2 {
+  height: vw(371px);
+
+  // &::before {
+  //   background: linear-gradient(
+  //     260deg,
+  //     rgba(251, 215, 134, 1) 0%,
+  //     rgba(234, 175, 200, 1) 50%,
+  //     rgba(247, 121, 125, 1) 100%
+  //   );
+  // }
+}
+
+// table
+.cmd-centre-overview__colm1-table-div {
+  margin-top: vw(8px);
+  height: 97%;
+  overflow: auto;
+  padding: vw(28px) vw(25px) vw(15px) vw(70px);
+
+  button {
+    width: vw(200px);
+    @include theme-button-height-and-radius-3;
+    border: 0;
+    font-size: vw(20px);
+    @include fontRegular400;
+    margin-right: vw(35px);
+    background: $theme-bg-gradient-blue-to-blue;
+    border-radius: vw(25px);
+    color: $theme-text-color-grey;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  tr {
+    // border-bottom: vw(1px) solid rgba(112, 112, 112, 0.41);
+    border-bottom: vw(1px) solid $theme-border-color-white-2;
+  }
+
+  // thead tr {
+  //   border-bottom: 0;
+  // }
+
+  td {
+    word-break: break-all;
+    text-align: center;
+    padding-top: vw(37px);
+    padding-bottom: vw(15px);
+    font-size: vw(20px);
+    line-height: vw(30px);
+    @include fontMedium500;
+  }
+
+  th {
+    text-align: center;
+    // color: rgba(0, 0, 0, 0.34);
+    font-size: vw(16px);
+    line-height: vw(25px);
+    @include fontBold700;
+    color: $theme-text-color-white-42;
+    padding-bottom: vw(49px);
+  }
+
+  th:nth-child(1),
+  th:nth-child(3) {
+    width: 20%;
+  }
+
+  th:nth-child(2),
+  th:nth-child(4) {
+    width: 30%;
+  }
+
+  td:nth-child(1) {
+    padding-left: vw(20px);
+    padding-right: vw(5px);
+    text-align: left;
+  }
+}
+
+.cmd-centre-overview__colm2-block1-title1 {
+  color: $theme-text-color-1;
+  font-size: vw(16px);
+  line-height: vw(25px);
+  @include fontBold700;
+  @include theme-letter-spacing-10-uppercase;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.cmd-centre-overview__colm2-block1-title2 {
+  font-size: vw(32px);
+  line-height: vw(48px);
+  @include fontBold700;
+  margin-bottom: 0;
+}
+
+.cmd-centre-overview__colm2-block1-border {
+  padding-bottom: vw(5px);
+  // border-bottom: vw(1px) solid rgba(112, 112, 112, 0.23);
+  border-bottom: vw(1px) solid $theme-border-color-white-1;
+  margin-bottom: vw(13px);
+}
+
+.cmd-centre-overview__colm2-block1-overflow {
+  margin-top: vw(10px);
+  height: 90%;
+  overflow: auto;
+  padding: vw(19px) vw(35px) 0 vw(37px);
+
+  .cmd-centre-overview__colm2-block1-border:last-child {
+    padding-bottom: vw(3px);
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+.cmd-centre-overview__colm2-block2-row {
+  align-items: flex-start;
+  flex-wrap: nowrap !important;
+}
+
+.cmd-centre-overview__colm2-block2-row-2 {
+  flex-basis: 90%;
+  flex-shrink: 0;
+  justify-content: space-between;
+  padding-left: vw(18px);
+  padding-right: vw(10px);
+}
+
+.cmd-centre-overview__colm2-block2-img {
+  width: vw(50px);
+  height: auto;
+  display: block;
+  border-radius: 50%;
+}
+
+.cmd-centre-overview__colm2-block2-text-1,
+.cmd-centre-overview__colm2-block2-text-2,
+.cmd-centre-overview__colm2-block2-text-3 {
+  word-break: break-all;
+  margin-bottom: 0;
+  @include fontSemiBold600;
+}
+
+.cmd-centre-overview__colm2-block2-text-1 {
+  font-size: vw(18px);
+  line-height: vw(27px);
+}
+
+.cmd-centre-overview__colm2-block2-text-2 {
+  // color: rgba(0, 0, 0, 0.3);
+  color: $theme-text-color-1;
+  font-size: vw(16px);
+  line-height: vw(25px);
+}
+
+.cmd-centre-overview__colm2-block2-text-3 {
+  font-size: vw(20px);
+  line-height: vw(30px);
+}

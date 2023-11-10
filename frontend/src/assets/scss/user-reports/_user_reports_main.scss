@@ -1,0 +1,252 @@
+.user_report_main_container {
+  padding-left: vw(128px);
+  padding-right: vw(128px);
+  padding-top: vw(62px);
+}
+
+@import "./report-row-1/report-row-one";
+@import "./report-row-2/report-row-two";
+@import "./report-row-3/report-row-three";
+
+// common card
+.reports-common-card {
+  padding: vw(30px);
+  // border-radius: vw(15px);
+  // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+  // background-color: $theme-bg-color-1;
+  @include theme-mixin-1;
+  @include border-mixin-1;
+  border-radius: vw(18px);
+}
+
+.reports-common-card-title {
+  // color: #43424b;
+  color: $theme-text-color-gray-to-white;
+  font-size: vw(14px);
+  line-height: vw(17px);
+  @include fontSemiBold600;
+  @include theme-letter-spacing-28-uppercase;
+  margin-bottom: vw(2px);
+}
+
+.reports-account-card-text {
+  color: $theme-text-color-white-42;
+  font-size: vw(11px);
+  line-height: vw(54px);
+  @include fontSemiBold600;
+  @include theme-letter-spacing-28-uppercase;
+  margin-right: vw(17px);
+  margin-bottom: vw(5px);
+}
+
+.reports-from-to-text {
+  color: $theme-text-color-white-42;
+  font-size: vw(11px);
+  line-height: vw(32px);
+  @include fontSemiBold600;
+  padding-left: vw(35px);
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.reports-common-card--account-1,
+.reports-common-card--account-2 {
+  margin-bottom: vw(42px);
+  height: vw(593px);
+  overflow: auto;
+  padding-top: vw(35px);
+  padding-bottom: vw(15px);
+
+  .reports-common-card-title {
+    margin-bottom: vw(10px);
+  }
+}
+
+.reports-common-card--account-1 {
+  margin-right: vw(38px);
+  width: vw(798px);
+}
+
+.reports-common-card--account-2 {
+  width: vw(872px);
+}
+
+.reports-common-card--reports-total-revenue-card {
+  padding: vw(42px) vw(35px) vw(39px) vw(35px);
+  width: 100%;
+  height: vw(562px);
+  margin-bottom: vw(27px);
+
+  .reports-common-card-title {
+    margin-bottom: vw(30px);
+  }
+}
+
+.reports-common-card--future-reccuring-1,
+.reports-common-card--future-reccuring-2 {
+  width: vw(843px);
+  height: vw(558px);
+  margin-bottom: vw(35px);
+  padding: vw(40px);
+  position: relative;
+
+  .reports-common-card-title {
+    margin-bottom: vw(17px);
+  }
+}
+
+.reports-common-card--future-reccuring-1 {
+  margin-right: vw(22px);
+}
+
+.reports-common-card--future-reccuring-2 {
+  margin-right: 0;
+}
+
+.reports-common-card--deals-and-leads-1,
+.reports-common-card--deals-and-leads-2 {
+  // width: vw(868px);
+  width: vw(841px);
+  height: vw(558px);
+  margin-bottom: vw(29px);
+  padding: vw(46px) vw(40px) vw(50px) vw(40px);
+
+  .reports-common-card-title {
+    margin-bottom: vw(30px);
+  }
+}
+
+.reports-common-card--deals-and-leads-1 {
+  margin-right: vw(26px);
+}
+
+.reports-common-card--deals-and-leads-2 {
+  margin-right: 0;
+}
+
+// dropdowns
+.lead-status-dropDown--reports-account {
+  margin-right: vw(30px);
+  border-radius: vw(15px);
+
+  .Dropdown-control {
+    width: vw(284px);
+    height: vw(45px);
+  }
+
+  .Dropdown-placeholder {
+    font-size: vw(18px);
+    line-height: vw(39px);
+    @include fontRegular400;
+  }
+
+  .Dropdown-menu {
+    min-height: max-content;
+    height: auto;
+    max-height: vw(230px);
+    margin-top: vw(5px);
+  }
+}
+
+.reports-revenue-info-icon-btn {
+  width: vw(30px);
+  height: auto;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  background-color: transparent;
+
+  position: absolute;
+  top: vw(40px);
+  right: vw(40px);
+
+  .reports-revenue-info-icon {
+    width: 100%;
+    height: auto;
+  }
+}
+//new css
+.reports-graph-not-found-text {
+  //font-size: vw(15px);
+  font-size: vw(18px);
+  line-height: vw(22.2px);
+  margin-bottom: 0;
+  @include fontMedium500;
+  color: #9c9c9c;
+}
+.reports-biggest-deals-img {
+  width: vw(485px);
+  height: auto;
+  margin-top: vw(47px);
+  margin-bottom: vw(45px);
+}
+.reports-revenue-from-img {
+  width: vw(315px);
+  height: auto;
+  margin-top: vw(20px);
+  margin-bottom: vw(43px);
+}
+.reports-total-revenue-generated-img {
+  width: vw(353px);
+  height: auto;
+  margin-top: vw(88px);
+  margin-bottom: vw(45px);
+}
+.reports-closed-deals-img {
+  width: vw(428px);
+  height: auto;
+  margin-bottom: vw(45px);
+  margin-top: vw(47px);
+}
+.reports-deals-and-leads-img {
+  width: vw(700px);
+  height: auto;
+  margin-top: vw(67px);
+  margin-bottom: vw(45px);
+}
+.reports-future-revenue-img {
+  width: vw(371px);
+  height: auto;
+  margin-top: vw(56px);
+  margin-bottom: vw(45px);
+}
+.reports-future-reocurring-img {
+  width: vw(302px);
+  height: auto;
+  margin-top: vw(56px);
+  margin-bottom: vw(45px);
+}
+.account-with-max-revenue-img {
+  width: vw(640px);
+  height: auto;
+  margin-bottom: vw(45px);
+}
+.reports-total-revenue-genrated-by-account {
+  width: vw(289px);
+  height: auto;
+  margin-bottom: vw(45px);
+}
+
+.reports-biggest-deals-div {
+  button {
+    width: vw(251px);
+    @include theme-button-height-and-radius-1;
+    background: $theme-bg-dark-blue-to-purple-1;
+    color: $color-white;
+    font-size: vw(21px);
+    @include fontRegular400;
+    border: 0;
+
+    display: inline-block;
+    text-align: center;
+  }
+  .add-new-btn-kanban-board-block {
+    background: transparent;
+  }
+}
+.reports-owner-wise-leads-img {
+  width: vw(400px);
+  height: auto;
+  margin-bottom: vw(10px);
+  margin-top: vw(50px);
+}

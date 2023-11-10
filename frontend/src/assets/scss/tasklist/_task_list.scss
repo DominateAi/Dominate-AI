@@ -1,0 +1,345 @@
+/*======================================================
+            Task List css
+========================================================*/
+
+/*=================================
+       task list top bar css
+==================================*/
+
+.font-36-regular--task {
+  line-height: vw(36px);
+}
+
+.task-list-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $theme-bg-color-transparent;
+  width: 100% !important;
+  max-width: 90% !important;
+  margin: 0 auto !important;
+  height: max-content;
+  padding-top: vw(77px);
+  padding-bottom: vw(30px);
+  // box-shadow: 0 3px 6px #00000017;
+  border-bottom: vw(1px) solid $theme-border-color-grey-1;
+
+  .bar-left-section {
+    display: flex;
+
+    img {
+      height: vw(70px);
+      width: vw(70px);
+      border-radius: vw(50px);
+    }
+
+    .progress-content {
+      margin-left: vw(31px);
+    }
+
+    .progress-dots-green {
+      color: $color-green-to-dark-green;
+    }
+
+    .progress-dots-yellow {
+      color: $color-yellow-to-dark-yellow;
+    }
+    .progress-dots-red {
+      color: $color-red-to-dark-red;
+    }
+
+    h3 {
+      font-size: vw(21px);
+      line-height: vw(31px);
+      color: $theme-text-color-1;
+      @include fontBold700;
+    }
+
+    p {
+      margin: 0;
+      margin-right: vw(22px);
+      font-size: vw(21px);
+      line-height: vw(31px);
+      color: $theme-text-color-white-42;
+      @include fontRegular400;
+    }
+  }
+
+  .bar-right-section {
+    button {
+      @include theme-blue-bg-btn;
+      border: none;
+      width: vw(200px);
+      height: vw(65px);
+      font-size: vw(21px);
+      line-height: vw(31px);
+      @include fontRegular400;
+      border-radius: vw(25px);
+    }
+  }
+}
+
+.progress-dots--new {
+  padding-right: vw(25px);
+
+  .fa {
+    margin-right: vw(20px);
+    font-size: vw(20px);
+  }
+  p {
+    margin-right: vw(32px);
+    color: $theme-text-color-white-42;
+    @include theme-letter-spacing-28-uppercase;
+    margin-bottom: vw(30px);
+  }
+}
+
+/*=================================
+          Table css
+==================================*/
+.task-list-table-illustration-container {
+  margin-top: 0;
+  padding-left: vw(155px) !important;
+  padding-right: vw(155px) !important;
+}
+.no-task-found-text {
+  color: $theme-text-color-white-42;
+  padding-top: vw(74px);
+}
+.new-task-list-table-illustration {
+  width: vw(700px);
+  height: auto;
+  margin-bottom: vw(75px);
+}
+table {
+  color: $theme-text-color-white-79 !important;
+}
+
+.task-list-table-container {
+  margin-top: vw(15px);
+  padding-top: vw(40px);
+  padding-left: vw(105px) !important;
+  padding-right: vw(105px) !important;
+
+  .content-css {
+    font-size: vw(18px) !important;
+  }
+
+  p {
+    font-size: vw(18px);
+    color: $theme-text-color-white-79;
+    @include fontRegular400;
+  }
+
+  h3 {
+    font-size: vw(21px);
+    line-height: vw(31px);
+    color: $theme-text-color-white-79;
+  }
+
+  h5 {
+    color: $theme-text-color-white-79;
+    font-size: vw(21px);
+    line-height: vw(31px);
+    @include fontSemiBold600;
+  }
+
+  .task-list-view-container {
+    width: 100%;
+    margin-bottom: vw(80px);
+
+    .task-name-column {
+      width: vw(570px);
+    }
+
+    .duration-column {
+      width: vw(400px);
+    }
+
+    .time-left-column {
+      width: vw(350px);
+    }
+
+    h3 {
+      color: $theme-text-color-1;
+      font-size: vw(21px);
+      line-height: vw(31px);
+      @include fontSemiBold600;
+    }
+
+    .task-list-table {
+      td {
+        padding: vw(30px) vw(20px) vw(30px) vw(30px);
+      }
+
+      .table-with-border-row__space-row {
+        td {
+          padding: vw(10px);
+        }
+      }
+    }
+
+    .task-status-text {
+      color: $theme-text-color-1;
+      font-size: vw(21px);
+      line-height: vw(31px);
+      @include fontSemiBold600;
+      margin-left: vw(10px);
+    }
+
+    .edit-img {
+      height: auto;
+      width: vw(6px);
+      margin-left: vw(55px);
+      opacity: 0.79;
+    }
+  }
+
+  .task-list-table-title {
+    .task-name-column {
+      width: vw(600px);
+      padding-left: vw(35px);
+    }
+
+    .duration-column {
+      width: vw(400px);
+    }
+
+    .time-left-column {
+      width: vw(395px);
+    }
+
+    .table {
+      margin-bottom: 0 !important;
+    }
+
+    .table,
+    thead th {
+      color: $theme-text-color-white-42;
+      vertical-align: middle !important;
+      border-bottom: 0 !important;
+      border-top: 0 !important;
+      font-size: vw(14px);
+      line-height: vw(17px);
+      @include theme-letter-spacing-28-uppercase;
+      @include fontBold700;
+      padding-bottom: vw(35px);
+    }
+  }
+}
+
+.progress-dots-green {
+  color: $color-green-to-dark-green;
+}
+
+.progress-dots-yellow {
+  color: $color-yellow-to-dark-yellow;
+}
+
+.progress-dots-red {
+  color: $color-red-to-dark-red;
+}
+
+/*===============================
+          Form Css
+================================*/
+.tasklist-duration-fields {
+  margin-top: vw(40px);
+  display: flex;
+  // margin-left: vw(70px);
+  justify-content: flex-start;
+  text-align: center;
+
+  h3 {
+    font-size: vw(18px);
+    color: $theme-text-color-1;
+    line-height: vw(27px);
+    @include fontRegular400;
+  }
+
+  .task-date-picker {
+    display: flex;
+    align-items: center;
+    margin-right: vw(50px);
+
+    h3 {
+      margin-right: vw(15px);
+    }
+  }
+
+  input {
+    background: $theme-bg-color-1;
+    border: none;
+    text-align: center;
+    @include theme-button-height-and-radius-3;
+  }
+}
+
+.add-tasklist-form {
+  .save-task-btn {
+    width: vw(111px);
+    border: vw(1px) solid #303030;
+    border-radius: vw(27px);
+    background-color: $theme-bg-color-1;
+    font-size: vw(24px);
+    line-height: vw(35px);
+    color: $theme-text-color-1;
+    @include fontSemiBold600;
+  }
+
+  .is-invalid.add-member-select-display-container__error {
+    padding-left: vw(30px);
+  }
+}
+
+.edit-task-btn {
+  width: vw(111px);
+  border: vw(1px) solid #303030;
+  border-radius: vw(27px);
+  background-color: $theme-bg-color-1;
+  font-size: vw(24px);
+  line-height: vw(35px);
+  color: $theme-text-color-1;
+  @include fontSemiBold600;
+}
+
+.task-edit-status {
+  margin-top: vw(30px);
+  // padding-left: vw(68px);
+  margin-top: vw(40px);
+
+  label {
+    color: $theme-text-color-white-42;
+  }
+
+  .css-yk16xz-control {
+    border: none;
+    border-bottom: vw(1px) solid;
+    border-radius: 0;
+    border-bottom: vw(4px) solid #cccccc;
+  }
+
+  .css-1wa3eu0-placeholder {
+    color: $theme-text-color-1;
+    font-size: vw(18px);
+    line-height: vw(27px);
+  }
+
+  .css-1okebmr-indicatorSeparator {
+    color: #cccccc;
+  }
+
+  .css-tlfecz-indicatorContainer {
+    color: #cccccc;
+  }
+
+  h3 {
+    font-size: vw(24px);
+    color: $theme-text-color-1;
+    line-height: vw(35px);
+    @include fontSemiBold600;
+  }
+}
+.add-lead-pagination--tasklist {
+  margin-bottom: vw(50px);
+}

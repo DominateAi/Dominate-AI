@@ -1,0 +1,56 @@
+.vission_template_four {
+  display: flex;
+  .vission_template_four_left_line {
+    display: block;
+    width: vw(55px);
+    height: 100%;
+    border-radius: vw(10px) 0 0 vw(10px);
+  }
+  .vission_template_four_right {
+    width: 95%;
+    display: flex;
+    padding: vw(50px) vw(50px) vw(30px) vw(80px);
+  }
+  .vission_template_four_left {
+    width: 50%;
+    padding: vw(50px) vw(20px) vw(20px) vw(30px);
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+  .vission_template_four_right_container {
+    width: 50%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: vw(70px) vw(50px) vw(40px) vw(20px);
+  }
+  .vission_template_four_right_top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+  }
+  .vission_template_four_dot {
+    width: vw(22px);
+    height: vw(22px);
+    display: block;
+  }
+  .vission_template_four_right_headline {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    height: vw(79px);
+  }
+  .vission_template_four_right_para {
+    display: flex;
+    width: 100%;
+    height: vw(125px);
+    padding: vw(10px);
+    padding-top: 0;
+  }
+}

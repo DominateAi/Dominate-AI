@@ -1,0 +1,137 @@
+/* ===============================================================
+                   message colm 1          
+================================================================== */
+
+.dashboard-message__colm1__row1 {
+  align-items: center;
+  padding: vw(15px) vw(23px) vw(23px) vw(23px);
+}
+
+.dashboard-message__colm1__row1-1 {
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.dashboard-message__colm1__row1__img {
+  width: vw(50px);
+  margin-right: vw(27px);
+  border-radius: 50%;
+}
+
+.dashboard-message__colm1__row1__img2 {
+  cursor: pointer;
+  width: vw(30px);
+}
+
+.message-search-block {
+  padding-right: vw(34px);
+  padding-left: vw(34px);
+  position: relative;
+  margin-bottom: vw(20px);
+}
+.message-search-block--chat {
+  margin-right: vw(81px);
+  margin-left: vw(85px);
+}
+.message-search-block__input {
+  // width: vw(473px);
+  height: vw(60px);
+  @include theme-mixin-1;
+  border-radius: vw(56px);
+  border: transparent;
+  padding-left: vw(30px);
+  padding-right: vw(48px);
+  font-size: vw(18px);
+  @include fontExtraLight200;
+  font-style: italic;
+
+  &::placeholder {
+    color: #a0a0a0;
+    @include fontExtraLight200;
+    font-style: italic;
+  }
+}
+.message-search-block__input--msg {
+  width: 100%;
+}
+
+.message-search-block__icon {
+  width: vw(20px);
+  position: absolute;
+  right: vw(20px);
+  top: vw(20px);
+  cursor: pointer;
+}
+
+.message-search-block__icon--chat {
+  right: vw(60px);
+}
+
+.message-colm1-card {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: vw(26px) vw(44px) vw(28px) vw(44px);
+  margin-bottom: vw(9px);
+  @include theme-mixin-2;
+
+  // &:hover {
+  //   background-color: #fafafa;
+  // }
+
+  h2 {
+    font-size: vw(21px);
+    @include fontMedium500;
+    line-height: vw(31px);
+    margin-bottom: 0;
+    padding-bottom: vw(16px);
+  }
+
+  p {
+    color: $theme-text-color-white-79;
+    font-size: vw(18px);
+    @include fontLight300;
+    line-height: vw(27px);
+    margin-bottom: 0;
+  }
+
+  .fa-caret-right {
+    font-size: vw(21px);
+    font-family: "FontAwesome";
+    margin-right: vw(12px);
+  }
+}
+
+.message-colm1-card__text-img {
+  display: flex;
+  align-items: flex-start;
+}
+
+.message-colm1-card__img {
+  width: vw(70px);
+  margin-right: vw(24px);
+  border-radius: 50%;
+}
+
+.message-colm1-card__active {
+  @include theme-mixin-2;
+}
+
+.message-pb-16 {
+  padding-bottom: vw(16px);
+}
+
+.message-colm1-card__notification {
+  padding: vw(1px) vw(15px);
+  background-color: $color-green-to-dark-green;
+  border-radius: vw(15px);
+
+  span {
+    font-size: vw(18px);
+    @include fontMedium500;
+    line-height: vw(27px);
+    margin-bottom: 0;
+    color: $color-white;
+  }
+}

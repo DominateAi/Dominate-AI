@@ -1,0 +1,33 @@
+// coming soom proposals
+.coming-soon-proposals {
+  background-image: url("../../../img/proposal/coming-soon/proposals-bg.svg");
+  background-position: bottom;
+  background-size: 100%;
+  min-height: 100vh;
+
+  align-items: center;
+  justify-content: center;
+
+  img {
+    height: mvwDivide(38px);
+    margin-bottom: mvwDivide(35px);
+  }
+
+  h1 {
+    width: mvwDivide(500px);
+    color: #502eff;
+    font-size: mvwDivide(58px);
+    @include fontBold700;
+    margin-bottom: mvwDivide(75px);
+  }
+
+  button {
+    padding: mvwDivide(15px) mvwDivide(35px);
+    color: $color-white;
+    background-color: #502eff;
+    @include fontSemiBold600;
+    border: 0;
+    border-radius: mvwDivide(45px);
+    text-transform: uppercase;
+  }
+}

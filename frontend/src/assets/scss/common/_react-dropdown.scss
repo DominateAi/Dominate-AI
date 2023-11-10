@@ -1,0 +1,140 @@
+.lead-status-dropDown--level {
+  .Dropdown-control {
+    width: vw(171px);
+    height: vw(27px);
+    // border-radius: vw(51px);
+    // background: rgba(196, 196, 196, 0.39);
+    font-size: vw(12px);
+    line-height: vw(18px);
+    @include fontItalicPoppins;
+    color: $theme-text-color-1;
+    //padding-right: vw(6px);
+    padding-left: vw(18px);
+    padding-top: vw(5px);
+    @include theme-mixin-4;
+    border-radius: vw(18px);
+
+    .is-selected,
+    .Dropdown-placeholder {
+      width: inherit;
+    }
+  }
+  .Dropdown-menu {
+    width: vw(162px);
+    height: vw(200px);
+    margin-top: vw(2px);
+  }
+  .Dropdown-option {
+    font-size: vw(18px);
+  }
+}
+
+.lead-status-dropDown--accounts-details-leads-cards {
+  .Dropdown-control {
+    // border-radius: vw(30px) !important;
+    height: vw(49px) !important;
+    // background: linear-gradient(
+    //   180deg,
+    //   rgba(242, 243, 246, 1) 0%,
+    //   rgba(255, 255, 255, 1) 100%
+    // );
+    // box-shadow: 0 vw(3px) vw(6px) #80808028;
+    padding-left: vw(30px);
+    padding-top: vw(10px);
+  }
+  .Dropdown-menu {
+    height: max-content;
+  }
+  .Dropdown-option {
+    text-align: center;
+  }
+}
+.lead-status-dropDown--accounts-details-leads-emoji {
+  .Dropdown-control {
+    margin-left: vw(30px);
+    padding-right: vw(45px);
+  }
+  .Dropdown-menu {
+    width: vw(80px);
+    margin-top: vw(10px);
+    margin-left: vw(35px);
+    height: max-content;
+    padding: 0;
+  }
+}
+
+.lead-status-dropDown--accounts-profile-display-fields-text-block-contactLeads {
+  .Dropdown-control {
+    // border-radius: vw(30px) !important;
+    height: vw(49px) !important;
+    // background: linear-gradient(
+    //   180deg,
+    //   rgba(242, 243, 246, 1) 0%,
+    //   rgba(255, 255, 255, 1) 100%
+    // );
+    // box-shadow: 0 vw(3px) vw(6px) #80808028;
+    padding-left: vw(30px);
+    padding-top: vw(10px);
+    text-transform: capitalize;
+    // color: $theme-text-dark-gray-to-white;
+    // @include theme-mixin-4;
+    // border-radius: vw(10px);
+    box-shadow: 0 0 0;
+    // color: $theme-text-color-white-79;
+  }
+  .Dropdown-menu {
+    margin-top: vw(5px);
+    min-height: vw(90px);
+    height: auto;
+    z-index: 99;
+  }
+  .Dropdown-option {
+    text-align: center;
+  }
+}
+.lead-status-dropDown--accounts-profile-display-fields-text-block-contactLeads-emoji {
+  .Dropdown-control {
+    margin-left: vw(30px);
+    padding-right: vw(45px);
+    @include theme-mixin-4;
+    border-radius: vw(18px);
+    box-shadow: 0 0 0;
+  }
+  .Dropdown-menu {
+    width: vw(80px);
+    margin-top: vw(10px);
+    margin-left: vw(35px);
+    height: max-content;
+    padding: 0;
+  }
+}
+
+.lead-status-dropDown--adminReportYear {
+  .Dropdown-placeholder {
+    font-size: vw(16px);
+    line-height: vw(25px);
+    @include fontSemiBold600;
+  }
+
+  .Dropdown-control {
+    padding-right: vw(35px);
+  }
+
+  .Dropdown-menu {
+    width: max-content;
+    max-height: vw(150px);
+    height: min-content;
+    margin-top: vw(10px);
+    padding: vw(10px);
+  }
+
+  .Dropdown-option {
+    font-size: vw(16px);
+    line-height: vw(25px);
+  }
+
+  .Dropdown-option.is-selected {
+    background-color: transparent;
+    @include fontSemiBold600;
+  }
+}

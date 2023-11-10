@@ -1,0 +1,27 @@
+/* ===============================================================
+                    
+                    add lead progressbar
+                    
+================================================================== */
+
+.add-lead-blue-progressbar-block-with-button {
+  top: vw(-25px);
+}
+
+.add-lead-blue-progressbar-block,
+.add-lead-blue-progressbar-block-with-button {
+  position: relative;
+  width: vw(670px);
+  height: vw(18px);
+  // background-color: rgba(48, 48, 48, 0.18);
+  background-color: rgba(48, 48, 48, 1);
+  border-radius: vw(21px);
+  margin-left: vw(60px);
+}
+
+.add-lead-blue-progressbar-block__fill {
+  height: vw(18px);
+  border-radius: inherit;
+  background-color: $theme-bg-blue-1;
+  transition: all 0.2s ease;
+}

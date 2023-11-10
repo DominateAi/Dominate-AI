@@ -1,0 +1,55 @@
+/* ===============================================================
+                   message                
+================================================================== */
+
+.dashboard-message {
+  // padding-left: vw(141px);
+  // padding-right: vw(141px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.dashboard-message__colm1 {
+  width: vw(817px);
+  background: $theme-bg-colm1-bg;
+  position: relative;
+}
+
+.dashboard-message__colm1,
+.dashboard-message__colm2 {
+  height: calc(100vh - 8vw);
+  overflow: hidden;
+}
+
+.dashboard-message__colm2 {
+  overflow: auto;
+}
+
+.dashboard-message__colm1__overflow-cards {
+  height: calc(100vh - 14vw - 7.1875vw);
+  overflow: auto;
+  padding-right: vw(81px);
+  padding-left: vw(85px);
+}
+
+.message-colm2-block__container {
+  height: calc(100vh - 12vw - 12vw);
+  overflow: auto;
+}
+
+.dashboard-message__colm2 {
+  flex-grow: 1;
+  background: $theme-bg-colm2-bg;
+  // box-shadow: 0 vw(3px) vw(50px) rgba(128, 128, 128, 0.16);
+}
+
+.no_users_found_for_chat {
+  text-align: center;
+  margin-top: 30px;
+  @include fontMedium500;
+}
+// scss
+@import "./message-colm1";
+@import "./message-colm2";
+@import "./message-new-chat-modal";

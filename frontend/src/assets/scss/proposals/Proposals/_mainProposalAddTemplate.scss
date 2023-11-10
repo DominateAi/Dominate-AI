@@ -1,0 +1,172 @@
+.main_Proposal_add_Template_main_container {
+  display: flex;
+  height: -webkit-fill-available;
+  width: 100%;
+  background: #ffffff;
+  .main_Proposal_add_Template_block_left {
+    display: flex;
+    width: 30%;
+    padding-top: vw(95px);
+    flex-direction: column;
+    background: #ffffff;
+    // box-shadow: 0 vw(3px) vw(50px) rgba(220, 220, 220, 1);
+  }
+  .main_Proposal_add_Template_block_right {
+    display: flex;
+    width: 70%;
+    margin-top: vw(80px);
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+// RENDER IMAGE
+
+// PROPOSAL NAME AREA
+.main_proposal_proposal_name_container {
+  display: flex;
+  width: 100%;
+  height: vw(70px);
+  align-items: center;
+  padding: 0 vw(10px);
+  border-bottom: vw(1px) solid black;
+  .proposal_name {
+    display: flex;
+    width: 80%;
+    @include theme-button-height-and-radius-3;
+    align-items: center;
+  }
+  .proposal_name_edit_toggler {
+    display: flex;
+    width: 20%;
+    @include theme-button-height-and-radius-3;
+    justify-content: center;
+    align-items: center;
+  }
+  .proposal_name_input {
+    display: flex;
+    border: none;
+    border-bottom: vw(1px) solid blue;
+    width: 100%;
+    @include theme-button-height-and-radius-3;
+    outline: none;
+  }
+}
+
+// IMAGE CARD AREA
+.main_Proposal_image_container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  padding: vw(30px) vw(20px);
+  justify-content: space-around;
+  align-items: center;
+  .main_Proposal_image_block_single {
+    display: flex;
+  }
+  .main_proposal_image_block_single_image {
+    height: vw(150px);
+    width: vw(280px);
+    border-radius: vw(10px);
+    // box-shadow: 0 vw(1px) vw(80px) rgba(220, 220, 220, 1);
+  }
+  .main_proposal_image_block_single_image_active {
+    height: vw(150px);
+    width: vw(280px);
+    border-radius: vw(10px);
+    border: vw(1px) solid rgba(38, 51, 235, 0.74);
+  }
+}
+
+// PALLETTE CONTAINER
+.main_Proposal_add_Template_block_right_pallete_main_container {
+  display: flex;
+  height: vw(80px);
+  // box-shadow: 0 vw(3px) vw(50px) rgba(220, 220, 220, 1);
+  width: 95%;
+  border-radius: vw(10px);
+  background: $theme-bg-color-white-03;
+  padding-left: vw(20px);
+  padding-right: vw(20px);
+  align-items: center;
+  .font_pallette_whole_container {
+    display: flex;
+    height: vw(60px);
+    align-items: center;
+    span {
+      font-size: vw(20px);
+    }
+    select {
+      outline: none;
+      border: none;
+      font-size: vw(20px);
+      background: $theme-bg-color-white-03;
+    }
+    option:after {
+      content: " ";
+      height: 5px;
+      width: 5px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+  }
+}
+
+// SIDE BAR
+.side_bar_container {
+  display: flex;
+  height: vw(50px);
+  width: 1px;
+  border: vw(1px) solid rgba(220, 220, 220, 1);
+  margin-left: vw(10px);
+  margin-right: vw(10px);
+  // box-shadow: 0 vw(3px) vw(50px) rgba(220, 220, 220, 1);
+}
+
+// COLOR
+.color_names {
+  height: vw(40px);
+  width: vw(80px);
+}
+
+// INDENTATION ICONS
+.indentation_icons {
+  display: flex;
+  height: vw(40px);
+  width: vw(40px);
+  margin-left: vw(10px);
+  margin-right: vw(10px);
+  align-items: center;
+  justify-content: center;
+}
+.indentation_icons:hover {
+  height: vw(40px);
+  width: vw(40px);
+  background: rgba(220, 220, 220, 1);
+  align-items: center;
+  justify-content: center;
+}
+
+// EDITABLE AREA
+.main_Proposal_add_Template_block_right_editable_main_container {
+  display: flex;
+  margin-top: vw(40px);
+  flex-direction: column;
+  border-radius: vw(10px);
+  height: 70%;
+  // box-shadow: 0 vw(3px) vw(50px) rgba(220, 220, 220, 1);
+  width: 95%;
+  background: $theme-bg-color-white-03;
+  background: #ffffff;
+  // box-shadow: 0 vw(3px) vw(50px) rgba(220, 220, 220, 1);
+}
+
+// BUTONS
+.main_Proposal_add_Template_block_right_buttons_main_container {
+  display: flex;
+  width: 95%;
+  padding-top: vw(20px);
+  align-items: flex-end;
+  justify-content: flex-end;
+}

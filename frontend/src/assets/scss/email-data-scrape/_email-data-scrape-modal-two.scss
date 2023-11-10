@@ -1,0 +1,91 @@
+.customModal--emailDataScrapeModal-two {
+  padding-left: vw(70px) !important;
+}
+.email-data-scrape-modal-two-15-medium {
+  font-size: vw(14px);
+  line-height: vw(21px);
+  @include fontMedium500;
+  color: rgba(48, 48, 48, 1);
+  padding-bottom: vw(10px);
+}
+.pt-80 {
+  padding-top: vw(80px);
+}
+.leads-title-block-btn-red-bg-email-data-scrape-modal-two {
+  font-size: vw(14px);
+  @include fontMedium500;
+  width: vw(187px);
+  @include theme-button-height-and-radius-4;
+}
+.email-data-scrape-modal-two-img {
+  width: vw(320px);
+  height: vw(168px);
+}
+.email-data-scrape-modal-two-result-text {
+  font-size: vw(15px);
+  line-height: vw(23px);
+  color: rgba(64, 64, 64, 0.45);
+  @include fontBold700;
+}
+.email-data-scrape-modal-two-card-outer-div {
+  width: vw(663px);
+  height: vw(200px);
+  overflow: auto;
+  border-radius: vw(6px);
+  // box-shadow: 0 vw(12px) vw(25px) rgba(0, 0, 0, 0.12);
+  background: $theme-bg-color-white-03;
+  padding: vw(25px) vw(35px);
+  margin-top: vw(20px);
+  padding-bottom: vw(10px);
+  margin-bottom: vw(10px);
+}
+.email-data-scrape-modal-two-card-img {
+  width: vw(31px);
+  height: vw(31px);
+  border-radius: 50%;
+  //width: 20%;
+  // box-shadow: 0 vw(3px) vw(6px) rgba(0, 0, 0, 0.12);
+  margin-right: vw(20px);
+}
+.email-data-scrape-modal-two-card-img-div {
+  width: 70%;
+}
+.email-data-scrape-modal-two-card-email-div {
+  width: 30%;
+}
+.email-data-scrape-modal-two-card-text {
+  font-size: vw(16px);
+  line-height: vw(25px);
+  color: rgba(64, 64, 64, 0.42);
+  @include fontItalicPoppins;
+  //padding-left: vw(30px);
+  word-break: break-all;
+  width: 70%;
+}
+.email-data-scrape-modal-two-card-email-text {
+  font-size: vw(16px);
+  line-height: vw(25px);
+  color: rgba(64, 64, 64, 1);
+  @include fontMedium500;
+  word-break: break-all;
+  display: flex;
+  justify-content: flex-end;
+}
+.email-data-scrape-modal-two-card-inner-div {
+  position: relative;
+  padding: vw(25px) 0;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    border-radius: vw(5px);
+    height: vw(2px);
+    bottom: 0;
+    background: rgba(64, 64, 64, 0.42);
+  }
+}
+.email-data-scrape-modal-two-card-inner-div:last-child {
+  &::after {
+    display: none;
+  }
+}

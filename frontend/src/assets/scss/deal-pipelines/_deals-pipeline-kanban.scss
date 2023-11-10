@@ -1,0 +1,247 @@
+.deals-background {
+  .kanban_view_main_container {
+    // margin-right: vw(20px);
+    //   margin-left: vw(120px);
+    padding-right: 0;
+    padding-bottom: vw(25px);
+    margin-bottom: vw(70px);
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    // height: 90vh;
+    // height: auto;
+  }
+
+  /*====================================
+          Kanban list columns css
+    =====================================*/
+
+  .kanban_list_columns {
+    flex-shrink: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: vw(14px);
+    width: vw(354px);
+    max-height: 100%;
+    height: auto;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .fa-ellipsis-v {
+      float: right;
+      position: relative;
+      right: vw(30px);
+    }
+  }
+
+  .heads {
+    text-align: center;
+
+    .heads__title {
+      padding-top: vw(30px);
+      padding-bottom: vw(30px);
+      // background: #69696c17;
+      // border-radius: vw(10px) vw(10px) 0 0;
+      // box-shadow: 0 vw(3px) vw(10px) 0 rgba(0, 0, 0, 0.16);
+      margin-bottom: 0;
+      // color: $color-white;
+      font-size: vw(20px);
+      line-height: vw(36px);
+      @include fontSemiBold600;
+      text-transform: uppercase;
+      @include theme-mixin-2;
+      border-radius: vw(18px) vw(18px) 0 0;
+      color: $theme-text-color-white-79;
+      display: flex;
+      justify-content: space-around;
+
+      span {
+        font-size: vw(16px);
+        color: $theme-text-color-white-42;
+      }
+    }
+  }
+
+  // .list_conatiner:hover {
+  //   cursor: pointer;
+  // }
+
+  .list_conatiner,
+  .kanban-single-status-conainer {
+    padding: vw(5px);
+    max-height: 100%;
+    overflow: auto;
+    // scrollbar
+    &::-webkit-scrollbar {
+      height: vw(3px);
+      width: (0px);
+    }
+  }
+
+  .list_conatiner,
+  .kanban-single-status-conainer {
+    border-radius: 0 0 vw(10px) vw(10px);
+    // background-color: #69696c17;
+    padding-bottom: vw(20px);
+    padding-top: vw(20px);
+    overflow: auto;
+    text-align: center;
+    background: $theme-bg-color-white-03;
+    backdrop-filter: blur(392px);
+
+    .login-dashboard-btn {
+      margin-right: 0;
+    }
+
+    &::-webkit-scrollbar {
+      height: vw(12px);
+      width: vw(13px);
+    }
+
+    &::-webkit-scrollbar-track {
+      margin: vw(20px);
+      background: $theme-scrollbar-track-bg;
+      border-radius: vw(50px);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: vw(50px);
+      background: $theme-scrollbar-thumb-bg;
+
+      &:hover {
+        background: $theme-scrollbar-thumb-bg;
+      }
+    }
+
+    .list_single_card_container,
+    .leads-content-block-480 {
+      text-transform: capitalize;
+      word-break: break-all;
+      width: vw(285px);
+      height: vw(53px);
+      // height: vw(97px);
+      margin-bottom: vw(24px);
+      background-color: blueviolet;
+      margin-left: vw(35px);
+      border-radius: vw(20px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .list_conatiner,
+  .kanban-single-status-conainer {
+    height: auto;
+  }
+
+  .add_new_stack_column {
+    flex-shrink: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: vw(14px);
+    width: vw(354px);
+    max-height: 100%;
+    height: auto;
+  }
+
+  .closed_stack_column {
+    flex-shrink: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: vw(14px);
+    width: vw(354px);
+    max-height: 100%;
+    height: auto;
+  }
+
+  // .add_new_stack {
+  //   background-color: transparent;
+  //   border: none;
+  //   border-radius: vw(25px);
+  // }
+
+  /*================================================ 
+                STACK HEADER COLORS
+  ===================================================*/
+  // .kanban_list_columns:nth-child(1) .heads__title {
+  //   background: -webkit-linear-gradient(180deg, #ff5acd 0%, #9face6 100%);
+  // }
+  // .kanban_list_columns:nth-child(2) .heads__title {
+  //   background: -webkit-linear-gradient(0deg, #ff512f85 0%, #dd247685 100%);
+  // }
+  // .kanban_list_columns:nth-child(3) .heads__title {
+  //   background: -webkit-linear-gradient(0deg, #fab2ff 0%, #1904e5 100%);
+  // }
+  // .kanban_list_columns:nth-child(4) .heads__title {
+  //   background: -webkit-linear-gradient(0deg, #fa9472 0%, #fb6394 100%);
+  // }
+  // .kanban_list_columns:nth-child(5) .heads__title {
+  //   background: -webkit-linear-gradient(0deg, #fda085 0%, #f6d365 100%);
+  // }
+  // .kanban_list_columns:nth-child(6) .heads__title {
+  //   background: -webkit-linear-gradient(0deg, #4568dc 0%, #e6a0e9 100%);
+  // }
+
+  .add_new_stack_column .heads__title {
+    // border-radius: vw(10px) vw(10px) vw(10px) vw(10px);
+    // background: -webkit-linear-gradient(0deg, #1904e52b 0%, #fab2ff 100%);
+    @include theme-blue-bg-radius;
+    border: none;
+  }
+  .closed_stack .heads__title {
+    // background: -webkit-linear-gradient(
+    //   180deg,
+    //   rgba(254, 168, 88, 1) 0%,
+    //   rgba(237, 118, 94, 1) 100%
+    // ); /* safari5.1+,chrome10+ */
+    border: vw(1px) solid $theme-border-color-green-2;
+    background: $theme-tag-bg-green-color;
+  }
+  .closed_stack_column {
+    .list_conatiner {
+      background: $theme-tag-bg-green-color;
+      backdrop-filter: blur(392px);
+    }
+  }
+  /*====================================
+          Add Kanban List css
+    =====================================*/
+
+  .add_kanban_list {
+    height: vw(84px);
+    .heads {
+      text-align: center;
+
+      .heads__title {
+        padding-top: vw(30px);
+        padding-bottom: vw(30px);
+        background: #69696c17;
+        border-radius: vw(10px);
+        // box-shadow: 0 vw(3px) vw(10px) 0 rgba(0, 0, 0, 0.16);
+        margin-bottom: 0;
+        color: $color-white;
+        font-size: vw(18px);
+        line-height: vw(24px);
+        @include fontMedium500;
+      }
+    }
+  }
+
+  .add_kanban_list:hover {
+    cursor: pointer;
+  }
+}
+.add_new_stack_btn {
+  width: vw(311px);
+  height: vw(88px);
+  border-radius: vw(25px);
+  border: none;
+  font-size: vw(18px);
+  line-height: vw(22px);
+  @include fontSemiBold600;
+  color: #e7e7e7;
+  background: #6f5adc;
+}

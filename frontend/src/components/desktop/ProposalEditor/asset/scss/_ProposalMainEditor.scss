@@ -1,0 +1,23 @@
+.proposal_main_editor_panel_main_container_view{
+    display: flex;
+    height: 100vh;
+    width: vw( 1920px );
+    flex-direction: column;
+}
+
+.proposal_main_editor_panel_bottom_view{
+    margin-top:vw( 10px );
+    display: flex;
+    height: calc( 100vh - 4.65vw );
+    width:100%;
+    justify-content: space-between;
+}
+
+
+.working_area_main_container{
+    display: flex;
+    height: calc( 100vh - 4.65vw );
+    width: vw( 1920px - 475px );
+    align-items: center;
+    justify-content: center;
+}

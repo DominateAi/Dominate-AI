@@ -1,0 +1,124 @@
+/* ===============================================================
+                   message colm 1          
+================================================================== */
+
+.dashboard-message__colm1__row1 {
+  align-items: center;
+  padding: mvwDivide(15px) mvwDivide(23px) mvwDivide(23px) mvwDivide(23px);
+}
+
+.dashboard-message__colm1__row1-1 {
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.dashboard-message__colm1__row1__img {
+  width: mvwDivide(50px);
+  margin-right: mvwDivide(27px);
+  border-radius: 50%;
+}
+
+.dashboard-message__colm1__row1__img2 {
+  cursor: pointer;
+  width: mvwDivide(30px);
+}
+
+.message-search-block {
+  padding-left: mvwDivide(34px);
+  padding-right: mvwDivide(34px);
+  position: relative;
+  margin-bottom: mvwDivide(20px) !important;
+}
+
+.message-search-block__input {
+  width: 100%;
+  height: mvwDivide(50px);
+  background: $theme-bg-color-white-03;
+  border-radius: mvwDivide(42px);
+  border: transparent;
+  padding-left: mvwDivide(30px);
+  padding-right: mvwDivide(48px);
+  font-size: mvwDivide(18px);
+  @include fontExtraLight200;
+  font-style: italic;
+
+  &::placeholder {
+    color: #a0a0a0;
+    @include fontExtraLight200;
+    font-style: italic;
+  }
+}
+
+.message-search-block__icon {
+  width: mvwDivide(20px);
+  position: absolute;
+  right: mvwDivide(52px);
+  top: mvwDivide(18px);
+  cursor: pointer;
+}
+
+.message-colm1-card {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: mvwDivide(26px) mvwDivide(44px) mvwDivide(28px) mvwDivide(44px);
+
+  // &:hover {
+  //   background-color: #fafafa;
+  // }
+
+  h2 {
+    font-size: mvwDivide(21px);
+    @include fontMedium500;
+    line-height: mvwDivide(31px);
+    margin-bottom: 0;
+    padding-bottom: mvwDivide(16px);
+  }
+
+  p {
+    font-size: mvwDivide(18px);
+    @include fontLight300;
+    line-height: mvwDivide(27px);
+    margin-bottom: 0;
+  }
+
+  .fa-caret-right {
+    font-size: mvwDivide(21px);
+    font-family: "FontAwesome";
+    margin-right: mvwDivide(12px);
+  }
+}
+
+.message-colm1-card__text-img {
+  display: flex;
+  align-items: flex-start;
+}
+
+.message-colm1-card__img {
+  width: mvwDivide(70px);
+  margin-right: mvwDivide(24px);
+  border-radius: 50%;
+}
+
+.message-colm1-card__active {
+  background-color: #fafafa;
+}
+
+.message-pb-16 {
+  padding-bottom: mvwDivide(16px);
+}
+
+.message-colm1-card__notification {
+  padding: mvwDivide(2px) mvwDivide(15px);
+  background-color: $color-green-to-dark-green;
+  border-radius: mvwDivide(15px);
+
+  span {
+    font-size: mvwDivide(18px);
+    @include fontMedium500;
+    line-height: mvwDivide(27px);
+    margin-bottom: 0;
+    color: $color-white;
+  }
+}

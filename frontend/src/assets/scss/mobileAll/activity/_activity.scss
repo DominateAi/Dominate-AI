@@ -1,0 +1,176 @@
+/* ===============================================================
+                    
+                            activity
+
+================================================================== */
+
+.customModal--mail-max-height {
+  min-height: mvwDivide(655px) !important;
+  max-height: mvwDivide(695px);
+  overflow: auto;
+}
+
+.backtokanban_button {
+  position: absolute;
+  width: mvwDivide(55px);
+  left: mvwDivide(22px);
+}
+
+.backtokanban_button:hover {
+  cursor: pointer;
+}
+
+.files-open-btn {
+  margin-top: mvwDivide(20px);
+  height: mvwDivide(40px);
+  background: $theme-bg-dark-blue-to-purple-1;
+  color: $color-white;
+  width: mvwDivide(105px);
+  font-size: mvwDivide(15px);
+  @include fontRegular400;
+  // line-height: mvwDivide(31px);
+  border: 0;
+  border-radius: mvwDivide(6px);
+}
+
+// activity structure
+
+.activity-outer-container {
+  background-color: $theme-bg-color-1;
+  // box-shadow: 0 mvwDivide(3px) mvwDivide(50px) rgba(128, 128, 128, 0.16);
+  // margin: 0 mvwDivide(146px) 0 mvwDivide(136px);
+  box-shadow: 0 0 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  .activity-outer-container__colm1 {
+    width: 100%;
+    padding: mvw(5px) mvw(16px) mvw(20px) mvw(43px);
+    box-shadow: 0 0 0;
+  }
+
+  .activity-outer-container__colm2 {
+    width: 100%;
+  }
+}
+
+// activity summary
+
+.activity-title-img-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: mvwDivide(19px);
+  word-break: break-all;
+}
+
+.activity-page-lead-img {
+  width: mvwDivide(60px);
+  margin-right: mvwDivide(17px);
+}
+
+.btn-funnel-view--activitySummary {
+  width: mvwDivide(155px);
+  height: mvwDivide(40px);
+  margin-right: mvwDivide(21px);
+  margin-bottom: mvwDivide(10px);
+
+  color: $color-white;
+  border: transparent;
+  // background: rgba(154, 184, 255, 0.4);
+  // background: linear-gradient(
+  //   1deg,
+  //   rgba(0, 60, 255, 0.4) 0%,
+  //   rgba(154, 184, 255, 0.4) 100%
+  // );
+  background: #3f81ff;
+  // background: linear-gradient(
+  //   1deg,
+  //   rgba(0, 60, 255, 0.4) 0%,
+  //   rgba(154, 184, 255, 0.4) 100%
+  // );
+  // box-shadow: 0 mvw(3px) mvw(6px) rgba(0, 0, 0, 0.16);
+  border-radius: mvw(10px);
+}
+
+.activity-summary-about {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  h6 {
+    margin-bottom: mvwDivide(16px);
+  }
+}
+
+.contact-content-block {
+  display: flex;
+  word-break: break-all;
+  margin-bottom: mvwDivide(9px);
+  // cursor: default;
+
+  .contact-content-block__imgDiv {
+    width: mvwDivide(38px);
+    margin-right: mvwDivide(9px);
+  }
+}
+
+.summary-gmailImg {
+  width: mvwDivide(38px);
+}
+
+.summary-outlookImg {
+  font-size: mvwDivide(32px);
+  line-height: mvwDivide(32px);
+  width: mvwDivide(32px);
+  border-radius: mvwDivide(3px);
+  // box-shadow: 0 mvwDivide(3px) mvwDivide(6px) rgba(0, 0, 0, 0.16);
+}
+
+.summaryLocation {
+  font-size: mvwDivide(28px);
+  line-height: mvwDivide(41px);
+  width: mvwDivide(32px);
+}
+
+.summaryLocationText {
+  width: 50%;
+  word-break: break-word;
+}
+
+.summary-border-bottom {
+  border-bottom: vw(1px) solid rgba(112, 112, 112, 0.25);
+  padding-bottom: mvwDivide(32px);
+}
+
+// menu activity content
+.justify-content-space-between {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.activity-summary-about__mobileDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: mvw(15px);
+  padding-right: mvw(15px);
+}
+
+.resp-activity-page-lead-img {
+  border-radius: 50%;
+  width: mvw(88px);
+  margin-bottom: mvw(7px);
+}
+/* =========================================================== */
+
+// all activity
+@import "./activityContentActivity";
+@import "./activityContentEmail";
+@import "./activityContentCallLog";
+@import "./activityContentNotesFiles";
+@import "./activityTabs";
+@import "./activitySummaryViewProfile";
+@import "./activityTimeline";

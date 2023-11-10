@@ -1,0 +1,77 @@
+.referral-code-btn {
+  height: vw(65px);
+  //   line-height: vw(65px);
+  display: flex;
+  align-items: center;
+  color: $theme-text-color-light-purple-1;
+}
+.referral-code-card-outer-div {
+  margin: auto;
+  padding-top: vw(318px);
+}
+.referral-code-card {
+  width: vw(834px);
+  min-height: vw(583px);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(229, 229, 229, 0.19);
+  backdrop-filter: blur(56px);
+  border-radius: vw(58px);
+  padding: 0 vw(68px) 0 vw(82px);
+}
+.referral-code-card__top-section {
+  padding: vw(67px) 0 vw(37px) 0;
+  color: $theme-text-color-white-79;
+}
+.referral-code-card__middle-section {
+  padding: vw(37px) 0 vw(77px) 0;
+  border-bottom: vw(2px) solid $theme-border-color-white-22;
+  border-top: vw(2px) solid $theme-border-color-white-22;
+}
+.referral-form-group {
+  width: 100%;
+  height: vw(75px);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(56px);
+  border-radius: vw(25px);
+  margin-top: vw(46px);
+
+  input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: transparent;
+    padding: 0 vw(55px) 0 vw(55px);
+    font-size: vw(18px);
+    line-height: vw(22px);
+    @include fontSemiBold600;
+  }
+}
+.refferral-code-back-btn,
+.refferral-code-apply-btn {
+  width: vw(182px);
+  height: vw(60px);
+  font-size: vw(16px);
+  line-height: vw(59px);
+  padding: 0;
+  @include fontSemiBold600;
+}
+.refferral-code-apply-btn:hover {
+  cursor: pointer;
+}
+.refferral-code-apply-btn {
+  @include theme-mixin-blue-bg-with-color;
+}
+.refferral-code-back-btn {
+  @include theme-mixin-2;
+  color: $theme-text-color-grey;
+  margin-right: vw(8px);
+}
+.referral-code-card__bottom-section {
+  padding: vw(25px) 0 vw(29px) 0;
+}
+.referral-code-card__bottom-section-text {
+  font-size: vw(20px);
+  line-height: vw(24px);
+  margin-bottom: 0;
+  @include fontLight300;
+}

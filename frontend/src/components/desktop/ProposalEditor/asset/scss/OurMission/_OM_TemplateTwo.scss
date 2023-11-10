@@ -1,0 +1,58 @@
+.our_mission_page_template_two {
+  padding: vw(30px) vw(45px) vw(40px) vw(45px);
+  display: flex;
+  flex-direction: column;
+
+  .our_mission_page_template_two__top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 40%;
+    height: 15%;
+  }
+  .our_mission_page_template_two__headline {
+    display: flex;
+    height: vw(79px);
+    align-items: center;
+    //width: 100%;
+  }
+  .our_mission_page_template_two__line {
+    display: block;
+    width: vw(5px);
+    height: vw(40px);
+    border-radius: vw(20px);
+    margin: 0 vw(5px);
+  }
+
+  .our_mission_page_template_two__bottom {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: vw(30px);
+    width: 100%;
+    //height: 85%;
+  }
+  .our_mission_page_template_two__bottom--text {
+    width: 45%;
+    height: vw(250px);
+    overflow: auto;
+    word-break: break-all;
+    margin-bottom: vw(30px);
+    //padding: vw(20px);
+    display: flex;
+    align-items: flex-start;
+
+    .text-container {
+      padding: 0 vw(20px) vw(20px) vw(20px);
+    }
+  }
+  .our_mission_page_template_two__bottom--img {
+    width: 55%;
+    padding: 0 vw(30px) vw(20px) vw(30px);
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+}

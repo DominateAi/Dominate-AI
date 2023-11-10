@@ -1,0 +1,182 @@
+/* ===============================================================
+                    
+                            activity
+
+================================================================== */
+
+.leads-title-block-btn-red-bg--notes {
+  width: mvwDivide(150px);
+  font-size: mvwDivide(18px);
+  line-height: mvwDivide(27px);
+}
+
+.searchBlockStyle {
+  width: mvwDivide(250px) !important;
+  border-bottom: vw(1px) solid $theme-border-color-grey-1;
+}
+
+.ac-notes-cards-container {
+  margin-top: mvwDivide(38px);
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0;
+  margin-right: 0;
+
+  .ac-notes-cards-container__card {
+    margin-right: mvwDivide(30px);
+    margin-bottom: mvwDivide(30px);
+    border-radius: mvwDivide(20px);
+    @include theme-mixin-2;
+  }
+
+  .ac-notes-cards-container__cardOverflow,
+  .ac-notes-cards-container__cardOverflowHidden {
+    //total width 342px = 290px + (ml-26px + mr-26px)
+    width: mvwDivide(290px);
+    //total height 154px = 102px + (mt-26px + mb-33px)
+    height: mvwDivide(95px);
+    // margin
+    margin: mvwDivide(26px) mvwDivide(26px) mvwDivide(33px) mvwDivide(26px);
+    padding: 0 mvwDivide(4px);
+  }
+
+  .ac-notes-cards-container__cardOverflow {
+    overflow: auto;
+    height: mvwDivide(130px);
+    margin: mvwDivide(26px) mvwDivide(26px) mvwDivide(31px) mvwDivide(26px);
+  }
+
+  .ac-notes-cards-container__cardOverflowHidden {
+    overflow: hidden;
+  }
+}
+
+.ac-notes-modal-container,
+.ac-files-modal-container {
+  max-height: mvwDivide(700px);
+  overflow: auto;
+}
+
+.ac-notes-modal-container {
+  padding: mvwDivide(42px) mvwDivide(62px) mvwDivide(12px) mvwDivide(42px);
+}
+
+.ac-notes-border-bottom-gray {
+  padding-bottom: mvwDivide(25px);
+  margin-bottom: mvwDivide(45px);
+  border-bottom: vw(1px) solid rgba(112, 112, 112, 0.19);
+}
+
+// files
+.ac-files-modal-container {
+  padding: mvwDivide(22px) mvwDivide(8px) mvwDivide(3px) mvwDivide(24px);
+}
+
+.ac-input-file-block-textarea {
+  margin: mvwDivide(91px) mvwDivide(71px) mvwDivide(31px) mvwDivide(55px);
+
+  textarea {
+    padding: mvwDivide(30px);
+  }
+}
+
+.ac-input-file-block {
+  margin: 0 mvwDivide(71px) 0 mvwDivide(55px);
+  position: relative;
+
+  .ac-input-file-block__textInput,
+  .ac-input-file-block__fileInput {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: mvwDivide(51px);
+    padding-left: mvwDivide(38px);
+    padding-right: mvwDivide(38px);
+  }
+
+  .ac-input-file-block__textInput {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border: transparent;
+    background: $theme-bg-color-1;
+    border-radius: mvwDivide(26px);
+    padding: mvwDivide(10px) mvwDivide(38px);
+  }
+
+  .ac-input-file-block__fileInput {
+    opacity: 0;
+    z-index: 999;
+  }
+}
+
+.ac-input-file-block__note {
+  padding-left: mvwDivide(68px);
+  opacity: 0.32;
+  position: relative;
+  top: mvwDivide(69px);
+}
+
+.ac-input-file-block__border-onfocus {
+  cursor: pointer;
+  position: absolute;
+  // left: 0;
+  width: 100%;
+  height: mvwDivide(51px);
+  padding-left: mvwDivide(38px);
+  padding-right: mvwDivide(38px);
+  z-index: 0;
+  // position: relative;
+}
+
+.ac-input-file-block__fileInput:focus + .ac-input-file-block__border-onfocus {
+  content: "";
+  // outline: mvwDivide(5px) auto #502eff !important;
+  border: mvwDivide(2px) solid rgba(204, 204, 204, 0.2) !important;
+  border-radius: mvwDivide(30px);
+  display: block;
+}
+
+.ac-input-file-block__errorBlock {
+  padding-left: mvwDivide(71px);
+  position: relative;
+  top: mvwDivide(72px);
+}
+
+.ac-input-file-block__errorBlock-description {
+  padding-left: mvwDivide(20px);
+}
+
+.ac-files-buttons-container {
+  text-align: right;
+  margin-top: mvwDivide(37px);
+}
+
+.ac-files-buttons-container--notes {
+  margin-top: mvwDivide(57px);
+}
+
+.btn-funnel-view--files {
+  width: mvwDivide(177px);
+  margin-top: mvwDivide(17px);
+
+  &:first-child {
+    margin-right: mvwDivide(17px);
+  }
+}
+
+.btn-funnel-view--filesSelect {
+  width: 100%;
+  height: auto;
+  border: transparent;
+  background: #dddddd;
+}
+
+.notes-3-dots-div {
+  position: relative;
+}
+.notes-3-dots-img {
+  position: absolute;
+  right: mvwDivide(1px);
+}

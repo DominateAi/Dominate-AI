@@ -1,0 +1,85 @@
+// calendar content css
+.grey-border-bottom-calendar,
+.holiday-grey-border-bottom-calendar {
+  display: block;
+  border-bottom: vw(1px) solid rgba(132, 132, 132, 0.4);
+}
+
+.holiday-grey-border-bottom-calendar {
+  margin-left: mvwDivide(160px);
+  margin-right: mvwDivide(430px);
+}
+
+.dashboard-holiday-content-outer-div {
+  height: mvwDivide(220px);
+  padding-right: mvwDivide(10px);
+  overflow: auto;
+
+  // &::-webkit-scrollbar {
+  //   height: mvwDivide(3px);
+  //   width: mvwDivide(9px);
+  // }
+
+  // &::-webkit-scrollbar-track {
+  //   background: transparent;
+  //   border-radius: mvwDivide(30px);
+  //   margin: mvwDivide(10px);
+  // }
+
+  // &::-webkit-scrollbar-thumb {
+  //   border-radius: mvwDivide(30px);
+  //   background: #00e8d3;
+  //   background: linear-gradient(306deg, #00e8d3 0%, #d1c7ff 100%);
+
+  //   &:hover {
+  //     background: #00e8d3;
+  //     background: linear-gradient(306deg, #00e8d3 0%, #d1c7ff 100%);
+  //   }
+  // }
+
+  .holiday-grey-border-bottom-calendar:last-child {
+    display: none;
+  }
+}
+.dashboard-holiday-content-outer-div--upcoming-leaves {
+  height: mvwDivide(150px);
+  padding-top: mvwDivide(5px);
+}
+
+.px-calendar {
+  padding-left: mvwDivide(10px);
+  padding-right: mvwDivide(10px);
+}
+
+.cayan-75-font {
+  color: #00e8d3;
+  font-size: mvwDivide(75px);
+  @include fontBold700;
+  line-height: mvwDivide(113px);
+  margin-bottom: 0;
+  margin-right: mvwDivide(20px);
+}
+
+.dashboard-holiday-content {
+  display: flex;
+  align-items: center;
+  line-height: mvwDivide(41px);
+}
+
+.dashboard-holiday-upcoming-leaves {
+  width: 39%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: mvwDivide(20px);
+}
+
+.dasboard-holiday-dash {
+  &::after {
+    content: "";
+    display: block;
+    width: mvwDivide(25px);
+    height: mvwDivide(6px);
+    background: #303030;
+    margin-top: mvwDivide(59px);
+  }
+}

@@ -1,0 +1,47 @@
+.linkedIn-search-list-background {
+  background: linear-gradient(
+    360deg,
+    rgba(242, 243, 246, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  min-height: 100vh;
+}
+.message-search-block__input-list-search {
+  background: white !important;
+  width: vw(600px);
+}
+.leads-title-block-btn-red-bg-linkedIn-serach-list {
+  font-size: vw(17px);
+  line-height: vw(26px);
+  width: vw(186px);
+  border-radius: vw(50px);
+  @include fontMedium500;
+}
+.leads-title-block-btn-red-bg-linkedIn-serach-list-import-lead {
+  background: linear-gradient(
+    288deg,
+    rgba(251, 194, 235, 1) 0%,
+    rgba(166, 193, 238, 1) 100%
+  );
+  margin-left: vw(15px);
+}
+.leads-title-block-btn-red-bg-linkedIn-serach-list-download {
+  background: linear-gradient(
+    289deg,
+    rgba(152, 144, 227, 1) 0%,
+    rgba(177, 244, 207, 1) 100%
+  );
+  margin-left: vw(20px);
+}
+.linkedIn-search-list-delete-icon-div {
+  width: vw(50px);
+  height: vw(50px);
+  border-radius: 50%;
+  margin-left: vw(20px);
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    // box-shadow: vw(1px) vw(3px) vw(20px) #24415d4d;
+  }
+}

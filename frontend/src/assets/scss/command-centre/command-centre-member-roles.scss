@@ -1,0 +1,365 @@
+/*============================================================================
+      edit member role modal
+============================================================================*/
+
+.cc-roles-edit-modal-title-img {
+  width: vw(109px);
+  height: auto;
+  margin-right: vw(25px);
+}
+
+.cc-members-role-edit-modal-table-div {
+  // padding-left: vw(72px);
+
+  table {
+    width: 100%;
+  }
+
+  .cc-members-role-edit-modal-table-heading {
+    padding-right: vw(30px);
+    padding-left: vw(30px);
+
+    td {
+      padding-top: vw(2px);
+      padding-bottom: vw(10px);
+      background-color: $theme-bg-color-1;
+    }
+  }
+
+  .cc-members-role-edit-modal-table-div__overflow-div {
+    height: vw(540px);
+    overflow: auto;
+    padding: vw(10px) vw(30px) vw(10px) vw(30px);
+
+    tr {
+      background-color: $theme-bg-color-1;
+      border-radius: vw(13px);
+
+      td:first-child {
+        border-radius: vw(13px) 0 0 vw(13px);
+      }
+
+      td:last-child {
+        border-radius: 0 vw(13px) vw(13px) 0;
+      }
+    }
+
+    td {
+      padding-top: vw(22px);
+      padding-bottom: vw(22px);
+    }
+  }
+
+  .cc-members-role-edit-modal-table-div__space-row {
+    background-color: transparent !important;
+    box-shadow: 0 0 0;
+
+    td {
+      padding: 0;
+      padding-top: vw(3px);
+    }
+  }
+
+  tr {
+    td:nth-child(1) {
+      padding-left: vw(60px);
+      padding-right: vw(60px);
+      width: 23%;
+    }
+
+    td:nth-child(2),
+    td:nth-child(3),
+    td:nth-child(4),
+    td:nth-child(5) {
+      width: 10%;
+    }
+  }
+
+  // tbody tr {
+  //   // box-shadow: 0 vw(3px) vw(30px) rgba(0, 0, 0, 0.1);
+  // }
+
+  thead td {
+    color: $theme-text-color-white-42;
+  }
+
+  .cc-members-role-edit-modal-table-div__tbody-text {
+    color: $theme-text-dark-gray-to-white;
+    text-transform: capitalize;
+  }
+
+  .MuiTypography-body1 {
+    // color: rgba(48, 48, 48, 0.52);
+    color: $theme-text-color-1;
+    font-size: vw(20px);
+    line-height: vw(30px);
+    @include fontItalicPoppins;
+    padding-left: vw(15px);
+    font-style: normal;
+  }
+
+  .MuiCheckbox-colorSecondary.Mui-checked {
+    // color: #695bdf !important;
+    color: $theme-checkbox-checked-color;
+    background: $theme-checkbox-checked-background;
+  }
+
+  .MuiIconButton-colorSecondary:hover {
+    // background-color: transparent !important;
+    color: $theme-checkbox-checked-color;
+    background: $theme-checkbox-checked-background;
+  }
+
+  .MuiFormControlLabel-root {
+    margin: 0;
+  }
+  .MuiCheckbox-root {
+    color: $theme-checkbox-color;
+    padding: vw(0.3px);
+    border-radius: vw(5px);
+  }
+  .MuiFormControlLabel-label.Mui-disabled {
+    color: $theme-text-color-1;
+    padding-left: vw(15px);
+  }
+}
+
+.cc-member-roles-edit-modal-buttons-div {
+  padding: vw(60px) vw(78px) vw(44px) vw(20px);
+
+  // button {
+  //   height: vw(57px);
+  // }
+
+  .add_more_info_lead_button {
+    width: vw(184px);
+  }
+}
+
+/*============================================================================
+      member role main tab content
+============================================================================*/
+.cc-member-roles-table-outer-div {
+  table {
+    width: 100%;
+  }
+
+  tr {
+    vertical-align: middle;
+
+    td:nth-child(1) {
+      width: 40%;
+    }
+
+    td:nth-child(2) {
+      width: 20%;
+    }
+
+    td:nth-child(3) {
+      width: 20%;
+    }
+  }
+
+  td {
+    padding-left: vw(23px);
+  }
+}
+
+.cc-member-roles-table-heading,
+.cc-member-roles-table-content {
+  padding: 0 vw(20px);
+}
+
+.cc-member-roles-table-content {
+  padding-top: vw(10px);
+}
+
+.cc-member-roles-table-heading {
+  margin-bottom: vw(9px);
+
+  td {
+    padding-top: vw(15px);
+    padding-bottom: vw(15px);
+    color: $theme-text-color-white-42;
+  }
+}
+
+.cc-member-roles-table-heading-border-bottom-row {
+  // background: rgb(242, 153, 74);
+  // background: linear-gradient(
+  //   90deg,
+  //   rgba(242, 153, 74, 1) 0%,
+  //   rgba(234, 175, 200, 1) 100%
+  // );
+
+  td {
+    padding: vw(1px) 0 0 0;
+  }
+}
+
+.cc-member-roles-table-content {
+  height: vw(540px);
+  overflow: auto;
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  span {
+    opacity: 0.86;
+  }
+
+  td {
+    padding-top: vw(13px);
+    padding-bottom: vw(18px);
+  }
+
+  tr {
+    // box-shadow: 0 vw(12px) vw(25px) rgba(0, 0, 0, 0.12);
+    // background-color: $theme-bg-color-1;
+    border-radius: vw(18px);
+    @include theme-mixin-1;
+
+    td:first-child {
+      border-radius: vw(18px) 0 0 vw(18px);
+    }
+
+    td:last-child {
+      border-radius: 0 vw(18px) vw(18px) 0;
+    }
+  }
+  tbody {
+    td {
+      @include border-mixin-1;
+      border-style: solid solid solid none;
+      border-right-style: none;
+
+      &:first-child {
+        border-left-style: solid;
+      }
+
+      &:last-child {
+        border-right-style: solid;
+      }
+    }
+    .cc-members-roles-table-div__space-row {
+      td {
+        border-style: none;
+      }
+      td:first-child {
+        border-left-style: none;
+      }
+    }
+  }
+  .font-20-semibold {
+    text-transform: capitalize;
+  }
+
+  .cc-members-roles-table-div__space-row {
+    box-shadow: 0 0 0;
+    background-color: transparent;
+
+    td {
+      padding: vw(8px) 0 0 0;
+      border-style: none;
+    }
+  }
+}
+
+.cc-member-roles-table-content__role-img-block {
+  width: vw(48px);
+  height: vw(48px);
+  margin-right: vw(15px);
+
+  img {
+    width: inherit;
+    height: inherit;
+  }
+}
+
+.cc-member-roles-view-permissions {
+  width: vw(186px);
+  @include theme-button-height-1;
+  padding: 0;
+  border: 0;
+  margin-right: vw(30px);
+  color: $theme-text-color-white-79;
+  @include theme-mixin-2-without-backdrop;
+}
+
+.cc-member-roles-action-btn {
+  width: vw(20px);
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  // color: rgba(0, 0, 0, 0.2);
+  margin-right: vw(23px);
+  color: $theme-text-color-white-54;
+  font-size: vw(22px);
+}
+
+.cc-member-roles-table-images-outer-block {
+  padding-right: vw(10px);
+
+  .cc-member-roles-table-image-block:nth-child(2),
+  .cc-member-roles-table-image-block:nth-child(3) {
+    margin-left: vw(-23px);
+  }
+
+  .cc-member-roles-table-image-block:last-child {
+    margin-right: vw(15px);
+  }
+}
+
+.cc-member-roles-table-image-block {
+  width: vw(47px);
+  height: vw(48px);
+  border-radius: 100%;
+
+  img {
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+  }
+}
+
+.cc-member-roles-icon-buttons-row {
+  padding: vw(30px) vw(10px) vw(20px) vw(70px);
+  padding-right: 0;
+
+  button {
+    padding: 0;
+    width: vw(109px);
+    height: vw(108px);
+    border-radius: 100%;
+    border: 0;
+    background-color: transparent;
+    border-radius: 100%;
+    margin-right: vw(27px);
+    text-align: center;
+
+    img {
+      width: inherit;
+      height: inherit;
+      border-radius: inherit;
+    }
+  }
+}
+
+.cc-member-roles-edit-modal-buttons-div {
+  .save_new_lead_button {
+    float: unset;
+  }
+}
+.add-lead-prev-icon--add-new-role {
+  left: vw(-60px);
+}
+.command-center-member-role-title-img-div {
+  border-bottom: vw(2px) solid $theme-border-color-white-26;
+  padding-bottom: vw(29px);
+  margin-bottom: vw(29px);
+}
+.add-lead-modal-container--cmd-custom-fileds {
+  .add-lead-input-field {
+    width: 100%;
+  }
+}

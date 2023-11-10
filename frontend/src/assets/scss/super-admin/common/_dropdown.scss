@@ -1,0 +1,67 @@
+/*====================================
+          dropdown
+=====================================*/
+
+.sa-plans-dropDown {
+  .Dropdown-control {
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    width: max-content;
+    max-width: max-content;
+    padding: 0 vw(60px) 0 0;
+  }
+
+  .Dropdown-control:hover {
+    box-shadow: 0 0 0;
+  }
+
+  .Dropdown-menu {
+    width: vw(310px);
+    // width: max-content;
+    max-width: max-content;
+    height: vw(280px);
+    max-height: vw(280px);
+    padding: vw(20px) vw(10px) vw(20px) vw(16px);
+    border: 0;
+    border-radius: vw(10px);
+    margin-top: vw(25px);
+    margin-left: vw(-10px);
+
+    background: rgba(255, 255, 255, 0.04);
+    border: vw(1px) solid rgba(255, 255, 255, 0.03);
+    box-shadow: inset 0 vw(4px) vw(14px) rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(94px);
+
+    .Dropdown-option:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .Dropdown-option {
+    font-size: vw(21px);
+    line-height: vw(31px);
+    @include fontRegular400;
+    color: $theme-text-color-1;
+    padding: vw(9px);
+    border-bottom: vw(1px) solid rgba(112, 112, 112, 0.25);
+  }
+
+  .Dropdown-option:hover,
+  .Dropdown-option.is-selected {
+    background: $theme-dropdown-hover-bg;
+    // background: $theme-bg-color-1;
+    // color: #000;
+  }
+
+  .Dropdown-arrow {
+    top: 41%;
+    border-color: #303030 transparent transparent;
+    border-width: vw(8px) vw(8px) 0;
+  }
+}
+
+.is-open .Dropdown-arrow {
+  border-color: transparent transparent $theme-dropdown-arrow-color !important;
+  border-width: 0 vw(8px) vw(8px) !important;
+}

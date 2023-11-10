@@ -1,0 +1,242 @@
+/*======================================
+      User Dahsboard main css
+=======================================*/
+
+.user_dashboard_main_container {
+  padding-left: vw(87px);
+  padding-right: vw(106px);
+  // padding-top: vw(62px);
+  // padding-top: vw(30px);
+  padding-bottom: vw(20px);
+
+  .dashboard_row_first {
+    display: flex;
+  }
+
+  // top button css
+  .dashboard_top_buttons {
+    position: absolute;
+    display: flex;
+    .create_email_template_button {
+      width: vw(288px);
+      @include theme-button-height-1;
+      font-size: vw(18px);
+      @include fontRegular400;
+      margin-right: vw(11px);
+      @include theme-mixin-2;
+      color: $theme-text-color-grey;
+    }
+    .create_email_template_button--importLeads {
+      // background: rgb(254, 168, 88);
+      // background: linear-gradient(
+      //   270deg,
+      //   rgba(254, 168, 88, 1) 0%,
+      //   rgba(237, 118, 94, 1) 100%
+      // );
+      width: vw(200px);
+    }
+    .dashboard_import_leads_button {
+      &.lead-status-dropDown--importExport .Dropdown-group .Dropdown-option {
+        padding-left: vw(13px);
+        padding-right: vw(13px);
+      }
+      &.lead-status-dropDown--importExport .Dropdown-menu {
+        width: max-content;
+        padding: vw(10px);
+        padding-top: 0;
+      }
+      &.lead-status-dropDown--importExport .Dropdown-group:first-child {
+        border-bottom: 0;
+      }
+      &.lead-status-dropDown--importExport .Dropdown-control {
+        padding-top: vw(10px);
+        width: 100%;
+        max-width: 100%;
+        &:hover {
+          box-shadow: 0 0 0;
+        }
+      }
+      &.lead-status-dropDown--importExport .Dropdown-placeholder {
+        color: white;
+        font-size: vw(18px);
+        line-height: vw(27px);
+        @include fontRegular400;
+        text-align: center;
+      }
+      border-radius: vw(50px);
+      width: vw(213px);
+      height: vw(51px);
+      border: none;
+      // color: white;
+      font-size: vw(18px);
+      line-height: vw(27px);
+      @include fontRegular400;
+      margin-right: vw(10px);
+      background: -webkit-linear-gradient(
+        261deg,
+        rgba(80, 46, 255, 1) 0%,
+        rgba(209, 199, 255, 1) 100%
+      ); /* safari5.1+,chrome10+ */
+    }
+    .dashboard_add_lead_customer_and_all_button {
+      color: $theme-text-color-grey;
+      @include theme-blue-bg-radius;
+
+      &.lead-status-dropDown--importExport .Dropdown-group .Dropdown-option {
+        padding-left: vw(16px);
+        padding-right: vw(43px);
+      }
+
+      width: vw(239px);
+      @include theme-button-height-1;
+      border: none;
+      // color: white;
+      font-size: vw(18px);
+      @include fontRegular400;
+
+      // background: rgb(80, 46, 255);
+      // background: linear-gradient(
+      //   280deg,
+      //   rgba(80, 46, 255, 1) 0%,
+      //   rgba(209, 199, 255, 1) 100%
+      // );
+    }
+  }
+}
+
+.user_dashboard_main_container--reports {
+  padding-right: vw(127px);
+}
+
+// gradient card count css
+@import "./dashboardCountCard";
+
+//first row css
+@import "./dashboard-row-one/dashboard_row_one";
+
+// third row css
+@import "./dashboard-row-three/dashboard_row_three";
+
+// eight row css
+@import "./dashboard-row-eight/dashboard_row_eight";
+
+// row seven css
+@import "./dashboard-row-seven/dashboard_row_seven";
+
+@import "./dashboard-row-2";
+
+@import "./dashboard-toggle";
+
+// react-grid-layout dashboard
+.draggableHandleDiamond {
+  position: absolute;
+  right: vw(10px);
+  top: vw(10px);
+  z-index: 1111;
+  width: vw(15px);
+}
+
+.relative-card-block {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .todays_followup_meet_card,
+  .monthly_revenue_card,
+  .dashboard_card_count,
+  .dashboard_notigfication_box,
+  .create_email_template_button,
+  .dashboard_add_lead_customer_and_all_button,
+  .dashboard_top_buttons,
+  .new-dashboard-row-5-colm1-card,
+  .new-dashboard-row-5-colm1-card--colm2Card,
+  .new-dashboard-row-5-colm1-card--colm3Card,
+  .new-report-row-2__colm,
+  .new-report-row-3__colm1,
+  .dashboard_row_eight_container,
+  .todays_followup_meet_card,
+  .monthly_revenue_card,
+  .new-dashboard-row-2-colm1-card1,
+  .dashboard_row_three_main_container,
+  .new-dashboard-row-4-colm1-card,
+  .new-dashboard-row-4-colm2-card,
+  .new-dashboard-row-6-colm1-card,
+  .dashboard-overview-blocks__performanceCard,
+  .dashboard_calender_card_conatiner,
+  .overview-demo-outline-button,
+  .btn-funnel-view--files,
+  .main_container_email_dashboard__bottom__left,
+  .main_container_email_dashboard__bottom__right,
+  .display_contacts_main_container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+}
+/*==========================================================
+                 illustrations
+============================================================*/
+.dashboard-leads-by-sources-img {
+  width: vw(185px);
+  height: auto;
+  margin-top: vw(107px);
+  margin-bottom: vw(43px);
+}
+.dashboard-leads-status-img {
+  width: vw(615px);
+  height: auto;
+  margin-bottom: vw(43px);
+  margin-top: vw(88px);
+}
+.dashboard-expected-acquired-revenue-img {
+  width: vw(240px);
+  height: auto;
+  margin-top: vw(63px);
+  margin-bottom: vw(43px);
+}
+.dashboard-target-img {
+  width: vw(347px);
+  height: auto;
+  margin-top: vw(62px);
+  margin-bottom: vw(22px);
+}
+.dashboard-revenue-forcast-img {
+  width: vw(240px);
+  height: auto;
+  margin-top: vw(90px);
+  margin-bottom: vw(43px);
+}
+.dashboard-deal-pipeline-img {
+  width: vw(315px);
+  height: auto;
+  margin-bottom: vw(43px);
+  margin-top: vw(80px);
+}
+.performace-scoreboard-text {
+  width: vw(150px);
+  text-align: center;
+
+  .font-18-medium,
+  .font-15-light {
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    width: inherit;
+  }
+}
+.todays_followup_meet_card,
+.monthly_revenue_card,
+.dashboard_card_count,
+.dashboard_notigfication_box,
+.new-dashboard-row-2-colm1-card1,
+.dashboard_row_three_main_container,
+.new-dashboard-row-4-colm1-card,
+.new-dashboard-row-4-colm2-card,
+.new-dashboard-row-6-colm1-card,
+.dashboard-overview-blocks__performanceCard,
+.dashboard_calender_card_conatiner {
+  @include theme-mixin-2;
+  border-radius: vw(18px);
+}

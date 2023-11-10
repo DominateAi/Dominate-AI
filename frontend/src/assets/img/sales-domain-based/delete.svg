@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="50" viewBox="0 0 49 50">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="2.121" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f2f3f6"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_9258" data-name="Group 9258" transform="translate(-5427 1335)">
+    <g id="Group_9257" data-name="Group 9257" transform="translate(3655 -1640)">
+      <rect id="Rectangle_3876" data-name="Rectangle 3876" width="49" height="50" rx="24.5" transform="translate(1772 305)" fill="url(#linear-gradient)"/>
+      <path id="Icon_material-delete" data-name="Icon material-delete" d="M8.6,22.107a2.207,2.207,0,0,0,2.2,2.2h8.8a2.207,2.207,0,0,0,2.2-2.2V8.9H8.6ZM22.906,5.6H19.054l-1.1-1.1h-5.5l-1.1,1.1H7.5V7.8H22.906Z" transform="translate(1781.5 315.5)"/>
+    </g>
+  </g>
+</svg>

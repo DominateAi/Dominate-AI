@@ -1,0 +1,79 @@
+@import "./customers-desktop";
+
+// /************************************
+//        Sliding Component Css
+// ************************************/
+// .toggle {
+//   .toggle-chk-circle {
+//     position: relative;
+//     background-color: $theme-bg-color-1;
+//     // position: absolute;
+//     appearance: none;
+//     width: mvwDivide(53px);
+//     height: mvwDivide(27px);
+//     border-radius: mvwDivide(60px);
+//     // border: 3px solid silver;
+//     position: relative;
+//     outline: none;
+//     background-color: rgba(255, 255, 255, 0.6);
+//     // box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+//     // cursor: pointer;
+//     transition: all 0.3s linear;
+//     margin-left: mvwDivide(10px);
+//     margin-right: mvwDivide(10px);
+//   }
+
+//   input {
+//     cursor: pointer;
+//     width: mvwDivide(53px);
+//     height: mvwDivide(27px);
+//     position: absolute;
+//     z-index: 1;
+//     background: black;
+//     opacity: 0;
+//   }
+
+//   input:checked + .toggle__switch {
+//     background-color: $theme-bg-color-1;
+
+//     &:after {
+//       left: 7%;
+//       background-color: #72ff5a;
+//     }
+//   }
+
+//   .toggle__switch {
+//     &:after {
+//       content: "";
+//       display: block;
+//       width: mvwDivide(21px);
+//       height: mvwDivide(21px);
+//       background-color: #cccccc;
+//       // box-shadow: 0 0 8px rgba(54, 41, 41, 0.2);
+//       border-radius: mvwDivide(60px);
+//       position: absolute;
+//       margin: auto;
+//       bottom: 0;
+//       top: 0;
+//       left: calc(100% - 21px);
+//       transition: all 0.3s linear;
+//     }
+//   }
+// }
+
+// // dropdown on card
+// .leads-accordion--customers {
+//   .accordion__item {
+//     position: relative;
+//   }
+
+//   .dropdown-on-card {
+//     position: absolute;
+//     right: mvwDivide(24px);
+//     margin-top: mvwDivide(21px);
+//   }
+// }
+
+// .width-first-textblock-card {
+//   width: mvwDivide(82px);
+// }

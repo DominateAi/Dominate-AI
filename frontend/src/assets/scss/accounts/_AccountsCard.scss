@@ -1,0 +1,238 @@
+// block view
+.accounts-card-block-view-container {
+  width: vw(565px);
+  height: auto;
+  border-radius: vw(20px);
+  background: $theme-bg-color-white-03;
+  padding: vw(27px) vw(25px);
+  margin-right: vw(50px);
+  margin-bottom: vw(56px);
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 80%;
+    height: vw(8px);
+    background: rgb(246, 211, 101);
+    background: linear-gradient(
+      90deg,
+      rgba(246, 211, 101, 1) 0%,
+      rgba(253, 160, 133, 1) 100%
+    );
+    border-radius: vw(4px);
+    position: absolute;
+    bottom: vw(-4px);
+    left: 10%;
+  }
+}
+
+.accounts-card-block-view-container__img-block {
+  width: vw(102px);
+  height: vw(102px);
+  border-radius: 100%;
+  margin-right: vw(16px);
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    //border-radius: 50%;
+  }
+}
+.accounts-card-dropdown-icon {
+  cursor: pointer;
+  width: vw(7px);
+  margin: vw(15px) vw(20px);
+}
+
+.accounts-card-block-view-container__row1 {
+  justify-content: space-between;
+}
+
+.accounts-card-block-view__text-1 {
+  color: $theme-text-color-white-23;
+  font-size: vw(24px);
+  line-height: vw(35px);
+  @include fontBold700;
+  margin-bottom: vw(5px);
+  word-break: break-all;
+  padding-right: vw(10px);
+}
+
+.accounts-card-block-view__text-2 {
+  color: $theme-text-color-white-42;
+  font-size: vw(21px);
+  line-height: vw(31px);
+  text-transform: capitalize;
+  @include fontLight300;
+  margin-bottom: vw(7px);
+}
+
+.accounts-card-block-view__text-2--count {
+  color: rgba(48, 48, 48, 0.48);
+  @include fontBold700;
+  padding-left: vw(20px);
+}
+.accounts-card-list-btn {
+  width: vw(112px);
+  @include theme-button-height-and-radius-4;
+  border: none;
+  color: $color-white;
+  font-size: vw(18px);
+  @include fontRegular400;
+  margin-right: vw(17px);
+  background-color: transparent;
+}
+
+.accounts-card-list-btn--view {
+  display: inline-block;
+  text-align: center;
+  @include theme-mixin-2;
+}
+
+.accounts-card-list-btn--edit {
+  background: rgb(247, 121, 125);
+  background: linear-gradient(
+    285deg,
+    rgba(247, 121, 125, 1) 0%,
+    rgba(251, 215, 134, 1) 75%,
+    rgba(234, 175, 200, 1) 100%
+  );
+}
+
+.accounts-card-block-view__text-follow-up {
+  text-transform: uppercase;
+  color: rgba(48, 48, 48, 0.48);
+  margin-bottom: vw(11px);
+  font-size: vw(24px);
+  line-height: vw(35px);
+  @include fontBold700;
+}
+
+.accounts-card-block-view__text-upcoming-leaves-light {
+  @include fontLight300;
+  font-style: italic;
+  padding-left: vw(16px);
+  padding-right: vw(16px);
+}
+
+.accounts-card-CircularProgressbar {
+  width: vw(83px);
+  height: vw(83px);
+  margin: 0 auto;
+
+  .CircularProgressbar .CircularProgressbar-text {
+    font-size: vw(41px);
+    font-style: italic;
+    @include fontBold700;
+  }
+
+  .CircularProgressbar {
+    width: 100% !important;
+  }
+}
+
+.accounts-card-CircularProgressbar--detailsProfile {
+  width: vw(102px);
+  height: vw(102px);
+  margin-bottom: vw(12px);
+}
+
+.accounts-card-block-view__leads-closed {
+  color: $theme-text-dark-gray-to-white;
+  font-size: vw(20px);
+  line-height: vw(30px);
+  @include fontSemiBold600;
+  margin-bottom: 0;
+}
+
+.accounts-card-deals-text {
+  font-size: vw(20px);
+  line-height: vw(30px);
+  color: $theme-text-dark-gray-to-white;
+  text-transform: capitalize;
+  @include fontSemiBold600;
+  padding-left: vw(40px);
+}
+
+.web-text {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background: linear-gradient(
+      180deg,
+      rgba(172, 237, 252, 1) 0%,
+      rgba(87, 161, 230, 1) 100%
+    );
+    left: 0;
+    top: vw(3px);
+    width: vw(20px);
+    height: vw(20px);
+    border-radius: 50%;
+    border: solid vw(4px) transparent;
+    background-origin: border-box;
+    // box-shadow: vw(4px) vw(20px) vw(1px) white inset;
+  }
+}
+
+.social-text {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background: linear-gradient(
+      180deg,
+      rgba(80, 46, 255, 1) 0%,
+      rgba(209, 199, 255, 1) 100%
+    );
+    left: 0;
+    top: vw(3px);
+    width: vw(20px);
+    height: vw(20px);
+    border-radius: 50%;
+    border: solid vw(4px) transparent;
+    background-origin: border-box;
+    // box-shadow: vw(4px) vw(20px) vw(1px) white inset;
+  }
+}
+
+.content-text {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background: linear-gradient(
+      180deg,
+      rgba(13, 194, 183, 1) 0%,
+      rgba(75, 140, 224, 1) 100%
+    );
+    left: 0;
+    top: vw(3px);
+    width: vw(20px);
+    height: vw(20px);
+    border-radius: 50%;
+    border: solid vw(4px) transparent;
+    background-origin: border-box;
+    // box-shadow: vw(4px) vw(20px) vw(1px) white inset;
+  }
+}
+
+.accounts-card-leads-img-div {
+  width: vw(70px);
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: vw(20px);
+}
+.accounts-cards-leads-img {
+  width: vw(38px);
+  height: auto;
+  vertical-align: middle;
+  // box-shadow: 0 vw(4px) vw(10px) #00000028;
+  border-radius: 50%;
+  margin-left: vw(-13px);
+}

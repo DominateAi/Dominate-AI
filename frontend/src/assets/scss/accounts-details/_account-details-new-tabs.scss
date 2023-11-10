@@ -1,0 +1,36 @@
+//Leads
+.account-details-leads-tabpanel-no-lead-img {
+  width: vw(250px);
+  height: auto;
+  margin-bottom: vw(38px);
+}
+.account-details-leads-tabpanel-no-deals-img {
+  width: vw(402px);
+  height: auto;
+  margin-bottom: vw(43px);
+}
+.no-leads-found-div {
+  padding-top: vw(110px);
+  padding-bottom: vw(30px);
+  margin: auto;
+
+  .leads-title-block-btn-red-bg {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.no-lead-found-text {
+  font-size: vw(13px);
+  line-height: vw(19.5px);
+  @include fontMedium500;
+  color: $theme-text-color-1;
+  padding-top: vw(10px);
+  margin-bottom: vw(21px);
+  padding-left: vw(100px);
+}
+//timeline
+.no-timeline-found-img {
+  width: vw(446px);
+  height: auto;
+  margin-bottom: vw(71px);
+}

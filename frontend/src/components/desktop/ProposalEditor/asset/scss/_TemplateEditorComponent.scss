@@ -1,0 +1,16 @@
+.template_editor_component_main {
+  display: flex;
+  height: 98%;
+  width: 97%;
+  flex-direction: column;
+}
+.template_editor_componane_null {
+  display: flex;
+  height: 98%;
+  width: 97%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include fontLight300;
+  font-size: vw(20px);
+}

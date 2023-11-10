@@ -1,0 +1,335 @@
+/* ===============================================================
+                    
+                    Global reset and css
+
+================================================================== */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover {
+  text-decoration: inherit !important;
+  color: inherit !important;
+}
+
+button {
+  white-space: nowrap;
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 0 !important;
+}
+
+button:disabled {
+  opacity: 0.7;
+}
+
+// button,
+// .outline-link,
+// .form-button-outline {
+//   &:focus {
+//     outline: vw(5px) auto #502eff !important;
+//   }
+// }
+
+.outline-0 {
+  outline: 0;
+}
+
+// // .leads-title-block-btn-red-bg,
+// .leads-title-block-btn-red-bg--notes,
+// .leads-title-block-btn-red-bg--activity {
+//   // &:focus {
+//   //   outline: vw(5px) auto #ffa5a5 !important;
+//   // }
+//   button {
+//     // opacity: 0.9;
+
+//     &:focus {
+//       // opacity: 1 !important;
+//       border-width: vw(3.7px);
+//     }
+//   }
+// }
+
+.btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0;
+}
+
+// // specific buttons that want to be highlight
+// .add-lead-form-field-block,
+// .add-lead-modal-container--followUp,
+// .login-form-fields,
+// .button-section,
+// .quatation-from-section,
+// .workspace-login-page-main-conatiner,
+// .ac-files-buttons-container,
+// .ac-email-modal-btns-block,
+// .ac-files-modal-container {
+//   button {
+//     // opacity: 0.8;
+
+//     &:focus {
+//       // opacity: 1 !important;
+//       border-width: vw(3.7px);
+//     }
+//   }
+//   // button:focus {
+//   //   outline: vw(5px) auto #502eff !important;
+//   // }
+// }
+
+.rc-dropdown-menu > .rc-dropdown-menu-item-selected:after {
+  display: none;
+}
+
+.rc-dropdown-menu > .rc-dropdown-menu-item:hover {
+  cursor: pointer;
+}
+
+.rc-dropdown-menu .rc-dropdown-menu-item-divider:last-child {
+  display: none !important;
+}
+
+button,
+input,
+textarea {
+  color: $theme-text-color-1;
+  background-color: $theme-bg-color-white-01;
+}
+
+// to keep width 100% when modal opens
+html {
+  width: 100% !important;
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+  font-size: vw(16px) !important;
+  color: $theme-text-color-1 !important;
+  background-color: $theme-bg-color-1 !important;
+  font-family: $font-family-regular-poppins !important;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("../img/background-new-design/new-bg-dark-ui.svg") !important;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  // position: relative;
+  // &::before {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   content: " ";
+  //   width: 30%;
+  //   height: 30%;
+  //   display: revert;
+  //   background: radial-gradient(
+  //     85.45% 85.45% at 50% 50%,
+  //     #ae9aff 0%,
+  //     #402b93 100%
+  //   );
+  //   filter: blur(18vw);
+  //   z-index: 1;
+  // }
+}
+
+/* autocomplete chrome */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  // border: vw(2px) solid inherit;
+  // -webkit-text-fill-color: inherit;
+  // -webkit-box-shadow: vw(1000px) transparent inset;
+  // transition: background-color 0.5s ease-in-out 0s;
+  transition: all 5000s ease-in-out 0s;
+  transition-property: background-color, color;
+  -webkit-box-shadow: 0 0 0 vw(1000px) #2c3137 inset;
+  -webkit-text-fill-color: #fff;
+  border: none;
+}
+
+// scrollbar chrome
+*::-webkit-scrollbar {
+  height: vw(11px);
+  width: vw(11px);
+}
+
+*::-webkit-scrollbar-track,
+*::-ms-scrollbar-track-color {
+  background: #d9d1f9;
+  border-radius: vw(25px);
+  margin: vw(10px);
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: vw(25px);
+  background: $theme-scrollbar-thumb-bg;
+
+  &:hover {
+    background: $theme-scrollbar-thumb-bg;
+  }
+}
+
+body {
+  &::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+}
+
+*::placeholder {
+  color: #848484;
+  @include fontRegular400;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*===========================
+  Functional components css 
+=============================*/
+
+.alphabates-filter-container {
+  padding-left: vw(141px);
+  padding-right: vw(141px);
+
+  .filter-container {
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+      display: flex;
+    }
+
+    .add-form-btn {
+      background: $theme-bg-dark-blue-to-purple-1;
+      border-radius: vw(25px);
+      width: vw(218px);
+      font-size: vw(21px);
+      height: vw(54px);
+      text-align: center;
+      color: white;
+      border-collapse: collapse;
+      border: none;
+      margin-left: vw(40px);
+    }
+  }
+
+  .alphabates-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: vw(27px);
+    font-size: vw(24px);
+    line-height: vw(35px);
+    // color: $theme-text-color-1;
+    color: $theme-text-color-white-79;
+    width: 100%;
+  }
+}
+
+.edit-img,
+.edit-img-employee,
+.edit-img-customer,
+.edit-img-employee-column {
+  cursor: pointer;
+}
+
+.opacity-0 {
+  opacity: 0;
+  user-select: none;
+}

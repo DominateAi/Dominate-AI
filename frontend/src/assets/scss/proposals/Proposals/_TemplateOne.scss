@@ -1,0 +1,21 @@
+.blocks_hover:hover {
+  border: vw(1px) solid red;
+  cursor: pointer;
+}
+
+.blocks_hover_active {
+  border: vw(1px) solid black;
+}
+.input_class {
+  display: flex;
+  border: none;
+  border-bottom: vw(1px) solid blue;
+  height: vw(50px);
+  outline: none;
+  font-family: $font-family-poppins;
+  font-size: vw(30px);
+  margin-bottom: vw(5px);
+}
+.asdads {
+  background-image: url("../../../img/proposal/templates/proposal1/slide2-img.png");
+}

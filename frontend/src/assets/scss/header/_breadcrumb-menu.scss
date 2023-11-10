@@ -1,0 +1,41 @@
+.breadcrumb-menu__li,
+.breadcrumb-menu__forwardSlash {
+  @include fontRobotoMedium;
+  font-size: vw(13px);
+  line-height: vw(19px);
+  letter-spacing: 0.015em;
+  color: #bdbdbd;
+}
+
+.breadcrumb-menu__li {
+  padding: 0;
+  border: none;
+  background: transparent;
+  text-transform: capitalize;
+}
+
+.breadcrumb-menu__forwardSlash {
+  margin-right: vw(6px);
+  margin-left: vw(6px);
+}
+
+.breadcrumb-menu {
+  padding: vw(41px) vw(10px) vw(30px) vw(86px);
+
+  img {
+    width: vw(10px);
+    height: auto;
+    margin-right: vw(5px);
+    vertical-align: middle;
+  }
+}
+.breadcrumb-menu__li--last {
+  color: $theme-text-color-blue-5;
+
+  .breadcrumb-menu__forwardSlash:first-of-type {
+    display: none;
+  }
+}
+.breadcrumb-menu--salesCentre {
+  padding-left: vw(75px);
+}

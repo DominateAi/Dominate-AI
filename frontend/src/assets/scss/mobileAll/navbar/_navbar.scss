@@ -1,0 +1,35 @@
+// navbar
+
+.mobile-topnavbar-page-title {
+  color: $color-white;
+  font-size: mvw(23px);
+  line-height: mvw(34px);
+  @include fontSemiBold600;
+  margin-bottom: 0;
+}
+
+.resp-top-header__menuImg {
+  width: mvw(24px);
+  cursor: pointer;
+}
+
+.logout-btn-mobile {
+  cursor: pointer;
+  .fa-power-off {
+    font-size: mvw(20px);
+    color: #ed765e;
+  }
+}
+
+.main-logo-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    height: mvw(25px);
+  }
+}
+
+.main-logo-navbar--main-logo {
+  margin-left: mvw(60px);
+}

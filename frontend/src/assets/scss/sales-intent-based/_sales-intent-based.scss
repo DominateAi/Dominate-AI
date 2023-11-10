@@ -1,0 +1,31 @@
+.intent-based-subtitle {
+  font-size: vw(19px);
+  line-height: vw(29px);
+  @include fontMedium500;
+  padding: vw(20px) 0 vw(20px);
+  text-transform: capitalize;
+  color: $theme-text-dark-gray-to-white;
+}
+.pl-70 {
+  padding-left: vw(70px);
+}
+.leads-title-block-btn-red-bg-download-as-list {
+  background: linear-gradient(
+    283deg,
+    rgba(152, 144, 227, 1) 0%,
+    rgba(177, 244, 207, 1) 100%
+  );
+}
+.leads-title-block-btn-red-bg-import-to-leads {
+  background: linear-gradient(
+    286deg,
+    rgba(250, 148, 114, 1) 0%,
+    rgba(251, 99, 148, 1) 100%
+  );
+}
+.leads-title-block-btn-red-bg-download-as-list,
+.leads-title-block-btn-red-bg-import-to-leads {
+  font-size: vw(17px);
+  line-height: vw(26px);
+  @include fontSemiBold600;
+}

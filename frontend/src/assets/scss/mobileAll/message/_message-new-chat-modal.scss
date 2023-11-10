@@ -1,0 +1,13 @@
+/* ===============================================================
+                   message new chat modal     
+================================================================== */
+
+.message-new-chat-modal-container {
+  padding: mvwDivide(39px) mvwDivide(80px) 0 mvwDivide(109px);
+
+  .dropdown-input-class {
+    background-color: transparent;
+    border-radius: 0;
+    border-bottom: mvwDivide(3px) solid #cccccc;
+  }
+}

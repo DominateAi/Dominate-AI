@@ -1,0 +1,133 @@
+/*==============================================================
+                toolbox
+==============================================================*/
+.toolbox {
+  color: $theme-text-color-1;
+  background-color: $theme-bg-color-gray-13 !important;
+  border-radius: vw(34px);
+  height: vw(620px) !important;
+  width: vw(100px) !important;
+  margin-left: vw(11px);
+  .bg-white {
+    background-color: $theme-bg-color-gray-13;
+  }
+}
+/*==============================================================
+                     right bar customize and layer
+==============================================================*/
+.sidebar {
+  background: $theme-bg-color-gray-13 !important;
+  border-radius: vw(34px) !important;
+  width: vw(452px) !important;
+  padding: vw(40px) vw(24px);
+  margin-right: vw(20px);
+
+  .custom-h2-class {
+    color: $theme-text-color-1 !important;
+  }
+  .dQHKtE {
+    // border-radius: vw(34px) vw(34px) 0 0;
+    border-bottom: vw(2px) solid $theme-border-color-white-26;
+    background: transparent !important;
+    padding-bottom: vw(21px) !important;
+    margin-bottom: vw(15px);
+    .shadow-sm {
+      box-shadow: none !important;
+    }
+
+    svg {
+      fill: $theme-text-color-1;
+    }
+    h2 {
+      font-size: vw(14px);
+      line-height: vw(16px);
+      @include fontSemiBold600;
+      color: $theme-text-color-1;
+      @include theme-letter-spacing-28-uppercase;
+    }
+  }
+}
+.customize-title-div {
+  .dQHKtE {
+    border-bottom: vw(2px) solid $theme-border-color-white-26;
+  }
+}
+.custom-background-class {
+  background: $theme-account-details-bg-color !important;
+}
+.bg-renderer-gray {
+  background: $theme-account-details-bg-color !important;
+}
+.YFciv {
+  svg {
+    fill: $theme-text-color-1 !important;
+  }
+  h2 {
+    color: $theme-text-color-1;
+  }
+}
+.craft-layer-node {
+  // background: $theme-bg-color-gray-13;
+  background: transparent;
+  h2 {
+    font-size: vw(14px) !important;
+    line-height: vw(16px) !important;
+    @include fontSemiBold600;
+    color: $theme-text-color-white-42;
+    @include theme-letter-spacing-28-uppercase;
+  }
+}
+.bg-white {
+  background-color: transparent !important;
+}
+.viewport {
+  .header {
+    height: auto;
+    padding-top: vw(32px);
+    padding-bottom: vw(33px);
+  }
+}
+.MuiAccordionSummary-content {
+  .MuiGrid-grid-xs-4 {
+    h5 {
+      color: $theme-text-color-1 !important;
+    }
+  }
+}
+.craftjs_send_btn,
+.craftjs_save_draft_btn,
+.craftjs_edit_btn,
+.craftjs-pdf-download-btn,
+.craftjs_preview_chnages_btn {
+  height: vw(74px);
+  width: vw(223px);
+  border-radius: vw(25px) !important;
+}
+.craftjs-pdf-download-btn {
+  margin-top: vw(28px);
+  right: vw(130px);
+}
+.customize-pencile-icon {
+  width: vw(24px);
+  height: auto;
+  margin-right: vw(26px);
+}
+/*==============================================================
+                     layer
+==============================================================*/
+
+.carftjs-layer-icon {
+  width: vw(30px);
+  height: auto;
+  margin-right: vw(16px);
+}
+.craftjs-layer-content-div {
+  border-bottom: vw(2px) solid $theme-border-color-white-26;
+}
+.UGADi,
+.iSpOIE {
+  background: $theme-bg-blue-1 !important;
+}
+.fOjXZF {
+  background: $theme-craftjs-layer-bg-color !important;
+}

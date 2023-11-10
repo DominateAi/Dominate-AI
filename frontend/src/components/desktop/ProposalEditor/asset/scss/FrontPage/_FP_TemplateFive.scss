@@ -1,0 +1,14 @@
+.front_page_template_five {
+  .front_page_template_five__left {
+    display: flex;
+    width: 50%;
+    height: 100%;
+  }
+  .front_page_template_five__right {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}

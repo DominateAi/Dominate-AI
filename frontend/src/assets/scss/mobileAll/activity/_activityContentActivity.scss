@@ -1,0 +1,26 @@
+/* ===============================================================
+                    
+                            activity
+
+================================================================== */
+.activity-delete-img {
+  height: mvwDivide(28px);
+  cursor: pointer;
+}
+
+.ac-activity-card {
+  display: flex;
+  padding-top: mvwDivide(27px);
+  padding-right: mvwDivide(41px);
+  padding-bottom: mvwDivide(27px);
+  border-top: vw(1px) solid rgba(112, 112, 112, 0.49);
+
+  &:last-child {
+    border-bottom: vw(1px) solid rgba(112, 112, 112, 0.49);
+  }
+}
+
+.ac-activity-emoji {
+  margin-left: mvwDivide(68px);
+  margin-right: mvwDivide(89px);
+}

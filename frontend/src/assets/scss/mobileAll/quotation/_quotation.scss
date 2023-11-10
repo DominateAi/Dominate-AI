@@ -1,0 +1,254 @@
+.quotation-block-container {
+  background-color: $theme-bg-color-1;
+  // box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.16);
+  padding: mvwDivide(36px);
+  border-radius: mvwDivide(15px);
+  margin-top: mvwDivide(25px);
+
+  h1 {
+    font-size: mvwDivide(60px);
+    line-height: mvwDivide(108px);
+    color: $theme-text-color-1;
+    @include fontMedium500;
+  }
+  span {
+    font-size: mvwDivide(21px);
+    line-height: mvwDivide(31px);
+    color: $theme-text-color-1;
+    @include fontMedium500;
+  }
+  p {
+    font-size: mvwDivide(24px);
+    line-height: mvwDivide(35px);
+    color: $theme-text-color-1;
+    @include fontMedium500;
+    margin-bottom: 15px;
+    margin-top: mvwDivide(67px);
+  }
+
+  .fa-trash {
+    position: absolute;
+    right: mvwDivide(50px);
+    font-size: mvwDivide(30px);
+    color: #d1c7ff;
+  }
+  .fa-trash:hover {
+    cursor: pointer;
+  }
+  .view_button_quotation {
+    position: absolute;
+    right: mvwDivide(50px);
+    top: mvwDivide(270px);
+    font-size: mvwDivide(18px);
+    width: mvwDivide(120px);
+    height: mvwDivide(40px);
+    @include fontMedium500;
+    background: linear-gradient(306deg, #502eff 0%, #d1c7ff 100%) !important;
+    color: white;
+    border: none;
+    border-radius: mvwDivide(15px);
+  }
+  .fa-eye:hover {
+    cursor: pointer;
+  }
+}
+
+.quatation-to-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: mvwDivide(20px);
+  h2 {
+    font-size: mvwDivide(24px);
+    line-height: mvwDivide(35px);
+    color: $theme-text-color-1;
+    @include fontSemiBold600;
+    margin-bottom: mvwDivide(5px);
+  }
+  h1 {
+    font-size: mvwDivide(24px);
+    line-height: mvwDivide(35px);
+    color: $theme-text-color-1;
+    @include fontBold700;
+    margin-bottom: mvwDivide(15px);
+  }
+  p {
+    font-size: mvwDivide(21px);
+    line-height: mvwDivide(31px);
+    color: $theme-text-color-1;
+    @include fontRegular400;
+    margin-bottom: 15px;
+  }
+}
+
+.quatation-from-section {
+  h2 {
+    font-size: mvwDivide(24px);
+    line-height: mvwDivide(35px);
+    color: $theme-text-color-1;
+    @include fontSemiBold600;
+    margin-bottom: mvwDivide(5px);
+  }
+  h1 {
+    font-size: mvwDivide(24px);
+    line-height: mvwDivide(35px);
+    color: $theme-text-color-1;
+    @include fontBold700;
+    margin-bottom: mvwDivide(15px);
+  }
+  p {
+    font-size: mvwDivide(21px);
+    line-height: mvwDivide(31px);
+    color: $theme-text-color-1;
+    @include fontRegular400;
+    margin-bottom: 0;
+  }
+  .quotation-button-section {
+    text-align: right;
+    .save-draft-btn {
+      width: mvwDivide(187px);
+      height: mvwDivide(56px);
+      background-color: transparent;
+      color: $theme-text-color-1;
+      font-size: mvwDivide(20px) !important;
+      line-height: mvwDivide(35px);
+      border: mvwDivide(2px) solid #303030;
+      border-radius: mvwDivide(26px);
+      @include fontSemiBold600;
+      margin-right: mvwDivide(30px);
+    }
+    .save-btn {
+      width: mvwDivide(109px);
+      height: mvwDivide(56px);
+      background-color: transparent;
+      color: $color-green-to-dark-green;
+      color: #502eff;
+      font-size: mvwDivide(20px) !important;
+      line-height: mvwDivide(35px);
+      border: mvwDivide(3px) solid $color-green-to-dark-green;
+      border: mvwDivide(3px) solid #502eff;
+      border-radius: mvwDivide(26px);
+      @include fontSemiBold600;
+    }
+
+    .final_quotation_total {
+      position: absolute;
+      right: mvwDivide(280px);
+      bottom: mvwDivide(200px);
+    }
+  }
+}
+.add-item-section {
+  margin-top: mvwDivide(45px);
+  margin-bottom: mvwDivide(45px);
+  overflow: auto;
+
+  .fa-trash {
+    font-size: mvwDivide(20px);
+  }
+  input {
+    width: 100%;
+    padding-left: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
+  .amount-font {
+    font-size: mvwDivide(21px);
+    line-height: mvwDivide(31px);
+    @include fontSemiBold600;
+  }
+
+  .normal-text {
+    font-size: mvwDivide(21px);
+    line-height: mvwDivide(31px);
+    @include fontRegular400;
+  }
+
+  .input_disabled {
+    border: none;
+    background: transparent;
+    outline: none;
+  }
+
+  .item-number-type {
+    width: mvwDivide(100px);
+  }
+  .tota-section {
+    margin-right: mvwDivide(150px);
+    display: flex;
+    justify-content: flex-end;
+    color: $theme-text-color-1;
+    font-size: mvwDivide(24px);
+    line-height: mvwDivide(35px);
+    @include fontSemiBold600;
+    p {
+      margin-right: mvwDivide(30px);
+    }
+  }
+
+  thead th {
+    font-size: mvwDivide(21px);
+    color: $theme-text-color-1;
+    line-height: mvwDivide(31px);
+    @include fontSemiBold600;
+    padding: mvwDivide(25px) !important;
+    border-bottom: vw(1px) solid #dee2e6 !important;
+  }
+  .button-section {
+    margin-top: mvwDivide(30px);
+    .add-item {
+      border: vw(1px) solid #303030;
+      background-color: transparent;
+      width: mvwDivide(120px);
+      height: mvwDivide(40px);
+      border-radius: mvwDivide(20px);
+      font-size: mvwDivide(18px);
+      line-height: mvwDivide(31px);
+      @include fontRegular400;
+      margin-right: mvwDivide(20px);
+    }
+    .save-edit-button {
+      border: vw(1px) solid #303030;
+      background-color: transparent;
+      width: mvwDivide(100px);
+      height: mvwDivide(40px);
+      border-radius: mvwDivide(20px);
+      font-size: mvwDivide(18px);
+      line-height: mvwDivide(31px);
+      @include fontRegular400;
+    }
+  }
+  td,
+  th {
+    padding: mvwDivide(25px) !important;
+    font-size: mvwDivide(21px);
+    line-height: mvwDivide(31px);
+    color: $theme-text-color-1;
+    @include fontRegular400;
+  }
+  table {
+    border-bottom: vw(1px) solid #dee2e6;
+  }
+}
+
+.customModal--addquotation {
+  width: mvwDivide(1420px) !important;
+  border-radius: mvwDivide(15px) !important;
+  padding: mvwDivide(30px) !important;
+  // box-shadow: 0 0.4vw 6.66667vw 0 rgba(0, 0, 0, 0.16) !important;
+}
+
+.quotation_select_lead_pointer:hover {
+  cursor: pointer;
+}
+
+.quotation_total_subtotal_section {
+  float: right;
+  border-bottom: 0px !important;
+  td {
+    padding: 0px !important;
+  }
+}
+
+@import "./add-quotation";

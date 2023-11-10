@@ -1,0 +1,31 @@
+.introduction_template_four {
+  display: block;
+  padding: vw(77px) vw(106px) vw(77px) vw(86px);
+}
+
+.introduction_template_four__top {
+  max-height: vw(50px);
+  margin-bottom: vw(90px);
+  text-align: center;
+
+  .text_component_main_container {
+    margin: 0 auto;
+  }
+}
+
+.introduction_template_four__bottom {
+  display: flex;
+  align-items: flex-start;
+}
+
+.introduction_template_four__bottom__left {
+  width: 50%;
+  height: vw(400px);
+  overflow: auto;
+  margin-right: vw(50px);
+  padding-right: vw(20px);
+}
+
+.introduction_template_four__bottom__right {
+  width: 50%;
+}

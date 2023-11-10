@@ -1,0 +1,293 @@
+.page-title-new {
+  font-size: vw(36px);
+  @include fontBold700;
+  line-height: vw(44px);
+  margin-bottom: 0;
+  padding-left: vw(87px);
+}
+.page-title-border-bottom {
+  display: block;
+  width: 93%;
+  height: vw(1px);
+  border-top: vw(1px) solid $theme-border-color-grey-1;
+  margin-top: vw(30px);
+  margin-right: auto;
+  margin-bottom: vw(41px);
+  margin-left: auto;
+}
+.page-title-border-bottom--account {
+  width: 100%;
+}
+.page-title-border-bottom--vault {
+  width: 100%;
+}
+.page-title-border-bottom--quotation {
+  width: 100%;
+}
+.page-title-border-bottom--contacts {
+  margin-top: 0;
+  width: 100%;
+}
+.dashboard-message__colm1 {
+  .breadcrumb-menu {
+    padding-bottom: vw(35px);
+  }
+}
+.page-title-new--chat {
+  padding-bottom: vw(16px);
+  margin-bottom: vw(30px);
+  padding-left: 0;
+  margin-left: vw(75px);
+  border-bottom: vw(1px) solid $theme-border-color-grey-1;
+}
+
+.cmd-center-member-setting {
+  padding: vw(64px) vw(88px) vw(50px) vw(46px);
+
+  .font-18-bold {
+    color: $theme-bg-color-white-48;
+  }
+}
+.cmd-member-setting-input-fileds {
+  width: vw(241px);
+  height: auto;
+  margin-right: vw(26px);
+
+  label {
+    margin-bottom: vw(20px);
+    color: $theme-text-color-white-42;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+  }
+  input {
+    width: 100%;
+    height: vw(77px);
+    border-radius: vw(25px);
+    font-size: vw(16px);
+    line-height: vw(24px);
+    @include fontMedium500;
+    padding: vw(27px) vw(32px);
+    // @include theme-mixin-1;
+    // @include border-mixin-1;
+    @include theme-mixin-2-without-backdrop;
+    color: $theme-text-color-white-79;
+
+    &::placeholder {
+      @include fontRegular400;
+    }
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-text-fill-color: $theme-text-color-white-79;
+    background-clip: text;
+  }
+}
+.cmd-member-setting-input-fileds--email {
+  width: vw(717px);
+}
+.cmd-centre-block__add-holiday-btn--add-member {
+  width: vw(272px);
+  @include theme-button-height-and-radius-2;
+  margin-top: vw(39px);
+}
+.cmd-add-member-card {
+  width: vw(1670px);
+  height: auto;
+  // background: white;
+  padding: vw(38px) vw(61px) vw(53px) vw(45px);
+  //backdrop-filter: blur(300px);
+  // box-shadow: 0 vw(4px) vw(35px) 0 rgba(69, 21, 51, 0.06);
+  // border-radius: vw(15px);
+  margin-top: vw(41px);
+  margin-bottom: vw(70px);
+  // @include theme-mixin-1;
+  // @include border-mixin-1;
+  // border-radius: vw(25px);
+  @include theme-mixin-2;
+}
+.cmd-member-settings-table {
+  padding-top: vw(63px);
+  table {
+    width: 100%;
+    tr {
+      vertical-align: middle;
+    }
+    th {
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+    }
+    td,
+    th {
+      &:first-child {
+        width: 25%;
+      }
+      &:nth-child(2) {
+        width: 20%;
+      }
+      &:nth-child(3) {
+        width: 20%;
+      }
+    }
+    th {
+      color: $theme-text-color-white-42;
+
+      &:nth-child(2) {
+        padding-left: vw(60px);
+      }
+      &:nth-child(3) {
+        padding-left: vw(80px);
+      }
+    }
+  }
+
+  .cmd-member-settings-member-img {
+    width: vw(45px);
+    height: auto;
+    margin-right: vw(34px);
+  }
+  .cmd-member-settings-copy-link-div {
+    width: vw(321px);
+    min-height: vw(66px);
+    word-break: break-all;
+    // background: rgba(229, 229, 229, 0.29);
+    // border-radius: vw(60px);
+    padding: vw(10px) vw(20px) vw(10px) vw(57px);
+    @include theme-mixin-without-border-and-backdrop;
+    border-radius: vw(18px);
+    color: $theme-text-color-white-79;
+
+    img {
+      width: vw(19px);
+      height: auto;
+      margin-right: vw(12px);
+      display: none;
+    }
+  }
+}
+.cmd-member-settings-table--tbody {
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+
+    tbody {
+      tr {
+        //// box-shadow: vw(-3px) vw(-3px) vw(20px) #e7e5e5;
+        // box-shadow: 0 vw(4px) vw(35px) 0 rgba(69, 21, 51, 0.06);
+        border-radius: vw(15px);
+        // background: white;
+        @include theme-mixin-1;
+      }
+      td {
+        padding: vw(31px) 0;
+        min-height: vw(128px);
+        &:first-child {
+          border-top-left-radius: vw(15px);
+          border-bottom-left-radius: vw(15px);
+          padding-left: vw(36px);
+        }
+        &:last-child {
+          border-top-right-radius: vw(15px);
+          border-bottom-right-radius: vw(15px);
+        }
+      }
+      .empty-cell {
+        background: transparent;
+        box-shadow: 0 0 0;
+        td {
+          padding: vw(10px);
+          background: transparent;
+        }
+      }
+      td {
+        @include border-mixin-1--dashed;
+        border-style: dashed dashed dashed none;
+        border-right-style: none;
+
+        &:first-child {
+          border-left-style: dashed;
+        }
+
+        &:last-child {
+          border-right-style: dashed;
+        }
+      }
+      .empty-cell {
+        td {
+          border-style: none;
+        }
+        td:first-child {
+          border-left-style: none;
+        }
+      }
+    }
+  }
+}
+.cmd-centre-block__add-holiday-btn--sent-invite-link {
+  width: vw(245px);
+  @include theme-button-height-and-radius-2;
+  filter: none;
+}
+.cmd-member-settings-edit-btn {
+  font-size: vw(16px);
+  @include fontSemiBold600;
+  margin-left: vw(36px);
+  width: vw(148px);
+  @include theme-button-height-and-radius-1;
+  padding: 0;
+  @include theme-mixin-2;
+  color: $theme-text-color-white-42;
+  @include theme-letter-spacing-28-uppercase;
+
+  img {
+    width: vw(20px);
+    margin-right: vw(10px);
+    margin-bottom: vw(5px);
+  }
+}
+.cmd-member-settings-toggle {
+  .toggle {
+    margin: 0;
+    span {
+      font-size: vw(16px);
+      line-height: vw(24px);
+      @include fontRegular400;
+      // color: rgba(48, 48, 48, 0.45);
+      color: $theme-text-color-white-79;
+
+      b {
+        // color: rgba(48, 48, 48, 1);
+        @include fontRegular400;
+        color: $theme-text-color-white-79;
+      }
+    }
+    .toggle-chk-circle {
+      width: vw(60px);
+      height: vw(30px);
+      box-shadow: 0 0 0;
+      background: $theme-toggle-bg;
+    }
+    input:checked + .toggle__switch:after,
+    .toggle__switch:after {
+      width: vw(20px);
+      height: vw(20px);
+    }
+    .toggle__switch {
+      &:after {
+        left: calc(100% - 1.2vw);
+      }
+    }
+    input {
+      left: 0;
+    }
+  }
+}
+.cmd-member-settings-fileds-title {
+  font-size: vw(20px);
+  line-height: vw(30px);
+  @include fontBold700;
+  margin-bottom: 0;
+  // color: rgba(67, 66, 75, 0.37);
+  color: $theme-text-color-gray-to-white;
+}

@@ -1,0 +1,37 @@
+/* ===============================================================
+                    
+                all mobile styles import
+                    
+================================================================== */
+
+@import "../../scss/globalMobile";
+@import "./commonStylesInMobile";
+
+@import "./auth/loginSignup";
+@import "./commonDesktopMobile/cusotmModal";
+@import "./commonDesktopMobile/common";
+@import "./commonDesktopMobile/checkbox";
+@import "./commonDesktopMobile/datepicker";
+@import "./commonDesktopMobile/dropdown";
+@import "./commonDesktopMobile/customEditDropdown";
+@import "./leads/addLead";
+@import "./leads/leads";
+// @import "./navbar/navbar";
+@import "./navbar/topmenubar";
+@import "./navbar/menu";
+// @import "./leads/leadsMobileNew";
+// @import "./leads/leadsAccordion";
+@import "./dashboard/dashboardPerformance";
+@import "./leads/leadsSearchBlock";
+@import "./activity/activity";
+@import "./employees/employees_data";
+@import "./customers/customers";
+@import "./payment/payment";
+@import "./profile/profile";
+@import "./message/message";
+@import "./dashboard/dashboard";
+@import "./quotation/quotation";
+@import "./tasks/tasks";
+@import "./proposals/proposals";
+@import "./reports/reports";
+@import "./calendar/calendar";

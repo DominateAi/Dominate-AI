@@ -1,0 +1,33 @@
+// dashboard row seven illustration
+
+.new-dashboard-no-pending-holidays {
+  text-align: center;
+  font-size: vw(16px);
+  line-height: vw(25px);
+  @include fontSemiBold600;
+  @include theme-letter-spacing-28-uppercase;
+  color: $theme-text-color-white-42;
+
+  p {
+    margin-bottom: vw(10px);
+  }
+}
+
+.new-dashboard-no-pending-holidays {
+  margin-top: vw(5px);
+}
+
+.new-dashboard__no-pending-leaves-img {
+  width: vw(113px);
+  margin-bottom: vw(10px);
+}
+
+.new-dashboard__no-upcoming-holiday-img {
+  width: vw(156px);
+  margin-bottom: vw(17px);
+}
+
+.new-dashboard__no-members-on-leave-img {
+  width: vw(101px);
+  margin-bottom: vw(20px);
+}

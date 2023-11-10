@@ -1,0 +1,87 @@
+/* ===============================================================
+                    
+                        custom edit dropdown 
+
+================================================================== */
+
+.main-dropdown-class {
+  background: transparent;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-container-fluid {
+  background-color: $theme-bg-color-1;
+  padding: mvwDivide(50px) mvwDivide(141px);
+}
+
+.fa-angle-down {
+  cursor: pointer;
+  font-size: mvwDivide(24px) !important;
+  font-weight: 500;
+  font-family: "fontawesome";
+  position: absolute;
+  right: mvwDivide(18px);
+  top: 20%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  color: $theme-text-color-1;
+}
+
+.dropdown-input-class {
+  width: 100%;
+  height: mvwDivide(51px);
+  border-radius: mvwDivide(26px);
+  padding: mvwDivide(5px) mvwDivide(43px) mvwDivide(5px) mvwDivide(20px);
+  @include fontRegular400;
+  font-size: mvwDivide(18px);
+  outline: none;
+  border: none;
+  background: $theme-bg-color-white-03;
+  color: $theme-text-color-1;
+  margin-bottom: 0 !important;
+
+  ::placeholder {
+    font-size: mvwDivide(21px);
+    @include fontRegular400;
+    color: $theme-text-color-1;
+  }
+}
+
+.dropdown-ul {
+  max-height: mvwDivide(170px);
+  overflow: auto;
+  list-style: none;
+  background: #ffffff;
+  // box-shadow: 0 mvwDivide(2px) mvwDivide(4px) 0 rgba(0, 0, 0, 0.2);
+  margin: 0;
+  margin-top: mvwDivide(5px);
+  padding: 0;
+  border-radius: mvwDivide(10px);
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+}
+
+.dropdown-li,
+.dropdown-li_selected {
+  font-size: mvwDivide(18px);
+  @include fontRegular400;
+  padding: mvwDivide(10px) mvwDivide(23px);
+  cursor: default;
+}
+
+.dropdown-li {
+  &:hover {
+    background: $theme-bg-color-white-03;
+  }
+}
+
+.dropdown-li_selected {
+  color: $color-white;
+  // background: #00e15a;
+  background: #6266e1;
+}

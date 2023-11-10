@@ -1,0 +1,131 @@
+.domain-bulk-upload-list-button-text-div {
+  margin-top: vw(50px);
+  margin-bottom: vw(45px);
+  padding: vw(60px) vw(30px) vw(30px) vw(30px);
+  border: vw(1px) dashed #d5d5d6;
+  background-color: #f7f7f9;
+  text-align: center;
+
+  label {
+    cursor: pointer;
+  }
+
+  &__buttonBlock {
+    width: vw(218px);
+    @include theme-button-height-and-radius-3;
+    border: none;
+    color: $color-white;
+    font-size: vw(21px);
+    @include fontMedium500;
+    background: rgba(250, 148, 114, 1);
+    background: linear-gradient(
+      286deg,
+      rgba(250, 148, 114, 1) 0%,
+      rgba(251, 99, 148, 1) 100%
+    );
+    // box-shadow: 0 vw(3px) vw(6px) rgba(0, 0, 0, 0.16);
+    margin-top: vw(35px);
+    margin-bottom: vw(25px);
+    position: relative;
+  }
+
+  &__input {
+    width: inherit;
+    height: inherit;
+    display: none;
+  }
+
+  &__desc {
+    color: #3a4759;
+    font-size: vw(16px);
+    line-height: vw(40px);
+    @include fontLight300;
+    margin-bottom: 0;
+  }
+}
+
+.intent-keyword-div.intent-keyword-div--domain-bulk-list {
+  width: max-content;
+  max-width: vw(1200px);
+}
+
+// .leads-title-block-btn-red-bg--domain-search-eamils {
+//   margin-right: vw(133px);
+//   background: linear-gradient(
+//     287deg,
+//     rgba(152, 144, 227, 1) 0%,
+//     rgba(177, 244, 207, 1) 100%
+//   );
+//   width: vw(268px);
+//   height: vw(67px);
+//   font-size: vw(21px);
+//   line-height: vw(52px);
+//   @include fontMedium500;
+//   border-radius: vw(50px);
+//   // box-shadow: 0 vw(3px) vw(6px) rgba(0, 0, 0, 0.16);
+// }
+
+.bulk-list-upload-result-text {
+  color: $theme-text-color-white-23;
+  font-size: vw(28px);
+  line-height: vw(42px);
+  @include fontBold700;
+  margin-bottom: 0;
+}
+
+// cards
+.domain-based-bulk-list-card-container {
+  margin-right: vw(10px);
+}
+
+.domain-based-bulk-list-card {
+  background-color: $theme-bg-color-1;
+  // box-shadow: 0 vw(12px) vw(25px) rgba(0, 0, 0, 0.12);
+  border-radius: vw(20px);
+  padding: vw(25px) vw(30px);
+  margin-bottom: vw(3px);
+}
+
+.domain-based-bulk-list-img-div {
+  width: vw(53px);
+  height: vw(53px);
+  border-radius: 100%;
+  margin-right: vw(30px);
+  background-color: #d8dbe8;
+  // box-shadow: 0 vw(3px) vw(6px) rgba(0, 0, 0, 0.16);
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+  }
+}
+
+.domain-based-bulk-list-card__textDiv {
+  width: 60%;
+  margin-right: vw(50px);
+}
+
+.donain-based-card-progressbar {
+  width: vw(386px);
+  height: vw(30px);
+  border-radius: vw(25px);
+
+  .progressbar-container {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+  }
+
+  .progressbar-progress {
+    background: rgb(7, 163, 178);
+    background: linear-gradient(
+      91deg,
+      rgba(7, 163, 178, 1) 0%,
+      rgba(217, 236, 199, 1) 100%
+    );
+    width: auto;
+    height: inherit !important;
+    border-radius: inherit !important;
+  }
+}

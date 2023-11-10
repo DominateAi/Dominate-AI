@@ -1,0 +1,171 @@
+/* ===============================================================
+                    
+                        leads
+                    
+================================================================== */
+
+.funnel-view-outer-div {
+  margin: 0 vw(141px);
+  padding-top: vw(16px);
+  padding-bottom: vw(50px);
+  display: flex;
+
+  .funnel-view-outer-div__block {
+    width: vw(278px);
+    border-right: vw(2px) solid #cccccc;
+    padding-bottom: vw(30px);
+    // padding-bottom: 0;
+
+    h5,
+    h6 {
+      padding-left: vw(30px);
+    }
+
+    h5 {
+      margin-bottom: vw(31px);
+    }
+
+    h6 {
+      margin-bottom: vw(62px);
+      // margin-bottom: 0;
+    }
+  }
+
+  .funnel-view-outer-div__colorDivOuter {
+    height: vw(610px);
+    // height: vw(730px);
+    display: flex;
+    align-items: center;
+  }
+
+  .funnel-view-outer-div__block:nth-child(1) {
+    .funnel-view-outer-div__colorDivOuter {
+      height: vw(610px);
+    }
+  }
+
+  .funnel-view-outer-div__block:nth-child(2) {
+    .funnel-view-outer-div__colorDivOuter {
+      height: vw(580px);
+      margin-top: vw(76px);
+    }
+  }
+
+  .funnel-view-outer-div__block:nth-child(3) {
+    .funnel-view-outer-div__colorDivOuter {
+      height: vw(550px);
+      margin-top: vw(90px);
+    }
+  }
+
+  .funnel-view-outer-div__block:nth-child(4) {
+    .funnel-view-outer-div__colorDivOuter {
+      height: vw(520px);
+      margin-top: vw(105px);
+    }
+  }
+
+  .funnel-view-outer-div__block:nth-child(5) {
+    .funnel-view-outer-div__colorDivOuter {
+      height: vw(490px);
+      margin-top: vw(120px);
+    }
+  }
+
+  .funnel-view-outer-div__block:nth-child(6) {
+    .funnel-view-outer-div__colorDivOuter {
+      height: vw(460px);
+      margin-top: vw(130px);
+    }
+  }
+
+  .funnel-view-outer-div__lightColorDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    // slope for light color div in vw
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      width: vw(290px);
+      height: vw(28px);
+      //   background: $theme-bg-color-white-03;
+      // background: $bg-container;
+      background: #292d31;
+      position: absolute;
+      left: -1%;
+      bottom: vw(-17px);
+      transform: rotate(-3deg);
+    }
+
+    &::before {
+      bottom: auto;
+      top: vw(-17px);
+      transform: rotate(3deg);
+    }
+
+    // slope for light color div in %
+    // &::after,
+    // &::before {
+    //     content: '';
+    //     display: block;
+    //     width: 110%;
+    //     height: 30%;
+    //     background: $theme-bg-color-white-03;
+    //     position: absolute;
+    //     left: -1%;
+    //     bottom: -14%;
+    //     transform: rotate(-7deg);
+    // }
+
+    // &::before {
+    //     bottom: auto;
+    //     top: -14%;
+    //     transform: rotate(7deg);
+    // }
+  }
+
+  .funnel-view-outer-div__darkColorDiv {
+    width: 100%;
+  }
+
+  // slope for dark color div
+  // .funnel-view-outer-div__darkColorDiv {
+  //     position: relative;
+
+  //     &::after,
+  //     &::before {
+  //         content: '';
+  //         display: block;
+  //         width: 130%;
+  //         height: 10%;
+  //         background: #B3C9FE;
+  //         // background: transparent;
+  //         position: absolute;
+  //         left: -10%;
+  //         bottom: 5%;
+  //         transform: rotate(-7deg);
+  //         z-index: 1;
+  //     }
+
+  //     &::before {
+  //         bottom: auto;
+  //         top: -5%;
+  //         transform: rotate(7deg);
+  //     }
+  // }
+}
+
+// .funnel-view-outer-div__block:nth-child(4) .funnel-view-outer-div__colorDivOuter .funnel-view-outer-div__lightColorDiv::before,
+// .funnel-view-outer-div__block:nth-child(4) .funnel-view-outer-div__colorDivOuter .funnel-view-outer-div__lightColorDiv::after,
+// .funnel-view-outer-div__block:nth-child(5) .funnel-view-outer-div__colorDivOuter .funnel-view-outer-div__lightColorDiv::before,
+// .funnel-view-outer-div__block:nth-child(5) .funnel-view-outer-div__colorDivOuter .funnel-view-outer-div__lightColorDiv::after,
+// .funnel-view-outer-div__block:nth-child(6) .funnel-view-outer-div__colorDivOuter .funnel-view-outer-div__lightColorDiv::before,
+// .funnel-view-outer-div__block:nth-child(6) .funnel-view-outer-div__colorDivOuter .funnel-view-outer-div__lightColorDiv::after {
+//     display: none;
+// }

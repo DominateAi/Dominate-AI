@@ -1,0 +1,96 @@
+/* ===============================================================
+                    
+                        admin reports
+                    
+================================================================== */
+
+.admin-report-block {
+  padding: vw(30px) vw(109px) vw(50px) vw(141px);
+}
+
+.admin-reports-folds {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.admin-reports-folds--new {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.admin-reports-fold-2,
+.admin-reports-fold-3__1,
+.admin-reports-fold-3__2 {
+  background: #ffffff;
+  // box-shadow: 0 vw(3px) vw(50px) rgba(0, 0, 0, 0.16);
+  border-radius: vw(15px);
+  margin-right: vw(30px);
+  margin-bottom: vw(30px);
+  overflow: auto;
+}
+
+.admin-reports-fold-2 {
+  width: vw(1638px);
+  height: vw(585px);
+  margin-right: vw(30px);
+  padding: vw(25px) vw(18px) vw(55px) vw(37px);
+}
+
+.admin-reports-fold-3__1 {
+  width: vw(1079px);
+  height: vw(575px);
+  padding: vw(25px) vw(18px) vw(55px) vw(37px);
+}
+
+.admin-reports-fold-3__2 {
+  width: vw(526px);
+  height: vw(575px);
+}
+
+.admin-reports-fold-3__secondBlockTitle {
+  margin: vw(25px) vw(10px) vw(43px) vw(55px);
+}
+
+.activityMenuTabs--adminReport {
+  .rwt__tablist {
+    padding: 0 vw(10px);
+    box-shadow: 0 0 0;
+    border-bottom: vw(1px) solid $theme-border-color-white-06;
+  }
+  .rwt__tablist button {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: vw(10px);
+    padding-right: vw(10px);
+    color: $theme-blue-text-tab-color-1;
+    text-align: center;
+  }
+  .rwt__tablist button[aria-selected="true"] {
+    font-size: vw(16px);
+    line-height: vw(25px);
+    @include fontSemiBold600;
+    color: $theme-blue-text-tab-color-2;
+    border-bottom: vw(1px) solid $theme-border-color-blue-1;
+  }
+  .rwt__tablist button {
+    font-size: vw(16px);
+    line-height: vw(25px);
+  }
+
+  .rwt__tabpanel {
+    padding: vw(45px) vw(10px) 0 vw(10px);
+  }
+}
+
+.admin-report-p-30 {
+  padding: vw(30px);
+}
+
+.mt-56 {
+  margin-top: vw(56px);
+}

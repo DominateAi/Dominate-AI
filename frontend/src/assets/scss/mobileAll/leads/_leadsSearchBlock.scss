@@ -1,0 +1,97 @@
+/* ===============================================================
+                    
+                        leadsSearchBlock
+                    
+================================================================== */
+
+.resp-search-overlay-block {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(242, 242, 242, 0.63);
+  z-index: 1001;
+  user-select: none;
+  overflow: hidden;
+  // display: block;
+  opacity: 0;
+  transition: all 0.4s ease;
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+.resp-search-overlay-block__element {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.resp-search-block {
+  position: relative;
+  // height: mvw(239px);
+  height: min-content;
+  overflow: auto;
+  background: #ffffff;
+  // box-shadow: mvw(10px) mvw(10px) mvw(10px) rgba(0, 0, 0, 0.16);
+  padding: mvw(19px) mvw(20px) mvw(19px) mvw(30px);
+
+  h6 {
+    cursor: pointer;
+  }
+}
+
+.search-text-border-bottom {
+  padding-bottom: mvw(10px);
+  margin-bottom: mvw(10px);
+  border-bottom: 0.5px solid rgba(112, 112, 112, 0.26);
+}
+
+.resp-search-input-block-outer {
+  position: relative;
+  margin: mvw(36px) mvw(22px) mvw(26px) mvw(25px);
+
+  // .resp-search-input-block-border-right {
+  //   &::after {
+  //     content: "";
+  //     display: block;
+  //     width: 0.5px;
+  //     height: mvw(18px);
+  //     position: absolute;
+  //     left: 9%;
+  //     top: 23%;
+  //     background: rgba(112, 112, 112, 0.3);
+  //   }
+  // }
+
+  .resp-search-input-block-img {
+    width: mvw(13px);
+    position: absolute;
+    top: mvw(11px);
+    left: mvw(23px);
+    opacity: 0.7;
+  }
+
+  .resp-search-input-block-input {
+    width: 100%;
+    height: mvw(34px);
+    padding: mvw(10px);
+    padding-left: mvw(46px);
+    padding-right: mvw(23px);
+    border: 0;
+    // box-shadow: 0 mvw(3px) mvw(6px) rgba(128, 128, 128, 0.16);
+    border-radius: mvw(17px);
+    @include fontLight300;
+    font-style: italic;
+    font-size: mvw(14px);
+    color: rgba(48, 48, 48, 0.9);
+
+    &::placeholder {
+      @include fontLight300;
+      font-style: italic;
+    }
+  }
+}

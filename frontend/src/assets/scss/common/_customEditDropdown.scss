@@ -1,0 +1,122 @@
+/* ===============================================================
+                    
+                        custom edit dropdown 
+
+================================================================== */
+
+.main-dropdown-class {
+  background: transparent;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-container-fluid {
+  background-color: $theme-bg-color-1;
+  padding: vw(50px) vw(141px);
+}
+
+.fa-angle-down {
+  cursor: pointer;
+  font-size: vw(24px) !important;
+  font-weight: 500;
+  font-family: "fontawesome";
+  position: absolute;
+  right: vw(18px);
+  top: 20%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  color: $theme-text-color-1;
+}
+
+.dropdown-input-class {
+  width: 100%;
+  @include theme-button-height-and-radius-3;
+  padding: vw(5px) vw(43px) vw(5px) vw(20px);
+  @include fontRegular400;
+  font-size: vw(18px);
+  outline: none;
+  border: none;
+  background: $theme-bg-color-white-03;
+  color: $theme-text-color-1;
+  margin-bottom: 0 !important;
+  padding-left: vw(35px);
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
+  ::placeholder {
+    font-size: vw(21px);
+    @include fontRegular400;
+    color: $theme-text-color-1;
+  }
+}
+
+.dropdown-ul {
+  max-height: vw(170px);
+  overflow: auto;
+  list-style: none;
+  background: #ffffff;
+  // box-shadow: 0 vw(2px) vw(4px) 0 rgba(0, 0, 0, 0.2);
+  margin: 0;
+  margin-top: vw(5px);
+  padding: 0;
+  border-radius: vw(10px);
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+}
+
+.dropdown-li,
+.dropdown-li_selected {
+  font-size: vw(18px);
+  @include fontRegular400;
+  padding: vw(10px) vw(23px);
+  cursor: default;
+}
+
+.dropdown-li {
+  &:hover {
+    background: $theme-bg-color-white-03;
+  }
+}
+
+.dropdown-li_selected {
+  color: $color-white;
+  background: #6266e1;
+}
+
+.dropdown-li,
+.dropdown-li_selected {
+  padding: 0;
+  button {
+    text-align: left;
+    padding: vw(10px) vw(23px);
+    border: 0;
+    width: 100%;
+    background: transparent;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+  }
+}
+
+.dropdown-li {
+  button {
+    &:focus {
+      color: $theme-text-color-1;
+      background: $theme-bg-color-white-03;
+    }
+  }
+}
+
+.dropdown-li_selected {
+  button {
+    &:focus {
+      color: $color-white;
+      background: #6266e1;
+    }
+  }
+}

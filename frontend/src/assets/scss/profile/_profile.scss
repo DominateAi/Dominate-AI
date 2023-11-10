@@ -1,0 +1,584 @@
+/*====================================
+          Profile Page Css
+=====================================*/
+
+.user-profile-page-main-container {
+  .next_subscription_info {
+    color: blue;
+    font-size: vw(18px);
+    @include fontSemiBold600;
+  }
+  .next_plan_label_button_container {
+    display: flex;
+    align-items: baseline;
+
+    button {
+      margin-left: vw(200px);
+      background: transparent;
+      border: vw(1px) solid #ff4848;
+      color: #ff4848;
+      width: vw(220px);
+      @include theme-button-height-and-radius-3;
+      @include fontBold700;
+      font-size: vw(18px);
+    }
+  }
+  .font-24-semibold {
+    color: $color-white;
+  }
+  .employee-data-container {
+    min-height: 100vh;
+  }
+  .payment-main-conatiner {
+    width: 100%;
+    .buttons-section {
+      justify-content: left;
+    }
+  }
+
+  /*========================= 
+            form css
+  ==========================*/
+
+  .quotation-upload-img__btn,
+  .quotation-upload-img__input {
+    width: vw(281px);
+    height: vw(65px);
+    font-size: vw(18px) !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+    color: $theme-sign-up-btn-text-color;
+    @include fontRegular400;
+  }
+
+  .justify-content-space-between {
+    justify-content: center;
+  }
+}
+.employees-delete-btn {
+  // background-color: #ff4848;
+  background: linear-gradient(306deg, #502eff 0%, #d1c7ff 100%) !important;
+  border: none;
+  width: vw(250px);
+  @include theme-button-height-and-radius-3;
+  color: white;
+  @include fontBold700;
+  font-size: vw(18px);
+}
+
+// workspace info
+.user-profile-page-main-container .edit-profile-form-container--workspace {
+  button {
+    width: vw(235px);
+    @include theme-button-height-3;
+  }
+}
+
+.profile-info-tab-logo-block {
+  margin-bottom: vw(40px);
+  margin-right: vw(119px);
+}
+
+.free_trail_top_description {
+  p {
+    font-size: vw(24px);
+    line-height: vw(35px);
+    @include fontRegular400;
+    margin-bottom: 0;
+    color: $theme-text-color-1;
+  }
+  h3 {
+    font-size: vw(24px);
+    line-height: vw(35px);
+    @include fontSemiBold600;
+    margin-bottom: 0;
+    color: $theme-text-color-1;
+  }
+  h2 {
+    font-size: vw(34px);
+    line-height: vw(51px);
+    @include fontBold700;
+    margin-bottom: 0;
+    color: $theme-text-color-1;
+  }
+}
+.free_trail_middle_section {
+  margin-top: vw(43px);
+  p {
+    font-size: vw(19px);
+    line-height: vw(29px);
+    color: $theme-text-color-1;
+    @include fontRegular400;
+  }
+  button {
+    color: white;
+    margin-top: vw(27px);
+    width: vw(235px);
+    @include theme-button-height-and-radius-3;
+    font-size: vw(18px);
+    background: -webkit-linear-gradient(
+      45deg,
+      rgba(40, 95, 207, 1) 0%,
+      rgba(212, 32, 249, 1) 100%
+    );
+  }
+}
+.free_trail_image_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: vw(50px);
+
+  .middle_img {
+    width: vw(460px);
+    height: vw(363px);
+  }
+  .right_img {
+    width: vw(168px);
+    height: vw(168px);
+  }
+  .leads_employees_count {
+    p {
+      font-size: vw(19px);
+      color: $theme-text-color-1;
+      line-height: vw(29px);
+      @include fontRegular400;
+      margin-top: vw(14px);
+      margin-bottom: 0;
+    }
+    span {
+      font-size: vw(34px);
+      line-height: vw(51px);
+      color: $theme-text-color-1;
+      @include fontBold700;
+    }
+  }
+}
+/*=================================
+         saved card
+=================================*/
+.default-card-div,
+.profile-card-title-text-div {
+  h3 {
+    font-size: vw(24px);
+    line-height: vw(29px);
+    color: $theme-text-color-1;
+    margin-bottom: 0;
+    @include fontSemiBold600;
+  }
+}
+.saved-card-title-icon-img {
+  display: none;
+  // width: vw(25px);
+  // height: auto;
+  // margin-right: vw(20px);
+}
+.add-payment-card-btn {
+  background: $theme-bg-blue-btn;
+  margin-left: vw(15px);
+  border: none;
+  border-radius: vw(25px);
+  padding: 0;
+  width: vw(65px);
+  height: vw(65px);
+  margin-left: vw(29px);
+
+  img {
+    width: vw(23px);
+    height: vw(23px);
+  }
+  //padding-bottom: 1px;
+}
+.profile-card-table {
+  margin-top: vw(32px);
+  margin-bottom: 0;
+  tbody {
+    vertical-align: middle;
+
+    tr {
+      background: $theme-bg-color-white-03;
+      border-radius: vw(16px);
+      border-bottom: none;
+      min-height: vw(85px);
+    }
+  }
+}
+.font-14-rubix {
+  font-size: vw(14px);
+  line-height: vw(16px);
+}
+.profile-set-default-btn {
+  width: vw(178px);
+  @include theme-button-height-and-radius-5;
+  background: $theme-bg-dark-blue-to-purple-1;
+  color: $color-white;
+  font-size: vw(14px);
+  @include fontRegular400;
+  border: none;
+}
+
+.quotation-upload-img-block--profile {
+  .quotation-upload-img__btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .quotation-upload-img__btn,
+  .quotation-upload-img__input {
+    cursor: pointer !important;
+  }
+}
+.profile-payment-not-found-img {
+  width: vw(400px);
+  height: auto;
+  margin-top: vw(100px);
+  margin-bottom: vw(29px);
+}
+.profile-edit-btn {
+  width: vw(109px) !important;
+  @include theme-mixin-2-important;
+  font-size: vw(16px) !important;
+  @include fontMedium500;
+  color: $theme-text-color-white-42 !important;
+  margin-left: vw(100px);
+  margin-bottom: vw(100px);
+
+  img {
+    width: vw(18px);
+    height: auto;
+    margin-right: vw(12px);
+    margin-bottom: vw(2px);
+  }
+}
+.profile-workspace-save-btn {
+  font-size: vw(16px) !important;
+  @include fontSemiBold600;
+  width: vw(183px) !important;
+  @include theme-mixin-blue-bg-with-color-important;
+}
+.profile-workspace-cancel-btn {
+  font-size: vw(16px) !important;
+  line-height: vw(27px);
+  margin-right: vw(10px);
+  width: vw(183px) !important;
+  height: vw(59px) !important;
+  @include theme-mixin-2-important;
+  border-radius: vw(33px);
+  color: $theme-text-gray-color-1 !important;
+  @include fontSemiBold600;
+}
+.profile-edit-btn--settings {
+  margin-bottom: vw(50px);
+}
+.profile-setting-btn-div {
+  padding-top: vw(25px);
+  padding-bottom: vw(50px);
+}
+.profile-settings-edit-btn-outer-div {
+  position: relative;
+}
+.profile-settings-edit-btn-div {
+  position: absolute;
+  top: vw(35px);
+  right: vw(-40px);
+
+  .profile-workspace-save-btn {
+    width: vw(107px) !important;
+    @include fontMedium500Important;
+
+    i {
+      padding-right: vw(5px);
+    }
+  }
+}
+.profile-img-div {
+  position: relative;
+}
+.profile-pencil-div {
+  cursor: pointer;
+  position: absolute;
+  bottom: 5%;
+  left: 40%;
+  color: white;
+  background-color: $theme-text-color-dark-blue-to-white-1;
+  width: vw(45px);
+  height: vw(45px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  i {
+    font-size: vw(18px);
+  }
+}
+.activity-outer-container__colm1--profile {
+  background: transparent !important;
+}
+.profile-font-36-semibold {
+  font-size: vw(36px);
+  line-height: vw(54px);
+  letter-spacing: 0.035em;
+  color: $theme-text-color-light-purple-1;
+  @include fontSemiBold600;
+}
+.profile-font-36-regular {
+  font-size: vw(36px);
+  line-height: vw(54px);
+}
+
+.profile_premium_card_outer_div {
+  // width: vw(1100px);
+  // overflow-x: scroll;
+  // overflow-y: hidden;
+  padding-bottom: vw(40px);
+  padding-top: vw(30px);
+  padding-left: vw(10px);
+}
+// .profile_premium_card_div {
+//   //width: vw(1600px);
+//   width: max-content;
+// }
+.profile_product_card {
+  width: vw(421px);
+  height: vw(404px);
+  display: block;
+  margin-right: vw(34px);
+  @include theme-mixin-2-important;
+  border-radius: vw(18px);
+  padding: 0;
+  padding-bottom: vw(15px);
+}
+.profile_product_card_img_block {
+  width: 100%;
+  height: vw(107px);
+  background: transparent;
+  border-radius: vw(11px);
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: vw(93px);
+  margin-bottom: vw(59px);
+  position: relative;
+
+  // &::after {
+  //   position: absolute;
+  //   bottom: 0;
+  //   // left: vw(127px);
+  //   left: vw(50px);
+  //   background: $theme-bg-dark-blue-to-purple-1;
+  //   border-radius: vw(25px);
+  //   width: vw(126px);
+  //   height: vw(2px);
+  //   content: "";
+  // }
+
+  img {
+    width: auto;
+    height: inherit;
+  }
+}
+.profile_product_card_name {
+  font-size: vw(24px);
+  line-height: vw(29px);
+  color: $theme-text-color-1;
+  @include fontMontserratExtraBold;
+  margin-bottom: vw(12px);
+}
+.profile_product_card_tier {
+  font-size: vw(14px);
+  line-height: vw(17px);
+  color: $theme-text-color-white-42;
+  @include fontSemiBold600;
+  @include theme-letter-spacing-10-uppercase;
+  margin-bottom: vw(12px);
+}
+.profile_product_card_per_user {
+  color: $theme-text-color-white-79;
+  font-size: vw(14px);
+  line-height: vw(17px);
+  text-align: right;
+  letter-spacing: 0.03em;
+  margin-bottom: vw(12px);
+}
+.profile_product_card_text-div {
+  padding: vw(31px) vw(45px) vw(55px) vw(49px);
+  @include theme-mixin-1;
+  backdrop-filter: none;
+  border-radius: vw(18px);
+  border: none;
+  height: vw(144px);
+}
+.profile_product_card_price {
+  font-size: vw(18px);
+  line-height: vw(29px);
+  margin-bottom: vw(12px);
+  @include fontExtraBold800Important;
+  color: $theme-text-color-white-79;
+  text-align: right;
+}
+.profile_card_img1 {
+  // width: vw(157px);
+  width: vw(100px);
+  height: auto;
+}
+.profile_card_img2 {
+  // width: vw(235px);
+  width: vw(150px);
+  height: auto;
+}
+.profile_card_img3 {
+  // width: vw(115px);
+  width: vw(63px);
+  height: auto;
+}
+.profile_card_img4 {
+  // width: vw(229px);
+  width: vw(140px);
+  height: auto;
+}
+.make-payment--profile {
+  margin-left: 0;
+  font-size: vw(18px);
+  width: max-content;
+  padding-right: vw(53px);
+  padding-left: vw(53px);
+  @include theme-button-height-and-radius-1;
+  @include fontMedium500;
+  margin-top: vw(40px);
+  color: $theme-sign-up-btn-text-color;
+  // .make-payment-span-text {
+  //   font-size: vw(36px);
+  // }
+}
+.profile_current_card_title__blue-text {
+  color: $theme-text-color-blue-4;
+}
+.profile_current_plan_card {
+  width: vw(575px);
+  @include theme-mixin-2;
+  border-radius: vw(22px);
+  min-height: vw(230px);
+  margin-bottom: vw(43px);
+  margin-top: vw(28px);
+}
+.profile_current_plan_card_img {
+  width: vw(67px);
+  height: auto;
+  margin-right: vw(25px);
+}
+
+.profile_current_plan_card_inner_div {
+  // background-image: url("../../img/background-new-design/default-card-bg.png");
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: contain;
+  width: 100%;
+  min-height: vw(257px);
+}
+.edit-profile-form-container--setting {
+  .form-group {
+    width: vw(739px);
+  }
+}
+
+.edit-profile-form-container {
+  width: 100%;
+
+  .font-24-semibold {
+    color: $theme-text-color-white-42;
+  }
+  .form-group {
+    display: grid;
+    margin-bottom: vw(30px);
+  }
+  .add-lead-label {
+    margin: 0;
+  }
+  label {
+    font-size: vw(14px) !important;
+    @include theme-letter-spacing-10-uppercase;
+    text-transform: uppercase;
+    color: $theme-text-color-white-42;
+    @include fontBold700Important;
+    margin-bottom: vw(30px);
+  }
+  input {
+    @include theme-button-height-3;
+    @include theme-mixin-2;
+    padding: vw(15px) vw(30px);
+  }
+  input:disabled,
+  input:read-only {
+    border: vw(1px) solid transparent;
+  }
+  button {
+    border: none;
+    width: vw(150px);
+    @include theme-button-height-and-radius-3;
+    color: white;
+    @include fontBold700;
+    font-size: vw(24px);
+  }
+  .disabled-field {
+    background-color: #fcfcfc;
+    user-select: none;
+  }
+}
+.profile-workspace-cancel-btn--change-password {
+  width: vw(248px) !important;
+  height: vw(60px) !important;
+}
+
+.edit-profile-form-container .font-24-semibold {
+  margin-left: vw(20px);
+}
+
+.user-profile-page-main-container .edit-profile-form-container {
+  .add-quotation-final-modal-logo {
+    width: vw(157px);
+    height: vw(157px);
+    border-radius: 50%;
+    font-size: vw(11px);
+    margin-left: vw(40px);
+
+    img {
+      background: conic-gradient(
+        from 180deg at 50% 50%,
+        #a18eff 0deg,
+        #ae9aff 159.38deg,
+        #502eff 258.75deg,
+        #d1c7ff 360deg
+      );
+    }
+  }
+}
+.edit-profile-form-container--workspace__colm1 {
+  width: 50%;
+  padding-right: vw(145px);
+  position: relative;
+
+  .profile-setting-btn-div {
+    padding-right: 3%;
+    justify-content: flex-end;
+    padding-top: vw(45px);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: vw(1px);
+    height: vw(221px);
+    background-color: $theme-border-color-white-26;
+    position: absolute;
+    top: vw(57px);
+    right: 0;
+  }
+}
+.edit-profile-form-container--workspace__colm2 {
+  width: 30%;
+  padding-left: vw(130px);
+}
+.edit-profile-form-container--workspace__rowMain {
+  padding-left: vw(30px);
+}

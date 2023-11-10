@@ -1,0 +1,61 @@
+.vission_template_three {
+  display: flex;
+  padding: vw(50px) vw(50px) vw(20px) vw(50px);
+  .vission_template_three_left {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding: vw(20px) vw(20px) 0 vw(40px);
+  }
+  .vission_template_three_left_top {
+    width: 90%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+  }
+  .vission_template_three_left_headline {
+    width: 90%;
+    height: vw(79px);
+    display: flex;
+    align-items: center;
+    //justify-content: flex-end;
+  }
+  .vission_template_three_top_line {
+    display: block;
+    width: vw(6px);
+    height: 40%;
+    margin-left: vw(10px);
+    border-radius: vw(20px);
+  }
+  .vission_template_three_left_para_outer {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin: vw(10px) vw(15px);
+  }
+  .vission_template_three_left_para_inner {
+    padding: vw(30px) vw(30px) vw(30px) vw(10px);
+  }
+  .vission_template_three_left_para_head {
+    width: 100%;
+    height: vw(50px);
+    align-items: center;
+    display: flex;
+    margin-bottom: vw(10px);
+  }
+  .vission_template_three_left_para_para {
+    width: 100%;
+    height: vw(320px);
+    display: flex;
+  }
+  .vission_template_three_right {
+    width: 55%;
+    margin: vw(120px) vw(30px) vw(100px) vw(20px);
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+}

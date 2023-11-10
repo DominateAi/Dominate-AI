@@ -1,0 +1,63 @@
+// calendar content css
+.grey-border-bottom-calendar,
+.holiday-grey-border-bottom-calendar {
+  display: block;
+  border-bottom: vw(1px) solid rgba(132, 132, 132, 0.4);
+}
+
+.holiday-grey-border-bottom-calendar {
+  margin-left: vw(160px);
+  margin-right: vw(430px);
+}
+
+.dashboard-holiday-content-outer-div {
+  height: vw(220px);
+  padding-right: vw(10px);
+  overflow: auto;
+
+  .holiday-grey-border-bottom-calendar:last-child {
+    display: none;
+  }
+}
+.dashboard-holiday-content-outer-div--upcoming-leaves {
+  height: vw(150px);
+  padding-top: vw(5px);
+}
+
+.px-calendar {
+  padding-left: vw(10px);
+  padding-right: vw(10px);
+}
+
+.cayan-75-font {
+  color: #00e8d3;
+  font-size: vw(75px);
+  @include fontBold700;
+  line-height: vw(113px);
+  margin-bottom: 0;
+  margin-right: vw(20px);
+}
+
+.dashboard-holiday-content {
+  display: flex;
+  align-items: center;
+  line-height: vw(41px);
+}
+
+.dashboard-holiday-upcoming-leaves {
+  width: 39%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: vw(20px);
+}
+
+.dasboard-holiday-dash {
+  &::after {
+    content: "";
+    display: block;
+    width: vw(25px);
+    height: vw(6px);
+    background: #303030;
+    margin-top: vw(59px);
+  }
+}

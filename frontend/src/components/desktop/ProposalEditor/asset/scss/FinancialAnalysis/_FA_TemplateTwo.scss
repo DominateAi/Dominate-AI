@@ -1,0 +1,47 @@
+.financial_analysis_template_two {
+  display: flex;
+  align-items: flex-start;
+  padding: vw(80px) vw(50px) vw(50px) vw(50px);
+  .financial_analysis_template_two_left {
+    width: 50%;
+    padding: vw(30px);
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+  .financial_analysis_template_two_right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: vw(30px) vw(20px) vw(20px) vw(20px);
+  }
+  .financial_analysis_template_two_right_top {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    margin-bottom: vw(10px);
+  }
+  .financial_analysis_template_two_headline {
+    width: 95%;
+    height: vw(79px);
+    display: flex;
+    align-items: center;
+  }
+  .financial_analysis_template_two_top_line {
+    width: vw(5px);
+    //height: 40%;
+    height: vw(50px);
+    border-radius: vw(20px);
+    display: flex;
+  }
+  .financial_analysis_template_two_para {
+    width: 100%;
+    height: vw(116px);
+    padding: vw(20px) 0 vw(20px) vw(10px);
+    margin-top: vw(30px);
+    margin-bottom: vw(20px);
+  }
+}

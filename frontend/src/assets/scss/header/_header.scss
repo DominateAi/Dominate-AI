@@ -1,0 +1,241 @@
+/*=====================
+      Header css
+=======================*/
+.my-navbar {
+  color: $theme-text-color-1;
+  background-color: $theme-bg-color-transparent;
+  height: vw(100px);
+  padding: 0 !important;
+  padding-left: vw(110px) !important;
+  padding-right: vw(141px) !important;
+  margin-bottom: -1px;
+
+  .nav_icons {
+    img {
+      width: vw(39px);
+      height: vw(39px);
+      margin-left: vw(48px);
+      border-radius: vw(25px);
+      display: inline-block;
+    }
+    .fa-user {
+      font-size: vw(33px);
+      margin-left: vw(28px);
+      color: #0ccda3;
+    }
+  }
+  .logout-btn {
+    cursor: pointer;
+
+    img {
+      height: auto;
+      width: vw(26px);
+      height: vw(26px);
+    }
+    // .fa-power-off {
+    //   font-size: vw(33px);
+    //   // margin-left: vw(px) !important;
+    //   color: #ed765e;
+    //   vertical-align: bottom;
+    // }
+  }
+}
+.navbar-brand {
+  font-size: vw(30px) !important;
+  font-weight: 600;
+
+  p {
+    margin-bottom: 0 !important;
+  }
+}
+
+.dominate_header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+
+  background-color: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(vw(392px));
+  border-bottom: vw(1px) solid rgba(229, 229, 229, 0.19);
+}
+
+.dominate_header__fix {
+  padding-bottom: vw(149px);
+}
+
+/*=========================
+    top menus navbar
+==========================*/
+
+.menu-navbar {
+  position: relative;
+
+  &__title {
+    transition: all 0.4s ease;
+    position: absolute;
+    left: 50%;
+  }
+
+  .tooltip-new {
+    position: absolute;
+    left: 43%;
+    top: vw(13px);
+    height: 70%;
+  }
+}
+
+.topmenubar-menu-name {
+  text-transform: capitalize;
+
+  img {
+    margin-right: vw(11px);
+  }
+}
+
+.menu-navbar {
+  // height: vw(85px);
+  color: $theme-text-color-1;
+  background-color: $theme-bg-color-transparent;
+  padding: 0 vw(98px) 0 vw(111px) !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: vw(20px);
+
+  /* Left Menus */
+  .dominate-menus-left,
+  .dominate-menus-right {
+    list-style-type: none;
+    display: flex;
+    margin-bottom: 0;
+
+    .topmenubar-icon {
+      // background-image: linear-gradient(
+      //   to left bottom,
+      //   #003cff,
+      //   #2c60ff,
+      //   #5180ff,
+      //   #759cff,
+      //   #9ab8ff
+      // );
+      border-radius: vw(7px);
+      // opacity: 0.6;
+      margin-right: vw(42px);
+    }
+
+    .topmenubar-icon--active {
+      // opacity: 1;
+      color: $theme-blue-text-tab-color-2;
+      // cursor: default;
+      position: relative;
+
+      .topmenubar-menu-name {
+        color: $theme-blue-text-tab-color-2;
+      }
+
+      &::after {
+        position: absolute;
+        left: 0;
+        bottom: vw(-23px);
+        content: "";
+        display: block;
+        width: 100%;
+        height: vw(4px);
+        background: $theme-bg-gardient-blue-2;
+        border-radius: 80%;
+      }
+    }
+
+    a:hover {
+      opacity: 1;
+    }
+
+    li {
+      // width: vw(65px);
+      // height: vw(65px);
+      position: relative;
+
+      img {
+        display: inline-block;
+        width: vw(26px);
+        height: vw(26px);
+      }
+
+      img.tooltip-menu {
+        position: absolute;
+        top: vw(75px);
+        left: 0;
+        width: auto;
+        height: 70%;
+      }
+
+      .tooltip-box {
+        position: absolute;
+        top: vw(35px);
+        left: 0;
+        padding: vw(10px) vw(20px);
+        border: vw(1px) solid $theme-border-color-white-11;
+        background-color: $theme-bg-color-1;
+        display: block;
+        border-radius: vw(5px);
+      }
+
+      .tooltip-box__text {
+        white-space: nowrap;
+        font-size: vw(21px);
+        @include fontMedium500;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.main-logo-navbar {
+  height: vw(45px);
+}
+.profile-nav-icon {
+  position: relative;
+
+  &:hover {
+    .tooltip-box {
+      opacity: 1;
+      z-index: 99;
+    }
+  }
+  .tooltip-box {
+    position: absolute;
+    top: vw(45px);
+    left: 0;
+    padding: vw(10px) vw(20px);
+    background-color: $theme-bg-color-1;
+    display: block;
+    border: vw(1px) solid $theme-border-color-white-11;
+    border-radius: vw(5px);
+    opacity: 0;
+  }
+
+  .tooltip-box__text {
+    white-space: nowrap;
+    font-size: vw(21px);
+    @include fontMedium500;
+    margin-bottom: 0;
+  }
+}
+
+.nav_icons.profile-nav-icon.topmenubar-menu-name {
+  @include theme-mixin-2;
+  backdrop-filter: none;
+  padding-top: vw(7px);
+  padding-right: vw(10px);
+  padding-bottom: vw(7px);
+  padding-left: vw(9px);
+  margin-right: vw(30px);
+
+  img {
+    margin-left: 0;
+  }
+}
+
+.nav_icons.profile-nav-icon.topmenubar-menu-name--active {
+  @include theme-mixin-blue-border-2;
+}

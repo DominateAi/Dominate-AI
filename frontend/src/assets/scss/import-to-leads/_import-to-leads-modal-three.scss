@@ -1,0 +1,59 @@
+.import-to-leads-modal-menu-later-text {
+  // color: #3a4759;
+  //padding-top: vw(5px);
+  line-height: vw(40px);
+}
+.import-modal-three-img-div {
+  width: vw(92px);
+  height: vw(92px);
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.pt-70 {
+  padding-top: vw(70px);
+}
+.import-leads-modal-three-bottom-text {
+  // color: #3a4759;
+  color: $theme-text-color-white-79;
+  i {
+    color: $theme-text-color-blue;
+  }
+}
+
+.lead-status-dropDown--import-to-leads {
+  width: vw(304px) !important;
+  margin-left: vw(32px);
+
+  .Dropdown-control {
+    // border-radius: vw(30px) !important;
+    height: vw(49px) !important;
+    // height: vw(84px) !important;
+    // background: linear-gradient(
+    //   180deg,
+    //   rgba(242, 243, 246, 1) 0%,
+    //   rgba(255, 255, 255, 1) 100%
+    // );
+    // box-shadow: 0 vw(3px) vw(6px) #80808028;
+    padding-left: vw(30px);
+    padding-top: vw(10px);
+    @include border-mixin-1;
+    color: $theme-text-color-1;
+  }
+
+  .Dropdown-option {
+    text-align: center;
+  }
+}
+.import-to-leads-modal-three-dropdown-label {
+  font-size: vw(16px);
+  line-height: vw(27px);
+  margin-bottom: vw(22px);
+  // color: rgba(48, 48, 48, 0.48);
+  margin-top: vw(45px);
+  @include fontBold700;
+  padding-left: vw(10px);
+  color: $theme-text-color-white-42;
+}

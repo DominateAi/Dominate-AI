@@ -1,0 +1,441 @@
+/* ===============================================================
+                    
+                        overview demo new
+                    
+================================================================== */
+
+// .overlay-new-walkthrough {
+//   position: absolute;
+//   top: 0;
+//   z-index: 11111;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(110, 110, 110, 0.53);
+//   // background-image: url("../../img/overview-demo/new-walkthrough-dashboard.png");
+//   // width: 100%;
+//   // height: 100%;
+//   // min-height: 100vh;
+//   // background-size: 100%;
+//   // background-position: top;
+
+//   padding-top: vw(140px);
+//   padding-left: vw(511px);
+// }
+
+.customOverlay.customOverlay--walkthrough {
+  background-color: rgba(110, 110, 110, 0.1);
+  transition: all 0.4s ease;
+}
+
+.customModal.customModal--walkthrough {
+  width: auto;
+  height: auto;
+  padding: 0;
+
+  .closeIconInModal::before,
+  .closeIconInModal::after {
+    background-color: $theme-bg-color-1;
+  }
+
+  &::before {
+    position: absolute;
+    left: vw(-18px);
+    top: vw(30px);
+    content: "";
+    width: vw(20px);
+    height: vw(20px);
+    border-top: vw(20px) solid transparent;
+    border-bottom: vw(20px) solid transparent;
+    border-right: vw(20px) solid #54349f;
+    border-radius: vw(3px);
+  }
+
+  &.customModal--walkthrough-dashboard-1 {
+    margin-top: vw(140px);
+    margin-left: vw(511px);
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &.customModal--walkthrough-reports-1 {
+    margin-top: vw(68px);
+    margin-left: vw(565px);
+  }
+
+  &.customModal--walkthrough-dashboard-2 {
+    margin-top: vw(68px);
+    margin-left: vw(288px);
+  }
+
+  &.customModal--walkthrough-dashboard-3 {
+    margin-top: vw(68px);
+    margin-left: vw(372px);
+  }
+
+  &.customModal--walkthrough-sales-centre-1 {
+    margin-top: vw(501px);
+    margin-left: vw(970px);
+
+    &::before {
+      left: vw(60px);
+      top: vw(-38px);
+      border-bottom: vw(20px) solid #54349f;
+      border-right: vw(20px) solid transparent;
+      border-left: vw(20px) solid transparent;
+    }
+  }
+
+  &.customModal--walkthrough-sales-centre-2 {
+    margin-top: vw(493px);
+    margin-left: vw(487px);
+  }
+
+  &.customModal--walkthrough-sales-centre-3 {
+    margin-top: vw(493px);
+    margin-left: vw(772px);
+  }
+
+  &.customModal--walkthrough-sales-centre-4 {
+    margin-top: vw(493px);
+    margin-left: vw(1058px);
+    // margin-left: vw(59px);
+
+    // &::before {
+    //   left: unset;
+    //   right: vw(-38px);
+    //   border-bottom: vw(20px) solid transparent;
+    //   border-right: vw(20px) solid transparent;
+    //   border-left: vw(20px) solid #54349f;
+    // }
+  }
+
+  &.customModal--walkthrough-finish {
+    margin-top: vw(150px);
+    margin-left: auto;
+    margin-right: auto;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &.customModal--walkthrough-accounts-1 {
+    margin-top: vw(177px);
+    margin-left: vw(660px);
+  }
+
+  &.customModal--walkthrough-accounts-2 {
+    margin-top: vw(572px);
+    margin-left: vw(670px);
+  }
+
+  &.customModal--walkthrough-accounts-3 {
+    margin-top: vw(195px);
+    margin-left: vw(790px);
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &.customModal--walkthrough-leads-1 {
+    margin-top: vw(177px);
+    margin-left: vw(600px);
+  }
+
+  &.customModal--walkthrough-leads-2 {
+    margin-top: vw(320px);
+    margin-left: vw(712px);
+
+    &::before {
+      left: vw(60px);
+      top: unset;
+      bottom: vw(-38px);
+      border-top: vw(20px) solid #54349f;
+      border-right: vw(20px) solid transparent;
+      border-left: vw(20px) solid transparent;
+    }
+  }
+
+  &.customModal--walkthrough-leads-3 {
+    margin-top: vw(268px);
+    margin-left: vw(908px);
+  }
+
+  &.customModal--walkthrough-deal-pipelines-1 {
+    margin-top: vw(177px);
+    margin-left: vw(760px);
+  }
+
+  &.customModal--walkthrough-deal-pipelines-2 {
+    margin-top: vw(545px);
+    margin-left: vw(430px);
+  }
+
+  &.customModal--walkthrough-deal-pipelines-3 {
+    margin-top: vw(195px);
+    margin-left: vw(790px);
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &.customModal--walkthrough-command-centre-1 {
+    margin-top: vw(345px);
+    margin-left: vw(430px);
+
+    &::before {
+      left: vw(60px);
+      top: vw(-38px);
+      border-bottom: vw(20px) solid #54349f;
+      border-right: vw(20px) solid transparent;
+      border-left: vw(20px) solid transparent;
+    }
+  }
+}
+
+.new-walkthrough {
+  color: $color-white;
+  width: vw(653px);
+  padding: vw(56px) vw(48px) vw(44px) vw(50px);
+  height: auto;
+  border-radius: vw(10px);
+  background-color: rgba(84, 52, 159, 1);
+  // box-shadow: 0 vw(10px) vw(30px) rgba(147, 147, 147, 0.16);
+  position: relative;
+}
+
+.new-walkthrough__button-white {
+  padding: vw(15px) vw(37px);
+  color: $theme-text-color-blue-to-white;
+  border-radius: vw(25px);
+  background-color: $theme-bg-color-1;
+  // box-shadow: 0 vw(3px) vw(6px) rgba(128, 128, 128, 0.16);
+  border: 0;
+}
+
+.new-walkthrough__button-white-border {
+  color: $color-white;
+  background-color: transparent;
+  border-radius: vw(35px);
+  border: vw(1px) solid #ffffff;
+  // box-shadow: 0 vw(3px) vw(6px) rgba(128, 128, 128, 0.16);
+  font-size: vw(17px);
+  @include fontSemiBold600;
+  line-height: vw(27px);
+  padding: vw(13px) vw(37px);
+  margin-right: vw(30px);
+}
+
+.skip-walkthrough-text {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: vw(14px);
+  @include fontMedium500;
+  line-height: vw(30px);
+  margin-bottom: 0;
+
+  .fa {
+    font-size: vw(19px);
+    margin-left: vw(5px);
+    vertical-align: middle;
+  }
+}
+
+.new-walkthrough__title {
+  text-shadow: 0 vw(3px) vw(6px) rgba(0, 0, 0, 0.16);
+}
+
+.new-walkthrough__desc {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: vw(19px);
+  @include fontRegular400;
+  line-height: vw(29px);
+  margin-bottom: vw(25px);
+}
+
+.new-walkthrough__click-here {
+  color: rgba(255, 255, 255, 1);
+  font-size: vw(19px);
+  @include fontSemiBold600;
+  line-height: vw(29px);
+  font-style: italic;
+  margin-bottom: vw(25px);
+}
+
+.new-walkthrough__see-through-block {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.new-walkthrough-menu-active {
+  li {
+    border: vw(1px) solid #54349f;
+    padding: vw(3px);
+    border-radius: vw(5px);
+  }
+}
+
+.new-walkthrough-sales-centre-active {
+  border: vw(1px) solid #54349f;
+  padding: vw(13px);
+  border-radius: vw(39px);
+  width: vw(900px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.new-walkthrough-sales-centre-menu-active,
+.new-walkthrough-accounts-card-active {
+  border: vw(1px) solid #54349f;
+  border-radius: vw(5px);
+}
+
+.new-walkthrough-accounts-add-btn-active {
+  border: vw(1px) solid #54349f;
+  border-radius: vw(5px);
+  padding: vw(10px);
+}
+
+.new-walkthrough-leads-tabs-active {
+  border: vw(1px) solid #54349f;
+  margin-right: 54%;
+  border-radius: vw(5px);
+  padding: vw(5px);
+}
+
+.new-walkthrough-command-centre-tabs-active {
+  .rwt__tablist {
+    border: vw(1px) solid #54349f;
+    margin-right: 42%;
+    border-radius: vw(5px);
+    padding: vw(5px);
+  }
+}
+
+// dashboard 1
+.new-walkthrough--dashboard-1 {
+  width: vw(917px);
+}
+
+.new-walkthrough--dashboard-1__img {
+  width: vw(319px);
+  height: auto;
+  margin-top: vw(53px);
+}
+
+// dashboard 2
+.new-walkthrough--dashboard-2__img {
+  width: vw(113px);
+  height: auto;
+}
+
+// dashboard 3
+.new-walkthrough--dashboard-3__img {
+  width: vw(97px);
+  height: auto;
+  margin-bottom: vw(10px);
+}
+
+// sales centre 1
+.new-walkthrough--sales-centre-1__img {
+  width: vw(184px);
+  height: auto;
+}
+
+// sales centre 2
+.new-walkthrough--sales-centre-2__img {
+  width: vw(97px);
+  height: auto;
+}
+
+// sales centre 3
+.new-walkthrough--sales-centre-3__img {
+  width: vw(97px);
+  height: auto;
+}
+
+// sales centre 4
+.new-walkthrough--sales-centre-4__img {
+  width: vw(117px);
+  height: auto;
+}
+
+// finish
+.new-walkthrough--finish {
+  width: vw(1260px);
+  padding: vw(80px) vw(50px) vw(60px) vw(50px);
+  text-align: center;
+}
+.new-walkthrough--finish__img-block {
+  width: vw(475px);
+  height: vw(327px);
+  margin: 0 auto;
+  margin-bottom: vw(41px);
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.new-walkthrough__desc--finish {
+  width: vw(518px);
+  margin: vw(16px) auto vw(41px) auto;
+}
+
+.new-walkthrough__button-white-border--finish {
+  font-size: vw(24px);
+  line-height: vw(35px);
+}
+
+// accounts 1
+.new-walkthrough--accounts-1__img {
+  width: vw(76px);
+  height: auto;
+}
+
+// accounts 2
+.new-walkthrough--accounts-2__img {
+  width: vw(96px);
+  height: auto;
+}
+
+// leads 1
+.new-walkthrough--leads-1__img {
+  width: vw(68px);
+  height: auto;
+}
+
+// leads 2
+.new-walkthrough--leads-2__img {
+  width: vw(228px);
+  height: auto;
+}
+
+// leads 2
+.new-walkthrough--leads-3__img {
+  width: vw(174px);
+  height: auto;
+}
+
+// deal pipelines 1
+.new-walkthrough--deal-pipelines-1__img {
+  width: vw(90px);
+  height: auto;
+}
+
+// deal pipelines 2
+.new-walkthrough--deal-pipelines-2__img {
+  width: vw(98px);
+  height: auto;
+}

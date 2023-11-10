@@ -1,0 +1,203 @@
+.sales-centre-scrollspy__main-div {
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+  // background-image: url("../../img/background-new-design/new-sales-center-bg.svg");
+  background-color: $theme-bg-color-transparent;
+}
+
+.sales-centre-scrollspy__page-title-1 {
+  font-size: vw(24px);
+  line-height: vw(36px);
+  color: $theme-text-color-blue-to-white;
+  @include fontMedium500;
+  margin-bottom: vw(8px);
+}
+
+.sales-centre-scrollspy__page-title-2 {
+  font-size: vw(19px);
+  @include fontMedium500;
+  line-height: vw(29px);
+  margin-bottom: vw(40px);
+  color: $theme-text-dark-gray-to-white;
+
+  border-top: vw(2px) solid $theme-border-color-grey-1;
+  width: 90%;
+  padding-top: vw(33px);
+  margin-top: vw(20px);
+}
+
+.sales-centre-scrollspy__menus-fixed {
+  padding-top: vw(37px);
+  text-align: left;
+  padding-left: vw(75px);
+}
+
+.sales-centre-scrollspy__menus {
+  width: max-content;
+  margin: 0 auto;
+  border-bottom: vw(1px) solid $theme-border-color-white-06;
+  margin-bottom: vw(50px);
+  margin-left: 0;
+
+  ul {
+    margin-bottom: 0;
+    li {
+      display: inline-block;
+      padding: vw(12px) vw(35px);
+      margin-right: vw(30px);
+    }
+
+    li.is-current {
+      background-color: transparent;
+      border-radius: vw(25px);
+      position: relative;
+      //new css
+      // filter: drop-shadow(0px 10px 30px rgba(147, 147, 147, 0.161));
+      z-index: 99;
+
+      &::after {
+        content: "";
+        width: 60%;
+        position: absolute;
+        left: 20%;
+        height: vw(5px);
+        border-bottom-left-radius: vw(15px);
+        border-bottom-right-radius: vw(15px);
+        bottom: vw(-5px);
+        // filter: drop-shadow(0px 10px 30px rgba(147, 147, 147, 0.161));
+        background: $theme-text-color-blue;
+        z-index: -1;
+      }
+
+      .sales-centre-scrollspy__menus-link {
+        color: $theme-text-color-blue !important;
+      }
+    }
+  }
+}
+
+.sales-centre-scrollspy__menus-link {
+  color: $theme-text-color-white-23 !important;
+}
+
+.sales-centre-scrollspy__sections {
+  height: vw(500px) !important;
+  overflow: auto;
+  margin-right: vw(73px);
+
+  section {
+    margin-left: vw(100px);
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .sales-centre-scrollspy__sections-blue-text-div {
+    // padding-top: vw(30px);
+    // width: vw(70px);
+    // flex-shrink: 0;
+    display: none;
+  }
+
+  // .sales-centre-scrollspy__sections-blue-text {
+  //   font-size: vw(43px);
+  //   line-height: vw(43px);
+  //   color: $theme-text-color-blue-to-white;
+  //   opacity: 0.43;
+  //   text-transform: uppercase;
+  //   @include fontExtraBold800;
+  //   transform: rotate(270deg);
+  // }
+
+  .sales-centre-scrollspy__section-cards-div {
+    padding-top: vw(30px);
+    padding-bottom: vw(60px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    // margin-left: vw(50px);
+    margin-left: 0;
+  }
+}
+
+// card
+.sales-centre-scrollspy__card-link {
+  margin-bottom: vw(27px);
+  margin-right: vw(30px);
+}
+
+.sales-centre-scrollspy__card-link {
+  display: block;
+  padding: vw(1px);
+  padding-top: vw(38px);
+  position: relative;
+  width: vw(270px);
+  height: vw(270px);
+  @include theme-mixin-1;
+  border: vw(1px) solid rgba(229, 229, 229, 0.19);
+  border-radius: vw(25px);
+}
+
+.sales-centre-scrollspy__card-img-div {
+  overflow: auto;
+  margin: 0 auto;
+  margin-bottom: vw(34px);
+  text-align: center;
+
+  //new css
+  width: vw(119px);
+  height: vw(119px);
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.sales-centre-scrollspy__card-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: $theme-bg-color-transparent;
+  width: 100%;
+  height: vw(77px);
+  overflow: auto;
+  text-align: center;
+  margin: auto;
+  border-radius: vw(16px);
+  padding-left: vw(15px);
+  padding-right: vw(15px);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: $theme-text-color-black-to-white-1;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 80%;
+    height: vw(2px);
+    background: linear-gradient(
+      90deg,
+      $theme-text-color-blue 0%,
+      #23253780 100%
+    );
+    position: absolute;
+    top: 0;
+  }
+}
+
+.sales_center_mailbox_card:hover {
+  cursor: pointer;
+}
+.sales-center-dominate-logo {
+  width: vw(59px);
+  height: auto;
+  margin-bottom: vw(15px);
+}

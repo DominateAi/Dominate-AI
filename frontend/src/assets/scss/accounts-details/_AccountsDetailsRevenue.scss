@@ -1,0 +1,142 @@
+.accounts-revenue-card-block {
+  width: vw(768px);
+  height: auto;
+  border-radius: vw(15px);
+  // background: #ffffff;
+  // box-shadow: 0 0 vw(25px) #00000017;
+  padding: vw(32px) 0;
+  padding-right: vw(35px);
+  @include theme-mixin-2;
+
+  table td,
+  .table thead th {
+    border-top: 0;
+    // border-bottom: vw(1px) solid rgba(48, 48, 48, 0.2);
+    border-bottom: vw(1px) solid $theme-border-color-white-2;
+  }
+  table th:nth-child(1) {
+    padding-left: vw(80px);
+  }
+  table td:nth-child(4) {
+    @include fontBold700;
+  }
+  table th:nth-child(1),
+  table td:nth-child(1) {
+    width: vw(230px);
+  }
+
+  table th:nth-child(4),
+  table td:nth-child(4) {
+    width: vw(150px);
+  }
+  table th:nth-child(3),
+  table td:nth-child(3),
+  table th:nth-child(2),
+  table td:nth-child(2) {
+    width: vw(175px);
+  }
+
+  table th {
+    font-size: vw(14px);
+    line-height: vw(54px);
+    vertical-align: middle;
+    text-transform: uppercase;
+    padding: vw(20px);
+    @include fontBold700;
+    // color: $theme-text-color-white-79;
+    border-top: 0;
+    color: $theme-text-color-white-42;
+  }
+  .table_icon {
+    font-size: vw(18px);
+    line-height: vw(24px);
+    padding-right: vw(22px);
+  }
+  table td {
+    padding: vw(20px) vw(23px) !important;
+    @include fontRegular400;
+    font-size: vw(16px);
+    line-height: vw(25px);
+    vertical-align: middle;
+    border-top: 0;
+    color: $theme-text-color-1;
+  }
+  .accounts-revenue-table-container {
+    height: vw(250px);
+    width: auto;
+    overflow: auto;
+  }
+}
+.accounts-revenue-card-title {
+  text-align: center;
+  font-size: vw(20px);
+  line-height: vw(25px);
+  color: $theme-text-color-gray-to-white;
+  @include fontBold700;
+}
+
+.accounts-revenue-card-block--graph {
+  width: vw(972px);
+  max-width: vw(972px);
+  margin-left: vw(20px);
+}
+.accounts-revenue-count-card-block {
+  width: vw(582px);
+  height: auto;
+  padding: vw(28px) vw(43px) vw(23px) vw(41px);
+  color: $color-white;
+  // border-radius: vw(20px);
+  // box-shadow: 0 0 vw(25px) rgba(0, 0, 0, 0.09);
+  // background: rgba(101, 78, 163, 1);
+  // background: linear-gradient(
+  //   180deg,
+  //   rgba(101, 78, 163, 1) 0%,
+  //   rgba(75, 108, 183, 1) 50%,
+  //   rgba(234, 175, 200, 1) 100%
+  // );
+  position: relative;
+  @include theme-mixin-1;
+  @include border-mixin-1;
+  border-radius: vw(18px);
+
+  // &::after {
+  //   position: absolute;
+  //   background-image: url("../../img/accounts/revenue-card-lines.svg");
+  //   width: vw(171px);
+  //   height: vw(41px);
+  //   background-size: cover;
+  //   content: "";
+  //   top: vw(35px);
+  //   right: vw(43px);
+  // }
+}
+.accounts-revenue-count-card-block-title {
+  font-size: vw(48px);
+  line-height: vw(53px);
+  @include fontBold700;
+  margin-bottom: vw(40px);
+  width: vw(300px);
+  word-break: break-all;
+}
+.accounts-revenue-count-card-block-text {
+  font-size: vw(17px);
+  line-height: vw(21px);
+  @include fontSemiBold600;
+  margin-bottom: 0;
+}
+.accounts-revenue-count-card-block--2 {
+  // background: linear-gradient(
+  //   92deg,
+  //   rgba(7, 163, 178, 1) 0%,
+  //   rgba(217, 236, 199, 1) 100%
+  // );
+  margin-left: vw(25px);
+}
+.accounts-revenue-count-card-block--3 {
+  // background: linear-gradient(
+  //   92deg,
+  //   rgba(180, 144, 202, 1) 0%,
+  //   rgba(94, 231, 223, 1) 100%
+  // );
+  margin-left: vw(25px);
+}

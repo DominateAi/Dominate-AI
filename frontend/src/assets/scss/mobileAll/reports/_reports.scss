@@ -1,0 +1,123 @@
+/* ===============================================================
+                    
+                        admin reports
+                    
+================================================================== */
+
+.admin-report-block {
+  padding: mvwDivide(30px) mvwDivide(41px) mvwDivide(50px) mvwDivide(41px);
+}
+
+.admin-reports-folds {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.admin-reports-folds--new {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.admin-reports-fold-2,
+.admin-reports-fold-3__1,
+.admin-reports-fold-3__2 {
+  width: 100%;
+  height: auto;
+
+  background: #ffffff;
+  // box-shadow: 0 mvwDivide(3px) mvwDivide(50px) rgba(0, 0, 0, 0.16);
+  border-radius: mvwDivide(15px);
+  margin-right: mvwDivide(30px);
+  margin-bottom: mvwDivide(30px);
+  overflow: auto;
+}
+
+.admin-reports-fold-2 {
+  margin-right: mvwDivide(30px);
+  padding: mvwDivide(25px) mvwDivide(18px) mvwDivide(55px) mvwDivide(37px);
+}
+
+.admin-reports-fold-3__1 {
+  padding: mvwDivide(25px) mvwDivide(18px) mvwDivide(55px) mvwDivide(37px);
+}
+
+.admin-reports-fold-3__secondBlockTitle {
+  margin: mvwDivide(25px) mvwDivide(10px) mvwDivide(43px) mvwDivide(55px);
+}
+
+.activityMenuTabs--adminReport {
+  .rwt__tablist {
+    padding: 0 mvwDivide(10px);
+    box-shadow: 0 0 0;
+  }
+  .rwt__tablist button {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+  .rwt__tablist button[aria-selected="true"] {
+    font-size: mvwDivide(16px);
+    line-height: mvwDivide(25px);
+    @include fontSemiBold600;
+
+    &::after {
+      content: "";
+      width: mvwDivide(25px);
+      height: mvwDivide(3px);
+      background: #303030;
+      display: block;
+    }
+  }
+  .rwt__tablist button {
+    font-size: mvwDivide(16px);
+    line-height: mvwDivide(25px);
+  }
+
+  .rwt__tabpanel {
+    padding: mvwDivide(45px) mvwDivide(10px) 0 mvwDivide(10px);
+  }
+}
+
+.lead-status-dropDown--adminReportYear {
+  .Dropdown-placeholder {
+    font-size: mvwDivide(16px);
+    line-height: mvwDivide(25px);
+
+    @include fontSemiBold600;
+  }
+
+  .Dropdown-control {
+    padding-right: mvwDivide(35px);
+  }
+
+  .Dropdown-menu {
+    width: max-content;
+    max-height: mvwDivide(150px);
+    height: min-content;
+    margin-top: mvwDivide(10px);
+    padding: mvwDivide(10px);
+  }
+
+  .Dropdown-option {
+    font-size: mvwDivide(16px);
+    line-height: mvwDivide(25px);
+  }
+
+  .Dropdown-option.is-selected {
+    background-color: transparent;
+    @include fontSemiBold600;
+  }
+}
+
+.admin-report-p-30 {
+  padding: mvwDivide(30px);
+}
+
+.mt-56 {
+  margin-top: mvwDivide(56px);
+}

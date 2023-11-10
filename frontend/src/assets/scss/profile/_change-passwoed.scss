@@ -1,0 +1,87 @@
+.change-password-div {
+  padding: vw(61px) vw(83px) vw(75px) vw(40px);
+}
+.change-password-content-div {
+  // padding: vw(42px) 0 0 vw(50px);
+  padding: vw(42px) 0 0 0;
+  border-top: vw(2px) solid $theme-border-color-white-26;
+  margin-top: vw(30px);
+}
+.current-password-input {
+  width: 100%;
+  height: auto;
+  margin-bottom: vw(47px);
+  label {
+    color: $theme-text-color-white-42;
+  }
+  input {
+    // background: rgba(229, 229, 229, 0.22);
+    // border-radius: vw(45px);
+    width: 100%;
+    // height: vw(51px);
+    font-size: vw(14px);
+    line-height: vw(21px);
+    // color: #303030;
+    @include fontMedium500;
+    border: none;
+    margin-top: vw(31px);
+    padding: vw(7px) vw(38px);
+    @include theme-mixin-1;
+    border-radius: vw(25px);
+    height: vw(75px);
+
+    &::placeholder {
+      @include fontRegular400;
+    }
+  }
+}
+.change-password-forgot-text {
+  // color: #54349f;
+  color: $theme-text-color-blue-to-white;
+}
+.change-password-btn {
+  width: vw(279px);
+  height: vw(66px);
+  // background: $theme-bg-dark-blue-to-purple-1;
+  // border-radius: vw(50px);
+  font-size: vw(18px);
+  line-height: vw(66px);
+  // color: #ffffff;
+  @include fontSemiBold600;
+  padding: 0;
+  // border: none;
+  @include theme-mixin-blue-bg-with-color;
+}
+.current-password-input--new {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: nowrap;
+
+  input {
+    width: vw(715px);
+  }
+}
+.change-password-div--change {
+  padding-right: vw(68px);
+}
+/*====================================================================
+                   permission-warning-div
+=====================================================================*/
+.permission-warning-div {
+  padding: vw(46px) 0 vw(83px) 0;
+
+  .permission-warning-img {
+    width: vw(434px);
+    height: auto;
+    margin-bottom: vw(31px);
+  }
+  .permission-warning-text {
+    font-size: vw(19px);
+    line-height: vw(28px);
+    @include fontSemiBold600;
+    color: rgba(48, 48, 48, 0.48);
+    margin-bottom: 0;
+    padding-top: vw(10px);
+  }
+}

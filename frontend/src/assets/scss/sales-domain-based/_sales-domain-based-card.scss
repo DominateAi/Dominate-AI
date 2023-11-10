@@ -1,0 +1,59 @@
+.sales-domain-based_card {
+  width: vw(565px);
+  min-height: vw(306px);
+  padding: vw(35px) vw(32px) vw(33px) vw(32px);
+  // box-shadow: vw(1px) vw(3px) vw(20px) rgba(36, 65, 93, 0.3);
+  border-radius: vw(20px);
+  background: $theme-bg-color-white-03;
+  margin-right: vw(48px);
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 80%;
+    height: vw(8px);
+    background: rgb(246, 211, 101);
+    background: linear-gradient(
+      90deg,
+      rgba(246, 211, 101, 1) 0%,
+      rgba(253, 160, 133, 1) 100%
+    );
+    border-radius: vw(4px);
+    position: absolute;
+    bottom: vw(-4px);
+    left: 10%;
+  }
+}
+.sales-domain-based_img-block {
+  width: vw(102px);
+  height: vw(102px);
+  border-radius: 50%;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    // box-shadow: vw(1px) vw(3px) vw(20px) #24415d4d;
+  }
+}
+.sales-domain-based-title {
+  color: rgba(64, 64, 64, 1);
+}
+.sales-domain-based-date {
+  color: $theme-text-color-white-42;
+  padding: vw(5px) 0 vw(15px) 0;
+}
+.sales-domain-based-subtitle {
+  color: rgba(48, 48, 48, 0.48);
+  text-transform: uppercase;
+}
+.sales-domain-based-33-semibold {
+  font-size: vw(33px);
+  line-height: vw(50px);
+  @include fontSemiBold600;
+  color: rgba(0, 0, 0, 0.86);
+}
+.sales-domain-based-address {
+  padding-left: vw(15px);
+  color: rgba(48, 48, 48, 0.48);
+  text-transform: uppercase;
+}

@@ -1,0 +1,390 @@
+/* ===============================================================
+                    
+                    LOGIN AND SIGNUP CSS
+                    
+================================================================== */
+
+.dominate-login-logo {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: mvwDivide(55px);
+  img {
+    width: mvwDivide(290px);
+    cursor: pointer;
+  }
+}
+
+.copyright_text {
+  margin-top: vw(80px);
+  color: $theme-text-color-dark-blue-to-white-42;
+  font-size: vw(20px);
+  @include fontLight300;
+}
+
+.login-container {
+  padding: mvwDivide(50px);
+  padding-top: mvwDivide(80px);
+  min-height: 100vh;
+  background-color: rgba(249, 222, 190, 1);
+
+  background-image: url("../../../img/auth/login-signup-bg-mobile.svg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .signup-content-div {
+    margin-bottom: mvwDivide(30px);
+  }
+
+  /*====================
+      Content css
+    =====================*/
+
+  h3 {
+    font-size: mvwDivide(24px);
+    line-height: mvwDivide(35px);
+    @include fontSemiBold600;
+    margin-bottom: mvwDivide(15px);
+    color: $theme-text-color-1;
+  }
+  p {
+    font-size: mvwDivide(21px);
+    line-height: mvwDivide(31px);
+    @include fontRegular400;
+  }
+
+  .signup-content-div {
+    h3,
+    p {
+      color: $color-white;
+    }
+  }
+
+  /*====================
+      Tabs custom css
+    =====================*/
+
+  .rwt__tablist {
+    text-align: center;
+  }
+
+  .heading-divider {
+    width: mvwDivide(175px);
+    margin: 0 auto;
+    height: mvwDivide(23px);
+    margin-top: 0;
+    margin-bottom: mvwDivide(10px);
+    background-image: url("../../../img/auth/yellow-underline.svg");
+    background-position: top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    // hr {
+    //   width: 100%;
+    //   margin: 0;
+    //   margin-top: mvwDivide(25px);
+    //   border-top: 3px solid #303030;
+    // }
+  }
+
+  .rwt__tab[aria-selected="true"] {
+    position: relative;
+    color: $theme-text-color-1;
+    background-color: $theme-bg-color-1;
+    border-top-left-radius: mvwDivide(20px);
+    border-top-right-radius: mvwDivide(20px);
+  }
+  .rwt__tab {
+    color: $color-white;
+    background: transparent;
+    border: 0;
+    font-family: inherit;
+    font-size: inherit;
+    padding: mvwDivide(35px) mvwDivide(65px) 0 mvwDivide(65px);
+    // -webkit-transition: background 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+    // transition: background 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition: none;
+  }
+  .rwt__tablist:not([aria-orientation="vertical"])
+    .rwt__tab[aria-selected="true"]:after {
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    border-bottom: none;
+  }
+  .rwt__tab[aria-selected="true"]:after {
+    content: "";
+    position: absolute;
+  }
+
+  .rwt__tab {
+    width: 50%;
+    @include fontSemiBold600;
+    color: $color-white;
+    font-size: mvwDivide(35px);
+    line-height: mvwDivide(38px);
+  }
+  .rwt__tabpanel {
+    padding: mvwDivide(58px);
+    border-bottom-left-radius: mvwDivide(20px);
+    border-bottom-right-radius: mvwDivide(20px);
+    background-color: $theme-bg-color-1;
+    // box-shadow: 0 mvwDivide(3px) mvwDivide(12px) rgba(0, 0, 0, 0.41);
+  }
+
+  /*====================
+      Login Form Css
+    =====================*/
+  .login-form-fields {
+    margin-top: mvwDivide(50px);
+    button {
+      width: mvwDivide(246px);
+      height: mvwDivide(56px);
+      background-color: $theme-text-color-blue-to-white;
+      border-radius: mvwDivide(28px);
+      font-size: mvwDivide(32px);
+      @include fontRegular400;
+      border: none;
+      color: $color-white;
+    }
+    .back-btn {
+      background-color: transparent;
+      border: mvwDivide(2px) solid #54349f;
+      color: $theme-text-color-blue-to-white;
+    }
+    label {
+      font-size: mvwDivide(24px);
+      line-height: mvwDivide(35px);
+      color: $theme-text-color-1;
+      @include fontRegular400;
+      margin-bottom: mvwDivide(22px);
+    }
+    .form-group {
+      margin-bottom: mvwDivide(60px);
+    }
+    .form-control-new {
+      width: 100%;
+      border-radius: 0;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      // border-bottom: mvwDivide(3px) solid #303030;
+      border-bottom: mvwDivide(3px) solid rgba(84, 52, 159, 0.55);
+    }
+    .form-control-new:focus {
+      box-shadow: none;
+      color: $theme-text-color-blue-to-white;
+    }
+    input {
+      font-size: mvwDivide(32px);
+      @include fontMedium500;
+      color: $theme-text-color-blue-to-white;
+      // color: #495057;
+      margin: 0;
+      // border-bottom: vw(1px) solid #cccccc;
+      border-bottom: vw(1px) solid rgba(84, 52, 159, 0.55);
+      padding-right: mvw(25px);
+    }
+    ::placeholder {
+      font-size: mvwDivide(30px);
+      @include fontMedium500;
+      color: rgba(84, 52, 159, 0.55);
+    }
+    .workspace-name-div {
+      // display: flex;
+      position: relative;
+
+      .fa-eye,
+      .fa-eye-slash {
+        cursor: pointer;
+        position: absolute;
+        right: 2%;
+        top: 23%;
+      }
+      p {
+        font-size: mvwDivide(32px);
+        line-height: mvwDivide(56px);
+        color: $theme-text-color-1;
+        // color: #495057;
+        margin: 0;
+      }
+    }
+
+    /*========================
+        subscription fields css
+      ===========================*/
+    label {
+      color: $theme-text-color-1;
+      font-size: mvwDivide(30px);
+      line-height: mvwDivide(46px);
+      @include fontBold700;
+    }
+    .subscription {
+      // display: flex;
+
+      // justify-content: center;
+
+      .subscription-box {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 0 mvwDivide(50px);
+
+        border-radius: mvw(20px);
+        width: mvw(278px);
+        height: mvw(64px);
+        // background-color: $theme-bg-color-1;
+        // box-shadow: 0px 0px mvwDivide(20px) #80808017;
+        // border-radius: mvwDivide(20px);
+        background-color: transparent;
+        box-shadow: 0 0 0;
+        border-radius: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        margin-bottom: mvwDivide(20px);
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        // color: white;
+        color: #502eff;
+      }
+      .plan-content {
+        width: mvwDivide(140px);
+        margin-left: mvwDivide(40px);
+        margin-right: mvwDivide(40px);
+      }
+      .plan-price {
+        @include fontItalicPoppins;
+        font-size: mvwDivide(24px);
+        line-height: mvwDivide(35px);
+        margin-bottom: 0;
+      }
+      .plan-name {
+        @include fontBold700;
+        font-size: mvwDivide(24px);
+        line-height: mvwDivide(35px);
+        margin-bottom: 0;
+      }
+      .plan-users {
+        @include fontMediumItalicPoppins;
+        font-size: mvwDivide(15px);
+        line-height: mvwDivide(23px);
+        margin-bottom: 0;
+        // margin-top: mvwDivide(15px);
+      }
+    }
+
+    .subscription-box.active-plan {
+      // border: mvwDivide(3px) solid greenyellow;
+      background-image: url("../../../img/plans/active-plans-bg.svg");
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      position: relative;
+      color: $color-white;
+    }
+
+    .subscription-box:hover {
+      cursor: pointer;
+    }
+    .subscription-box-1:hover {
+      cursor: pointer;
+    }
+
+    /*==========================
+          progress bar css
+      ===========================*/
+
+    .form-progress-bar {
+      margin-bottom: mvwDivide(60px);
+      border-top: mvwDivide(3px) solid #81ff04;
+      transition-duration: 0.5s;
+      p {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        font-size: mvwDivide(16px);
+        line-height: mvwDivide(18px);
+        // color: $theme-text-color-1;
+        color: #495057;
+        @include fontRegular400;
+      }
+    }
+    .form-progress-1 {
+      width: 16.66%;
+    }
+    .form-progress-2 {
+      width: 33.32%;
+    }
+    .form-progress-3 {
+      width: 49.98%;
+    }
+    .form-progress-4 {
+      width: 66.64%;
+    }
+    .form-progress-5 {
+      width: 83.3%;
+    }
+    .form-progress-6 {
+      width: 100%;
+    }
+  }
+}
+
+.subscription-box__imgBlock {
+  margin: 0 auto;
+}
+
+// new design
+
+.login-signup-tabs-container {
+  input {
+    background-color: transparent;
+    color: $theme-text-color-blue-to-white;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    -webkit-text-fill-color: $theme-text-color-blue-to-white;
+    border: vw(1px) solid inherit;
+    -webkit-box-shadow: mvwDivide(1000px) transparent inset;
+    transition: background-color 10000s ease-in-out 0s;
+  }
+
+  .rwt__tab {
+    color: rgba(69, 56, 144, 0.7);
+  }
+
+  .rwt__tabs {
+    width: mvwDivide(650px);
+    margin: 0 auto;
+  }
+
+  .rwt__tab[aria-selected="true"],
+  .rwt__tabpanel {
+    background-color: rgba(249, 222, 190, 1);
+  }
+
+  .rwt__tab[aria-selected="true"] {
+    color: rgba(69, 56, 144, 1);
+    // box-shadow: 0 mvwDivide(-5px) mvwDivide(15px) rgba(189, 189, 189, 0.22);
+    margin-bottom: 0;
+  }
+
+  .rwt__tabpanel {
+    // box-shadow: 0 mvwDivide(5px) mvwDivide(15px) rgba(189, 189, 189, 0.5);
+  }
+}
+
+.login-new-desc-text {
+  color: rgba(149, 120, 177, 0.65);
+  font-size: mvwDivide(32px) !important;
+  line-height: mvwDivide(43px) !important;
+  @include fontSemiBold600;
+  width: mvwDivide(302px);
+  margin: 0 auto;
+  text-align: center;
+}

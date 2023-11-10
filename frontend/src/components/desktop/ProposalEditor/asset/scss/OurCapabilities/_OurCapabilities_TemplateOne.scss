@@ -1,0 +1,61 @@
+.our_capabilities_template_one {
+  //flex-direction: column;
+  .our_capabilities_template_one__left__line {
+    width: vw(55px);
+    height: 100%;
+    border-radius: vw(10px) 0 0 vw(10px);
+  }
+  .our_capabilities_template_one__container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+  }
+  .our_capabilities_template_one__top {
+    display: flex;
+    height: 20%;
+    width: 100%;
+    align-items: center;
+    padding-left: vw(50px);
+
+    .our_capabilities_template_one__top_black_dot {
+      display: block;
+      height: vw(22px);
+      width: vw(22px);
+    }
+
+    .our_capabilities_template_one__top_headline {
+      display: flex;
+      height: vw(79px);
+      width: 70%;
+      align-items: center;
+    }
+  }
+  .our_capabilities_template_one__bottom {
+    display: flex;
+    height: 80%;
+    width: 100%;
+    align-items: flex-start;
+    padding-top: vw(50px);
+    justify-content: center;
+
+    .our_capabilities_template_one__bottom_blocks {
+      display: flex;
+      height: vw(350px);
+      width: 23%;
+      flex-direction: column;
+      //justify-content: space-between;
+      .our_capabilities_template_one_icon_block {
+        display: flex;
+        height: 50%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+      .our_capabilities_template_one_text_block {
+        display: flex;
+        height: 25%;
+        width: 100%;
+      }
+    }
+  }
+}

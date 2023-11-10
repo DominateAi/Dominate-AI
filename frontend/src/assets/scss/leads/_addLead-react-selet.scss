@@ -1,0 +1,79 @@
+/* ===============================================================
+                    
+                        react select add lead
+                    
+================================================================== */
+
+// .react-select-add-lead-form-container {
+//   width: 75%;
+// }
+
+.react-select-add-lead-form {
+  &__control {
+    min-height: vw(60px) !important;
+    // background-color: $theme-dropdown-bg-color !important;
+    background-color: $theme-bg-color-transparent !important;
+    // border: vw(2px) solid #cccccc !important;
+    border: none !important;
+    box-shadow: 0 0 0 !important;
+  }
+
+  &__indicator-separator {
+    display: none !important;
+  }
+
+  &__indicator {
+    color: $theme-text-color-black-to-white-1 !important;
+    padding: vw(15px) !important;
+
+    svg {
+      width: vw(25px) !important;
+      height: vw(25px) !important;
+    }
+  }
+
+  &__control--is-focused {
+    box-shadow: 1px rgba(8, 57, 217, 0.3) !important;
+    box-shadow: 1px #cccccc !important;
+  }
+
+  &__single-value {
+    color: $theme-text-color-black-to-white-1 !important;
+    font-size: vw(24px) !important;
+    @include fontSemiBold600;
+    line-height: vw(35px) !important;
+  }
+
+  &__option,
+  &__option--is-focused,
+  &__option--is-selected {
+    font-size: vw(21px) !important;
+    @include fontMedium500;
+    line-height: vw(31px) !important;
+  }
+
+  &__option {
+    border-bottom: vw(1px) solid $theme-border-color-white-21 !important;
+    padding: vw(15px) vw(20px) !important;
+    background-color: transparent !important;
+  }
+
+  &__menu-notice--no-options,
+  &__option:hover,
+  // &__option--is-focused,
+  &__option--is-selected {
+    color: $color-white !important;
+    background-color: $theme-dropdown-hover-bg !important;
+  }
+
+  &__menu {
+    margin-top: vw(5px) !important;
+    // box-shadow: vw(1px) vw(3px) vw(6px) rgba(0, 0, 0, 0.16) !important;
+    background-color: $theme-dropdown-bg-color !important;
+
+    .react-select-elements__option:last-child,
+    .react-select-follow-up-form__option:last-child {
+      border-bottom: 0;
+    }
+  }
+}

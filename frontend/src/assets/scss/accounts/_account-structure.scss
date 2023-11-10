@@ -1,0 +1,183 @@
+.account-cards-container {
+  margin: vw(53px) vw(3px) vw(71px) vw(70px);
+}
+
+.leads-new-details-timeline-block--account-timeline-block {
+  width: vw(1167px);
+  margin-top: vw(45px);
+
+  .leads-timeline-left-block,
+  .leads-timeline-right-block {
+    width: vw(527px);
+    height: vw(197px);
+    padding: vw(22px) vw(27px) vw(15px) vw(27px);
+    @include theme-mixin-1;
+    @include border-mixin-1;
+    border-radius: vw(18px);
+  }
+
+  .leads-timeline-left-block {
+    border-radius: vw(9px) 0 vw(9px) vw(9px);
+  }
+
+  .leads-timeline-right-block {
+    border-radius: 0 vw(9px) vw(9px) vw(9px);
+  }
+}
+
+.account-detail-timeline-card__text1 {
+  font-style: italic;
+}
+
+.account-detail-timeline-card__ttitle {
+  color: $theme-text-color-white-42;
+}
+.account-detail-timeline-card__ttitle,
+.account-detail-timeline-card__text1 {
+  padding-bottom: vw(11px);
+}
+.account-detail-timeline-card__text2,
+.account-detail-timeline-card__text3,
+.account-detail-timeline-card__text4 {
+  // color: #707070;
+  padding-bottom: vw(11px);
+}
+
+.account-detail-timeline-card__text4,
+.account-detail-timeline-card__text2 {
+  color: $theme-text-color-1;
+}
+.account-detail-timeline-card__text3 {
+  color: $theme-text-color-white-42;
+}
+
+// select leads
+.add-project-member-modal-list-overflow {
+  height: vw(200px);
+  overflow: auto;
+}
+
+.create-project-add-member-img-text-block,
+.create-project-add-member-img-block {
+  width: vw(133px);
+}
+
+.create-project-add-member-img-text-block {
+  word-break: break-all;
+  text-align: center;
+  margin-right: vw(30px);
+  padding-top: vw(10px);
+}
+
+.create-project-add-member-img-block {
+  text-align: center;
+  height: vw(136px);
+  border-radius: 100%;
+  // border: vw(1px) dashed #ffffff;
+
+  margin-bottom: vw(10px);
+  position: relative;
+
+  &__imgMember {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+  }
+
+  &__remove {
+    cursor: pointer;
+    font-size: vw(18px);
+    position: absolute;
+    right: vw(5px);
+    top: vw(10px);
+    color: $color-white;
+    // background-color: rgba(252, 76, 71, 1);
+    padding: vw(4px) vw(6px) vw(5px) vw(7px);
+    border-radius: 100%;
+    background-color: $theme-red-bg-1;
+  }
+}
+
+.create-project-add-member-img-block__text {
+  font-size: vw(16px);
+  line-height: vw(25px);
+  @include fontSemiBold600;
+  // color: #707070;
+  color: $color-white;
+  text-transform: capitalize;
+  // color: $theme-text-color-1;
+}
+
+.add-account-location-details {
+  // label.font-24-semibold {
+  //   // font-size: vw(18px);
+  //   // line-height: vw(27px);
+  //   background: $theme-bg-color-white-03;
+  // }
+
+  .add-lead-input-field {
+    margin-top: vw(20px);
+  }
+
+  .add-account-location-details__title {
+    margin-top: vw(20px);
+    // margin-left: vw(68px);
+    margin-bottom: vw(40px);
+  }
+}
+
+.add-member-select-display-container {
+  //   margin-left: vw(65px);
+  .font-24-semibold {
+    color: $theme-text-color-white-42;
+  }
+}
+
+// edit account
+.edit-account-content-row {
+  .add-account-location-details .add-account-location-details__title {
+    margin-top: 0;
+    background-color: $theme-bg-color-1;
+  }
+  .input_field_div {
+    width: 100%;
+  }
+  .add-lead-input-field {
+    margin-top: vw(20px);
+    width: 86%;
+  }
+
+  .add-member-select-display-container__error {
+    margin-left: 0;
+  }
+}
+
+// btn
+.new-save-btn-blue {
+  padding-right: vw(41px);
+  padding-left: vw(41px);
+  font-size: vw(24px);
+  @include fontSemiBold600;
+  background-color: #7358fd;
+  color: $color-white;
+  border: none;
+  @include theme-button-height-and-radius-2;
+}
+
+.new-save-btn-blue-skip {
+  padding-right: vw(10px);
+  padding-left: vw(10px);
+  font-size: vw(24px);
+  @include fontSemiBold600;
+  // border-color: #7358fd;
+  color: #7358fd;
+  border: vw(1px) solid #7358fd;
+  border-radius: vw(27px);
+  margin-right: vw(30px);
+  border-collapse: collapse;
+  background-color: transparent;
+  @include theme-button-height-and-radius-2;
+}
+.edit-account-save-btn-div {
+  padding-right: vw(80px);
+}

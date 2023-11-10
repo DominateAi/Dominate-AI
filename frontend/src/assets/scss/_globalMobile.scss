@@ -1,0 +1,285 @@
+/* ===============================================================
+                    
+                    Global reset and css
+
+================================================================== */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover {
+  text-decoration: inherit !important;
+  color: inherit !important;
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 0 !important;
+}
+
+// button,
+// .outline-link,
+// .form-button-outline {
+//   &:focus {
+//     outline: mvwDivide(5px) auto #502eff !important;
+//   }
+// }
+
+.outline-0 {
+  outline: 0;
+}
+
+// // .leads-title-block-btn-red-bg,
+// .leads-title-block-btn-red-bg--notes,
+// .leads-title-block-btn-red-bg--activity {
+//   // &:focus {
+//   //   outline: mvwDivide(5px) auto #ffa5a5 !important;
+//   // }
+//   button {
+//     // opacity: 0.9;
+
+//     &:focus {
+//       // opacity: 1 !important;
+//       border-width: mvwDivide(3.7px);
+//     }
+//   }
+// }
+
+.btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0;
+}
+
+// // specific buttons that want to be highlight
+// .add-lead-form-field-block,
+// .add-lead-modal-container--followUp,
+// .login-form-fields,
+// .button-section,
+// .quatation-from-section,
+// .workspace-login-page-main-conatiner,
+// .ac-files-buttons-container,
+// .ac-email-modal-btns-block,
+// .ac-files-modal-container {
+//   button {
+//     // opacity: 0.8;
+
+//     &:focus {
+//       // opacity: 1 !important;
+//       border-width: mvwDivide(3.7px);
+//     }
+//   }
+//   // button:focus {
+//   //   outline: mvwDivide(5px) auto #502eff !important;
+//   // }
+// }
+
+.rc-dropdown-menu > .rc-dropdown-menu-item-selected:after {
+  display: none;
+}
+
+// to keep width 100% when modal opens
+html {
+  width: 100% !important;
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+  font-size: mvwDivide(16px) !important;
+  color: $theme-text-color-1 !important;
+  font-family: $font-family-regular-poppins !important;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* autocomplete chrome */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  border: vw(1px) solid inherit;
+  -webkit-text-fill-color: inherit;
+  -webkit-box-shadow: vw(1000px) transparent inset;
+  transition: background-color 0.5s ease-in-out 0s;
+}
+
+// scrollbar chrome
+*::-webkit-scrollbar {
+  height: mvwDivide(11px);
+  width: mvwDivide(11px);
+}
+
+*::-webkit-scrollbar-track {
+  background: #d9d1f9;
+  border-radius: mvwDivide(35px);
+  margin: mvwDivide(10px);
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: mvwDivide(30px);
+  background: $theme-scrollbar-thumb-bg;
+
+  &:hover {
+    background: $theme-scrollbar-thumb-bg;
+  }
+}
+
+body {
+  &::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+}
+
+*::placeholder {
+  color: #848484;
+  @include fontRegular400;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*===========================
+  Functional components css 
+=============================*/
+
+.alphabates-filter-container {
+  padding-left: mvwDivide(141px);
+  padding-right: mvwDivide(141px);
+
+  .filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .title {
+      display: flex;
+      margin-bottom: mvw(10px);
+    }
+
+    .add-form-btn {
+      background: $theme-bg-dark-blue-to-purple-1;
+      border-radius: mvwDivide(38px);
+      width: mvwDivide(218px);
+      font-size: mvwDivide(21px);
+      height: mvwDivide(54px);
+      text-align: center;
+      color: white;
+      border-collapse: collapse;
+      border: none;
+      margin-left: mvwDivide(40px);
+    }
+  }
+
+  .alphabates-filter {
+    display: flex;
+    display: none;
+    justify-content: space-between;
+    margin-top: mvwDivide(27px);
+    font-size: mvwDivide(24px);
+    line-height: mvwDivide(35px);
+    color: $theme-text-color-1;
+    width: 100%;
+  }
+}
+
+.edit-img,
+.edit-img-employee,
+.edit-img-customer,
+.edit-img-employee-column {
+  cursor: pointer;
+}
+
+.opacity-0 {
+  opacity: 0;
+  user-select: none;
+}

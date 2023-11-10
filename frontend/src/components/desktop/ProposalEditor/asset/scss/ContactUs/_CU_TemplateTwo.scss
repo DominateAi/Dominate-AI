@@ -1,0 +1,49 @@
+.contact_us_template_two {
+  display: flex;
+  align-items: flex-start;
+  padding: vw(100px) vw(50px) vw(50px) vw(50px);
+  .contact_us_template_two_left {
+    width: 55%;
+    padding: vw(30px);
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+  .contact_us_template_two_right {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    padding: vw(20px) vw(30px) vw(30px) vw(30px);
+  }
+  .contact_us_template_two_right_top {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    margin-bottom: vw(12px);
+  }
+  .contact_us_template_two_headline {
+    width: 80%;
+    height: vw(79px);
+    display: flex;
+    align-items: center;
+  }
+  .contact_us_template_two_top_line {
+    width: vw(5px);
+    //height: 40%;
+    height: vw(49px);
+    border-radius: vw(20px);
+    display: flex;
+    margin-left: vw(10px);
+  }
+  .contact_us_template_two_para {
+    width: 100%;
+    display: flex;
+    height: vw(115px);
+    padding: vw(20px) 0 vw(17px) vw(10px);
+    margin-top: vw(30px);
+    margin-bottom: vw(15px);
+  }
+}

@@ -1,0 +1,61 @@
+.swot_template_two {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: vw(80px) vw(80px);
+  .swot_template_two_top {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    //justify-content: flex-end;
+  }
+  .swot_template_two_top_headline {
+    width: 95%;
+    height: vw(79px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .swot_template_three_top_line {
+    width: vw(6px);
+    height: 50%;
+    border-radius: vw(20px);
+    display: flex;
+    align-items: center;
+    margin-left: vw(10px);
+  }
+  .swot_template_two_bottom {
+    display: flex;
+    justify-content: center;
+    padding-top: vw(10px);
+  }
+
+  .swot_template_two_bottom_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 25%;
+    height: vw(400px);
+    margin: vw(20px) vw(30px);
+  }
+  .swot_template_two_bottom_block_top {
+    width: 30%;
+    height: 30%;
+    margin: vw(30px) vw(50px);
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+  .swot_template_two_bottom_block_bottom_para {
+    display: flex;
+    //align-items: flex-start;
+    width: 100%;
+    height: 70%;
+    padding: vw(20px) vw(30px) vw(20px) vw(10px);
+    word-break: break-all;
+  }
+}

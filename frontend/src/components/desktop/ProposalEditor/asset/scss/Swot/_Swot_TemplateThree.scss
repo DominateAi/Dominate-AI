@@ -1,0 +1,74 @@
+.swot_template_three {
+  display: flex;
+  flex-direction: column;
+  .swot_template_three__top {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+  }
+  .swot_template_three_top_line {
+    width: 45%;
+    height: vw(49px);
+    display: block;
+    border-radius: vw(6px);
+  }
+  .swot_template_three_top_headline {
+    width: 55%;
+    height: vw(79px);
+    display: flex;
+    align-items: center;
+  }
+  .swot_template_three_bottom {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: vw(30px) vw(50px) vw(20px) vw(50px);
+    align-items: flex-end;
+  }
+  .swot_template_three_bottom_block {
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    height: vw(450px);
+    justify-content: flex-end;
+    align-items: center;
+    padding: vw(15px) vw(18px);
+
+    .text_component_main_container .cke_editable {
+      padding-left: 0;
+    }
+  }
+  .swot_template_three_bottom_block_top {
+    width: 55%;
+    height: 40%;
+    margin: vw(30px);
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+  .swot_template_three_bottom_block_headline {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+  }
+  .swot_template_three_bottom_block_bottom {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    word-break: break-all;
+    padding-top: vw(10px);
+    padding-bottom: vw(10px);
+    padding-left: vw(10px);
+    padding-right: vw(20px);
+  }
+  .swot_template_three_side_line {
+    width: vw(3px);
+    height: 85%;
+    //display: flex;
+    border-radius: vw(20px);
+  }
+}

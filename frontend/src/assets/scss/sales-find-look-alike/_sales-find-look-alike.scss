@@ -1,0 +1,75 @@
+.sales-find-look-alike-search-div {
+  width: vw(1699px);
+  min-height: vw(419px);
+  border-radius: vw(20px);
+  // box-shadow: 0 0 vw(25px) rgba(0, 0, 0, 0.09);
+  padding: vw(45px);
+  // background: url("../../img/background-new-design/sales-look-alike-bg.svg");
+  // background-size: cover;
+  // background-color: $theme-bg-color-1;
+  @include theme-mixin-2;
+  margin-top: vw(20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sales-find-look-alike-search-italic-text {
+  padding-left: vw(20px);
+  color: rgba(64, 64, 64, 0.29);
+  font-size: vw(20px);
+  line-height: vw(30px);
+  @include fontItalicPoppins;
+}
+.sales-find-look-alike-search-input {
+  width: vw(936px);
+  height: vw(56px);
+  border: none;
+  background: rgba(239, 239, 239, 1);
+  padding-left: vw(34px);
+  border-radius: vw(28px);
+  // box-shadow: 0 0 vw(3px) rgba(0, 0, 0, 0.16);
+}
+.sales-find-look-alike-search-text {
+  color: $theme-text-color-white-79;
+}
+.sales-find-look-alike-search-img {
+  width: vw(38px);
+  height: vw(38px);
+}
+.pt-24 {
+  padding-top: vw(24px);
+}
+.sales-find-look-alike-search-keyword-div {
+  //width: vw(177px);
+  width: fit-content;
+  min-height: vw(53px);
+  padding: 0 vw(17px);
+  border-radius: vw(27px);
+  border: solid vw(2px) $theme-border-color-grey-1;
+}
+.mr-17 {
+  margin-right: vw(17px) !important;
+}
+.leads-title-block-btn-red-bg-sales-find-look-alike-search-button {
+  width: vw(311px) !important;
+  @include theme-button-height-and-radius-3;
+  @include theme-mixin-purple-gradient-bg-btn;
+  margin-top: vw(39px);
+  font-size: vw(20px);
+}
+.sales-look-alike-search {
+  width: vw(17px);
+  height: vw(17px);
+  margin-right: vw(10px);
+}
+.sales-find-look-alike-search-block {
+  width: vw(963px);
+  height: vw(56px);
+  margin-bottom: vw(45px) !important;
+}
+.react-select-follow-up-form-container--find-look-alike {
+  .css-1wa3eu0-placeholder {
+    @include fontItalicPoppins;
+    padding: 0 vw(30px);
+  }
+}

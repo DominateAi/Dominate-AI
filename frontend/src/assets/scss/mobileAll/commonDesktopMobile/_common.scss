@@ -1,0 +1,353 @@
+/* ===============================================================
+                    
+                        font size
+                    
+================================================================== */
+
+// light
+.font-15-light {
+  font-size: mvwDivide(15px);
+  @include fontLight300;
+  line-height: mvwDivide(23px);
+  margin-bottom: 0;
+}
+
+.font-21-light {
+  font-size: mvwDivide(21px);
+  @include fontLight300;
+  line-height: mvwDivide(31px);
+  margin-bottom: 0;
+}
+
+// regular
+.font-12-regular {
+  font-size: mvwDivide(12px);
+  @include fontRegular400;
+  line-height: mvwDivide(18px);
+  margin-bottom: 0;
+}
+
+.font-15-regular {
+  font-size: mvwDivide(15px);
+  @include fontRegular400;
+  line-height: mvwDivide(23px);
+  margin-bottom: 0;
+}
+
+.font-17-regular {
+  font-size: mvwDivide(17px);
+  @include fontRegular400;
+  line-height: mvwDivide(26px);
+  margin-bottom: 0;
+}
+
+.font-18-regular {
+  font-size: mvwDivide(18px);
+  @include fontRegular400;
+  line-height: mvwDivide(27px);
+  margin-bottom: 0;
+}
+
+.font-20-regular {
+  font-size: mvwDivide(20px);
+  @include fontRegular400;
+  line-height: mvwDivide(30px);
+  margin-bottom: 0;
+}
+
+.font-21-regular {
+  font-size: mvwDivide(21px);
+  @include fontRegular400;
+  line-height: mvwDivide(31px);
+  margin-bottom: 0;
+}
+
+.font-30-regular {
+  font-size: mvwDivide(30px);
+  @include fontRegular400;
+  line-height: mvwDivide(46px);
+  margin-bottom: 0;
+}
+
+// medium
+.font-16-medium {
+  font-size: mvwDivide(16px);
+  @include fontMedium500;
+  line-height: mvwDivide(25px);
+  margin-bottom: 0;
+}
+
+.font-18-medium {
+  font-size: mvwDivide(18px);
+  @include fontMedium500;
+  line-height: mvwDivide(27px);
+  margin-bottom: 0;
+}
+
+.font-20-medium {
+  font-size: mvwDivide(20px);
+  @include fontMedium500;
+  line-height: mvwDivide(30px);
+  margin-bottom: 0;
+}
+
+.font-21-medium {
+  font-size: mvwDivide(21px);
+  @include fontMedium500;
+  line-height: mvwDivide(31px);
+  margin-bottom: 0;
+}
+
+.font-24-medium {
+  font-size: mvwDivide(24px);
+  @include fontMedium500;
+  line-height: mvwDivide(35px);
+  margin-bottom: 0;
+}
+
+// semi bold
+.font-17-semibold {
+  font-size: mvwDivide(17px);
+  @include fontSemiBold600;
+  line-height: mvwDivide(26px);
+  margin-bottom: 0;
+}
+
+.font-18-semibold {
+  font-size: mvwDivide(18px);
+  @include fontSemiBold600;
+  line-height: mvwDivide(27px);
+  margin-bottom: 0;
+}
+
+.font-20-semibold {
+  font-size: mvwDivide(20px);
+  @include fontSemiBold600;
+  line-height: mvwDivide(30px);
+  margin-bottom: 0;
+}
+
+.font-21-semibold {
+  font-size: mvwDivide(21px);
+  @include fontSemiBold600;
+  line-height: mvwDivide(31px);
+  margin-bottom: 0;
+}
+
+.font-24-semibold {
+  font-size: mvwDivide(24px);
+  @include fontSemiBold600;
+  line-height: mvwDivide(35px);
+  margin-bottom: 0;
+}
+
+.font-28-semibold {
+  font-size: mvwDivide(28px);
+  @include fontSemiBold600;
+  line-height: mvwDivide(42px);
+  margin-bottom: 0;
+}
+// bold
+.font-15-bold {
+  font-size: mvwDivide(15px);
+  @include fontBold700;
+  line-height: mvwDivide(23px);
+  margin-bottom: 0;
+}
+
+.font-18-bold {
+  font-size: mvwDivide(18px);
+  @include fontBold700;
+  line-height: mvwDivide(27px);
+  margin-bottom: 0;
+}
+
+.font-21-bold {
+  font-size: mvwDivide(21px);
+  @include fontBold700;
+  line-height: mvwDivide(31px);
+  margin-bottom: 0;
+}
+
+.font-24-bold {
+  font-size: mvwDivide(24px);
+  @include fontBold700;
+  line-height: mvwDivide(35px);
+  margin-bottom: 0;
+}
+
+.font-25-bold {
+  font-size: mvwDivide(25px);
+  @include fontBold700;
+  line-height: mvwDivide(38px);
+  margin-bottom: 0;
+}
+
+.font-28-bold {
+  font-size: mvwDivide(28px);
+  @include fontBold700;
+  line-height: mvwDivide(42px);
+  margin-bottom: 0;
+}
+
+.font-30-bold {
+  font-size: mvwDivide(30px);
+  @include fontBold700;
+  line-height: mvwDivide(46px);
+  margin-bottom: 0;
+}
+
+.font-40-bold {
+  font-size: mvwDivide(40px);
+  @include fontBold700;
+  line-height: mvwDivide(60px);
+  margin-bottom: 0;
+}
+/* ===============================================================
+                      
+                          margin, padding, other
+                      
+  ================================================================== */
+
+// margin top
+.mt-10 {
+  margin-top: mvwDivide(10px);
+}
+
+.mt-20 {
+  margin-top: mvwDivide(20px);
+}
+
+.mt-25 {
+  margin-top: mvwDivide(25px);
+}
+
+// margin right
+.mr-25 {
+  margin-right: mvwDivide(25px);
+}
+
+.mr-30 {
+  margin-right: mvwDivide(30px);
+}
+
+.mr-40 {
+  margin-right: mvwDivide(40px);
+}
+
+.mr-70 {
+  margin-right: mvwDivide(70px);
+}
+
+.mr-125 {
+  margin-right: mvwDivide(125px);
+}
+
+// margin bottom
+.mb-8 {
+  margin-bottom: mvwDivide(8px);
+}
+
+.mb-10 {
+  margin-bottom: mvwDivide(10px);
+}
+
+.mb-18 {
+  margin-bottom: mvwDivide(18px);
+}
+
+.mb-25 {
+  margin-bottom: mvwDivide(25px);
+}
+
+.mb-30 {
+  margin-bottom: mvwDivide(30px);
+}
+
+.mb-48 {
+  margin-bottom: mvwDivide(48px);
+}
+
+.mb-61 {
+  margin-bottom: mvwDivide(61px);
+}
+
+// margin left
+.ml-30 {
+  margin-left: mvwDivide(30px);
+}
+
+.ml-70 {
+  margin-left: mvwDivide(70px);
+}
+
+// padding top
+.pt-10 {
+  padding-top: mvwDivide(10px);
+}
+
+.pt-20 {
+  padding-top: mvwDivide(20px);
+}
+
+.pt-25 {
+  padding-top: mvwDivide(25px);
+}
+
+// padding right
+.pr-20 {
+  padding-right: mvwDivide(20px);
+}
+
+.pr-70 {
+  padding-right: mvwDivide(70px);
+}
+
+// padding bottom
+.pb-10 {
+  padding-bottom: mvwDivide(10px);
+}
+
+.pb-16 {
+  padding-bottom: mvwDivide(16px);
+}
+
+// padding left
+.pl-10 {
+  padding-left: mvwDivide(10px);
+}
+
+.pl-30 {
+  padding-left: mvwDivide(30px);
+}
+
+// py
+.py-6 {
+  padding-top: mvwDivide(6px);
+  padding-bottom: mvwDivide(6px);
+}
+/* ===============================================================
+                      
+                              other
+                      
+  ================================================================== */
+
+b {
+  @include fontSemiBold600;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.opacity-62 {
+  opacity: 0.62;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}

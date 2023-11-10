@@ -1,0 +1,84 @@
+// performance card content css
+.performanec-text-underline {
+  font-size: vw(18px);
+  @include fontMedium500;
+  line-height: vw(27px);
+  margin-bottom: 0;
+  padding: vw(3px);
+  border-bottom: vw(1px) solid #303030;
+}
+
+.performanec-text-normal {
+  font-size: vw(18px);
+  @include fontRegular400;
+  line-height: vw(27px);
+  margin-bottom: 0;
+}
+
+.no_other_employees_section_performance_scoreboard {
+  text-align: center;
+  margin-top: vw(100px);
+  .add-form-btn {
+    // background: #453890 !important;
+    // background: linear-gradient(306deg, #502eff 0%, #d1c7ff 100%) !important;
+    border: none;
+    width: vw(235px);
+    @include theme-button-height-and-radius-3;
+    @include fontBold700;
+    font-size: vw(24px);
+    color: $theme-text-color-grey;
+    @include theme-blue-bg-radius;
+  }
+}
+
+.dashboard-performance-card {
+  padding: vw(15px) vw(10px) vw(15px) vw(20px);
+  margin-bottom: vw(6px);
+  background: #ffffff;
+  // box-shadow: 0 vw(3px) vw(6px) rgba(0, 0, 0, 0.16);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  div {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.color-purple {
+  color: #a627ff;
+}
+
+.grey-border-right-performance-card,
+.purple-border-right-performance-card {
+  margin-left: vw(15px);
+  margin-right: vw(15px);
+  display: block;
+  height: vw(46px);
+}
+
+.grey-border-right-performance-card {
+  border-right: vw(1px) solid rgba(0, 0, 0, 0.16);
+}
+
+.purple-border-right-performance-card {
+  border-right: vw(1px) solid rgba(166, 39, 255, 0.16);
+}
+
+.performance-card-btn {
+  width: vw(165px);
+  height: vw(51px);
+  color: $color-white;
+  background: linear-gradient(
+    145deg,
+    rgba(0, 60, 255, 0.6) 0%,
+    rgba(154, 184, 255, 0.6) 100%
+  );
+  border: 0;
+  border-radius: vw(26px);
+  font-size: vw(21px);
+  @include fontRegular400;
+  margin-top: vw(106px);
+}

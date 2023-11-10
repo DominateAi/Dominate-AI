@@ -1,0 +1,34 @@
+// dashboard row 5
+
+.new-dashboard-row-5 {
+  flex-wrap: nowrap !important;
+}
+
+.new-dashboard-row-5-colm1-card {
+  // box-shadow: 0 vw(3px) vw(25px) #0000003b;
+  // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+  padding: vw(34px);
+  // border-radius: vw(15px);
+  margin-right: vw(19px);
+  margin-bottom: vw(32px);
+  height: vw(615px);
+  overflow: auto;
+  @include theme-mixin-1;
+  @include border-mixin-1;
+  border-radius: vw(18px);
+}
+
+.new-dashboard-row-5-colm1-card {
+  width: vw(558px);
+}
+
+.new-dashboard-row-5-colm1-card--colm2Card {
+  width: vw(579px);
+  padding-left: vw(20px);
+}
+
+.new-dashboard-row-5-colm1-card--colm3Card {
+  width: vw(546px);
+  padding-left: vw(18px);
+  margin-right: 0;
+}

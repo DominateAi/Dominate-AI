@@ -1,0 +1,30 @@
+// dashboard toggle
+.toggle--new-dashboard {
+  display: flex;
+  align-items: center;
+  margin-bottom: vw(50px);
+
+  span {
+    font-size: vw(20px);
+    line-height: vw(30px);
+    @include fontBold700;
+    color: $theme-text-color-white-79;
+
+    b {
+      color: $theme-text-color-white-79;
+      @include fontBold700;
+    }
+  }
+  .toggle-chk-circle,
+  input {
+    // box-shadow: 0 vw(3px) vw(5px) rgba(0, 0, 0, 0.16);
+    background: $theme-toggle-bg;
+  }
+
+  input:checked + .toggle__switch:after,
+  .toggle__switch:after {
+    background-color: $theme-toggle-check-bg !important;
+    // box-shadow: 0 vw(3px) vw(6px) rgba(0, 0, 0, 0.16);
+    box-shadow: 0 0 0;
+  }
+}

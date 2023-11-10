@@ -1,0 +1,24 @@
+@import "./proposals-coming-soon";
+@import "./AnyTemplateCommon";
+
+.buttons_preview {
+  @include fontMedium500;
+  font-size: mvwDivide(18px);
+  display: flex;
+  height: mvwDivide(50px);
+  width: mvwDivide(150px);
+  align-items: center;
+  justify-content: center;
+  border-radius: mvwDivide(50px);
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(
+    217deg,
+    rgba(80, 46, 255, 1) 0%,
+    rgba(209, 199, 255, 1) 95%,
+    rgba(209, 199, 255, 1) 100%
+  ); /* w3c */
+
+  margin-top: mvw(10px);
+  margin-right: mvw(10px);
+}

@@ -1,0 +1,71 @@
+/* ===============================================================
+                    
+                        react select add lead
+                    
+================================================================== */
+
+.react-select-add-lead-form-container {
+  width: 80%;
+}
+
+.react-select-add-lead-form {
+  &__control {
+    min-height: mvwDivide(60px) !important;
+    box-shadow: 1px rgba(8, 57, 217, 0) !important;
+    border: 0 !important;
+  }
+
+  &__indicator-separator {
+    display: none !important;
+  }
+
+  &__indicator {
+    color: $theme-text-color-black-to-white-1 !important;
+    padding: mvwDivide(15px) !important;
+
+    svg {
+      width: mvwDivide(25px) !important;
+      height: mvwDivide(25px) !important;
+    }
+  }
+
+  &__control--is-focused {
+    box-shadow: 1px rgba(8, 57, 217, 0.3) !important;
+    box-shadow: 1px #cccccc !important;
+  }
+
+  &__single-value {
+    color: $theme-text-color-black-to-white-1 !important;
+    font-size: mvwDivide(24px) !important;
+    @include fontSemiBold600;
+    line-height: mvwDivide(35px) !important;
+  }
+
+  &__option,
+  &__option--is-focused,
+  &__option--is-selected {
+    font-size: mvwDivide(21px) !important;
+    @include fontMedium500;
+    line-height: mvwDivide(31px) !important;
+  }
+
+  &__option--is-focused,
+  &__option--is-selected {
+    color: $color-white !important;
+    background-color: $theme-dropdown-hover-bg !important;
+  }
+
+  &__option {
+    border-bottom: vw(1px) solid #cccccc;
+    padding: mvwDivide(15px) mvwDivide(20px) !important;
+  }
+
+  &__option:last-child {
+    border-bottom: 0;
+  }
+
+  &__menu {
+    margin-top: mvwDivide(5px) !important;
+    // box-shadow: mvwDivide(3px) mvwDivide(3px) mvwDivide(6px) rgba(0, 0, 0, 0.16) !important;
+  }
+}

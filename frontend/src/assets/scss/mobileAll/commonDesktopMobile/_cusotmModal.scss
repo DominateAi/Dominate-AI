@@ -1,0 +1,46 @@
+/* ===============================================================
+                    
+                        modal mobile
+                    
+================================================================== */
+
+.closeIconInModal {
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: " ";
+    position: absolute;
+    top: mvwDivide(30px);
+    right: mvwDivide(40px);
+    background-color: #848484;
+    height: mvwDivide(20px);
+    width: mvwDivide(3px);
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.customModal {
+  margin-top: mvw(50px);
+}
+
+// following for (px value)refernce the (px relative vw value)
+// css present in customModal
+// desktop/common/CustomModalStyle.css
+.customModal--addLead {
+  width: mvwDivide(1082px) !important;
+  border-radius: mvwDivide(15px) !important;
+  padding: mvwDivide(30px) !important;
+  // box-shadow: 0 mvwDivide(3px) mvwDivide(50px) 0 rgba(0, 0, 0, 0.16) !important;
+}
+
+.customModal--addLead--thankYouMsg {
+  width: mvwDivide(782px) !important;
+}

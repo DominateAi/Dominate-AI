@@ -1,0 +1,15 @@
+.text_component_main_container{
+    display: flex;
+    width:fit-content;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    .cke_editable{
+        position: relative;
+        height: fit-content;
+        padding-left: vw( 30px );
+        max-height: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+}

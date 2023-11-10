@@ -1,0 +1,45 @@
+// dashboard row 2
+
+.new-dashboard-row-2 {
+  margin-top: vw(10px);
+  padding-right: vw(8px);
+  flex-wrap: nowrap !important;
+}
+
+.new-dashboard-row-2-colm1-card1__title {
+  font-size: vw(14px);
+  line-height: vw(17px);
+  @include fontBold700;
+  margin-bottom: 0;
+  @include theme-letter-spacing-28-uppercase;
+}
+
+.new-dashboard-row-2-colm1-card1 {
+  margin-right: vw(11px);
+  margin-bottom: vw(11px);
+  padding: vw(15px);
+  width: vw(413px);
+  height: vw(211px);
+  // width: 100%;
+  // height: auto;
+  overflow: auto;
+}
+
+.new-dashboard-row-2-colm1-card1--colm2-card {
+  width: vw(656px);
+  height: vw(432px);
+  // width: 100%;
+  // height: auto;
+}
+
+.new-dashboard-row-2-colm1-card1--colm3-card {
+  width: vw(608px);
+  height: vw(432px);
+  margin-right: 0;
+  // width: 100%;
+  // height: auto;
+}
+
+@import "./dashboard-row-five/dashboard-row-5";
+@import "./dashboard-row-four/dashboard-row-four";
+@import "./dashboard-row-six/dashboard-row-six";

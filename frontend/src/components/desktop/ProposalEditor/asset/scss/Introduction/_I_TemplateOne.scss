@@ -1,0 +1,47 @@
+.introduction_template_one__leftBlock {
+  width: 55%;
+  padding: vw(92px) vw(100px) vw(233px) vw(90px);
+
+  .introduction_template_one__top {
+    display: flex;
+    word-break: break-word;
+    overflow: auto;
+    height: vw(80px);
+  }
+
+  .introduction_template_one__top__headline {
+    height: 100%;
+  }
+
+  .introduction_template_one__top__line {
+    display: block;
+    margin-left: vw(15px);
+    width: vw(6px);
+    height: 80%;
+    border-radius: vw(25px);
+    // background-color: #00546f;
+  }
+
+  .introduction_template_one__bottom {
+    margin-top: vw(75px);
+    height: vw(225px);
+    overflow: auto;
+  }
+
+  .text_Container {
+    padding-right: vw(20px);
+  }
+}
+
+.introduction_template_one__rightBlock {
+  width: 45%;
+
+  .introduction_template_one__rightBlock__imgDiv {
+    margin: vw(120px) vw(136px) vw(105px) vw(10px);
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+}

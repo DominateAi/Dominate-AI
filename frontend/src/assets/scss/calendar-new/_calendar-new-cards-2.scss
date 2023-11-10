@@ -1,0 +1,239 @@
+// holidays card
+.new-calendar-holiday-card__img-block {
+  width: vw(54px);
+  height: vw(54px);
+  background-color: #c4c4c4;
+  border-radius: 100%;
+  margin-right: vw(15px);
+
+  img {
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+  }
+}
+
+.new-calendar-holiday-card__text-1 {
+  color: $theme-text-color-purple-2-to-white;
+  margin-bottom: vw(5px);
+}
+
+.new-calendar-holiday-card__text-2 {
+  color: $theme-text-color-white-23;
+}
+
+.new-calendar-holiday-card__text-content {
+  width: 75%;
+  margin-right: vw(10px);
+}
+
+// .new-calendar-pending-request-card__blur {
+// filter: blur(vw(2px));
+// }
+
+.new-calendar-pending-request-card {
+  table {
+    width: 100%;
+
+    tr td:nth-child(1) {
+      width: 35%;
+      padding-right: vw(10px);
+      vertical-align: top;
+    }
+
+    tr td:nth-child(2) {
+      width: 20%;
+      padding-right: vw(10px);
+    }
+
+    tr td:nth-child(3) {
+      width: 45%;
+      text-align: center;
+    }
+
+    .hidden_icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .fa-eye {
+        margin-left: vw(45px);
+      }
+    }
+    .hidden_icon:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.new-calendar-schedule-card__text-1 {
+  color: #9d6cdd;
+  margin-right: vw(24px);
+}
+
+// add new button
+.new-calendar-add-new-button {
+  width: vw(178px);
+  @include theme-button-height-and-radius-2;
+  margin-right: vw(33px);
+  border: none;
+  color: $color-white;
+  background: $theme-bg-dark-blue-to-purple-1;
+}
+
+.new-calendar-add-new-button__line {
+  color: rgba(255, 255, 255, 0.31);
+  margin-right: vw(9px);
+  margin-left: vw(9px);
+}
+
+.new-calendar-dropdown-icon-img {
+  width: vw(4px);
+  margin-top: vw(5px);
+  cursor: pointer;
+}
+
+.calendar-empty-followups-img {
+  width: vw(256px);
+  height: auto;
+  margin-top: vw(80px);
+  margin-bottom: vw(45px);
+}
+
+.calendar-empty-meetings-img {
+  width: vw(223px);
+  height: auto;
+  margin-top: vw(29px);
+  margin-bottom: vw(35px);
+}
+
+.calendar-empty-holidays-img {
+  width: vw(103px);
+  height: auto;
+  margin-top: vw(5px);
+  margin-bottom: vw(15px);
+}
+
+.calendar-empty-pending-requests-img {
+  width: vw(309px);
+  height: auto;
+  margin-top: vw(29px);
+  margin-bottom: vw(17px);
+}
+
+.new-calendar-followup-card__clock-time-text {
+  color: $theme-text-color-purple-1-to-white;
+  height: vw(57px);
+}
+
+.new-calendar-schedule-card {
+  margin-bottom: vw(57px);
+}
+
+.new-calendar-schedule-card__clock-icon {
+  width: vw(20px);
+  margin-right: vw(25px);
+}
+
+.new-calendar-schedule-color-blocks-div {
+  hr {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.calendar-new-schedule-card-npm-div {
+  .calendarHeader {
+    display: none;
+  }
+
+  .rbc-label {
+    color: $theme-text-color-light-purple-1-to-white;
+    @include fontMedium500;
+  }
+
+  .rbc-time-content {
+    border-top: none;
+  }
+
+  .rbc-time-content > * + * > * {
+    border-left: none;
+  }
+
+  .rbc-today {
+    background-color: transparent;
+  }
+
+  .rbc-time-view {
+    border: none;
+  }
+
+  .rbc-day-slot .rbc-time-slot {
+    border: none;
+  }
+
+  .rbc-timeslot-group {
+    border: none;
+  }
+
+  .rbc-day-slot .rbc-time-slot:first-child {
+    border-top: vw(1px) solid rgba(0, 0, 0, 0.04);
+  }
+
+  .rbc-event {
+    color: #502eff;
+    line-height: 1.8em;
+    background: rgba(80, 46, 255, 0.15);
+    border: vw(1px) solid #502eff;
+    /* box-shadow: vw(-2px) 0 vw(4px) rgba(0, 0, 0, 0.01),
+       vw(2px) vw(2px) vw(18px) rgba(0, 0, 0, 0.07); */
+    border-radius: vw(13px);
+
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      width: vw(3px);
+      height: 60%;
+      display: block;
+      background: #502eff;
+      opacity: 0.4;
+      border-radius: vw(22px);
+      position: absolute;
+      left: vw(10px);
+      top: 20%;
+      margin-right: vw(10px);
+    }
+  }
+
+  .rbc-day-slot .rbc-event {
+    // border: none;
+    padding-left: vw(20px);
+    cursor: default;
+    pointer-events: none;
+  }
+
+  .rbc-btn-group,
+  .rbc-toolbar-label,
+  .rbc-time-header {
+    display: none;
+  }
+
+  // .rbc-day-slot .rbc-event {
+  //   background-color: transparent;
+  // }
+
+  .rbc-current-time-indicator {
+    // background-color: $theme-text-color-dark-blue-to-white-42;
+    background-color: #9d6cdd;
+  }
+}
+
+.new-calendar-follow-up-cards-border-left--schedule {
+  .new-calendar-follow-up-cards-outer-div {
+    padding-top: vw(20px);
+    padding-bottom: vw(20px);
+  }
+}

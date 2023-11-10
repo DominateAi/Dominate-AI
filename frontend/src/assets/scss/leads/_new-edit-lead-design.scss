@@ -1,0 +1,291 @@
+/* ===============================================================
+                    
+                    new edit lead design
+                    
+================================================================== */
+
+.edit-lead-new-design__row {
+  flex-wrap: wrap;
+}
+
+.edit-lead-new-design__colm1,
+.edit-lead-new-design__colm2 {
+  width: 50%;
+}
+
+.add_more_info_lead_button {
+  width: vw(226px);
+  @include theme-button-height-1;
+  margin-right: vw(18px);
+  font-size: vw(24px);
+  @include fontSemiBold600;
+  margin-bottom: 0;
+  @include theme-mixin-2;
+  color: $theme-text-color-grey;
+}
+.save_new_lead_button {
+  width: vw(159px);
+  border: none;
+  @include theme-button-height-and-radius-1;
+  color: white;
+  background-color: #7358fd;
+  // margin-bottom: vw(20px);
+  font-size: vw(24px);
+  @include fontSemiBold600;
+  margin-bottom: 0;
+  float: right;
+}
+
+.set_level_and_status_of_lead {
+  margin-left: vw(18px);
+  margin-top: vw(30px);
+  p {
+    color: $theme-text-color-1;
+    font-size: vw(24px);
+    line-height: vw(35px);
+    @include fontSemiBold600;
+  }
+  button {
+    margin-right: vw(10px);
+    width: vw(159px);
+    border: none;
+    @include theme-button-height-and-radius-3;
+    font-size: vw(14px);
+    @include fontRegular400;
+  }
+}
+
+.select-lead-followup-by-btn {
+  @include fontSemiBold600;
+  background: $theme-bg-color-white-04;
+}
+
+.select-lead-followup-by-btn--active {
+  background: $theme-bg-blue-btn;
+}
+
+.set_level_and_status_of_lead--status {
+  margin-right: vw(20px);
+  button {
+    min-width: vw(147px);
+    width: auto;
+    padding: 0 vw(15px);
+    margin-bottom: vw(14px);
+  }
+}
+.set_level_and_status_of_lead--followup {
+  p {
+    font-size: vw(21px);
+    line-height: vw(31.5px);
+    // color: rgba(48, 48, 48, 0.83);
+    color: $theme-text-color-white-42;
+    @include fontMedium500;
+  }
+
+  .add-leads-status-img {
+    margin-right: vw(15px) !important;
+  }
+}
+
+.add-leads-status-img {
+  width: vw(24px);
+  height: auto;
+  margin-right: vw(5px);
+}
+.add-lead-modal-container--followUp {
+  .leads-follow-up-time-label-new-color,
+  .leads-follow-up-date-label-new-color {
+    padding-top: vw(20px);
+  }
+}
+.leads-follow-up-time-label-new-color,
+.leads-follow-up-date-label-new-color {
+  color: rgba(48, 48, 48, 0.83);
+}
+.leads-follow-up-date-label-new-color {
+  // padding-left: vw(50px);
+  padding-left: 0;
+}
+.leads-follow-up-time-label-new-color {
+  // padding-right: vw(30px);
+  padding-right: vw(87px);
+}
+.lead_add_more_info_model {
+  width: vw(1406px) !important;
+  border-radius: vw(15px) !important;
+  padding: vw(47px) vw(131px) !important;
+  // box-shadow: 0 0.4vw 6.66667vw 0 rgba(0, 0, 0, 0.16) !important;
+
+  .add-lead-label {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  .add-lead-input-field {
+    margin-left: 0 !important;
+    // padding-left: 0;
+  }
+  .react-select-add-lead-form__control {
+    width: 100% !important;
+    // border: vw(1px) solid #cccccc !important;
+    border: none !important;
+
+    &:focus,
+    &:hover {
+      border: none !important;
+      outline: none !important;
+      box-shadow: 0 0 0 !important;
+    }
+  }
+  .add-lead-prev-icon {
+    //  top: vw(60px) !important;
+    //  left: vw(50px) !important;
+    left: vw(-25px) !important;
+  }
+
+  .tag-border-block {
+    font-size: vw(15px);
+    padding: vw(8px);
+  }
+
+  .representative-recent-img-text-block {
+    margin-left: 0;
+  }
+
+  .add_more_infor_lead_container {
+    height: 50vh;
+    padding-top: 3%;
+    padding-right: 2%;
+    width: 102%;
+    overflow: auto;
+    overflow-x: hidden;
+  }
+  .save_new_lead_button,
+  .add_more_info_lead_button {
+    margin-top: vw(30px);
+  }
+}
+
+.lead_page_component {
+  position: relative;
+  .add-lead-blue-progressbar-block {
+    position: absolute;
+    width: 20%;
+    right: vw(100px);
+    top: vw(30px);
+  }
+}
+
+.add_more_info_left_section {
+  margin-right: vw(50px);
+  width: 50%;
+}
+.add_more_info_right_section {
+  width: 50%;
+}
+
+.add-new-btn-kanban-board-block {
+  width: 100%;
+  text-align: center;
+  padding-top: vw(16px);
+  padding-bottom: vw(10px);
+  background: transparent;
+  border: none;
+}
+
+.add-new-btn-kanban-board {
+  width: vw(264px);
+  @include theme-button-height-and-radius-2;
+  margin: 0 auto;
+  font-size: vw(19px);
+  @include fontRegular400;
+  background: $theme-bg-color-white-03;
+  backdrop-filter: blur(392px);
+  border: none;
+}
+
+.drop_deal_text_box {
+  width: vw(330px);
+  height: vw(95px);
+  margin: 0 auto;
+  border: vw(1px) dashed #707070;
+  border-radius: vw(9px);
+  font-size: vw(19px);
+  // color: #717171;
+  @include fontRegular400;
+  background-color: transparent;
+  line-height: vw(24px);
+  color: $theme-text-color-1;
+  opacity: 0.31;
+}
+
+.drop_deal_text_box:hover {
+  cursor: default;
+}
+
+.customCheckbox .rc-checkbox-inner {
+  border-color: #cccccc !important;
+}
+
+.customCheckbox .rc-checkbox-input:focus + .rc-checkbox-inner,
+.customCheckbox .rc-checkbox-checked .rc-checkbox-inner {
+  border-color: #0839d9 !important;
+}
+
+.drop-lead-cancel-btn,
+.drop-lead-confirm-btn {
+  width: vw(177px);
+  @include theme-button-height-and-radius-3;
+  font-size: vw(24px);
+  @include fontSemiBold600;
+  margin-bottom: 0;
+}
+
+.drop-lead-cancel-btn {
+  border: vw(1px) solid #000000;
+  color: $theme-text-color-1;
+  background-color: transparent;
+}
+
+.drop-lead-confirm-btn {
+  border: vw(1px) solid #502eff;
+  color: #502eff;
+  background-color: transparent;
+}
+
+.leads-title-block-next-arrow-img {
+  width: vw(60px);
+  height: vw(60px);
+  margin-left: vw(10px);
+  background-color: $theme-bg-blue-1;
+  border-radius: vw(50px);
+  cursor: pointer;
+}
+
+.social-media-leads-img-input-block {
+  width: 100%;
+
+  .social-media-leads-input-block,
+  input {
+    width: 100%;
+  }
+}
+
+.edit-lead-new-design__colm2 {
+  .all-checkbox-block {
+    width: 100%;
+  }
+}
+.social-media-leads-input-block {
+  position: relative;
+
+  .add-lead-form-field-errors {
+    position: absolute;
+    bottom: vw(-45px);
+    left: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .is-invalid {
+    padding-left: 0 !important;
+  }
+}

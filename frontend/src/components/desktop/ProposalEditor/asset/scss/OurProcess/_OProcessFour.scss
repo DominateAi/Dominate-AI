@@ -1,0 +1,41 @@
+.our_process_page_template_four {
+  display: flex;
+  flex-direction: column;
+  padding: vw(20px) vw(30px) 0 vw(30px);
+  .our_process_page_template_four_top {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .our_process_page_template_four_headline {
+    width: 43%;
+    height: vw(79px);
+  }
+  .our_process_page_template_four_bottom {
+    width: 100%;
+    display: flex;
+    padding: 0 vw(30px) 0 vw(30px);
+    //align-items: center;
+  }
+  .our_process_page_template_four_bottom_left {
+    width: 55%;
+    padding: vw(10px);
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+  .our_process_page_template_four_bottom_right {
+    width: 45%;
+    padding: vw(30px) vw(20px) vw(20px) vw(20px);
+    display: flex;
+    .text_container {
+      width: 100%;
+      height: vw(217px);
+      display: flex;
+    }
+  }
+}

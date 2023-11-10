@@ -1,0 +1,68 @@
+// // performance card content css
+// .performanec-text-underline {
+//   font-size: mvwDivide(18px);
+//   @include fontMedium500;
+//   line-height: mvwDivide(27px);
+//   margin-bottom: 0;
+//   padding: mvwDivide(3px);
+//   border-bottom: mvwDivide(3px) solid #303030;
+// }
+
+// .performanec-text-normal {
+//   font-size: mvwDivide(18px);
+//   @include fontRegular400;
+//   line-height: mvwDivide(27px);
+//   margin-bottom: 0;
+// }
+
+// .dashboard-performance-card {
+//   padding: mvwDivide(15px) mvwDivide(10px) mvwDivide(15px) mvwDivide(20px);
+//   margin-bottom: mvwDivide(6px);
+//   background: #ffffff;
+//   // box-shadow: 0 mvwDivide(3px) mvwDivide(6px) rgba(0, 0, 0, 0.16);
+
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+
+//   div {
+//     display: inline-block;
+//     vertical-align: middle;
+//   }
+// }
+
+// .color-purple {
+//   color: #a627ff;
+// }
+
+// .grey-border-right-performance-card,
+// .purple-border-right-performance-card {
+//   margin-left: mvwDivide(15px);
+//   margin-right: mvwDivide(15px);
+//   display: block;
+//   height: mvwDivide(46px);
+// }
+
+// .grey-border-right-performance-card {
+//   border-right: vw(1px) solid rgba(0, 0, 0, 0.16);
+// }
+
+// .purple-border-right-performance-card {
+//   border-right: vw(1px) solid rgba(166, 39, 255, 0.16);
+// }
+
+// .performance-card-btn {
+//   width: mvwDivide(165px);
+//   height: mvwDivide(51px);
+//   color: $color-white;
+//   background: linear-gradient(
+//     145deg,
+//     rgba(0, 60, 255, 0.6) 0%,
+//     rgba(154, 184, 255, 0.6) 100%
+//   );
+//   border: 0;
+//   border-radius: mvwDivide(26px);
+//   font-size: mvwDivide(21px);
+//   @include fontRegular400;
+//   margin-top: mvwDivide(106px);
+// }

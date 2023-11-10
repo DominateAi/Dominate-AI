@@ -1,0 +1,162 @@
+// command centre
+
+.cmd-centre-block {
+  position: relative;
+  padding: 0 vw(19px) vw(41px) vw(19px);
+
+  .cmd-centre-block__blue-btns-block {
+    position: absolute;
+    right: vw(138px);
+    top: vw(60px);
+  }
+
+  .cmd-centre-block__blue-btn {
+    border-radius: vw(50px);
+    width: vw(288px);
+    height: vw(51px);
+    border: none;
+    color: $color-white;
+    font-size: vw(18px);
+    line-height: vw(27px);
+    @include fontRegular400;
+    margin-right: vw(10px);
+    background: linear-gradient(
+      261deg,
+      rgba(80, 46, 255, 1) 0%,
+      rgba(209, 199, 255, 1) 100%
+    );
+  }
+
+  .rwt__tab {
+    width: vw(287px);
+    height: vw(71px);
+    border-bottom: 0;
+    padding: 0;
+    border-top-left-radius: vw(20px);
+    border-top-right-radius: vw(20px);
+    margin-bottom: vw(-1px);
+    margin-right: vw(10px);
+    color: $theme-text-color-white-79;
+    @include theme-mixin-tabs;
+    border-color: transparent;
+    font-size: vw(18px);
+    line-height: vw(27px);
+    @include fontSemiBold600;
+  }
+
+  .rwt__tablist button[aria-selected="true"] {
+    border: vw(1px) solid $theme-text-color-blue;
+    border-bottom: none;
+    position: relative;
+    color: $theme-text-color-white-79;
+
+    .fa {
+      display: none;
+      // display: inline-block;
+      // font-size: vw(12px);
+      // vertical-align: middle;
+      // margin-right: vw(15px);
+    }
+  }
+
+  .rwt__tablist button {
+    .fa {
+      display: none;
+    }
+  }
+
+  .rwt__tablist button[aria-selected="true"].rwt__tab:nth-child(1) {
+    .fa {
+      color: rgb(250, 148, 114);
+    }
+  }
+
+  .rwt__tablist button[aria-selected="true"].rwt__tab:nth-child(2) {
+    .fa {
+      color: rgb(240, 103, 180);
+    }
+  }
+
+  .rwt__tablist button[aria-selected="true"].rwt__tab:nth-child(3) {
+    .fa {
+      color: rgb(244, 59, 71);
+    }
+  }
+
+  .rwt__tablist button[aria-selected="true"].rwt__tab:nth-child(6) {
+    .fa {
+      background: linear-gradient(180deg, #f067b4 0%, #5961f9 100%);
+      transform: rotate(37deg);
+      color: transparent;
+      width: fit-content;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .rwt__tabpanel {
+    position: relative;
+    min-height: 80%;
+    @include theme-mixin-tabs;
+  }
+}
+
+.cmd-centre-headings-circle-img {
+  width: vw(20px);
+  margin-right: vw(17px);
+  vertical-align: middle;
+
+  + span {
+    vertical-align: text-bottom;
+  }
+}
+
+.cmd-centre-block__no-target {
+  width: 100%;
+  min-height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //padding-top: vw(235px);
+  padding-bottom: vw(275px);
+  padding-top: vw(32px);
+}
+
+.cmd-centre-block__no-target--text1 {
+  margin-top: vw(-226px);
+}
+
+.cmd-centre-block__no-target-title {
+  font-size: vw(28px);
+  line-height: vw(42px);
+  @include fontRegular400;
+  margin-bottom: vw(37px);
+}
+
+.cmd-centre-block.cmd-centre-block--new-design {
+  .rwt__tab {
+    width: auto;
+    padding-left: vw(35px);
+    padding-right: vw(35px);
+  }
+}
+.cmd-centre-block__add-holiday-btn {
+  width: vw(178px);
+  @include theme-button-height-and-radius-1;
+  background: $theme-bg-gradient-blue-to-blue;
+  font-size: vw(16px);
+  padding: 0;
+  border: none;
+  @include fontMedium500;
+  color: $theme-text-color-grey;
+}
+
+@import "./command-centre-overview";
+@import "./command-centre-organisation";
+@import "./command-centre-team";
+@import "./command-centre-pagination";
+@import "./command-centre-reports-table";
+@import "./command-centre-member-roles";
+@import "./command-centre-custom-fields";
+@import "./command-center-member-settings";

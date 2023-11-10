@@ -1,0 +1,201 @@
+// background images
+.leads-new-details-content-card-bg,
+.leads-new-details-content-card-bg-activity {
+  // background: url("../../img/background-new-design/new-design-leads-inner-page-bg.svg");
+  // background-position: bottom;
+  background: none;
+}
+
+.leads-new-details-content-card-bg.leads-new-details-content-card-shadow {
+  @include theme-mixin-dashed-border-card;
+}
+
+.leads-new-details-content-card-bg-activity {
+  background-position: right;
+}
+
+.lead_add_more_info_model {
+  // background: url("../../img/background-new-design/new-modal-bg.svg");
+  // background-position: inherit;
+  background: none;
+}
+.activity-outer-container__colm1,
+.customModal--importLeads {
+  // background: url("../../img/background-new-design/form-bg-3.svg");
+  // background-position: inherit;
+  background: none;
+}
+
+.customModal--importLeads,
+.customModal--addLead,
+.customModal--addNewEmailList {
+  // background: url("../../img/background-new-design/new-modal-bg.svg");
+  // background-position: inherit;
+  background: none;
+}
+
+.new-proposal-background,
+.task-page-bg,
+.cmd-centre-block,
+.service_activation__main_container {
+  // background: url("../../img/background-new-design/command-centre-bg.svg");
+  // background-position: inherit;
+  background: none;
+}
+.setting_page__main_container_mailbox {
+  // background: url("../../img/background-new-design/mailbox-bg.svg");
+  // background-position: inherit;
+  background: none;
+}
+
+.mailbox_bg {
+  // background: url("../../img/background-new-design/connect-new-bg.svg");
+  // background-position: inherit;
+  background: none;
+}
+
+.new-quotation-background,
+.accounts-details-tabpanel-div,
+.main-calender-tabs-container,
+.MuiBox-root {
+  // background: url("../../img/background-new-design/chat-bg.svg");
+  // background-position: inherit;
+  background: none;
+}
+
+.email-data-scrape-modal-bg {
+  // background-image: url("../../img/background-new-design/email-modal-bg.svg");
+  // background-position: inherit;
+  // background-repeat: no-repeat;
+  // min-height: inherit;
+  // background-size: 100%;
+  background: none;
+}
+
+.deals-background {
+  // background: url("../../img/background-new-design/sales-centre-bg.svg");
+  // background-position: inherit;
+  background: none;
+}
+
+.customModal--emailDataScrapeSearchResultModal {
+  // background-image: url("../../img/background-new-design/new-modal-bg.svg");
+  // background-position: inherit;
+  background: none;
+}
+// modal
+.customModal--addquotation {
+  // background: url("../../img/background-new-design/new-modal-bg.svg");
+  // background-position: top;
+  background: none;
+}
+
+.activity-outer-container__colm2 {
+  // background: url("../../img/background-new-design/chat-bg.svg");
+  // background-position: right;
+  background: none;
+}
+
+.customers-block-view-conatiner {
+  // background: url("../../img/background-new-design/dashboard-bg.svg");
+  // background-position: inherit;
+  // background-repeat: no-repeat;
+  // min-height: inherit;
+  // background-size: cover;
+  background: none;
+}
+
+.leads-new-details-content-card-bg,
+.leads-new-details-content-card-bg-activity,
+.activity-outer-container__colm1,
+.activity-outer-container__colm2,
+// modals
+.lead_add_more_info_model,
+.customModal--addquotation,
+.customModal--addLead,
+.customModal--addNewEmailList,
+.customModal--addNewEmailList,
+.customModal--importLeads,
+// dashboard
+.user_dashboard_main_container,
+// tasks
+.task-page-bg,
+// chat
+.dashboard-message,
+// command centre
+.cmd-centre-block,
+// mailbox
+.service_activation__main_container,
+.setting_page__main_container_mailbox,
+.MuiBox-root,
+// calendar
+.main-calender-tabs-container,
+.customers-block-view-conatiner,
+// quotation
+.new-quotation-background,
+// deals
+.deals-background,
+// accounts-detail
+.accounts-details-tabpanel-div,
+ // proposal
+ .new-proposal-background,
+ //mailbox
+ .mailbox_bg,
+ .customModal--emailDataScrapeSearchResultModal {
+  background-repeat: no-repeat;
+  min-height: inherit;
+  //background-size: cover;
+  background-size: 100%;
+}
+.customModal--emailDataScrapeModal {
+  @include theme-mixin-modal-bg;
+}
+
+// modals
+.lead_add_more_info_model,
+.customModal--addquotation,
+.customModal--emailDataScrapeSearchResultModal,
+.customModal--addLead,
+.customModal--addNewEmailList,
+.customModal--importLeads {
+  @include theme-mixin-modal-bg;
+}
+
+// update background colors
+// .todays_followup_meet_card,
+// .monthly_revenue_card,
+// .dashboard_notigfication_box ,
+// .new-dashboard-row-2-colm1-card1,
+// .dashboard_row_three_main_container,
+// .new-dashboard-row-4-colm1-card,
+//.new-dashboard-row-4-colm2-card,
+// .new-dashboard-row-6-colm1-card,
+// .dashboard-overview-blocks__performanceCard,
+// .dashboard_calender_card_conatiner,
+// calendar
+.table-bordered,
+// profile
+// .activityMenuTabs .rwt__tablist,
+// .overview-demo-outline-button,
+// buttons
+// .btn-funnel-view--files ,
+// mailbox 
+.main_container_email_dashboard__bottom__left,
+.main_container_email_dashboard__bottom__right {
+  background-color: $theme-bg-color-1;
+}
+// .display_contacts_main_container,
+// .display_contacts_main_container
+
+.task-page-bg ,
+// proposal
+.new-proposal-background,
+// quotation
+.new-quotation-background,
+// deals
+.deals-background {
+  min-height: 65vh;
+}
+.main-calender-tabs-container {
+  background-size: 100%;
+}

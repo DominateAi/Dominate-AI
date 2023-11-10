@@ -1,0 +1,11 @@
+FROM node:12.12.0-alpine
+RUN apk --no-cache add g++ gcc libgcc libstdc++ linux-headers make python git
+RUN npm install --quiet node-gyp -g
+WORKDIR /app
+COPY package*.json /app/
+# RUN npm set progress=false && npm config set depth 0 && npm cache clean --force
+RUN npm install --quiet
+COPY . .
+CMD  ["npm", "start" ]
+
+

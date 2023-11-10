@@ -1,0 +1,47 @@
+/* ===============================================================
+                    
+                    activity : summary view profile
+
+================================================================== */
+
+.activity-summary-view-profile {
+  padding: vw(5px) vw(25px) vw(20px) vw(45px);
+}
+
+.activity-summary-view-profile__overflow-block {
+  max-height: vw(550px);
+  overflow: auto;
+}
+
+.activity-title-img-text--view-profile {
+  flex-wrap: wrap;
+}
+
+.activity-summary-view-profile__fold3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  .activity-summary-about {
+    max-width: vw(250px);
+    word-break: break-all;
+    margin-right: vw(130px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.view-profile-icon-edit {
+  margin-left: vw(17px);
+  width: vw(24px);
+  cursor: pointer;
+}
+
+.view-profile-icon-delete {
+  margin-left: vw(21px);
+  width: vw(24px);
+  cursor: pointer;
+}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="549.056" height="127.438" viewBox="0 0 549.056 127.438">
+  <defs>
+    <filter id="Path_7095" x="0" y="0" width="130.316" height="127.438" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_1515" data-name="Group 1515" transform="translate(-445 -619.377)">
+    <g id="noun_Arrow_1966957" transform="translate(566.316 712.21) rotate(166)">
+      <g id="Group_1509" data-name="Group 1509" transform="translate(0 0)">
+        <g transform="matrix(-0.97, -0.24, 0.24, -0.97, 95.25, 119.42)" filter="url(#Path_7095)">
+          <path id="Path_7095-2" data-name="Path 7095" d="M89.443,86.734A3.087,3.087,0,0,1,84.837,89.1L53.435,71.7a3.089,3.089,0,0,1-1.587-2.77,3.043,3.043,0,0,1,1.681-2.7l8.87-4.606c-5.82-10.177-26.484-41.61-59.286-41.61A3.1,3.1,0,0,1,0,16.9V3.112A3.1,3.1,0,0,1,3.112,0C48.643,0,74.253,40.894,80.477,52.285l8.4-4.357a3.2,3.2,0,0,1,3.206.218,3.148,3.148,0,0,1,1.338,2.894Z" transform="translate(121.32 92.83) rotate(166)" fill="#8c85ff"/>
+        </g>
+      </g>
+    </g>
+    <text id="Start_by_adding_a_lead" data-name="Start by adding a lead" transform="translate(602.056 721)" fill="#8c85ff" font-size="35" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">Start by adding a lead</tspan></text>
+  </g>
+</svg>

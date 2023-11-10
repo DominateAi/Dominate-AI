@@ -1,0 +1,112 @@
+.vault-btn-card-div {
+  padding: 0;
+}
+.vault-card {
+  width: vw(301px);
+  height: auto;
+  margin-right: vw(26px);
+  margin-bottom: vw(26px);
+  @include theme-mixin-2;
+}
+.vault-card-img-block {
+  width: 100%;
+  min-height: vw(206px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //margin-bottom: vw(20px);
+
+  img {
+    width: vw(168px);
+    height: auto;
+  }
+}
+.vault-card-img-block--btn {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  border-radius: inherit;
+}
+.vault-card-content-block {
+  padding: vw(36px);
+  width: 100%;
+  height: fit-content;
+  // position: absolute;
+  position: relative;
+  color: $theme-text-color-black-to-white-1;
+  backdrop-filter: blur(56px);
+  border-radius: vw(25px);
+
+  &::before {
+    content: "";
+    display: block;
+    width: 80%;
+    height: vw(2px);
+    background: linear-gradient(
+      90deg,
+      $theme-text-color-blue 0%,
+      #23253780 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 15%;
+  }
+}
+.valut-card-folder-icon {
+  font-size: vw(29px) !important;
+  color: #483ca6;
+  margin-right: vw(12px);
+  display: none !important;
+}
+.vault-card-name {
+  font-size: vw(18px);
+  line-height: vw(22px);
+  @include fontSemiBold600;
+  color: $theme-text-color-1;
+  width: vw(180px);
+  margin-bottom: 0;
+  margin-right: vw(10px);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.vault-card-edit-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-right: vw(9px);
+  color: $theme-text-gray-color-3;
+  font-size: vw(17px);
+}
+.pt-60 {
+  padding-top: vw(60px);
+}
+.add-vault-from-row {
+  margin-top: vw(58px);
+  margin-bottom: vw(51px);
+
+  .input_field_div {
+    width: 100%;
+  }
+  .add-lead-input-field {
+    width: 100%;
+  }
+}
+.customModal--add-vault {
+  // padding-right: vw(100px) !important;
+  // background: url("../../img/background-new-design/new-modal-bg.svg");
+  @include theme-mixin-modal-bg;
+
+  .font-30-bold {
+    padding-bottom: vw(39px);
+    border-bottom: vw(2px) solid $theme-border-color-white-26;
+  }
+}
+.vault-not-found-img {
+  width: vw(345px);
+  height: auto;
+  margin-bottom: vw(51px);
+}
+.vault-not-found-div {
+  margin: auto;
+}

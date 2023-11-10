@@ -1,0 +1,99 @@
+/* ===============================================================
+                    
+                        leadsMobileNew
+                    
+================================================================== */
+
+.block-16-18 {
+  padding-left: mvw(16px);
+  padding-right: mvw(18px);
+}
+
+.resp-dropdown-filter-block {
+  padding-left: mvw(25px);
+  padding-right: mvw(40px);
+  padding-bottom: mvw(9px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.resp-leads__search-icon {
+  width: mvw(15px);
+  cursor: pointer;
+}
+
+.floating-btn-outer-block {
+  position: fixed;
+  bottom: mvw(19px);
+  right: mvw(19px);
+}
+
+.floating-btn-leads-page {
+  width: mvw(47px);
+  height: mvw(47px);
+  margin-right: mvw(19px);
+  margin-bottom: mvw(19px);
+  border-radius: 50%;
+  border: 0;
+  color: $color-white;
+  font-size: mvw(30px);
+  @include fontRegular400;
+  background: transparent
+    linear-gradient(144deg, #567dff 0%, #5a81ff 11%, #9ab8ff 100%) 0% 0%
+    no-repeat padding-box;
+
+  .close-icon {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: " ";
+      display: block;
+      background-color: transparent;
+      border: 3px solid #ffffff;
+      height: mvw(18px);
+      width: 0;
+      position: absolute;
+      left: mvw(-0.5px);
+      top: mvw(-10px);
+      bottom: 0;
+    }
+    &::before {
+      border-top: 0;
+      border-bottom: 0;
+      border-right: 0;
+      transform: rotate(45deg);
+    }
+    &::after {
+      border-top: 0;
+      border-bottom: 0;
+      border-left: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.floating-btn-options-block {
+  width: mvw(124px);
+  background: transparent linear-gradient(327deg, #567dff 0%, #9ab8ff 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: mvw(15px);
+  position: absolute;
+  left: mvw(-76px);
+  bottom: mvw(29px);
+  z-index: -1;
+  text-align: center;
+}
+
+.floating-btn-options-block__link {
+  padding-top: mvw(18px);
+  padding-bottom: mvw(8px);
+  color: $color-white;
+  border-bottom: 0.8px solid rgba(242, 242, 242, 0.62);
+}
+
+.customModal--addLead[aria-modal="true"] {
+  .floating-btn-options-block {
+    display: none;
+  }
+}

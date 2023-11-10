@@ -1,0 +1,173 @@
+/* ===============================================================
+                    
+                    success message modal
+                    
+================================================================== */
+
+.customModal--successMsg {
+  width: vw(725px);
+  padding: 0;
+  // background: rgba(249, 222, 190, 1) !important;
+  //background: #ffffff;
+  box-shadow: 0 0 0;
+  border-radius: vw(40px);
+  @include theme-mixin-2;
+  border-radius: vw(58px);
+  padding-left: vw(82px);
+  padding-right: vw(82px);
+}
+
+.success-msg-logo-block {
+  width: 100%;
+  height: vw(153px);
+  //background: rgba(249, 222, 190, 1);
+  // background: rgba(255, 255, 255, 1);
+  // border-radius: vw(40px) vw(40px) 0 0;
+  // box-shadow: 0 0 vw(30px) rgba(0, 0, 0, 0.05);
+  // @include theme-mixin-2;
+  border-radius: vw(58px) vw(58px) 0 0;
+  position: relative;
+  text-align: center;
+}
+
+.success-msg-copyright-block {
+  // padding-left: vw(104px);
+  padding-top: vw(34px);
+  width: 100%;
+  height: vw(91px);
+  //background: rgba(249, 222, 190, 1);
+  // background: rgba(255, 255, 255, 1);
+  // box-shadow: 0 0 vw(30px) rgba(0, 0, 0, 0.05);
+  // border-radius: 0 0 vw(40px) vw(40px);
+  color: $theme-text-color-blue-to-white;
+  text-align: center;
+}
+
+.success-msg-logo {
+  width: vw(252px);
+  height: vw(75px);
+  // margin-left: vw(99px);
+  margin-top: vw(39px);
+}
+
+.customOverlay--successMsg {
+  background: #191f23;
+}
+
+.success-msg-grey-bg-block {
+  //background: rgba(249, 222, 190, 0.5);
+  // background: #fafafa;
+  // padding: vw(44px) vw(100px) vw(47px) vw(104px);
+  // box-shadow: 0 0 vw(40px) rgba(0, 0, 0, 0.05);
+  // color: $theme-text-color-blue-to-white;
+  text-align: center;
+  padding: vw(58px) 0 vw(50px) 0;
+  border-top: vw(1px) solid $theme-border-color-white-22;
+  border-bottom: vw(1px) solid $theme-border-color-white-22;
+
+  .font-21-bold {
+    color: $theme-text-color-white-60;
+  }
+}
+
+.success-msg-btn {
+  width: vw(227px);
+  height: vw(67px);
+  // background: #54349f;
+  //background: transparent
+  //  linear-gradient(
+  //    107deg,
+  //    rgba(140, 217, 250, 1) 0%,
+  //    rgba(36, 136, 203, 1) 100%
+  //  );
+  // border-radius: vw(34px);
+  border: 0;
+  font-size: vw(21px);
+  @include fontBold700;
+  color: $color-white;
+  background: $theme-bg-blue-to-blue;
+  border-radius: vw(25px);
+}
+
+.email_verified {
+  text-align: center;
+  .heading {
+    background-color: transparent !important;
+  }
+  p {
+    font-size: vw(18px);
+    @include fontRegular400;
+    padding-bottom: vw(30px);
+    padding-top: vw(20px);
+  }
+}
+
+.email_verify_sucess_img {
+  width: vw(380px);
+  height: auto;
+  margin: auto;
+  margin-top: vw(62px);
+  margin-bottom: vw(47px);
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.email-verified-go-to-dash {
+  color: white;
+  border: none;
+  width: vw(246px);
+  height: vw(60px);
+  background: $theme-text-color-dark-blue-to-white-1;
+  border-radius: vw(29px);
+  font-size: vw(18px);
+  line-height: vw(27px);
+  @include fontBold700;
+}
+
+.email_suggestion_popup {
+  text-align: center;
+  h3 {
+    padding-bottom: vw(27px);
+    color: $theme-text-color-1;
+  }
+  p {
+    padding-bottom: vw(27px);
+    color: $theme-text-color-white-80;
+  }
+  img {
+    height: auto;
+    width: vw(381px);
+    margin-bottom: vw(27px);
+    margin-top: vw(55px);
+  }
+  .heading {
+    text-align: left;
+  }
+  .verify_email_btn {
+    border: none;
+    font-size: vw(18px);
+    line-height: vw(27px);
+    @include fontSemiBold600;
+    width: vw(200px);
+    height: vw(66px);
+    margin-right: vw(30px);
+    @include theme-mixin-blue-bg-with-color;
+  }
+  .do_it_later_btn {
+    font-size: vw(18px);
+    line-height: vw(27px);
+    margin-right: vw(10px);
+    width: vw(185px);
+    height: vw(66px);
+    @include fontSemiBold600;
+    @include theme-mixin-2;
+    color: $theme-text-color-grey;
+  }
+  .verify_email_btn--got-it {
+    width: vw(246px);
+    @include fontBold700;
+  }
+}

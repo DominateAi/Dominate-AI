@@ -1,0 +1,164 @@
+.side_panel_main_component_container {
+  display: flex;
+  height: calc(100vh - 4.65vw);
+  width: vw(455px);
+  // box-shadow: 10px 10px 30px #00000029;
+  padding-top: vw(30px);
+  padding-bottom: vw(30px);
+  flex-direction: column;
+  background: $theme-bg-color-gray-13;
+  margin-top: vw(12px);
+  border-radius: 0 vw(5px) vw(5px) 0;
+}
+
+.seleected_template_list_main_container {
+  display: inline-flex;
+  // height: 90%;
+  height: 83%;
+  overflow: auto;
+  flex-direction: column;
+
+  .selected_template_active {
+    // border: vw(1px) solid blue;
+    // border-radius: vw(10px);
+    border: vw(2px) solid $theme-border-blue !important;
+
+    // img {
+    //   border-radius: vw(10px);
+    // }
+  }
+  .selected_template {
+    position: relative;
+    align-self: center;
+    margin-top: vw(10px);
+    margin-bottom: vw(10px);
+    display: flex;
+    // width: vw(394px);
+    // height: vw(175px);
+    // box-shadow: 0 vw(3px) vw(16px) rgba(128, 128, 128, 0.16);
+    // border-radius: vw(10px);
+    @include theme-mixin-2;
+    width: vw(386px);
+    height: vw(179px);
+    // padding: vw(1px);
+    // border-width: vw(3px);
+
+    img {
+      // border-radius: vw(10px);
+      border-radius: inherit;
+    }
+  }
+  .delete_icons {
+    display: flex;
+    position: absolute;
+    top: 0;
+    // right: vw(10px);
+    right: vw(15px);
+    // height: vw(40px);
+    // width: vw(40px);
+    width: vw(59px);
+    height: vw(60px);
+    // color: white;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    // border-radius: 0 0 vw(10px) vw(10px);
+    border-radius: 0 0 vw(34px) vw(34px);
+    // background: linear-gradient(
+    //   217deg,
+    //   rgba(80, 46, 255, 1) 0%,
+    //   rgba(209, 199, 255, 1) 95%,
+    //   rgba(209, 199, 255, 1) 100%
+    // ); /* w3c */
+    // background: $theme-bg-color-gray-13;
+    background: rgba(196, 196, 196, 1);
+
+    img {
+      width: vw(24px);
+      height: auto;
+    }
+  }
+}
+
+.button_list_main_container {
+  display: flex;
+  height: 10%;
+  align-items: center;
+  padding-left: vw(10px);
+  padding-right: vw(10px);
+  justify-content: space-between;
+  .button_curve {
+    display: flex;
+    // width: vw(180px);
+    // height: vw(59px);
+    // border-radius: vw(25px);
+    // background-color: $theme-bg-color-white-03;
+    width: vw(149px);
+    height: vw(74px);
+    border-radius: vw(65px);
+    background: $theme-bg-color-gray-13;
+    // .fa-pencil {
+    //   color: #6266e1;
+    // }
+    .buttons {
+      display: flex;
+      cursor: pointer;
+      // height: vw(59px);
+      height: vw(74px);
+      width: 50%;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0 vw(38px) vw(38px) 0;
+      img {
+        width: vw(20px);
+        height: auto;
+      }
+    }
+    .buttons:first-child {
+      border-radius: vw(38px) 0 0 vw(38px);
+    }
+    .buttons_active {
+      // color: $color-white;
+      // @include theme-blue-bg-btn;
+      @include theme-mixin-blue-bg-with-color;
+      // border-radius: 0 vw(38px) vw(38px) 0;
+      border-radius: 0 vw(65px) vw(65px) 0;
+    }
+  }
+  .buttons_round {
+    display: flex;
+    // height: vw(59px);
+    // width: vw(59px);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: $color-white;
+    // @include theme-blue-bg-btn;
+    border-radius: 50%;
+    width: vw(74px);
+    height: vw(74px);
+    background: $theme-bg-color-gray-13;
+    // padding: 0;
+
+    .fa {
+      font-size: vw(20px);
+    }
+  }
+  .buttons_preview {
+    // @include fontMedium500;
+    font-size: vw(18px);
+    display: flex;
+    // height: vw(59px);
+    // width: vw(140px);
+    width: vw(159px);
+    height: vw(74px);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: $color-white;
+    // @include theme-blue-bg-btn;
+    border-radius: vw(25px);
+    @include theme-mixin-blue-bg-with-color;
+    @include fontSemiBold600;
+  }
+}

@@ -1,0 +1,108 @@
+/* ===============================================================
+                    
+                            activity
+
+================================================================== */
+
+.ac-call-recording-title {
+  display: flex;
+  justify-content: center;
+  margin-right: mvwDivide(13px);
+  margin-bottom: mvwDivide(26px);
+}
+
+.activity-text-border-right--acCallLog {
+  margin-left: mvwDivide(45px);
+  margin-right: mvwDivide(45px);
+}
+
+.justify-content-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ac-call-log-history-card {
+  display: flex;
+  padding: mvwDivide(22px) mvwDivide(45px);
+  margin-right: mvwDivide(67px);
+  border-bottom: vw(1px) solid rgba(112, 112, 112, 0.49);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  .ac-call-log-history-card__1 {
+    width: mvwDivide(213px);
+    padding-right: mvwDivide(30px);
+  }
+
+  .ac-call-log-history-card__2 {
+    width: mvwDivide(263px);
+    padding-right: mvwDivide(30px);
+  }
+
+  .ac-call-log-history-card__3 {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+}
+
+.ac-call-recordings-content {
+  padding-left: mvwDivide(49px);
+}
+
+.ac-call-recordings-blocks {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ac-call-recording-card {
+  background-color: $theme-bg-color-1;
+  // box-shadow: 0 0 mvwDivide(50px) rgba(128, 128, 128, 0.16);
+  border-top-left-radius: mvwDivide(7px);
+  border-top-right-radius: mvwDivide(7px);
+  position: relative;
+  margin-right: mvwDivide(21px);
+  margin-bottom: mvwDivide(55px);
+
+  .ac-call-recording-card__overflow {
+    width: mvwDivide(171px);
+    //total height 221px = 201px + mt-10px + mb-10px
+    height: mvwDivide(201px);
+    margin: mvwDivide(10px) 0;
+    overflow: auto;
+    padding: 0 mvwDivide(10px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: mvwDivide(-23px);
+    width: 100%;
+    height: mvwDivide(23px);
+    display: block;
+    // box-shadow: 0 mvwDivide(5px) mvwDivide(50px) rgba(128, 128, 128, 0.16);
+    background: rgba(0, 60, 255, 0.3);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 60, 255, 0.3) 0%,
+      rgba(154, 184, 255, 0.3) 82%
+    );
+    border-bottom-left-radius: mvwDivide(7px);
+    border-bottom-right-radius: mvwDivide(7px);
+  }
+}
+
+.ac-call-recording-audio-img {
+  margin-top: mvwDivide(58px);
+  margin-bottom: mvwDivide(13px);
+  width: mvwDivide(57px);
+}
+
+.ac-email-edit-dropdown-img--callRecording {
+  position: absolute;
+  right: mvwDivide(2px);
+  top: mvwDivide(10px);
+}

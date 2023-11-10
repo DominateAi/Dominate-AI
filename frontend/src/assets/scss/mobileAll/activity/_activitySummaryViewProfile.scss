@@ -1,0 +1,45 @@
+/* ===============================================================
+                    
+                    activity : summary view profile
+
+================================================================== */
+.activity-summary-view-profile {
+  padding: mvwDivide(5px) mvwDivide(25px) mvwDivide(20px) mvwDivide(45px);
+}
+
+.activity-summary-view-profile__overflow-block {
+  max-height: mvwDivide(550px);
+  overflow: auto;
+}
+
+.activity-title-img-text--view-profile {
+  flex-wrap: wrap;
+}
+
+.activity-summary-view-profile__fold3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  .activity-summary-about {
+    // max-width: mvwDivide(250px);
+    word-break: break-all;
+    margin-right: mvwDivide(60px);
+    margin-top: mvw(10px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.view-profile-icon-edit {
+  margin-left: mvwDivide(17px);
+  width: mvwDivide(24px);
+}
+
+.view-profile-icon-delete {
+  margin-left: mvwDivide(21px);
+  width: mvwDivide(24px);
+}

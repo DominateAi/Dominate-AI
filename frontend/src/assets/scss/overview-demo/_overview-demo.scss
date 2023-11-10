@@ -1,0 +1,298 @@
+/* ===============================================================
+                    
+                        overview demo
+                    
+================================================================== */
+
+.overview-demo-outline-button {
+  width: max-content;
+  @include theme-button-height-2;
+  font-size: vw(18px);
+  @include fontMedium500;
+  color: $theme-text-color-white-79;
+  @include theme-mixin-2;
+  padding: 0 vw(20px);
+  display: inline-block;
+  text-emphasis: center;
+}
+
+// overview demo screen 0
+.overview-demo-red-bg-btn {
+  padding-left: vw(35px);
+  padding-right: vw(35px);
+  width: max-content;
+  height: vw(73px);
+  font-size: vw(32px);
+  @include fontMedium500;
+  border: 0;
+  border-radius: vw(25px);
+  color: $color-white;
+  background-color: $theme-text-color-dark-blue-to-white-42;
+  // box-shadow: 0 vw(3px) vw(6px) #80808028;
+  margin-bottom: vw(93px);
+}
+
+.overview-demo__welcome-logo {
+  width: vw(206px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: vw(46px);
+  margin-top: vw(30px);
+}
+
+.overview-demo__welcome-title {
+  color: $theme-text-color-1;
+  font-size: vw(56px);
+  line-height: vw(85px);
+  @include fontRegular400;
+  margin-bottom: 0;
+}
+// overview demo screen 0 end
+
+.overview-demo__screens-min-max-height {
+  width: 100%;
+  min-height: vw(508px);
+  max-height: vw(648px);
+  display: block;
+}
+
+.overview-demo__footer-absolute {
+  position: absolute;
+  bottom: vw(35px);
+  width: 96.5%;
+}
+
+.overview-demo__screen-0,
+.overview-demo__screen-1,
+.overview-demo__screen-2,
+.overview-demo__screen-3,
+.overview-demo__screen-4,
+.overview-demo__screen-5,
+.overview-demo__screen-7,
+.overview-demo__screen-8,
+.overview-demo__screen-9,
+.overview-demo__screen-17 {
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  // display: none;
+  background-color: $theme-bg-color-1;
+}
+
+.overview-demo__screen-2,
+.overview-demo__screen-4,
+.overview-demo__screen-5,
+.overview-demo__screen-7,
+.overview-demo__screen-9 {
+  border-radius: vw(15px);
+  // box-shadow: vw(5px) vw(5px) vw(30px) #80808089;
+}
+
+.overview-demo__screen-0 {
+  width: vw(661px);
+  margin-bottom: vw(84px);
+}
+
+.overview-demo__screen-1 {
+  width: vw(1505px);
+  margin-bottom: vw(55px);
+}
+
+.overview-demo__screen-2 {
+  width: vw(1455px);
+  margin-bottom: vw(25px);
+}
+
+.overview-demo__screen-3 {
+  width: vw(936px);
+  margin-bottom: vw(89px);
+}
+
+.overview-demo__screen-3--mt {
+  margin-top: vw(86px);
+}
+
+.overview-demo__screen-4 {
+  width: vw(1455px);
+  margin-bottom: vw(45px);
+  border-radius: 0;
+}
+
+.overview-demo__screen-5 {
+  width: vw(1455px);
+  margin-bottom: vw(45px);
+}
+
+.overview-demo__screen-7 {
+  width: vw(1155px);
+  // height: vw(538px);
+  // margin-bottom: vw(45px);
+}
+
+.overview-demo__screen-8 {
+  width: vw(1525px);
+  margin-bottom: vw(45px);
+}
+
+.overview-demo__screen-9 {
+  width: vw(1455px);
+  margin-top: vw(25px);
+  margin-bottom: vw(45px);
+}
+
+.overview-demo__screen-17 {
+  width: vw(771px);
+  margin-top: vw(45px);
+  margin-bottom: vw(45px);
+}
+
+// overview demo screens
+.overview-demo__titleBlock,
+.overview-demo__titleBlockDashboard {
+  display: flex;
+  align-items: center;
+}
+
+.overview-demo__titleBlock {
+  margin: vw(70px) vw(142px) vw(25px) vw(142px);
+}
+
+.overview-demo__titleBlockDashboard {
+  margin: vw(12px) vw(102px) vw(32px) vw(102px);
+}
+
+.overview-demo__titleBlock-logo {
+  width: vw(223px);
+  height: auto;
+  display: block;
+  margin-right: vw(20px);
+}
+
+.overview-demo__titleBlock_text-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
+}
+
+.overview-demo__titleBlock-title {
+  font-size: vw(33px);
+  line-height: vw(50px);
+  @include fontBold700;
+  margin-bottom: 0;
+}
+
+.overview-demo__titleBlock-title__img {
+  width: vw(67px);
+  display: block;
+  opacity: 0.67;
+  margin-right: vw(27px);
+}
+
+.overview-demo__desc,
+.overview-demo__descDashboard {
+  font-size: vw(26px);
+  line-height: vw(42px);
+  @include fontRegular400;
+  margin-bottom: 0;
+}
+
+.overview-demo__desc {
+  text-align: right;
+  padding-bottom: vw(25px);
+  padding-left: vw(88px);
+  padding-right: vw(106px);
+}
+
+.overview-demo__descDashboard {
+  text-align: center;
+  padding-bottom: vw(20px);
+  padding-left: vw(102px);
+  padding-right: vw(102px);
+}
+
+.overview-demo__descScreen3 {
+  font-size: vw(34px);
+  line-height: vw(51px);
+  @include fontRegular400;
+  margin-bottom: 0;
+  width: vw(702px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.overview-demo-red-bg-btn-next,
+.overview-demo-red-border-btn-prev {
+  width: vw(372px);
+  @include theme-button-height-and-radius-2;
+  font-size: vw(30px);
+  @include fontMedium500;
+}
+
+.overview-demo-red-bg-btn-next {
+  border: 0;
+  color: $color-white;
+  background-color: $theme-text-color-dark-blue-to-white-42;
+}
+
+.overview-demo-red-border-btn-prev {
+  border: vw(2px) solid $theme-bg-dark-blue-to-purple-1;
+  color: $theme-text-color-dark-blue-to-white-42;
+  background-color: transparent;
+}
+
+.overview-demo__screen-1-footer-block {
+  margin-left: vw(133px);
+  margin-right: vw(117px);
+  margin-bottom: vw(66px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.overview-demo__tip-block {
+  display: flex;
+  align-items: flex-start;
+}
+
+.overview-demo__tip-block--dashboard {
+  margin-left: vw(102px);
+  margin-right: vw(102px);
+  margin-bottom: vw(25px);
+}
+
+.overview-demo__tip-block-img {
+  font-size: vw(18px);
+  margin-right: vw(12px);
+}
+
+.overview-demo__tip-block-title {
+  font-size: vw(20px);
+  line-height: vw(30px);
+  @include fontBlack900;
+  margin-bottom: 0;
+  margin-right: vw(22px);
+}
+
+.overview-demo__tip-block-desc {
+  font-size: vw(20px);
+  line-height: vw(30px);
+  @include fontLight300;
+  margin-bottom: 0;
+  width: vw(644px);
+}
+
+.overview-demo__prev-next-block {
+  margin-right: vw(102px);
+  margin-bottom: vw(5px);
+  margin-left: vw(102px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.overview-demo__text-btn-img {
+  width: vw(218px);
+  height: auto;
+}

@@ -1,0 +1,158 @@
+.saved_cards_container {
+  padding-top: vw(40px);
+  .first-row {
+    margin-bottom: vw(78px);
+  }
+  .default_card_box {
+    padding: vw(42px) vw(42px) vw(29px) vw(42px);
+    width: vw(535px);
+    height: vw(336px);
+    margin-top: vw(32px);
+    background: linear-gradient(
+      112.91deg,
+      rgba(255, 255, 255, 0.51) 3.51%,
+      rgba(255, 255, 255, 0) 111.71%
+    );
+    filter: drop-shadow(14.6469px 17.5762px 29.2937px rgba(0, 0, 0, 0.05));
+    backdrop-filter: blur(20.5056px);
+    border: vw(1px) solid rgba(174, 177, 178, 0.51);
+    border-radius: vw(15px);
+  }
+  .available_balence_card {
+    color: $theme-text-color-1;
+    margin-top: vw(32px);
+    width: vw(661px);
+    height: vw(336px);
+    padding: vw(91px);
+    @include theme-mixin-2;
+    border-radius: vw(18px);
+  }
+  .second-row {
+    .fa-trash {
+      margin-left: vw(30px);
+    }
+  }
+}
+.default-card-title {
+  font-size: vw(18px);
+  line-height: vw(21.33px);
+  @include fontRubikRegular;
+  margin-bottom: vw(7px);
+}
+.defult-card-credit-text {
+  font-size: vw(14px);
+  line-height: vw(16.59px);
+  @include fontRubikRegularImportant;
+  margin-bottom: vw(32px) !important;
+}
+.defult-card-credit-no-text {
+  font-size: vw(36px);
+  line-height: vw(48px);
+  @include fontComfortaaRegular;
+  margin-bottom: vw(36px);
+  color: $theme-text-color-1;
+}
+.defult-card-detail-text-1 {
+  font-size: vw(12px);
+  line-height: vw(14px);
+  @include fontComfortaaRegular;
+  margin-bottom: vw(15px);
+  color: $theme-text-color-1;
+  margin-right: vw(45px);
+}
+.defult-card-detail-text-2 {
+  font-size: vw(24px);
+  line-height: vw(27px);
+  @include fontComfortaaRegular;
+  margin-bottom: 0;
+  color: $theme-text-color-1;
+  margin-right: vw(45px);
+}
+.defult-card-expire-text {
+  font-size: vw(14px);
+  padding-top: vw(65px);
+  line-height: vw(16.59px);
+  @include fontRubikRegularImportant;
+  margin-bottom: 0 !important;
+  padding-left: vw(200px);
+}
+.available_balence_card-title {
+  font-size: vw(72px);
+  line-height: vw(87px);
+  @include fontRubikBold;
+  color: $theme-text-color-white-79;
+  margin-bottom: vw(30px);
+}
+.available_balence_card-para {
+  font-size: vw(13px);
+  line-height: vw(16px);
+  @include fontRubikRegularImportant;
+  margin-bottom: 0 !important;
+  color: $theme-text-color-white-79;
+}
+.default_card_box__visaTextIconBlock {
+  height: vw(31px);
+  text-align: right;
+  margin-bottom: vw(26px);
+
+  img {
+    width: auto;
+    height: inherit;
+    margin-left: auto;
+  }
+}
+.default_card_box__visaIconBlock {
+  height: vw(44px);
+  margin-bottom: vw(26px);
+
+  img {
+    width: auto;
+    height: inherit;
+  }
+}
+
+.profile-payment-history-table-paymentSavedCard {
+  th,
+  .table-with-border-row__content-row td {
+    @include fontSemiBold600;
+  }
+
+  .table-with-border-row__content-row {
+    td {
+      color: $theme-text-color-white-79;
+      font-size: vw(24px);
+      line-height: vw(29px);
+    }
+  }
+
+  th {
+    padding: vw(57px) vw(22px) vw(22px) vw(57px);
+  }
+  .table-with-border-row__content-row td {
+    padding: vw(51px) vw(22px) vw(51px) vw(51px);
+  }
+
+  .table-with-border-row__content-row td:first-child {
+    color: $theme-text-color-1;
+  }
+
+  .merchant-img {
+    height: vw(30px);
+  }
+
+  .person-img {
+    width: vw(51px);
+    height: vw(51px);
+    margin-right: vw(34px);
+  }
+
+  .expiry-date {
+    letter-spacing: 0.03em;
+    @include fontRegular400;
+    margin-left: vw(19px);
+  }
+
+  .fa-trash {
+    color: $theme-text-color-white-79;
+  }
+}

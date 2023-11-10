@@ -1,0 +1,79 @@
+/* ===============================================================
+                    
+                  UPDATES LOGIN AND SIGNUP
+                    
+================================================================== */
+
+.updates-signup-text {
+  margin-top: vw(54px);
+  margin-bottom: vw(35px);
+
+  p {
+    color: #808080;
+    font-size: vw(20px);
+    @include fontRegular400;
+  }
+
+  .updates-signup-text__gray {
+    color: #808080;
+    font-size: vw(25px);
+    line-height: vw(38px);
+    @include fontRegular400;
+  }
+
+  .updates-signup-text__blue {
+    color: $theme-text-color-white-79;
+    font-size: vw(28px);
+    line-height: vw(42px);
+    @include fontMedium500;
+  }
+  .updates-signup-text__blue:hover{
+    cursor: pointer;
+  }
+}
+
+.workspace-login-page-main-conatiner__bg-text {
+  color: rgba(255, 255, 255, 0.21);
+  font-size: vw(177px);
+  line-height: vw(142px);
+  @include fontBold700;
+  position: absolute;
+  left: vw(-205px);
+  transform: rotate(270deg);
+  top: vw(189px);
+}
+
+.customOverlay--successMsg {
+  // background-position: top !important;
+  // background-size: 100% !important;
+  // background-repeat: no-repeat !important;
+  // background-image: url("../../img/background-new-design/new-bg-dark-ui.png") !important;
+
+  .customModal--addLead {
+    background: transparent;
+    border-radius: vw(58px);
+  }
+}
+
+.free-img {
+  width: vw(40px);
+}
+.plans0-img {
+  width: vw(73px);
+}
+
+.plans1-img {
+  width: vw(117px);
+}
+
+.plans2-img {
+  width: vw(63px);
+}
+
+.plans3-img {
+  width: vw(120px);
+}
+
+.plans4-img {
+  width: vw(57px);
+}

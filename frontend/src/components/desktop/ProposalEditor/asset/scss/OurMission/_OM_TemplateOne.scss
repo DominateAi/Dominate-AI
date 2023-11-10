@@ -1,0 +1,68 @@
+.our_mission_page_template_one {
+  .our_mission_page_template_one__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    //justify-content: flex-start;
+  }
+  .our_mission_page_template_one__left_line {
+    width: vw(55px);
+    height: 100%;
+    border-radius: vw(10px) 0 0 vw(10px);
+  }
+
+  .our_mission_page_template_one__right--container--text {
+    display: flex;
+    //flex-direction: column;
+    width: 45%;
+    height: 100%;
+    padding: 0 vw(10px) vw(10px) vw(10px);
+  }
+  .our_mission_page_template_one__right--container {
+    display: flex;
+    width: 95%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: vw(50px) vw(20px) vw(70px) vw(20px);
+  }
+  .our_mission_page_template_one__top {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-left: vw(50px);
+
+    .our_mission_page_template_one__dot {
+      display: block;
+      width: vw(22px);
+      height: vw(22px);
+    }
+    .our_mission_page_template_one__top_headline {
+      display: flex;
+      height: vw(79px);
+      align-items: center;
+      width: 100%;
+      word-break: break-all;
+    }
+  }
+  .our_mission_page_template_one__left__para {
+    margin-top: vw(50px);
+    width: 100%;
+    height: vw(300px);
+    padding-left: vw(75px);
+    overflow: auto;
+    word-break: break-all;
+  }
+
+  .our_mission_page_template_one__img_container {
+    //height: 95%;
+    width: 55%;
+    padding: vw(10px);
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+}

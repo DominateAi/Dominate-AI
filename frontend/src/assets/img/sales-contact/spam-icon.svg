@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29.253" height="27" viewBox="0 0 29.253 27">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fa9472"/>
+      <stop offset="1" stop-color="#fb6394"/>
+    </linearGradient>
+  </defs>
+  <path id="Icon_ionic-ios-warning" data-name="Icon ionic-ios-warning" d="M16.095,5.618,3.642,28.343A2.137,2.137,0,0,0,5.548,31.5H30.459a2.142,2.142,0,0,0,1.905-3.157L19.905,5.618A2.183,2.183,0,0,0,16.095,5.618Zm3.143,9.429-.253,8.578H17.016l-.253-8.578ZM18,28.294A1.295,1.295,0,1,1,19.343,27,1.306,1.306,0,0,1,18,28.294Z" transform="translate(-3.375 -4.5)" fill="url(#linear-gradient)"/>
+</svg>

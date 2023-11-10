@@ -1,0 +1,32 @@
+/* ===============================================================
+                    
+                            activity tabs
+
+================================================================== */
+
+.activityMenuTabs {
+  .rwt__tablist {
+    padding: 0 mvwDivide(45px) 0 mvwDivide(48px);
+    // box-shadow: 0 mvw(3px) mvw(6px) rgba(0, 0, 0, 0.16);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    button {
+      padding: mvwDivide(20px);
+      border: transparent;
+      background-color: transparent;
+      font-size: mvwDivide(21px);
+      @include fontRegular400;
+    }
+
+    button[aria-selected="true"] {
+      @include fontBold700;
+    }
+  }
+
+  .rwt__tabpanel {
+    margin: mvwDivide(33px) mvwDivide(55px) mvwDivide(33px) mvwDivide(55px);
+    overflow: auto;
+  }
+}

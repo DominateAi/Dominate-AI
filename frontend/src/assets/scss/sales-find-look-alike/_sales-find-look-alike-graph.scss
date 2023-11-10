@@ -1,0 +1,33 @@
+.find-look-alike-graph-outer-div {
+  width: vw(1501px);
+  height: vw(435px);
+  overflow: auto;
+  margin: 0 auto;
+  margin-bottom: vw(100px);
+
+  .highcharts-label {
+    @include fontMedium500;
+  }
+
+  .highcharts-tooltip {
+    @include fontRegular400;
+  }
+
+  .highcharts-background,
+  .highcharts-button-box {
+    fill: $theme-bg-color-white-03;
+  }
+
+  .highcharts-menu {
+    background: $theme-dropdown-bg-color !important;
+    box-shadow: 0 0 0 !important;
+  }
+
+  .highcharts-menu-item {
+    color: $theme-text-color-white-79 !important;
+
+    &:hover {
+      background: $theme-text-color-on-dropdown-hover !important;
+    }
+  }
+}

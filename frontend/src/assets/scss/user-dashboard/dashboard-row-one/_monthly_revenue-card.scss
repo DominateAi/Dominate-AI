@@ -1,0 +1,59 @@
+.monthly_revenue_card {
+  padding-bottom: vw(24px);
+  padding-left: vw(10px);
+  padding-right: vw(10px);
+  padding-top: vw(24px);
+  width: vw(180px);
+  height: vw(240px);
+  text-align: center;
+  margin-top: vw(34px);
+  margin-right: vw(14px);
+  margin-bottom: vw(14px);
+  // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+  // border-radius: vw(15px);
+
+  h3 {
+    color: $theme-text-color-1;
+    font-size: vw(16px);
+    line-height: vw(25px);
+    @include fontBold700;
+  }
+}
+
+.new-dashboard-circular-graph {
+  margin-top: vw(10px);
+  margin-bottom: vw(13px);
+
+  .CircularProgressbar .CircularProgressbar-path {
+    stroke: $theme-bg-blue-1;
+    // stroke: linear-gradient(
+    //   90deg,
+    //   rgba(255, 37, 37, 0.5) 0%,
+    //   rgba(255, 229, 59, 0.5) 100%
+    // );
+  }
+
+  .CircularProgressbar .CircularProgressbar-text {
+    fill: $theme-text-color-white-79;
+    // font-size: vw(16px);
+  }
+}
+
+.monthly_revenue_card__title1 {
+  // color: #43424b;
+  // color: $theme-text-color-gray-to-white;
+  color: $theme-text-color-white-79;
+  font-size: vw(16px);
+  line-height: vw(25px);
+  @include fontMedium500;
+  margin-bottom: 0;
+}
+
+.monthly_revenue_card__title2 {
+  // color: rgba(67, 66, 75, 0.45);
+  color: $theme-text-color-white-03;
+  font-size: vw(12px);
+  line-height: vw(18px);
+  @include fontRegular400;
+  margin-bottom: 0;
+}

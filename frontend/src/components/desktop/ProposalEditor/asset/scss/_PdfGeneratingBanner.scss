@@ -1,0 +1,32 @@
+.pdf_generating_banner_main_container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: whitesmoke;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+.pdf_generating_banner_container {
+  display: flex;
+  height: vw(400px);
+  width: vw(500px);
+  flex-direction: column;
+}
+.pdf_generating_banner_loader {
+  display: flex;
+  height: vw(200px);
+  width: vw(500px);
+  justify-content: center;
+}
+.pdf_generating_banner_text {
+  display: flex;
+  height: vw(100px);
+  width: vw(500px);
+  justify-content: center;
+  @include fontLight300;
+  font-size: vw(18px);
+}

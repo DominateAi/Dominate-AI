@@ -1,0 +1,104 @@
+.sales-intent-based-search-div {
+  max-width: vw(1699px);
+  min-height: vw(377px);
+  padding: vw(64px) vw(117px) vw(52px) vw(123px);
+  margin-top: vw(20px);
+  border-radius: vw(20px);
+  // background: url("../../img/background-new-design/intent-bg.svg");
+  // background-size: cover;
+  background-color: $theme-bg-color-1;
+}
+
+.sales-intent-based-search-block-industry-block {
+  width: vw(420px);
+  height: vw(50px);
+}
+.mt-30 {
+  margin-top: vw(30px);
+}
+.react-select-follow-up-form-container--intent-based-search-block {
+  width: 100%;
+  border-radius: vw(25px);
+}
+.sales-intent-based-search-title {
+  color: rgba(64, 64, 64, 1);
+}
+.sales-intent-based-search-input {
+  width: vw(420px);
+  height: vw(52px);
+  border: none;
+  border-radius: vw(25px);
+  background: $theme-bg-color-white-03;
+  padding: 0 vw(40px);
+  // box-shadow: 0 vw(3px) vw(6px) rgba(128, 128, 128, 0.16);
+}
+.sales-intent-based-search-italic-text {
+  padding-left: vw(20px);
+  color: rgba(64, 64, 64, 0.29);
+  font-size: vw(20px);
+  line-height: vw(30px);
+  @include fontItalicPoppins;
+}
+.intent-keyword-div {
+  width: vw(177px);
+  min-height: vw(53px);
+  padding: vw(10px) vw(25px);
+  border-radius: vw(27px);
+  border: vw(1px) solid #303030;
+  margin: vw(20px);
+  margin-left: vw(10px) !important;
+  color: #331e1e;
+  word-break: break-all;
+  background: #ffffff;
+}
+.intent-based-search-block-more-text {
+  color: rgba(48, 48, 48, 0.45);
+  font-size: vw(20px);
+  @include fontBold700;
+  line-height: vw(30px);
+  margin-bottom: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.first-time-list-builder-more-text-button {
+  border: none;
+  background: transparent;
+  width: vw(100px);
+}
+
+.intent-keyword-div-outer-div {
+  width: vw(395px);
+}
+
+.intent-based-block-close,
+.intent-keyword-div-text {
+  color: $theme-text-color-1;
+  word-break: break-all;
+}
+
+.intent-based-block-close {
+  cursor: pointer;
+  font-size: vw(15px);
+  padding-top: vw(5px);
+}
+.intent-save {
+  width: vw(20px);
+  height: vw(20px);
+  margin-right: vw(15px);
+}
+.leads-title-block-btn-red-bg-intent-search-save {
+  margin-top: vw(60px);
+  background: linear-gradient(
+    286deg,
+    rgba(80, 46, 255, 1) 0%,
+    rgba(209, 199, 255, 1) 100%
+  );
+  width: vw(255px);
+  @include theme-button-height-and-radius-3;
+  font-size: vw(20px);
+}
+
+.sales-find-look-alike-search-img {
+  margin-right: vw(10px);
+}

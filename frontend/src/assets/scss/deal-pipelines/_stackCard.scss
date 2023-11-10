@@ -1,0 +1,117 @@
+.stack-card-container {
+  margin-top: vw(10px);
+  margin-left: vw(5px);
+  width: vw(325px);
+  min-height: vw(202px);
+  // box-shadow: vw(-3px) vw(-3px) vw(20px) #e7e5e5;
+  // background: $theme-bg-color-white-03;
+  background: $theme-bg-stack-card;
+  backdrop-filter: blur(153px);
+  padding: vw(20px);
+  border-radius: vw(14px);
+  position: relative;
+
+  &::before {
+    position: absolute;
+    border-radius: vw(12px);
+    content: "";
+    left: 0;
+    width: vw(7px);
+    height: 90%;
+    top: vw(9px);
+    border: vw(3px) solid transparent;
+    background-image: linear-gradient(180deg, #beb2fc 0%, #beb2fc 100%),
+      $theme-bg-gardient-blue;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+}
+
+.stack-card-container:hover {
+  cursor: grab;
+}
+
+.stack-card-img-div {
+  width: vw(50px);
+  height: vw(50px);
+  border-radius: 50%;
+  word-break: break-all;
+
+  img {
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    // box-shadow: 0 vw(3px) vw(6px) rgba(0, 0, 0, 0.16);
+  }
+}
+.stack-card-row1-colm2 {
+  padding-left: vw(17px);
+  width: 70%;
+}
+.stack-card-title {
+  // color: rgba(48, 48, 48, 1);
+  word-break: break-all;
+  color: $theme-text-color-white-79;
+}
+.stack-card-subtitle {
+  // color: rgba(48, 48, 48, 0.31);
+  word-break: break-all;
+  color: $theme-text-color-white-79;
+}
+.stack-card-data {
+  // color: rgba(48, 48, 48, 1);
+  padding-left: vw(15px);
+  word-break: break-all;
+  width: 60%;
+  color: $theme-text-color-white-79;
+}
+.stack-card-row2 {
+  padding-top: vw(10px);
+
+  .stack-card-subtitle {
+    color: $theme-text-blue-to-white-42;
+  }
+}
+.stack-card-btn {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  width: vw(91px);
+  height: vw(30px);
+  border-radius: vw(42px);
+  color: white;
+  // box-shadow: 0 vw(3px) vw(6px) rgba(0, 0, 0, 0.16);
+  border: none;
+  font-size: vw(14px);
+  line-height: vw(21px);
+  @include fontMedium500;
+}
+
+.stack-card-btn-view {
+  // background: linear-gradient(
+  //   291deg,
+  //   rgba(230, 160, 233, 1) 0%,
+  //   rgba(69, 104, 220, 1) 100%,
+  //   rgba(234, 175, 200, 1) 100%
+  // );
+  padding-top: vw(5px);
+  @include theme-mixin-2;
+  backdrop-filter: none;
+}
+
+.stack-card-btn-edit {
+  // background: linear-gradient(
+  //   292deg,
+  //   rgba(247, 121, 125, 1) 0%,
+  //   rgba(251, 215, 134, 1) 100%,
+  //   rgba(234, 175, 200, 1) 100%
+  // );
+  margin-left: vw(3px);
+  padding-top: vw(5px);
+  @include theme-blue-bg-btn;
+}
+
+.trash-icon {
+  // color: rgba(0, 0, 0, 0.35);
+  color: $theme-text-color-grey;
+}

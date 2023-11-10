@@ -1,0 +1,15 @@
+.import-modal-four-img-div {
+  width: vw(90px);
+  height: vw(90px);
+  margin-top: vw(50px);
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.import-leads-modal-four-text {
+  text-align: center;
+  padding-top: vw(25px);
+  color: $theme-text-dark-gray-to-white;
+}

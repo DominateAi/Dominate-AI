@@ -1,0 +1,239 @@
+/* ===============================================================
+                    
+                        dropdown
+                    
+================================================================== */
+
+// lead-status-dropDown
+.lead-status-dropDown {
+  .Dropdown-control {
+    cursor: pointer;
+    border: 0;
+    //    background-color: transparent;
+    width: max-content;
+    max-width: max-content;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    @include theme-mixin-4;
+    border-radius: vwDivide(18px);
+  }
+
+  .Dropdown-menu {
+    width: mvwDivide(310px);
+    height: mvwDivide(310px);
+    max-height: mvwDivide(310px);
+    padding: mvwDivide(29px) mvwDivide(10px) mvwDivide(29px) mvwDivide(16px);
+    border: 0;
+    border-radius: mvwDivide(10px);
+    // box-shadow: mvwDivide(3px) mvwDivide(3px) mvwDivide(6px) rgba(0, 0, 0, 0.16);
+    margin-top: mvwDivide(25px);
+
+    .Dropdown-option:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .Dropdown-option {
+    font-size: mvwDivide(21px);
+    line-height: mvwDivide(31px);
+    @include fontRegular400;
+    color: $theme-text-color-1;
+    padding: mvwDivide(9px);
+    border-bottom: vw(1px) solid rgba(112, 112, 112, 0.25);
+  }
+
+  .Dropdown-control:hover {
+    box-shadow: 0 0 0;
+  }
+
+  .Dropdown-option:hover,
+  .Dropdown-option.is-selected {
+    background: $theme-bg-color-1;
+    color: #000;
+  }
+
+  .Dropdown-arrow {
+    top: 41%;
+    border-color: $theme-dropdown-arrow-color transparent transparent;
+    border-width: mvwDivide(8px) mvwDivide(8px) 0;
+  }
+}
+
+.is-open .Dropdown-arrow {
+  border-color: transparent transparent $theme-dropdown-arrow-color !important;
+  border-width: 0 mvwDivide(8px) mvwDivide(8px) !important;
+}
+
+//lead-status-dropDown--importExport
+
+.lead-status-dropDown--importExport {
+  &.Dropdown-root {
+    background-color: $theme-dropdown-bg-color;
+    width: mvwDivide(198px);
+    // width: max-content;
+    height: mvwDivide(50px);
+    display: flex;
+    justify-content: center;
+    @include border-mixin-1;
+    border-radius: mvwDivide(25px);
+    background: #ffffff;
+  }
+
+  .Dropdown-menu .Dropdown-group > .Dropdown-title,
+  .Dropdown-placeholder,
+  .Dropdown-menu > .Dropdown-option {
+    font-size: mvwDivide(21px);
+    @include fontMedium500;
+    line-height: mvwDivide(31px);
+  }
+
+  .Dropdown-menu .Dropdown-group > .Dropdown-title,
+  .Dropdown-menu > .Dropdown-option {
+    color: #050505;
+  }
+
+  .Dropdown-menu > .Dropdown-option {
+    padding: mvwDivide(15px);
+  }
+
+  .Dropdown-menu .Dropdown-group > .Dropdown-title {
+    padding: mvwDivide(10px) mvwDivide(16px);
+    padding-bottom: 0;
+    @include fontRegular400;
+  }
+
+  .Dropdown-placeholder {
+    color: $theme-text-color-dark-blue-to-white-42;
+  }
+
+  .Dropdown-control {
+    padding: 0;
+    padding-top: mvwDivide(7px);
+  }
+
+  .Dropdown-arrow {
+    display: none;
+  }
+
+  .Dropdown-menu {
+    width: mvwDivide(218px);
+    height: auto;
+    margin-top: mvwDivide(5px);
+    padding: 0 mvwDivide(10px) mvwDivide(20px) mvwDivide(10px);
+  }
+
+  .Dropdown-group:first-child {
+    padding-bottom: mvwDivide(5px);
+    border-bottom: vw(1px) solid rgba(112, 112, 112, 0.25);
+  }
+
+  .Dropdown-group {
+    .Dropdown-option {
+      color: $theme-text-color-1;
+      border-bottom: 0;
+      font-size: mvwDivide(16px);
+      line-height: mvwDivide(25px);
+      padding: mvwDivide(7px) mvwDivide(5px) mvwDivide(5px) mvwDivide(28px);
+    }
+  }
+}
+
+.lead-status-dropDown--importExport--all-lead {
+  // box-shadow: 0 mvwDivide(3px) mvwDivide(6px) rgba(0, 0, 0, 0.16);
+  &.Dropdown-root {
+    background: $theme-bg-color-1;
+    // width: mvwDivide(171px);
+    width: max-content;
+    // margin-right: mvwDivide(33px);
+    border: transparent;
+    justify-content: flex-start;
+    height: mvwDivide(22px);
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .Dropdown-arrow {
+    display: block;
+  }
+
+  .Dropdown-control {
+    padding: 0;
+    padding-top: mvwDivide(2px);
+    padding-right: mvwDivide(41px);
+    padding-left: mvwDivide(7px);
+  }
+
+  .Dropdown-placeholder {
+    color: $theme-text-color-1;
+    font-size: mvwDivide(15px);
+    @include fontSemiBold600;
+    line-height: mvwDivide(38px);
+    padding: 0 mvwDivide(3px);
+  }
+
+  .Dropdown-menu {
+    width: max-content;
+    padding-bottom: mvwDivide(10px);
+  }
+}
+
+.dashboard-profile-dropdown {
+  .rc-dropdown-menu {
+    text-align: center;
+  }
+
+  .rc-dropdown-menu > .rc-dropdown-menu-item {
+    font-size: mvwDivide(18px);
+    color: $theme-text-color-1;
+    @include fontRegular400;
+    padding: mvwDivide(9px);
+  }
+}
+
+.rc-dropdown-menu > .rc-dropdown-menu-item {
+  cursor: default;
+}
+
+// lead-status-dropDown--statusRow
+.lead-status-dropDown.lead-status-dropDown--statusRow {
+  .Dropdown-control {
+    width: max-content;
+    max-width: mvwDivide(330px);
+    word-break: break-all;
+    padding-right: mvwDivide(45px);
+  }
+
+  .Dropdown-menu {
+    width: mvwDivide(248px);
+    height: auto;
+    max-height: mvwDivide(405px);
+    margin-top: mvwDivide(21px);
+    padding-top: mvwDivide(18px);
+    padding-bottom: mvwDivide(18px);
+  }
+}
+
+.lead-status-dropDown.lead-status-dropDown--taskStatusRow {
+  .Dropdown-control,
+  .Dropdown-placeholder {
+    font-size: mvwDivide(21px);
+    line-height: mvwDivide(31px);
+    @include fontSemiBold600;
+  }
+
+  .Dropdown-control {
+    width: max-content;
+    max-width: max-content;
+    padding-right: mvwDivide(45px);
+  }
+
+  .Dropdown-menu {
+    width: mvwDivide(208px);
+    height: auto;
+    max-height: mvwDivide(405px);
+    margin-top: mvwDivide(21px);
+    padding-top: mvwDivide(15px);
+    padding-bottom: mvwDivide(15px);
+  }
+}

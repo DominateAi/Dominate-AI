@@ -1,0 +1,156 @@
+/* ===============================================================
+                    
+                            activity
+
+================================================================== */
+
+.customModal--mail-max-height {
+  min-height: vw(655px) !important;
+  max-height: vw(780px);
+  overflow: auto;
+}
+
+.backtokanban_button {
+  position: absolute;
+  width: vw(75px);
+  left: vw(62px);
+}
+
+.backtokanban_button:hover {
+  cursor: pointer;
+}
+
+.files-open-btn {
+  margin-top: vw(20px);
+  height: vw(40px);
+  background: $theme-bg-dark-blue-to-purple-1;
+  color: $color-white;
+  width: vw(105px);
+  font-size: vw(15px);
+  @include fontRegular400;
+  border: 0;
+  border-radius: vw(6px);
+}
+
+// activity structure
+
+.activity-outer-container {
+  min-height: 100vh;
+  // background-color: $theme-bg-color-1;
+  // box-shadow: 0 vw(3px) vw(50px) rgba(128, 128, 128, 0.16);
+  margin: 0 vw(146px) 0 vw(136px);
+  display: flex;
+
+  .activity-outer-container__colm1 {
+    width: vw(408px);
+    padding: vw(48px) vw(29px) vw(31px) vw(34px);
+    background: $theme-bg-colm1-bg !important;
+    // box-shadow: vw(10px) vw(10px) vw(30px) rgba(0, 0, 0, 0.16);
+  }
+
+  .activity-outer-container__colm2 {
+    background: $theme-bg-colm2-bg !important;
+    flex-grow: 1;
+    width: vw(1230px);
+  }
+}
+
+// activity summary
+
+.activity-title-img-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: vw(19px);
+  word-break: break-all;
+}
+
+.activity-page-lead-img {
+  width: vw(60px);
+  margin-right: vw(17px);
+  border-radius: 50%;
+}
+
+.btn-funnel-view--activitySummary {
+  width: vw(155px);
+  @include theme-button-height-and-radius-4;
+  margin-right: vw(21px);
+  margin-bottom: vw(10px);
+
+  color: $color-white;
+  border: transparent;
+  background: rgba(154, 184, 255, 0.4);
+  background: linear-gradient(
+    1deg,
+    rgba(0, 60, 255, 0.4) 0%,
+    rgba(154, 184, 255, 0.4) 100%
+  );
+}
+
+.activity-summary-about {
+  margin-top: vw(19px);
+  margin-bottom: vw(29px);
+
+  h6 {
+    margin-bottom: vw(16px);
+  }
+}
+
+.contact-content-block {
+  display: flex;
+  word-break: break-all;
+  margin-bottom: vw(9px);
+  // cursor: default;
+
+  .contact-content-block__imgDiv {
+    width: vw(38px);
+    margin-right: vw(9px);
+  }
+}
+
+.summary-gmailImg {
+  width: vw(38px);
+}
+
+.summary-outlookImg {
+  font-size: vw(32px);
+  line-height: vw(32px);
+  width: vw(41px);
+  border-radius: vw(7px);
+  margin-bottom: vw(10px);
+  // box-shadow: 0 vw(3px) vw(6px) rgba(0, 0, 0, 0.16);
+}
+
+.summaryLocation {
+  font-size: vw(28px);
+  line-height: vw(41px);
+  width: vw(32px);
+}
+
+.summaryLocationText {
+  width: 50%;
+  word-break: break-word;
+}
+
+.summary-border-bottom {
+  border-bottom: vw(1px) solid rgba(112, 112, 112, 0.25);
+  padding-bottom: vw(32px);
+}
+
+// menu activity content
+.justify-content-space-between {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* =========================================================== */
+
+// all activity
+@import "./activityContentActivity";
+@import "./activityContentEmail";
+@import "./activityContentCallLog";
+@import "./activityContentNotesFiles";
+@import "./activitySummaryViewProfile";
+@import "./_activitySummaryViewProfileEdit.scss";
+@import "./activityContentTimeline";

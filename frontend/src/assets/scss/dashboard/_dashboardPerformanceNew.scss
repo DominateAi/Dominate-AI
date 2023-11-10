@@ -1,0 +1,118 @@
+// performance new
+.performance-card-btn--scoreboard {
+  margin-top: vw(16px);
+  background: transparent;
+  color: $theme-text-color-1;
+  border: vw(1px) solid #303030;
+  font-size: vw(18px);
+  @include fontMedium500;
+  width: vw(130px);
+  @include theme-button-height-and-radius-4;
+}
+
+.performance-score-block-outer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: vw(12px);
+
+  .performance-score-block {
+    text-align: center;
+    margin-right: vw(70px);
+  }
+  .margin_when_two_sers_only {
+    margin-left: vw(200px);
+  }
+
+  .performance-score-block:last-child {
+    margin-right: 0;
+  }
+}
+
+.performace-scoreboard-img,
+.performace-scoreboard-img1 {
+  border-radius: 50%;
+}
+
+.performace-scoreboard-img {
+  width: vw(124px);
+}
+
+.performace-scoreboard-img1 {
+  width: vw(155px);
+}
+
+.img-badge-outer {
+  position: relative;
+  margin-top: vw(12px);
+  margin-bottom: vw(20px);
+}
+
+.img-badge-text-outer {
+  position: absolute;
+  top: vw(5px);
+  right: vw(5px);
+}
+
+.img-badge-text-outer-first {
+  position: absolute;
+  top: vw(5px);
+  right: vw(-2px);
+}
+
+.img-badge-text,
+.img-badge-text-first,
+.img-badge-text-card {
+  position: relative;
+  width: max-content;
+
+  .badgeCount {
+    color: $color-white;
+    font-size: vw(15px);
+    @include fontBold700;
+    line-height: vw(19px);
+    margin-bottom: 0;
+  }
+}
+
+.img-badge-text {
+  img {
+    width: vw(28px);
+  }
+
+  .badgeCount {
+    position: absolute;
+    top: vw(5px);
+    left: vw(10px);
+  }
+}
+
+.img-badge-text-first {
+  img {
+    width: vw(39px);
+  }
+
+  .badgeCount {
+    position: absolute;
+    top: vw(11px);
+    left: vw(17px);
+  }
+}
+
+.img-badge-text-card {
+  margin-right: vw(20px);
+
+  img {
+    width: vw(39px);
+  }
+
+  .badgeCount {
+    position: absolute;
+    top: vw(11px);
+    left: vw(14px);
+  }
+}
+
+.leads-content-img--card {
+  width: vw(69px);
+}

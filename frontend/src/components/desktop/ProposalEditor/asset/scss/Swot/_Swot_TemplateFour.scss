@@ -1,0 +1,60 @@
+.swot_template_four {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: vw(50px) vw(30px);
+
+  .swot_template_four_headline {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swot_template_four_bottom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: vw(50px);
+  }
+  .swot_template_four_bottom_block_left {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    padding: vw(15px) vw(10px) vw(10px) vw(10px);
+  }
+  .swot_template_four_bottom_block_inner {
+    width: 100%;
+    height: vw(155px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: vw(30px);
+  }
+  .swot_template_four_bottom_block_inner_headline {
+    width: 100%;
+    height: 20%;
+    display: flex;
+  }
+  .swot_template_four_bottom_block_inner_para {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    padding: vw(16px) 0;
+  }
+  .swot_template_four_bottom_block_middle {
+    width: 30%;
+    padding-bottom: vw(21px);
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+  .swot_template_four_bottom_block_right {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+  }
+}

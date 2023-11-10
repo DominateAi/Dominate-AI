@@ -1,0 +1,49 @@
+/* ===============================================================
+                    
+                        checkbox
+                    
+================================================================== */
+
+.customCheckbox {
+  label {
+    width: 100%;
+    margin-bottom: mvwDivide(12px);
+  }
+
+  .rc-checkbox-inner {
+    width: mvwDivide(26px);
+    height: mvwDivide(27px);
+    border-color: #0839d9;
+    border-radius: mvwDivide(3px);
+    border-width: mvwDivide(3px);
+  }
+
+  .rc-checkbox-checked .rc-checkbox-inner:after,
+  .rc-checkbox-inner:after {
+    left: mvwDivide(7px);
+    top: mvwDivide(1px);
+    width: mvwDivide(10px);
+    height: mvwDivide(16px);
+  }
+
+  .rc-checkbox-input {
+    .rc-checkbox-inner {
+      box-sizing: content-box;
+    }
+
+    &:focus + .rc-checkbox-inner {
+      // border-color: #e96fcc !important;
+      border-color: #cccccc !important;
+    }
+  }
+
+  .rc-checkbox:hover .rc-checkbox-inner,
+  .rc-checkbox-input:focus + .rc-checkbox-inner {
+    border-color: #0839d9;
+  }
+
+  .rc-checkbox-checked .rc-checkbox-inner {
+    border-color: #0839d9;
+    background-color: #0839d9;
+  }
+}

@@ -1,0 +1,72 @@
+/*===============================================
+              Employee data css
+================================================*/
+/*============================
+      Add Employees css
+=============================*/
+
+.employees-dte-of-joining {
+  margin-left: mvwDivide(58px);
+  margin-top: mvwDivide(45px);
+}
+
+.employee-data-container {
+  margin-top: mvwDivide(2px);
+  .rwt__tablist {
+    text-align: center;
+  }
+  .icon-table-column {
+    width: mvwDivide(100px);
+  }
+  .content-column {
+    width: mvwDivide(500px);
+  }
+  .time-column {
+    width: mvwDivide(60px);
+    vertical-align: inherit !important;
+  }
+  .table td,
+  .table th {
+    padding: mvwDivide(20px);
+    vertical-align: top;
+    border-bottom: mvwDivide(3px) solid #dee2e6;
+    border-top: none;
+  }
+  .employee-data-activity {
+    p {
+      font-size: mvwDivide(18px);
+      line-height: mvwDivide(27px);
+      @include fontRegular400;
+      margin: 0;
+      color: $theme-text-color-1;
+    }
+    span {
+      @include fontSemiBold600;
+    }
+  }
+  .employee-data-leads-own {
+    overflow: auto;
+    th,
+    td {
+      width: 20%;
+      word-break: break-all;
+    }
+    img {
+      height: auto;
+      width: mvwDivide(50px);
+      margin-right: mvwDivide(15px);
+    }
+    th {
+      font-size: mvwDivide(21px);
+      line-height: mvwDivide(31px);
+      color: $theme-text-color-1;
+      @include fontBold700;
+    }
+    td {
+      font-size: mvwDivide(21px);
+      line-height: mvwDivide(31px);
+      @include fontMedium500;
+      vertical-align: inherit !important;
+    }
+  }
+}

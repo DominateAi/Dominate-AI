@@ -1,0 +1,205 @@
+/* ===============================================================
+                    
+                        all new colors gradient
+                    
+================================================================== */
+
+.leads-gradient-block {
+  color: $color-white;
+  text-align: center;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  @include theme-mixin-3;
+  @include theme-mixin-count-card-border;
+}
+
+@media screen and (min-width: 767px) {
+  .leads-gradient-block {
+    width: vw(260px);
+    height: vw(133px);
+    border-radius: vw(15px);
+    padding: vw(10px);
+    margin-right: vw(30px);
+    margin-bottom: vw(30px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .leads-gradient-block {
+    width: mvwDivide(260px);
+    height: mvwDivide(133px);
+    border-radius: mvwDivide(15px);
+    padding: mvwDivide(10px);
+    margin-right: mvwDivide(30px);
+    margin-bottom: mvwDivide(30px);
+  }
+
+  .leads-mobile-overview-block,
+  .leads-gradient-block {
+    .leads-gradient-block-font-100 {
+      font-size: mvwDivide(38px);
+      line-height: mvwDivide(46px);
+      padding-bottom: 0;
+    }
+
+    .font-24-semibold {
+      font-size: mvwDivide(16px);
+      line-height: mvwDivide(21px);
+    }
+  }
+}
+
+// customers
+.bg-color-cust1 {
+  // background: linear-gradient(120deg, #003cff 0%, #9ab8ff 100%);
+  background: linear-gradient(305deg, #0ec2b8 0%, #0500f5 100%);
+}
+
+.bg-color-cust2 {
+  // background: linear-gradient(118deg, #b610fe 0%, #f0adff 100%);
+  background: linear-gradient(305deg, #ff8dbb 0%, #0ccda3 100%);
+}
+
+.bg-color-cust3 {
+  // background: linear-gradient(118deg, #ff8917 0%, #ffd49b 100%);
+  background: linear-gradient(305deg, #f2bae8 0%, #0c7bb3 100%);
+}
+
+// quotations
+// .bg-color-quote1 {
+//   background: linear-gradient(121deg, #fbc2eb 0%, #a6c1ee 100%);
+// }
+
+// .bg-color-quote2 {
+//   background: linear-gradient(300deg, #9890e3 0%, #b1f4cf 100%);
+// }
+
+// .bg-color-quote3 {
+//   background: linear-gradient(300deg, #b490ca 0%, #5ee7df 100%);
+// }
+
+// proposals
+// .bg-color-prop1 {
+//   background: linear-gradient(138deg, #78ffd6 0%, #007991 100%);
+// }
+
+// .bg-color-prop2 {
+//   background: linear-gradient(128deg, #0dc2b7 0%, #4b8ce0 100%);
+// }
+
+// .bg-color-prop3 {
+//   background: linear-gradient(129deg, #0cebeb 0%, #20e3b2 46%, #29ffc6 100%);
+// }
+
+// employees
+
+.bg-color-emp1 {
+  // background: linear-gradient(129deg, #f79e74 0%, #fe8db8 100%);
+  background: linear-gradient(305deg, #c1fcd3 0%, #0ccda3 100%);
+}
+.bg-color-emp2 {
+  // background: linear-gradient(129deg, #e784c8 0%, #bd75df 100%);
+  background: linear-gradient(305deg, #acedfc 0%, #57a1e6 100%);
+}
+.bg-color-emp3 {
+  // background: linear-gradient(129deg, #b173de 0%, #8371d5 100%);
+  background: linear-gradient(305deg, #1cb5e0 0%, #000046 100%);
+}
+.bg-color-emp4 {
+  background: linear-gradient(
+    45deg,
+    rgba(0, 210, 255, 1) 0%,
+    rgba(146, 141, 171, 1) 100%
+  );
+}
+
+// accounts
+
+.bg-color-account1 {
+  background: rgba(159, 172, 230, 1);
+  background: linear-gradient(
+    45deg,
+    rgba(116, 235, 213, 1) 0%,
+    rgba(159, 172, 230, 1) 100%
+  );
+}
+
+.bg-color-account2 {
+  background: rgba(147, 249, 185, 1);
+  background: linear-gradient(
+    45deg,
+    rgba(147, 249, 185, 1) 0%,
+    rgba(251, 215, 134, 1) 100%
+  );
+}
+
+.bg-color-account3 {
+  background: rgba(254, 168, 88, 1);
+  background: linear-gradient(
+    225deg,
+    rgba(254, 168, 88, 1) 0%,
+    rgba(237, 118, 94, 1) 100%
+  );
+}
+
+.bg-color-account4 {
+  background: rgba(246, 211, 101, 1);
+  background: linear-gradient(
+    45deg,
+    rgba(246, 211, 101, 1) 0%,
+    rgba(253, 160, 133, 1) 100%
+  );
+}
+
+.bg-color-account5 {
+  background: rgba(172, 237, 252, 1);
+  background: linear-gradient(
+    245deg,
+    rgba(172, 237, 252, 1) 0%,
+    rgba(87, 161, 230, 1) 100%
+  );
+}
+
+.bg-color-account6 {
+  background: rgba(7, 163, 178, 1);
+  background: linear-gradient(
+    117deg,
+    rgba(7, 163, 178, 1) 0%,
+    rgba(217, 236, 199, 1) 100%
+  );
+}
+
+// accounts new
+.bg-color-account-new1 {
+  background: #74ebd5;
+  background: linear-gradient(-315deg, #74ebd5 0%, #fbd786 100%);
+}
+
+.bg-color-account-new2 {
+  background: #07a3b2;
+  background: linear-gradient(153deg, #07a3b2 0%, #d9ecc7 100%);
+}
+
+.bg-color-account-new3 {
+  background: #acedfc;
+  background: linear-gradient(-135deg, #acedfc 0%, #57a1e6 100%);
+}
+
+.bg-color-account-new4 {
+  background: #f6d365;
+  background: linear-gradient(11deg, #f6d365 8.13%, #fda085 104.99%);
+}
+
+.bg-color-account-new5 {
+  background: #fea858;
+  background: linear-gradient(-135deg, #fea858 0%, #ed765e 100%);
+}
+
+.bg-color-account-new6 {
+  background: #1d976c;
+  background: linear-gradient(15deg, #1d976c 0%, #93f9b9 1%, #fbd786 100%);
+}

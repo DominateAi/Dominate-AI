@@ -1,0 +1,54 @@
+.customModal--emailDataScrapeModal {
+  width: vw(800px) !important;
+  min-height: vw(600px);
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+.email-data-scrape-modal-bg {
+  padding: 0 vw(50px) vw(50px) vw(65px) !important;
+}
+.email-data-scrape-modal-one-logo {
+  width: vw(135px);
+  //height: vw(20px);
+}
+.email-data-scrape-modal-one-visit-text {
+  color: $theme-text-dark-gray-to-white;
+  width: vw(187px);
+  height: vw(47px);
+  background: $theme-bg-color-white-03;
+  border-radius: vw(35px);
+  // box-shadow: 0 vw(3px) vw(6px) rgba(128, 128, 128, 0.16);
+  padding: vw(15px) vw(20px);
+}
+.pt-50 {
+  padding-top: vw(50px);
+}
+.email-data-scrape-modal-one-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: vw(30px) 0;
+}
+.email-data-scrape-modal-one-img {
+  width: vw(118px);
+  height: vw(132px);
+}
+.email-data-scrape-modal-one-title {
+  padding: vw(20px) 0;
+  color: rgba(64, 64, 64, 1);
+}
+.leads-title-block-btn-red-bg-email-scrape-one-modal {
+  @include fontMedium500;
+  font-size: vw(18px);
+  width: vw(185px);
+  @include theme-button-height-and-radius-4;
+}
+.email-data-scrape-modal-one-subtitle {
+  padding-top: vw(30px);
+  @include fontMedium500;
+  font-size: vw(15px);
+  line-height: vw(23px);
+  color: rgba(48, 48, 48, 1);
+  padding-bottom: vw(120px);
+  text-align: center;
+}

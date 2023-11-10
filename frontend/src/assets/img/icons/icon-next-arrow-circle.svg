@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="57" height="58" viewBox="0 0 57 58">
+  <defs>
+    <filter id="Rectangle_2390" x="0" y="0" width="57" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="gray" flood-opacity="0.157"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_2334" data-name="Group 2334" transform="translate(-1742 -492)">
+    <g transform="matrix(1, 0, 0, 1, 1742, 492)" filter="url(#Rectangle_2390)">
+      <g id="Rectangle_2390-2" data-name="Rectangle 2390" transform="translate(9 6)" fill="#f7f7f7" stroke="#f7f7f7" stroke-width="1">
+        <rect width="39" height="40" rx="19.5" stroke="none"/>
+        <rect x="0.5" y="0.5" width="38" height="39" rx="19" fill="none"/>
+      </g>
+    </g>
+    <g id="Symbol_22_6" data-name="Symbol 22 – 6" transform="translate(1762 514)">
+      <line id="Line_45" data-name="Line 45" x2="4.439" y2="4.439" transform="translate(10.94 2.121)" fill="none" stroke="#303030" stroke-linecap="round" stroke-width="3"/>
+      <line id="Line_46" data-name="Line 46" y1="4.439" x2="4.439" transform="translate(10.94 6.561)" fill="none" stroke="#303030" stroke-linecap="round" stroke-width="3"/>
+      <line id="Line_47" data-name="Line 47" x1="13.474" transform="translate(1.5 6.561)" fill="none" stroke="#303030" stroke-linecap="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

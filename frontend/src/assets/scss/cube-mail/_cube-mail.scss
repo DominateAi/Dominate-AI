@@ -1,0 +1,564 @@
+/*===================================================
+                    CubeMail css
+====================================================*/
+
+.css-8xmcvp {
+  background-color: transparent !important;
+}
+
+.css-1w3bbtv {
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+
+.mailbox_bg {
+  width: 100%;
+
+  .rwt__tabpanel {
+    display: flex;
+    height: 100vh;
+    padding-top: vw(40px);
+  }
+  .css-a8giat {
+    width: 20% !important;
+    border: none;
+  }
+  .css-yphzvl {
+    // width: 80% !important;
+    width: 90% !important;
+    // background: $theme-bg-color-white-03;
+    background: transparent;
+  }
+  .css-fnk35n {
+    width: 80% !important;
+    overflow: auto;
+    @include theme-mixin-2;
+
+    .css-cxcgmj {
+      border: none;
+      color: $theme-text-color-1;
+
+      &:focus,
+      &:hover {
+        background: transparent;
+        border: none;
+        box-shadow: 0 0 0;
+      }
+    }
+    .css-vgcbl4 {
+      color: $theme-text-color-white-79;
+    }
+    .css-13h2vpa {
+      color: $theme-text-color-white-79;
+    }
+    html {
+      color: $theme-text-color-1;
+    }
+  }
+  .css-s6sz7e {
+    .css-1n1i2fd {
+      background: transparent;
+    }
+  }
+  .css-13v3rg8 {
+    height: 100vh;
+  }
+  .css-18uev0z:focus {
+    z-index: 1;
+    border-color: #3182ce;
+    // box-shadow: none !important;
+  }
+}
+.cube-mail-messages {
+  padding-top: vw(36px);
+  //background: $theme-bg-color-white-03;
+}
+.cube-mail-search-bar {
+  // background: rgba(194, 194, 194, 0.2);
+  width: vw(682px);
+  @include theme-button-height-and-radius-3;
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 0 vw(20px);
+  @include theme-mixin-1;
+
+  .css-3lxnon {
+    color: $theme-text-color-white-60;
+  }
+}
+.cube-mail-input-search {
+  background-color: transparent !important;
+  width: vw(600px) !important;
+  color: $theme-text-color-white-79;
+
+  &::placeholder {
+    // color: rgba(48, 48, 48, 1);
+    @include fontItalicPoppins;
+    font-size: vw(18px);
+    line-height: vw(27px);
+    color: $theme-text-color-white-60;
+  }
+}
+.css-18uev0z:focus {
+  border: none !important;
+  outline: transparent !important;
+  box-shadow: none;
+}
+.cube-mail-email-row {
+  padding-left: vw(10px);
+  .css-2x56w3,
+  .css-90vxvk {
+    //background-color: rgba(242, 243, 246, 0.68) !important;
+    //background-color: linear-gradient(
+    //  118deg,
+    //  rgba(242, 243, 246, 1) 0%,
+    //  rgba(255, 255, 255, 1) 100%
+    //) !important;
+    // margin-bottom: vw(1px) !important;
+    // border: none;
+    //border-radius: vw(2px);
+    //// box-shadow: 0 vw(3px) vw(15px) #00000029;
+    width: 99%;
+    padding-top: vw(20px);
+    padding-bottom: vw(20px);
+
+    //new css
+    // background: #f9f9fb !important;
+    // box-shadow: vw(-5px) vw(5px) vw(4px) rgba(200, 200, 207, 0.2),
+    //   vw(5px) vw(-5px) vw(10px) rgba(207, 207, 221, 0.2),
+    //   vw(-5px) vw(-5px) vw(10px) rgba(254, 254, 255, 0.9),
+    //   inset vw(-1px) vw(-1px) vw(2px) rgba(244, 244, 246, 0.5);
+    // border-radius: vw(14px);
+    @include theme-mixin-2;
+    position: relative;
+    margin-bottom: vw(20px) !important;
+
+    // &::after {
+    //   position: absolute;
+    //   content: "";
+    //   top: vw(18px);
+    //   left: vw(-5px);
+    //   width: vw(7px);
+    //   height: 70%;
+    //   background: rgba(224, 195, 252, 1);
+    //   background: linear-gradient(
+    //     360deg,
+    //     rgba(224, 195, 252, 1) 0%,
+    //     rgba(142, 197, 252, 1) 100%
+    //   );
+    //   border-radius: vw(12px);
+    // }
+  }
+}
+.cube-mail-message {
+  font-size: vw(18px);
+  line-height: vw(27px);
+  text-transform: capitalize;
+  color: $theme-text-color-grey;
+  @include fontMedium500;
+  height: vw(63px) !important;
+  @include theme-blue-bg-btn-important;
+}
+.active-cubemail-list {
+  background-color: transparent !important;
+  // color: $theme-dark-blue-text-to-light-purple !important;
+  color: $theme-text-color-1 !important;
+  font-size: vw(20px) !important;
+  line-height: vw(30px) !important;
+  @include fontBold700;
+  &:focus {
+    // box-shadow: none !important;
+    border: none !important;
+  }
+  i {
+    // color: #7c8ece !important;
+    color: $theme-text-color-1 !important;
+  }
+}
+.cubemail-list {
+  background-color: transparent !important;
+  font-size: vw(20px) !important;
+  line-height: vw(30px) !important;
+  @include fontBold700;
+  // color: rgba(58, 74, 89, 0.64);
+  color: $theme-text-color-white-63;
+  .css-1pmpdjw {
+    font-size: 2em !important;
+  }
+}
+.cube-mail-list-menu {
+  width: 100%;
+  height: vw(80px);
+  padding-left: vw(30px);
+}
+.active-cubemail-list--icon {
+  color: #7c8ece !important;
+}
+// .css-1v1abxu:focus {
+//   // box-shadow: none !important;
+// }
+
+.display_contacts_main_container {
+  //position: absolute;
+  //bottom: vw(265px);
+  width: 100% !important;
+}
+
+.infinite-scroll-component {
+  // overflow: hidden !important;
+  overflow: auto !important;
+  height: vw(1000px) !important;
+}
+.email-row-title {
+  font-size: vw(20px) !important;
+  line-height: vw(30px);
+  @include fontMedium500;
+  margin-bottom: vw(3px);
+  // color: $theme-text-color-1;
+  color: $theme-text-color-white-79;
+}
+.css-18kr1wr,
+.css-ajmnyc {
+  color: $theme-text-color-1 !important;
+}
+.css-17wrap6 {
+  color: $theme-text-color-white-29 !important;
+}
+.css-vj5c4j {
+  background-color: transparent !important;
+}
+.css-1m8andw {
+  max-width: vw(1176px) !important;
+
+  @include popup-bg-mixin;
+  box-shadow: 0 0 0 !important;
+
+  .css-w7idnj {
+    border-bottom: vw(1px) solid $theme-border-color-white-26;
+    padding: 0;
+    padding-bottom: vw(39px);
+    margin: vw(50px) vw(38px) vw(39px) vw(38px);
+  }
+  .css-1ga4kqw,
+  input {
+    height: vw(75px);
+  }
+  .css-1blqokh,
+  .css-1ga4kqw,
+  input,
+  textarea {
+    @include theme-mixin-2;
+    margin-bottom: vw(20px);
+
+    &::placeholder {
+      color: $theme-text-color-white-42;
+    }
+
+    &:focus,
+    &:hover {
+      border: vw(1px) solid rgba(229, 229, 229, 0.19);
+      box-shadow: 0 0 0;
+    }
+  }
+  .css-1blqokh {
+    padding-left: vw(20px);
+    padding-right: vw(20px);
+  }
+  .css-zupo2g {
+    @include theme-mixin-2;
+    width: vw(182px);
+    height: vw(60px);
+    color: $theme-text-color-grey;
+  }
+  .css-6cthfa {
+    @include theme-mixin-blue-bg-with-color;
+    width: vw(182px);
+    height: vw(60px);
+  }
+}
+/*=======================================================
+ 
+                    CONTACTS
+
+=======================================================*/
+.mailbox-add-contact-btn {
+  width: vw(246px);
+  height: vw(63px);
+  // background: rgb(190, 147, 197);
+  // background: linear-gradient(
+  //   90deg,
+  //   rgba(190, 147, 197, 1) 0%,
+  //   rgba(91, 134, 229, 1) 100%
+  // );
+  // border-radius: vw(32px) !important;
+  font-size: vw(18px) !important;
+  line-height: vw(27px) !important;
+  @include fontSemiBold600Important;
+  color: #ffffff !important;
+  margin-bottom: vw(80px) !important;
+  //margin-top: vw(59px) !important;
+  @include theme-blue-bg-btn-important;
+}
+.contact-data-row {
+  margin: vw(6px) 0 vw(12px) vw(12px);
+  border: none;
+  width: 97% !important;
+  padding-top: vw(20px);
+  padding-bottom: vw(20px);
+  // background: $theme-tab-bg-color-1;
+  // box-shadow: vw(-5px) vw(5px) vw(4px) rgba(200, 200, 207, 0.2),
+  //   vw(5px) vw(-5px) vw(10px) rgba(207, 207, 221, 0.2),
+  //   vw(-5px) vw(-5px) vw(10px) rgba(254, 254, 255, 0.9),
+  //   inset vw(-1px) vw(-1px) vw(2px) rgba(244, 244, 246, 0.5);
+  // border-radius: vw(14px);
+  // border-bottom: none !important;
+  position: relative;
+  @include theme-mixin-2-important;
+
+  // &::after {
+  //   position: absolute;
+  //   content: "";
+  //   top: vw(20px);
+  //   left: vw(-5px);
+  //   width: vw(7px);
+  //   height: 50%;
+  //   background: rgba(224, 195, 252, 1);
+  //   background: linear-gradient(
+  //     360deg,
+  //     rgba(224, 195, 252, 1) 0%,
+  //     rgba(142, 197, 252, 1) 100%
+  //   );
+  //   border-radius: vw(12px);
+  // }
+}
+.email-row-title--conatct {
+  @include fontMedium500Important;
+}
+.email-details-back-btn {
+  width: vw(37px);
+  height: vw(25px);
+  background: transparent;
+  border: none;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.display_contacts_main_container-cubemail-contact {
+  height: auto !important;
+  box-shadow: 0 0 0 !important;
+  align-self: flex-start !important;
+}
+
+.display_table_data_container--cubemail-contact {
+  height: vw(830px) !important;
+}
+/*==================================================================
+ 
+                           EVENTS
+
+=================================================================*/
+.events_block_container {
+  // background: $theme-tab-bg-color-1;
+  // box-shadow: vw(-5px) vw(5px) vw(4px) rgba(200, 200, 207, 0.2),
+  //   vw(5px) vw(-5px) vw(10px) rgba(207, 207, 221, 0.2),
+  //   vw(-5px) vw(-5px) vw(10px) rgba(254, 254, 255, 0.9),
+  //   inset vw(-1px) vw(-1px) vw(2px) rgba(244, 244, 246, 0.5);
+  // border-radius: vw(14px);
+  border-bottom: none;
+  height: auto !important;
+  min-height: vw(294px);
+  padding: vw(38px) vw(31px);
+  // border-bottom: none !important;
+  margin-bottom: vw(20px) !important;
+  word-break: break-all;
+  @include theme-mixin-2;
+  border-bottom: vw(1px) solid $theme-border-color-white-19 !important;
+}
+.events_block_container-date-div {
+  min-width: vw(89px);
+  height: vw(79px);
+  //  background: #d1c7ff;
+  background: $theme-bg-gardient-blue-2;
+  border-radius: vw(11px);
+  // border-radius: vw(35px);
+  text-align: center;
+  padding-top: vw(10px);
+  color: $color-white;
+  margin-right: vw(22px);
+}
+.title_block--cubemail {
+  .font-24-extraBold {
+    color: $theme-text-color-white-79;
+  }
+}
+.event-title-font-14 {
+  font-size: vw(14px);
+  line-height: vw(21px);
+  // color: rgba(48, 48, 48, 0.9);
+  color: $theme-text-color-white-42;
+  @include fontItalicPoppins;
+  margin-bottom: 0;
+  padding-right: vw(20px);
+}
+
+.event-title-font-14-italic {
+  font-size: vw(14px);
+  line-height: vw(21px);
+  @include fontBold700;
+  // font-style: italic;
+  margin-bottom: 0;
+  padding-right: vw(30px);
+  color: $theme-text-color-white-79;
+}
+.title_block--cubemail {
+  display: flex;
+  flex-direction: column;
+  width: 80% !important;
+  height: auto !important;
+
+  .event_title {
+    border: none !important;
+    width: inherit !important;
+    height: auto !important;
+    padding-left: 0 !important;
+    padding-bottom: vw(20px);
+  }
+}
+.cubemail-events_block_container-row1 {
+  // ?  border-bottom: vw(1px) solid rgba(0, 0, 0, 0.23);
+  border-bottom: vw(1px) solid $theme-border-color-white-11;
+  padding-bottom: vw(30px);
+}
+.description_block--cubemail {
+  padding-top: vw(20px);
+
+  .events_description {
+    width: 100% !important;
+    height: auto !important;
+    font-size: vw(16px) !important;
+    line-height: vw(24px) !important;
+    // color: rgba(48, 48, 48, 0.57);
+    color: $theme-text-color-white-79;
+  }
+}
+.cube-mail-search-bar--event {
+  margin-top: vw(10px);
+  margin-left: vw(70px);
+}
+.add-events-title {
+  padding: 0 0 vw(38px) 0 !important;
+  border-bottom: vw(2px) solid $theme-border-color-white-26;
+  margin-bottom: vw(20px) !important;
+
+  .MuiTypography-h6 {
+    font-size: vw(30px) !important;
+    @include fontBold700Important;
+    color: $theme-text-color-1;
+  }
+}
+.form_group_main_container--cubemail {
+  .time_events {
+    height: auto !important;
+    //margin-bottom: vw(25px);
+    width: 45%;
+  }
+  .MuiFormControl-root {
+    width: 100%;
+  }
+}
+.add-event-save-btn,
+.add-event-cancel-btn {
+  width: vw(143px);
+  @include theme-button-height-3;
+  border-radius: vw(25px) !important;
+  font-size: vw(18px) !important;
+  @include fontSemiBold600Important;
+}
+
+.add-event-cancel-btn {
+  // color: $theme-text-color-dark-blue-to-white-1 !important;
+  // border: vw(2px) solid $theme-bg-dark-blue-to-purple-1 !important;
+  @include theme-mixin-2-important;
+  color: $theme-text-color-grey !important;
+}
+
+.add-event-save-btn {
+  // background: $theme-text-color-dark-blue-to-white-1 !important;
+  // color: #ffffff !important;
+  color: $theme-text-color-dark-blue-to-white-1 !important;
+  border: vw(2px) solid $theme-bg-dark-blue-to-purple-1 !important;
+}
+.add-event-modal {
+  padding: vw(50px) vw(80px) vw(50px) vw(40px);
+  background: $theme-bg-color-1;
+
+  .MuiDialogActions-root {
+    padding-top: vw(20px) !important;
+    padding-bottom: 0 !important;
+  }
+  .MuiFormLabel-root {
+    padding-left: vw(30px);
+    padding-top: vw(18px);
+  }
+  .MuiInputLabel-shrink {
+    transform: translate(0, -5.5px) scale(0.75);
+  }
+  .MuiInputBase-input {
+    @include theme-mixin-1;
+    backdrop-filter: none;
+    color: $theme-text-color-1;
+    border-radius: vw(25px);
+    height: vw(75px);
+    padding: 0 vw(38px);
+
+    &::placeholder {
+      color: $theme-text-color-white-42;
+    }
+  }
+  .MuiInput-underline:before {
+    border-bottom: none !important;
+    transition: none;
+  }
+  .MuiFormLabel-root {
+    color: $theme-text-color-white-42 !important;
+  }
+  .MuiInput-underline:after {
+    border-bottom: none !important;
+    transition: none;
+  }
+  .form_group_row {
+    // margin-bottom: vw(10px);
+    margin-bottom: vw(20px) !important;
+  }
+  .MuiDialogContent-root {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .MuiDialogActions-root {
+    padding-right: 0 !important;
+  }
+  .MuiInputBase-inputMultiline {
+    padding-top: vw(20px);
+  }
+  .MuiInputBase-root {
+    position: relative;
+  }
+  .MuiInputAdornment-root {
+    position: absolute;
+    z-index: 99;
+    right: vw(25px);
+    color: $theme-text-color-1;
+    .MuiSvgIcon-root {
+      fill: $theme-text-color-1;
+    }
+  }
+}
+.add-event-modal--contact {
+  padding: vw(50px);
+  .form_group_coloum {
+    margin-bottom: vw(20px);
+  }
+}

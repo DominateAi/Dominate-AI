@@ -1,0 +1,52 @@
+.vission_template_two {
+  display: flex;
+  flex-direction: column;
+  //align-items: center;
+  justify-content: space-around;
+  padding-bottom: vw(20px);
+  .vission_template_two_headline {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: vw(80px);
+  }
+  .vission_template_two_middle {
+    display: flex;
+    width: 100%;
+    height: 60%;
+    padding-left: vw(50px);
+    padding-right: vw(100px);
+  }
+  .vission_template_two_middle_left {
+    display: flex;
+    width: 45%;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .vission_template_two_middle_right {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    padding-top: vw(10px);
+  }
+
+  .vission_template_two_middle_para {
+    width: 100%;
+    height: vw(100px);
+    display: flex;
+    margin-top: vw(20px);
+    margin-bottom: vw(30px);
+  }
+  .vission_template_two_bottom_line {
+    display: flex;
+    justify-content: flex-start;
+    width: 70%;
+    height: vw(50px);
+    border-radius: vw(5px);
+  }
+}

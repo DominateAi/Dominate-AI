@@ -1,0 +1,50 @@
+.au_template_five{
+    flex-direction: column;
+    .au_template_five__top{
+        display: flex;
+        height: 20%;
+        width: 100%;
+        align-items: center;
+        padding-right: vw( 100px );
+        .au_template_five__top__headline{
+            display: flex;
+            height: vw( 72px );
+            width: vw( 300px );
+            align-items: center;
+        }
+        .au_template_five__top__line{
+            display: flex;
+            height: vw( 52px );
+            width: vw( 50px );
+            align-items: center;
+            justify-content: center;
+            div{
+                display: flex;
+                height: vw( 52px );
+                width: vw( 5px );
+                align-items: center;
+                background-color: black;
+            }
+        }
+    }
+    .au_template_five__blocks_bottom{
+        display: flex;
+        height: 40%;
+        width: 100%;
+        // background-color: yellow;
+        align-items: center;
+        justify-content: center;
+        .au_template_five_image_holder{
+            display: flex;
+            height: 80%;
+            width: vw( 400px );
+            // background-color: yellowgreen;
+        }
+        .au_template_five_text_holder{
+            display: flex;
+            height: 80%;
+            width: vw( 600px );
+            // background-color: blue;
+        }
+    }
+}

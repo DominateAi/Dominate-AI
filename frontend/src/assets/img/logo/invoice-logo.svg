@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="594.686" height="134.686" viewBox="0 0 594.686 134.686">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.772" y1="1" x2="-0.509" y2="-0.445" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#502eff"/>
+      <stop offset="1" stop-color="#d1c7ff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1.963" y1="-0.777" x2="-4.252" y2="3.913" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#b7b5c2"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_2210" data-name="Group 2210" transform="translate(-4256 135)">
+    <rect id="Rectangle_2268" data-name="Rectangle 2268" width="594.686" height="134.686" transform="translate(4256 -135)" fill="url(#linear-gradient)"/>
+    <g id="Group_2209" data-name="Group 2209" transform="translate(-8 177)">
+      <g id="Group_1457" data-name="Group 1457" transform="translate(4171.002 1048.435)">
+        <path id="Path_6945" data-name="Path 6945" d="M699.638,160.725H678.525v-54.21h21.113a27.106,27.106,0,0,1,27.107,27.1h0a27.107,27.107,0,0,1-27.111,27.11Z" transform="translate(-551.525 -1417.31)" opacity="0.26" fill="url(#linear-gradient-2)"/>
+        <path id="Path_6944" data-name="Path 6944" d="M697.156,154.355H678.525v-47.84h18.631a23.92,23.92,0,0,1,23.92,23.92h0A23.92,23.92,0,0,1,697.156,154.355Z" transform="translate(-551.525 -1410.95)" opacity="0.26" fill="url(#linear-gradient-2)"/>
+        <path id="Path_6946" data-name="Path 6946" d="M702.235,167.4h-23.71V106.51h23.71a30.442,30.442,0,0,1,30.44,30.442v0A30.443,30.443,0,0,1,702.233,167.4Z" transform="translate(-551.525 -1423.95)" opacity="0.26" fill="url(#linear-gradient-2)"/>
+        <path id="Path_6947" data-name="Path 6947" d="M704.6,173.465H678.525v-66.95H704.6a33.475,33.475,0,0,1,33.476,33.476h0A33.476,33.476,0,0,1,704.6,173.465Z" transform="translate(-551.525 -1429.95)" opacity="0.26" fill="url(#linear-gradient-2)"/>
+        <path id="Path_6948" data-name="Path 6948" d="M706.723,178.915h-28.2v-72.4h28.2a36.2,36.2,0,0,1,36.2,36.2h0a36.2,36.2,0,0,1-36.2,36.2Z" transform="translate(-551.525 -1435.95)" opacity="0.26" fill="url(#linear-gradient-2)"/>
+      </g>
+      <g id="Group_1395" data-name="Group 1395" transform="translate(4149.002 -346.565)">
+        <text id="Dominate" transform="translate(234 113)" fill="#fff" font-size="28" font-family="Graphie-Regular, Graphie"><tspan x="0" y="0">Dominate</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
