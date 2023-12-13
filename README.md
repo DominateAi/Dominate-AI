@@ -1,7 +1,3 @@
-![](website_screenshot.png)
-
-![](Dashboard.png)
-
 <h1> Dominate A.I. - The world's best Open Source CRM for Tech Founders - </h1>
 <h2> [Visit Website](https://www.dominate.ai) </h2>
 <p>
@@ -34,6 +30,9 @@
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 ![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)
 
+![](website_screenshot.png)
+
+![](Dashboard.png)
 
 Dominate: Backend
 
