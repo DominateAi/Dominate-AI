@@ -1,0 +1,32 @@
+{
+    "env": "dev",
+    "server_port": 9010,
+    "server_url": "http://localhost:9010",
+    "server_domain": "dominate.ai",
+    "app_name": "Dominate.ai",
+    "multimedia_path": "",
+    "defaultUserFileUrlPath": "/public/download?filename=file-2019-11-18T17:38:30.307Z.jpeg",
+    "defaultOrganizationFileUrlPath": "/public/download?filename=file-2019-12-18T17:31:55.019Z.png",
+    "protocol": "http://",
+    "max_file_upload_limit": 20,
+    "monogodb_url": "mongodb://localhost:27017/dominate_master",
+    "server_secert": "dev",
+    "token_expiry": 20000000,
+    "refresh_token_expiry": 900,
+    "aud": "dominateadmin@dominate.ai",
+    "iss": "dev.dominate.ai",
+    "master_schema": "dominate_master",
+    "minio": {
+        "endPoint": "127.0.0.1",
+        "port": 9000,
+        "secure": false,
+        "accessKey": "minioadmin",
+        "secretKey": "minioadmin"
+    },
+    "fileServerRootBucket": "test-dominate",
+    "organizationFreeTrialPeriod": 15,
+    "dominateAdminEmail":"admin@dominate.ai",
+    "redisHost": "localhost",
+    "systemToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6ImJkY2RjOTljLTIxN2YtMTFlOS1hYjE0LWQ2NjNiZDg3M2Q5MyIsImVtYWlsIjoiZG9taW5hdGVhZG1pbkBkb21pbmF0ZS5jb20iLCJ3b3Jrc3BhY2VJZCI6ImRvbWluYXRlYWRtaW4ifSwic3ViIjoiU3lzdGVtX1Rva2VuIiwiaXNzIjoiZGV2LmRvbWluYXRlLmFpIiwiYXVkIjoiZG9taW5hdGVhZG1pbkBkb21pbmF0ZS5haSIsImlhdCI6MTU5NjU2MDI2Mn0.9KDrwJMcR6bEr3vDknOTnKLkKnu6TC28Xh8azKPgiYY",
+    "microsoft_oauth_authority":"https://login.microsoftonline.com/"
+}

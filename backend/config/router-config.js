@@ -17,7 +17,6 @@ var environmentConfig = configResolve.getConfig();
  
 const tokenPareUtil = require('../common/tokenParserUtil')
 const UserRoute = require('../api/routes/user.route');
-const OrganizationRoute = require('../api/routes/organization.route');
 const roleRoute = require('../api/routes/role.route');
 const leadRoute = require('../api/routes/lead.route');
 const customerRoute = require('../api/routes/customer.route');
@@ -58,7 +57,6 @@ var achievementRoute = require('../api/routes/achievement.route');
 var leadSearchRoute = require('../api/routes/leadSearch.route');
 var fieldRoute = require('../api/routes/field.route');
 var fvalueRoute = require('../api/routes/fvalue.route');
-var stripeRoute = require('../api/routes/stripe.route');
 var idealtargetRoute = require('../api/routes/idealtarget.route');
 var odealtargetRoute = require('../api/routes/odealtarget.route')
 var dealachieveRoute = require('../api/routes/dealachieve.route');
@@ -81,7 +79,6 @@ var referralRoute = require('../api/routes/referral.route')
 const router = express.Router();
 app.use('/api', passport.authenticate('jwt', {session: false}), router);
 UserRoute.init(router);
-OrganizationRoute.init(router);
 roleRoute.init(router);
 leadRoute.init(router);
 customerRoute.init(router);
@@ -122,7 +119,6 @@ achievementRoute.init(router);
 leadSearchRoute.init(router);
 fieldRoute.init(router);
 fvalueRoute.init(router);
-stripeRoute.init(router);
 idealtargetRoute.init(router);
 odealtargetRoute.init(router);
 dealachieveRoute.init(router);

@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Define functions for start and cleanup
+start() {
+    # Start Redis container
+    sudo docker run -d --name redis -p 6379:6379 redis:latest
+
+    # Start MongoDB container
+    sudo docker run -d --name mongo -p 27017:27017 bitnami/mongodb:latest
+
+    # Start MinIO container with specified root username and password
+    sudo docker run -d --name minio \
+        -p 9001:9001 -p 9090:9090 \
+        -e "MINIO_ROOT_USER=minioadmin" \
+        -e "MINIO_ROOT_PASSWORD=minioadmin" \
+        bitnami/minio:latest
+}
+
+cleanup() {
+    # Stop Docker containers
+    sudo docker stop redis mongo minio
+
+    # Remove Docker containers
+    sudo docker rm redis mongo minio
+}
+
+# Check the first argument to determine the action
+case "$1" in
+    start)
+        start
+        ;;
+    cleanup)
+        cleanup
+        ;;
+    *)
+        echo "Usage: $0 {start|cleanup}"
+        exit 1
+        ;;
+esac
+
+exit 0

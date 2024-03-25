@@ -1,0 +1,41 @@
+{
+  "getSchema": {
+    "type": "string",
+    "required": [
+      "id"
+    ],
+    "properties": {
+      "id": {
+        "type": "string"
+      }
+    }
+  },
+  "postSchema": {
+    "type": "object",
+    "required": [
+      "schemaName",
+      "billingId",
+      "billingType",
+      "organizationType",
+      "createdBy",
+      "updatedBy",
+      "status",
+      "features"
+    ],
+    "properties": {
+      "schemaName":{
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^[a-zA-Z0-9]+$"
+      },
+      "status": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 10
+      },
+      "features":{
+        "type": "array"
+      }
+    }
+  }
+}
