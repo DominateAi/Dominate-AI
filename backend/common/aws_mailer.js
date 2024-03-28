@@ -6,7 +6,7 @@ const mailcomposer = require('mailcomposer.js');
 aws.config.update({
   accessKeyId:'',
   secretAccessKey:'',
-  region:''
+  region:'ap-south-1'
 });
 
   

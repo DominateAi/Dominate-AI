@@ -1,0 +1,24 @@
+FROM node:16.20.2
+
+# Update package repository and install build-essential
+RUN apt-get update && apt-get install -y build-essential
+
+# Install node-gyp globally
+RUN npm install -g node-gyp
+
+# Install wait-for-it.sh
+COPY wait-for-it.sh /usr/local/bin/wait-for-it.sh
+RUN chmod +x /usr/local/bin/wait-for-it.sh
+
+# Copy package.json and install dependencies
+COPY package.json ./
+RUN npm install
+
+# Copy application code
+COPY . .
+
+# Expose port
+EXPOSE 9010
+
+# Set the maximum heap size for Node.js and run the application
+CMD ["wait-for-it.sh", "redis:6379", "--", "wait-for-it.sh", "mongo:27017", "--", "wait-for-it.sh", "minio:9000", "--", "node", "--max-old-space-size=4096", "node_modules/.bin/webpack", "--config", "webpack.config.js", "--watch", "&&", "npm", "run", "local"]

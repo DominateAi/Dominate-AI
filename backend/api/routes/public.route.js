@@ -21,11 +21,8 @@ var signUpSchema = require('../schemas/signUp.validation.schema.json')
 const roleService = require('../services/role.service');
 const paymentService = require('../services/payment.service');
 var currentContext = require('../../common/currentContext');
-var plans = require('../../config/plans.json');
 var userAuthCodeService = require('../services/userAuthCode.service');
-var razorPayService = require('../../config/razorPayService');
 var uuid = require('node-uuid');
-var stripeService = require('../../config/stripeService');
 var emailTemplateService = require('../../common/emailTemplateService');
 var mailer = require('../../common/aws_mailer');
 const SubscriptionTypes = require('../../common/constants/SubscriptionTypes');
@@ -39,7 +36,6 @@ var minioClient = require('../../config/minioClient').minioClient;
 var environmentConfig = configResolve.getConfig();
 
 var helper = require("../../common/helper");
-const razorPayWebhookManager = require('../../common/webhooks/razorPayWebhookManager');
 const commonEmailTemplateService = require("../../common/emailTemplateService");
 const emailExtractor = require('node-email-extractor').default;
 var validator = require('validator');
@@ -48,9 +44,7 @@ var microsoftOauthServices = require('../integrations/microsoft/auth/microsoft.a
 var stripeTest = configResolve.getConfig().stripeTest;
 var stripeLive = configResolve.getConfig().stripeLive;
 var currentStripe = stripeLive;
-var stripe = require('stripe')(currentStripe.key_secret);
-var tierPrices = require('../../config/tierPrices.json');
-//var tierPrices = require('../../config/testTierPrices.json');
+
 var _ = require('lodash');
 
 const referralService = require('../services/referral.service');

@@ -5,7 +5,6 @@ const userService = require('../services/user.service');
 const paymentService = require('../services/payment.service');
 var errorCode = require('../../common/error-code');
 var errorMethods = require('../../common/error-methods');
-var razorPayService = require('../../config/razorPayService');
 const organizationService = require('../services/organization.service');
 const billingService = require('../services/billing.service');
 const SubscriptionTypes = require('../../common/constants/SubscriptionTypes');
@@ -23,7 +22,6 @@ var _ = require('lodash');
 var schema = require('../schemas/payment.validation.schema.json')
 var iValidator = require('../../common/iValidator');
 const emailService = require('../services/email.service');
-let plansjson = require('../../config/plans.json'); 
 
 var Multer = require("multer");
 var environmentConfig = configResolve.getConfig();

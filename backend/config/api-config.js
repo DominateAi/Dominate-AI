@@ -20,7 +20,6 @@ const bearerToken = require('express-bearer-token');
 const expressSwagger = require('express-swagger-generator')(app);
 const socketIO = require("socket.io")(httpServer);
 
-app.use('/public/stripe-webhooks', bodyParser.raw({type: 'application/json'}))
 
 app.use(bodyParser.json({limit: "20mb"}));
 app.use(bodyParser.urlencoded({

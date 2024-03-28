@@ -1,6 +1,6 @@
 var callModel = require("../models/call.model");
 var currentContext = require('../../common/currentContext');
-const callers = require('../../common/caller');
+// const callers = require('../../common/caller');
 const CallDirection = require('../../common/constants/CallDirection');
 var configResolve = require("../../common/configResolver");
 var config = configResolve.getConfig();
