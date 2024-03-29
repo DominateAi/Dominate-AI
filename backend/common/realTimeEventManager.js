@@ -10,7 +10,7 @@ const redisHost = configResolve.getConfig().redisHost;
 
 function initRealTimeEventManager() {
 
-    io.adapter(socketIORedis({ host: redisHost, port: 6379 }));
+    io.adapter(socketIORedis({ host: 'redis', port: 6379 }));
 
 //middleware for authenticating users on socket
     io.use(function (socket, next) {

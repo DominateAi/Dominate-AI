@@ -33,6 +33,8 @@ ALTERNATIVE 3 -
 4. When you want to stop and remove all the containers, then run this - 
 5. `sudo docker compose -f docker-compose-dev.yml down`
 
+
+
 How to setup (Production):
 1. install docker, docker-compose
 2. copy dominate frontend dist folder in '/var/dominate/dist/dominate-frontend/'
