@@ -4,7 +4,7 @@ var minioConfig = configResolve.getConfig().minio;
 var environmentConfig = configResolve.getConfig();
 
 var minioClient = new Minio.Client({
-    endPoint: minioConfig.endPoint,
+    endPoint: 'minio',
     port: minioConfig.port,
     useSSL: minioConfig.secure,
     accessKey: minioConfig.accessKey,

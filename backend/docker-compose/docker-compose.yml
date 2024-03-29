@@ -12,7 +12,7 @@ services:
     links:
     - redis
     build:
-      context: .
+      context: ..
       dockerfile: DockerFile
     command: "npm start"
     image: dominatebackend

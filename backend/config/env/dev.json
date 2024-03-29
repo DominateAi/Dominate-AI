@@ -9,7 +9,7 @@
     "defaultOrganizationFileUrlPath": "/public/download?filename=file-2019-12-18T17:31:55.019Z.png",
     "protocol": "http://",
     "max_file_upload_limit": 20,
-    "monogodb_url": "mongodb://localhost:27017/dominate_master",
+    "monogodb_url": "mongodb://mongo:27017/dominate_master",
     "server_secert": "dev",
     "token_expiry": 20000000,
     "refresh_token_expiry": 900,

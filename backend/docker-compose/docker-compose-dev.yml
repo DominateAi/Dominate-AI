@@ -1,0 +1,59 @@
+version: '3.8'
+services:
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    container_name: redis
+    networks:
+      - my_bridge
+
+  mongo:
+    image: bitnami/mongodb:latest
+    ports:
+      - "27017:27017"
+    container_name: mongo
+    networks:
+      - my_bridge
+
+  minio:
+    image: bitnami/minio:latest
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    container_name: minio
+    networks:
+      - my_bridge
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+
+  dominate:
+    build:
+      context: ..
+      dockerfile: DockerFile.dev
+    depends_on:
+      - redis
+      - mongo
+      - minio
+    command: sh -c "
+      sleep 10;
+      until nc -z redis 6379 && nc -z mongo 27017; do
+      echo 'Waiting for Redis and MongoDB...';
+      sleep 1;
+      done;
+      node --max-old-space-size=4096 app.js --env=dev || sleep infinity"
+    ports:
+      - "9010:9010"
+    networks:
+      - my_bridge
+    restart: always
+
+networks:
+  my_bridge:
+    driver: bridge

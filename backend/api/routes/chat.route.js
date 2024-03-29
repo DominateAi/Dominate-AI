@@ -9,7 +9,7 @@ var accessResolver = require('../../common/accessResolver');
 const redis = require('redis');
 var configResolve = require("../../common/configResolver");
 const redisHost = configResolve.getConfig().redisHost;
-const client = redis.createClient({ host: redisHost, port: 6379 })
+const client = redis.createClient({ host: 'redis', port: 6379 })
 
 
 function init(router) {
