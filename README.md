@@ -1,5 +1,5 @@
 <h1> Dominate A.I. - The world's best Open Source CRM for Tech Founders - </h1>
-<h2> [Visit Website](https://www.dominate.ai) </h2>
+<h2> [Visit Website]([https://www.dominate.ai](https://dominateai.github.io/dominate-landing-page-website/)) </h2>
 <p>
 	
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/dominate-ai/?viewAsMember=true)
