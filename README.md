@@ -1,4 +1,4 @@
-<h1> Dominate A.I. - The world's best Open Source CRM for Tech Founders - </h1>
+<h1> Dominate A.I. - The world's best Open Source CRM for High Ticket B2B Sales - </h1>
 <h2> [Visit Website](https://dominateai.github.io/dominate-landing-page-website/) </h2>
 <p>
 	
@@ -30,9 +30,11 @@
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 ![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)
 
-![](website_screenshot.png)
+![](assets/website_screenshot.png)
 
-![](Dashboard.png)
+Dominate A.I. is designed for businesses where every deal counts—perfect for high-ticket sales with long sales cycles and account-based selling strategies. Whether you’re a tech company managing SaaS clients or a consultancy nurturing high-value partnerships, Dominate A.I. empowers your team to stay organized and close deals faster. With features like lead management, deal pipelines, follow-up scheduling, and account tracking, you can streamline every stage of your sales process. Stay on top of tasks, nurture relationships effectively, and never let a deal slip through the cracks. Best of all, it’s open source, giving you full control to customize and adapt the CRM to your unique business needs. Start dominating your sales process with Dominate A.I. today!
+
+![](assets/Dashboard.png)
 
 Dominate: Backend
 
