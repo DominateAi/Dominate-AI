@@ -76,10 +76,10 @@ Start dominating your sales process with **Dominate A.I.** today!
 
 Example command to run MinIO:
 
-``docker run -d --name minio -p 9000:9000 -p 9001:9001 \
+```docker run -d --name minio -p 9000:9000 -p 9001:9001 \
   -e "MINIO_ROOT_USER=minioadmin" \
   -e "MINIO_ROOT_PASSWORD=minioadmin" \
-  bitnami/minio:latest``
+  bitnami/minio:latest```
 
 5.  Access the MinIO web console:
     
