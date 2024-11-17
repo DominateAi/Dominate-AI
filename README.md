@@ -96,10 +96,86 @@ Example command to run MinIO:
 ### **Option 2: Automated Script**
 
 1.  Navigate to the root directory of the backend project.
+
 2.  Make the startup script executable:
 ``chmod +x config/local_containers_setup/start_containers.sh``
+
 3. Run the script to start all required containers and the Node.js server:
 ``./config/local_containers_setup/start_containers.sh``
+
 4. Once development is complete, clean up the containers by running:
 ``chmod +x config/local_containers_setup/cleanup_containers.sh
 ./config/local_containers_setup/cleanup_containers.sh``
+
+### **Option 3: Docker Compose**
+
+1.  Use Docker Compose to set up the entire environment:
+``docker-compose -f docker-compose-dev.yml up -d``
+
+2. This starts MongoDB, Redis, MinIO, and the Node.js project inside Docker containers.
+
+3. To scale the service:
+``docker-compose -f docker-compose-dev.yml up --scale dominate=3 -d``
+
+4. To stop and clean up the containers:
+``docker-compose -f docker-compose-dev.yml down``
+
+## Production Setup
+
+1.  Install Docker and Docker Compose.
+
+2.  Copy the frontend `dist` folder to `/var/dominate/dist/dominate-frontend/`.
+
+3.  Build and start the production environment:
+``docker-compose build``  
+``docker-compose up --scale dominate=2 -d``
+
+## Invite Flow
+
+1.  Send an invite using the `POST /api/users/invite` API:  
+    Example:
+  ``  {
+  "recipients": ["email1@example.com", "email2@example.com"]
+}``
+
+2. Recipients will receive an invite email with a link.
+
+3. The invite link leads to a page where the user can verify their invite using the `GET /public/authCode/verify` API.
+
+4. Upon successful verification, a new user can be created using the `POST /public/user` API with the necessary details.
+
+## Database Initialization
+
+To initialize the database:
+
+1.  Ensure MongoDB is installed and running.
+
+2.  Execute the following script:
+``./scripts/init_dominate.js``
+
+# Dominate A.I. - Frontend
+
+## Local Setup
+
+1.  Ensure Redis and MongoDB are running in the background.
+
+2.  Clone the repository:
+``git clone https://github.com/DominateAi/Dominate-AI.git``
+
+3. Navigate to the frontend folder and install dependencies:
+``npm install``
+
+4. Start the local development server:
+``npm run local``
+
+5. (Optional) Initialize the database before starting the server:
+``./scripts/init_dominate.js``
+
+## Production Setup
+
+1.  Install Docker and Docker Compose.
+
+2.  Copy the frontend `dist` folder to `/var/dominate/dist/dominate-frontend/`.
+
+3.  Build and start the production environment:
+``docker-compose build docker-compose up --scale dominate=2 -d``
