@@ -52,32 +52,54 @@ Start dominating your sales process with **Dominate A.I.** today!
 
 ![](assets/Dashboard.png)
 
-Dominate: Backend
+# Dominate A.I. - Backend
 
-How to setup:
-1. install docker, docker-compose
-2. copy dominate frontend dist folder in '/var/dominate/dist/dominate-frontend/'
-3. run 'docker-compose build'
-3. run 'docker-compose up --scale dominate=2 -d' 
+## Local Development Setup
 
-Local Setup -
+### **Option 1: Manual Setup**
 
-Make sure Redis and MongoDB are installed and the servers for them have been started in the background.
+1.  Install **NVM** and set up **Node.js** version `16.20.2`.
+    
+2.  Install necessary system dependencies:
+    
+    -   `build-essential`
+    -   `node-gyp`
+3.  Install `concurrently` globally for managing multiple processes:
 
-1. `git clone https://github.com/DominateAi/Dominate-AI.git`
-2. `npm install`
-3. `npm run local`
+```npm install -g concurrently```
 
-You can also setup database with admin with this addiitonal step before the 3rd step - 
+4. Start the required services using Docker:
 
-4. `Run ./scripts/init_dominate.js\`
+-   MongoDB (port `27017`)
+-   Redis (port `6379`)
+-   MinIO (ports `9000` and `9001`)
 
-T0 Setup :
-------------------
+Example command to run MinIO:
 
-1. Install MongoDB
+``docker run -d --name minio -p 9000:9000 -p 9001:9001 \
+  -e "MINIO_ROOT_USER=minioadmin" \
+  -e "MINIO_ROOT_PASSWORD=minioadmin" \
+  bitnami/minio:latest``
 
-2. Run ./scripts/init_dominate.js\
+5.  Access the MinIO web console:
+    
+    -   URL: `http://localhost:9001`
+    -   Login credentials:
+        -   Username: `minioadmin`
+        -   Password: `minioadmin`
 
+6. Navigate to the root directory of the backend project and run the local server:
+``npm run local``
 
-- Upload the default image and update the config file for default admin image
+7. Verify the logs for successful connections to MongoDB and Redis. If you encounter errors related to S3 or socket hang-ups, check the MinIO service configuration.
+
+### **Option 2: Automated Script**
+
+1.  Navigate to the root directory of the backend project.
+2.  Make the startup script executable:
+``chmod +x config/local_containers_setup/start_containers.sh``
+3. Run the script to start all required containers and the Node.js server:
+``./config/local_containers_setup/start_containers.sh``
+4. Once development is complete, clean up the containers by running:
+``chmod +x config/local_containers_setup/cleanup_containers.sh
+./config/local_containers_setup/cleanup_containers.sh``
