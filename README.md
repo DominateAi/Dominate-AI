@@ -29,10 +29,26 @@
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=Prometheus&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 ![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)  
+![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)  
+![Next.js](https://img.shields.io/badge/Next.js-%23000000.svg?style=for-the-badge&logo=nextdotjs&logoColor=white)  
+
+
+Dominate A.I. is designed for businesses where every deal counts—perfect for high-ticket sales with long sales cycles and account-based selling strategies. Whether you’re a tech company managing SaaS clients or a consultancy nurturing high-value partnerships, Dominate A.I. empowers your team to stay organized and close deals faster.  
+
+## Features  
+- **Lead Management:** Organize and track leads with ease, ensuring no potential opportunity is overlooked.  
+- **Deal Pipelines:** Visualize your sales process and monitor the progress of every deal.  
+- **Follow-Up Scheduling:** Set reminders to follow up with prospects at the right time, so you never miss a touchpoint.  
+- **Account Tracking:** Manage and view key details of all your accounts in one place for better relationship building.  
+- **Task Management:** Stay on top of your to-dos with an intuitive task manager built for sales workflows.  
+- **Customizable CRM:** Fully open source, giving you the flexibility to tailor features to your unique business needs.  
+
+Start dominating your sales process with **Dominate A.I.** today!
 
 ![](assets/website_screenshot.png)
 
-Dominate A.I. is designed for businesses where every deal counts—perfect for high-ticket sales with long sales cycles and account-based selling strategies. Whether you’re a tech company managing SaaS clients or a consultancy nurturing high-value partnerships, Dominate A.I. empowers your team to stay organized and close deals faster. With features like lead management, deal pipelines, follow-up scheduling, and account tracking, you can streamline every stage of your sales process. Stay on top of tasks, nurture relationships effectively, and never let a deal slip through the cracks. Best of all, it’s open source, giving you full control to customize and adapt the CRM to your unique business needs. Start dominating your sales process with Dominate A.I. today!
+
 
 ![](assets/Dashboard.png)
 
