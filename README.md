@@ -48,7 +48,7 @@ Start dominating your sales process with **Dominate A.I.** today!
 
 ![](assets/website_screenshot.png)
 
-
+![Dominate CLI Demo](assets/dominate.gif)
 
 ![](assets/Dashboard.png)
 
@@ -59,6 +59,8 @@ Dominate A.I. provides command-line interface (CLI) tools for different operatin
 ### Installation
 
 #### For Global installation checkout this NPM pakage [link](https://www.npmjs.com/package/dominate-cli)
+
+
 
 #### Windows
 
