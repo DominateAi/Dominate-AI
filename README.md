@@ -52,7 +52,93 @@ Start dominating your sales process with **Dominate A.I.** today!
 
 ![](assets/Dashboard.png)
 
-# Dominate A.I. - Backend
+## CLI Tools
+
+Dominate A.I. provides command-line interface (CLI) tools for different operating systems to help you manage your development environment easily. These tools are available in the `cli-binaries` directory.
+
+### Installation
+
+#### For Global installation checkout this NPM pakage [link](https://www.npmjs.com/package/dominate-cli)
+
+#### Windows
+
+1. Download `dominate-cli-win.exe` from the `cli-binaries` directory.
+2. Add the binary location to your system's PATH or move it to a directory that's already in PATH.
+3. Open Command Prompt or PowerShell and run:
+
+   ```batch
+   dominate-cli-win.exe help
+   ```
+
+#### macOS
+
+1. Download `dominate-cli-macos` from the `cli-binaries` directory.
+2. Make the binary executable:
+
+   ```bash
+   chmod +x dominate-cli-macos
+   ```
+
+3. Move to a directory in your PATH:
+
+   ```bash
+   sudo mv dominate-cli-macos /usr/local/bin/dominate-cli
+   ```
+
+4. Run the CLI:
+
+   ```bash
+   dominate-cli help
+   ```
+
+#### Linux
+
+1. Download `dominate-cli-linux` from the `cli-binaries` directory.
+2. Make the binary executable:
+
+   ```bash
+   chmod +x dominate-cli-linux
+   ```
+
+3. Move to a directory in your PATH:
+
+   ```bash
+   sudo mv dominate-cli-linux /usr/local/bin/dominate-cli
+   ```
+
+4. Run the CLI:
+
+   ```bash
+   dominate-cli help
+   ```
+
+### Available Commands
+
+- **start**: Start the Dominate backend locally
+- **stop**: Stop the Dominate backend
+- **install**: Pull the latest code from the Dominate backend repository
+- **logs**: View the logs of the running backend containers
+- **help**: Display help information
+
+### Usage Examples
+
+- **Start the backend:**
+
+  ```bash
+  dominate-cli start
+  ```
+
+- **View container logs:**
+
+  ```bash
+  dominate-cli logs
+  ```
+
+- **Stop all services:**
+
+  ```bash
+  dominate-cli stop
+  ```
 
 ## Local Development Setup
 
