@@ -1,7 +1,0 @@
-node_modules
-log/results.log
-.vscode
-dumb.rdb
-scripts
-./test.js
-test.js
