@@ -1,0 +1,8 @@
+{
+  "label": "Developer Docs",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Welcome to the Developer Documentation of Dominate A.I."
+  }
+}
