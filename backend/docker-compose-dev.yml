@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    container_name: redis
+    networks:
+      - my_bridge
+
+  mongo:
+    image: bitnami/mongodb:latest
+    ports:
+      - "27017:27017"
+    container_name: mongo
+    networks:
+      - my_bridge
+
+  minio:
+    image: bitnami/minio:latest
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    container_name: minio
+    networks:
+      - my_bridge
+
+networks:
+  my_bridge:
+    driver: bridge
