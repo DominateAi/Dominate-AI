@@ -18,7 +18,7 @@ const roleService = require('../services/role.service');
 const helper = require("../../common/helper");
 const userDetailService = require('../services/userDetails.service');
 const commonEmailTemplateService = require('../../common/emailTemplateService');
-
+const escapeHtml = require('escape-html'); // Add this line to import escape-html
 
 function init(router) {
   router.route('/users')

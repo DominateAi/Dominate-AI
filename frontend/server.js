@@ -26,9 +26,17 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(
   session({
-    secret: "mySuperDavisScret",
+    secret: process.env.SESSION_SECRET || "defaultSecret",
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    name: "sessionId",
+    cookie: {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      maxAge: 60000, // 1 minute for example
+      path: "/",
+      domain: "example.com" // replace with your domain
+    }
   })
 );
 

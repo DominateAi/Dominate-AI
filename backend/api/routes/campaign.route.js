@@ -302,7 +302,7 @@ async function changeStatus(req, res, next) {
     }else{
       if(data.campaignScheduled == true){
     var response = await campaignService.changeStatus(id, status)
-    res.send(response);
+    res.json(response); // Use res.json to safely send JSON data
       }
     else{
       return next(errorMethods.sendBadRequest(errorCode.CAMPAIGN_NOT_SCHEDULED));
