@@ -29,7 +29,7 @@ axios.interceptors.response.use(
   function (error) {
     // const originalRequest = error.config;
     // console.log(error.response.status);
-    if (error.response.status === 405) {
+    if (error.response && error.response.status === 405) {
       store.dispatch({
         type: SET_ERROR_CODE,
         payload: error.response.status,

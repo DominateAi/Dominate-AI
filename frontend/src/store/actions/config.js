@@ -14,7 +14,7 @@ module.exports = {
 
   url:
     process.env.NODE_ENV === "development"
-      ? "http://localhost:9010"
+      ? "http://localhost:8010"
       : `https://${workspaceName}.dominate.ai`,
   // `https://${workspaceName}.dominate.ai`,
   // url: `http://localhost:9010`,
