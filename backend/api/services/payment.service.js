@@ -9,7 +9,7 @@ const Status = require('../../common/constants/Status');
 var organisationModel = require('../models/organization.model');
 var bilingModel = require('../models/billing.model');
 var mailer = require('../../common/aws_mailer');
-const uuidv4 = require('uuid/v4');
+const { v4: uuidv4 } = require('uuid');
 
 
 var paymentService = {

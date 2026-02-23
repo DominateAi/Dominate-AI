@@ -1,5 +1,5 @@
 var organizationModel = require("../models/organization.model");
-const uuidv1 = require('uuid/v1');
+const { v1: uuidv1 } = require('uuid');
 const roleService = require('../services/role.service');
 var userService = require('../services/user.service');
 var widgetService = require('../services/widget.service');
@@ -28,7 +28,7 @@ var mailer = require('../../common/aws_mailer');
 var switchRoleService = require('../services/switchRole.service');
 var billingService = require('../services/billing.service');
 const helper = require("../../common/helper");
-const uuidv4 = require('uuid/v4');
+const { v4: uuidv4 } = require('uuid');
 const commonEmailTemplateService = require('../../common/emailTemplateService');
 const { pipeline } = require("stream");
 
