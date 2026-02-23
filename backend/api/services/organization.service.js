@@ -67,62 +67,31 @@ var organizationService = {
  
 function addOrganization(organizationData) {
     return new Promise(async(resolve, reject) => {
-//when you add an org, you do three things, you setOrgData and create the org, you create default widgets and you create a default user
-        // organizationData = setOrganizationData(organizationData);
-        // organizationModel.create(organizationData).then((data) => {
-        //     createDefaultWidgets(organizationData, resolve, reject);
-        //     createDefaultUser(organizationData, resolve, reject);
-        // }).catch((err) => {
-        //     reject(err);
-        // const stripeCustomerData = setStripeCustomerCreateData(organizationData);
-        // //have to call a function here that gets us the default price id for the currency and passes it in set subs data function
-        // stripeServices.createCustomer(stripeCustomerData)
-        // .then((customer)=>{
-        // const freeSubscriptionData = setStripeSubscriptionData(customer.id)
-        //     stripeServices.createSubscription(freeSubscriptionData).then((subscription)=>{
-        //     organizationData = setOrganizationData(organizationData,customer,subscription);
-        //     organizationModel.create(organizationData).then((data) => {
-        //         createDefaultWidgets(organizationData, resolve, reject);
-              
-        //         createDefaultUser(organizationData, resolve, reject);
-        //     }).catch((err) => {
-        //         reject(err);
-        //     });
-        // }).catch((err) => {
-        //     reject(err);
-        // });
-        //  })
-        // .catch(err => reject(err));
-        try{
-        const stripeCustomerData = setStripeCustomerCreateData(organizationData);
-        customer = await stripeServices.createCustomer(stripeCustomerData)
-        prices = defaultPrices.defaultPrices
-        var dealPipes = await dealPipelines.defaultPipelines
-        for(i in prices){
-            if(prices[i].currency == organizationData.defaultUserCurrency){
-                defaultPrice = prices[i].priceId
-                break;
+        try {
+            // Set up default deal pipelines
+            var dealPipes = dealPipelines.defaultPipelines;
+            for (var dealpipe of dealPipes) {
+                var pipelineData = {
+                    "name": dealpipe.name,
+                    "createdBy": organizationData.defaultUserEmailId,
+                    "lastModifiedBy": organizationData.defaultUserEmailId
+                };
+                await pipelineService.addPipeline2(pipelineData, organizationData.workspaceId);
             }
-            else{defaultPrice = default_price_id}
+
+            // Set up default lead pipeline
+            await leadPipelineService.addLeadPipeline2(leadPipeline.defaultPipeline, organizationData);
+
+            // Set up org data without Stripe (self-hosted mode)
+            organizationData = setOrganizationData(organizationData);
+            var data = await organizationModel.create(organizationData);
+            console.log("Organization created:", data.workspaceId);
+
+            createDefaultUser(organizationData, resolve, reject);
+        } catch(err) {
+            reject(err);
         }
-        for(dealpipe of dealPipes){
-            var pipelineData={
-                "name":dealpipe.name,
-                "createdBy":organizationData.defaultUserEmailId,
-                "lastModifiedBy":organizationData.defaultUserEmailId
-            }
-            await pipelineService.addPipeline2(pipelineData, organizationData.workspaceId)
-        }
-        await leadPipelineService.addLeadPipeline2(leadPipeline.defaultPipeline, organizationData);
-        const freeSubscriptionData = setStripeSubscriptionData(customer.id, defaultPrice)
-        subscription = await stripeServices.createSubscription(freeSubscriptionData)
-        organizationData = setOrganizationData(organizationData,customer,subscription);
-        data = await organizationModel.create(organizationData)
-        console.log("data is", data);
-        //createDefaultWidgets(organizationData, resolve, reject);
-        createDefaultUser(organizationData, resolve, reject);
-        }catch(err){reject(err);}
-    })
+    });
 }
 
 
@@ -136,10 +105,7 @@ function updateOrganization(id, organizationData, callback) {
             if(result != undefined){
                 result.logo = helper.resolveImagePath(data.logo, data.workspaceId);
             }
-            stripeServices.getCustomerObject(data.customerId).then((customer) => {
-                response = {...result._doc, currency: customer.currency}
-                resolve(response);
-            })
+            resolve(result);
         }).catch((err) => {
             reject(err);
         })
@@ -280,14 +246,7 @@ function getOrganizationByWorkspaceId(workspaceId) {
             if(result != undefined){
                 result.logo = helper.resolveImagePath(data.logo, data.workspaceId);
             }
-            stripeServices.getCustomerObject(data.customerId).then((customer) => {
-                response = {...result._doc, currency: customer.currency}
-                resolve(response);
-
-            }).catch((err) => {
-                reject(err);
-            })
-            
+            resolve(result);
         }).catch((err) => {
             reject(err);
         })
@@ -460,17 +419,14 @@ function setStripeSubscriptionData(customerId, defaultPrice){
 //create a unique bllingId for the org
     //organizationData.billingId = uuidv1();
 //create workspace url for the org
-function setOrganizationData(organizationData, customer, subscription) {
-    // Since, billing ID has role in creation for admin, So, billingId means subscriptionID
-    // Intially, for free trails we are not creating any subscription just customers are to
-    // be created without attaching the payment_method
+function setOrganizationData(organizationData) {
     organizationData.billingId = "";
     organizationData.priceId = "";
     organizationData.productId = "";
+    organizationData.customerId = "";
+    organizationData.subscriptionId = "";
     organizationData.planStatus = PlanStatus.FREE_PLAN;
     organizationData.status = Status.ACTIVE;
-    organizationData.customerId =  customer.id;
-    organizationData.subscriptionId = subscription.id;
     organizationData.workspaceUrl = organizationData.workspaceId + "." + server_domain;
 //storing who this org was created by and last modified by, as we receive default user email in data
     organizationData.createdBy = organizationData.defaultUserEmailId;
