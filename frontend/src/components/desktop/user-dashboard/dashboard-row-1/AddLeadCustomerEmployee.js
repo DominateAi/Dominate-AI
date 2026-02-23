@@ -8,7 +8,7 @@ import UserDashboardAddTask from "../../user-dashboard-add-forms/UserDashboardAd
 import UserDashboardFreePlanWarning from "../../user-dashboard-add-forms/UserDashboardFreePlanWarning";
 import AddLead from "../../leads/AddLead";
 import isEmpty from "../../../../store/validations/is-empty";
-import { workspace } from "../../../../store/utils/enterprizeAccount.json";
+const { workspace } = require("../../../../store/utils/enterprizeAccount.json");
 import { workspaceId } from "../../../../store/actions/config";
 
 export class AddLeadCustomerEmployee extends Component {

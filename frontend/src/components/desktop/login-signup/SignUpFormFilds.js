@@ -74,13 +74,13 @@ function SignUpFormFilds() {
       let response = await dispatch(checkIfUserExist());
       let rolesResponse = await dispatch(getAllRolesPublic());
 
-      if (!isEmpty(response.data.data)) {
+      if (!isEmpty(response && response.data && response.data.data)) {
         setUserExist(true);
       } else {
         setUserExist(false);
       }
 
-      if (!isEmpty(rolesResponse.data)) {
+      if (!isEmpty(rolesResponse && rolesResponse.data)) {
         let rolesOption = [];
         rolesResponse.data.forEach((ele) => {
           rolesOption.push({ value: ele._id, label: ele.name });

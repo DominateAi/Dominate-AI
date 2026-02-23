@@ -48,7 +48,6 @@ export const checkIfUserExist = (payload) => {
       }
     } catch (err) {
       console.log("err signup", err);
-      throw err;
     }
 
     return response;
@@ -107,7 +106,6 @@ export const getAllRolesPublic = (payload) => {
       }
     } catch (err) {
       console.log("err signup", err);
-      throw err;
     }
 
     return response;

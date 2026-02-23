@@ -16,7 +16,6 @@ import {
   updateOrganizationAddress,
 } from "./authAction";
 import { workspaceId } from "./config";
-import { json } from "body-parser";
 import isEmpty from "../validations/is-empty";
 
 /*=============================================

@@ -25,7 +25,7 @@ import { SET_FILTER_NAME, SET_EMPTY_ERRORS } from "./../../../store/types";
 import AddLeadBlueProgressbar from "../leads/AddLeadBlueProgressbar";
 import { maxLengths } from "../../../store/validations/maxLengths/MaxLengths";
 import UserDashboardFreePlanWarning from "./../user-dashboard-add-forms/UserDashboardFreePlanWarning";
-import { workspace } from "../../../store/utils/enterprizeAccount.json";
+const { workspace } = require("../../../store/utils/enterprizeAccount.json");
 import { workspaceId } from "../../../store/actions/config";
 
 const allEmployeesOptions = [
