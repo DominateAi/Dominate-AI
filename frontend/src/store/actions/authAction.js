@@ -179,17 +179,24 @@ export const signUpAction =
           });
         }
       })
-      .catch(
-        (err) => console.log(err)
-        // dispatch({
-        //   type: SET_ERRORS,
-        //   payload: err.response.data,
-        // })
-      );
+      .catch((err) => {
+        console.log(err);
+        const msg =
+          (err.response && err.response.data && err.response.data.message) ||
+          err.message ||
+          "Sign up failed. Please try again.";
+        Alert.error(`<h4>${msg}</h4>`, {
+          position: "top-right",
+          effect: "slide",
+          beep: false,
+          html: true,
+          timeout: 5000,
+        });
+      });
   };
 
 /*===========================
-    SignUp User 
+    SignUp User
 =============================*/
 
 export const googleSignUpAction =

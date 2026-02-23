@@ -140,32 +140,30 @@ function SignUpFormFilds() {
       payload: {},
     });
 
-    setValues({
+    const update = {
       ...values,
       [e.target.name]: e.target.value,
       errors: {},
       proceed: false,
-    });
+    };
 
     if (e.target.name === "password") {
-      setValues({
-        ...values,
-        displayConfirmPassword: true,
-        [e.target.name]: e.target.value,
-      });
+      update.displayConfirmPassword = true;
     }
+
+    setValues(update);
   };
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    var pass = document.getElementById("password").value;
-    var confirmPass = document.getElementById("confirmPassword").value;
+    var pass = values.password;
+    var confirmPass = values.confirmPassword || "";
 
     const { errors, isValid } = validateSignUp(values, pass, confirmPass);
-    // if (!isValid) {
-    //   setValues({ ...values, errors });
-    // } else if (isValid) {
-    console.log(values);
+    if (!isValid) {
+      setValues({ ...values, errors });
+      return;
+    }
 
     const newUser = {
       defaultUserEmailId: values.companyEmail.toLowerCase(),
@@ -180,38 +178,18 @@ function SignUpFormFilds() {
     };
 
     dispatch(signUpAction(newUser, userExist, history));
-    // }
   };
 
   // handle next on key enter
   const onFormKeyDown = (e) => {
     e.stopPropagation();
-    console.log(values.nextIndex);
-    if (e.keyCode === 13 && values.nextIndex !== 6) {
+    const lastStep = userExist ? 5 : 4;
+    if (e.keyCode === 13) {
       e.preventDefault();
-      handleNext();
-    } else if (e.keyCode === 13 && values.nextIndex === 6) {
-      e.preventDefault();
-      var pass = document.getElementById("password").value;
-      var confirmPass = document.getElementById("confirmPassword").value;
-
-      const { errors, isValid } = validateSignUp(values, pass, confirmPass);
-      if (!isValid) {
-        setValues({ ...values, errors });
-      } else if (isValid) {
-        console.log(values);
-
-        const newUser = {
-          defaultUserEmailId: values.companyEmail,
-          defaultUserPassword: values.password,
-          defaultUserFirstName: values.firstName,
-          defaultUserLastName: values.lastName,
-          defaultUserCurrency: getAllInfoByISO(
-            values.selectedCountry
-          ).currency.toLowerCase(),
-          features: ["call"],
-        };
-        dispatch(signUpAction(newUser, history));
+      if (values.nextIndex === lastStep) {
+        onSubmitHandler(e);
+      } else {
+        handleNext();
       }
     }
   };
@@ -551,7 +529,7 @@ function SignUpFormFilds() {
               name="password"
               id="password"
               type={values.passwordVisible ? "text" : "password"}
-              // value={this.state.password}
+              value={values.password}
               onChange={handleChange}
               autoFocus={true}
             />
@@ -569,7 +547,7 @@ function SignUpFormFilds() {
                 name="confirmPassword"
                 id="confirmPassword"
                 type={values.passwordVisible ? "text" : "password"}
-                // value={this.state.confirmPassword}
+                value={values.confirmPassword}
                 onChange={handleChange}
                 autoFocus={false}
               />
