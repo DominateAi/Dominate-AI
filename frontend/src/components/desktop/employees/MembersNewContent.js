@@ -30,7 +30,7 @@ import MembersNewOverview from "./MembersNewOverview";
 import MembersNewAddEmployees from "./MembersNewAddEmployees";
 import MembersNewLog from "./MembersNewLog";
 import UserDashboardFreePlanWarning from "./../user-dashboard-add-forms/UserDashboardFreePlanWarning";
-import { workspace } from "./../../../store/utils/enterprizeAccount.json";
+const { workspace } = require("./../../../store/utils/enterprizeAccount.json");
 import { workspaceId } from "./../../../store/actions/config";
 
 const allEmployeesOptions = [
