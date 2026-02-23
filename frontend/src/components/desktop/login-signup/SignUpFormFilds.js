@@ -43,6 +43,7 @@ function SignUpFormFilds() {
     firstName: "",
     lastName: "",
     companyEmail: "",
+    organizationName: "",
     password: "",
     confirmPassword: "",
     displayConfirmPassword: false,
@@ -165,6 +166,11 @@ function SignUpFormFilds() {
       return;
     }
 
+    // workspaceId must be alphanumeric only (backend schema requirement)
+    const workspaceId = values.organizationName
+      .toLowerCase()
+      .replace(/[^a-z0-9]/g, "") || "default";
+
     const newUser = {
       defaultUserEmailId: values.companyEmail.toLowerCase(),
       defaultUserPassword: values.password,
@@ -175,6 +181,8 @@ function SignUpFormFilds() {
       ).currency.toLowerCase(),
       features: ["call"],
       role: selectedRole.value,
+      organizationName: values.organizationName || "My Organization",
+      workspaceId: workspaceId,
     };
 
     dispatch(signUpAction(newUser, userExist, history));
@@ -183,7 +191,7 @@ function SignUpFormFilds() {
   // handle next on key enter
   const onFormKeyDown = (e) => {
     e.stopPropagation();
-    const lastStep = userExist ? 5 : 4;
+    const lastStep = 5;
     if (e.keyCode === 13) {
       e.preventDefault();
       if (values.nextIndex === lastStep) {
@@ -243,18 +251,20 @@ function SignUpFormFilds() {
         });
       }
     } else if (values.nextIndex === 4) {
-      if (errors.password || errors.confirmPassword) {
-        setValues({
-          ...values,
-          errors,
-          nextIndex: values.nextIndex,
-        });
+      if (!userExist) {
+        // Organization name step (first signup)
+        if (!values.organizationName || values.organizationName.trim().length < 2) {
+          setValues({
+            ...values,
+            errors: { organizationName: "Organization name must be at least 2 characters" },
+            nextIndex: values.nextIndex,
+          });
+        } else {
+          setValues({ ...values, nextIndex: values.nextIndex + 1, errors: {} });
+        }
       } else {
-        setValues({
-          ...values,
-          nextIndex: values.nextIndex + 1,
-          errors: {},
-        });
+        // Role selection step (additional user signup) — no validation required
+        setValues({ ...values, nextIndex: values.nextIndex + 1, errors: {} });
       }
     } else {
       setValues({
@@ -421,6 +431,38 @@ function SignUpFormFilds() {
     );
   };
 
+  const renderOrganizationNameField = () => {
+    const { errors } = values;
+    return (
+      <Fragment>
+        <div className="form-group">
+          <h5 className="font-24-bold font-24-bold--signup-login">
+            <img
+              src={require("../../../assets/img/auth/new-dummy-logo.svg")}
+              alt=""
+              className="new-dummy-logo-img"
+            />
+            Enter Your Organization Name
+          </h5>
+          <div className="workspace-name-div">
+            <SignUpInputField
+              placeholder="Organization Name"
+              name="organizationName"
+              id="organizationName"
+              type="text"
+              value={values.organizationName}
+              onChange={handleChange}
+              autoFocus={true}
+            />
+          </div>
+          {errors.organizationName && (
+            <div className="is-invalid">{errors.organizationName}</div>
+          )}
+        </div>
+      </Fragment>
+    );
+  };
+
   const renderCountryDropdown = () => {
     return (
       <Fragment>
@@ -563,35 +605,31 @@ function SignUpFormFilds() {
 
   // console.log(getAllInfoByISO(values.selectedCountry).currency.toLowerCase());
 
+  // First signup (no existing users): 5 steps — name → last name → email → org name → password
   const fields =
     values.nextIndex === 1
       ? renderFirstNameField()
       : values.nextIndex === 2
       ? renderlastNameField()
-      : // : values.nextIndex === 3
-      // ? renderSocialSignupButtons()
-      values.nextIndex === 3
+      : values.nextIndex === 3
       ? renderCompanyEmailField()
       : values.nextIndex === 4
-      ? renderPasswordField()
+      ? renderOrganizationNameField()
       : renderPasswordField();
 
+  // Additional user signup (existing users): 5 steps — name → last name → email → role → password
   const newFields =
     values.nextIndex === 1
       ? renderFirstNameField()
       : values.nextIndex === 2
       ? renderlastNameField()
-      : // : values.nextIndex === 3
-      // ? renderSocialSignupButtons()
-      values.nextIndex === 3
+      : values.nextIndex === 3
       ? renderCompanyEmailField()
       : values.nextIndex === 4
       ? renderRolesField()
-      : values.nextIndex === 5
-      ? renderPasswordField()
       : renderPasswordField();
 
-  const totalFields = userExist ? 5 : 4;
+  const totalFields = 5;
 
   return (
     <Fragment>
@@ -606,7 +644,7 @@ function SignUpFormFilds() {
           {this.renderlastNameField()} */}
         <div className={`form-progress-bar form-progress-${values.nextIndex}`}>
           <p>
-            (0{values.nextIndex}/{userExist ? "05" : "04"} ){" "}
+            (0{values.nextIndex}/05){" "}
           </p>
         </div>
         <div>
