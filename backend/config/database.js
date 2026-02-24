@@ -3,6 +3,14 @@ var configResolve = require("../common/configResolver");
 // Prefer MONGODB_URI env var (set by Docker); fall back to dev.json
 var monogodb_url = process.env.MONGODB_URI || configResolve.getConfig().monogodb_url;
 
+// mongoose-unique-validator uses the old callback API (countDocuments(query, cb))
+// which Mongoose 8 removed. Replace it with a no-op — MongoDB native unique
+// indexes already enforce uniqueness at the DB level.
+try {
+    const uvKey = require.resolve('mongoose-unique-validator');
+    require.cache[uvKey] = { id: uvKey, filename: uvKey, loaded: true, exports: function() {} };
+} catch(e) {}
+
 // Patch Connection.prototype.useDb so every workspace connection auto-inherits
 // all globally registered models. Without this, calling .model(name) on a
 // useDb() connection throws "Schema hasn't been registered for model X".

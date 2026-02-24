@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-var uuid = require('node-uuid');
+const { v1: uuidv1, v4: uuidv4 } = require('uuid');
 var currentContext = require('../../common/currentContext');
 const TaskStatus = require('../../common/constants/TaskStatus');
 var uniqueValidator = require('mongoose-unique-validator');
@@ -8,7 +8,7 @@ var uniqueValidator = require('mongoose-unique-validator');
 var modelName = 'Tasks';
 
 const taskSchema = new mongoose.Schema({
-  _id: { type: String, default: uuid.v1 },
+  _id: { type: String, default: uuidv1 },
   name: {
     type: String,
     required: true

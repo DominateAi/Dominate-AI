@@ -29,6 +29,7 @@
     "artillery": "1.6.0-26",
     "aws-sdk": "^2.626.0",
     "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^3.0.3",
     "body-parser": "1.19.0",
     "boom": "7.3.0",
     "bull": "^3.18.0",

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-var uuid = require('node-uuid');
+const { v1: uuidv1, v4: uuidv4 } = require('uuid');
 var currentContext = require('../../common/currentContext');
 const CallStatus = require('../../common/constants/CallStatus');
 const CallDirection = require('../../common/constants/CallDirection');
@@ -9,7 +9,7 @@ var uniqueValidator = require('mongoose-unique-validator');
 var modelName = 'Calls';
 
 const callSchema = new mongoose.Schema({
-  _id: { type: String, default: uuid.v1},
+  _id: { type: String, default: uuidv1},
   from: {
     type: String,
     required: true,

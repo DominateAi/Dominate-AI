@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-var uuid = require('node-uuid');
+const { v1: uuidv1, v4: uuidv4 } = require('uuid');
 var currentContext = require('../../common/currentContext');
 const FollowupStatus = require('../../common/constants/FollowupStatus');
 const Ftype = require('../../common/constants/FollowupType');
@@ -10,7 +10,7 @@ const EntityType = require('../../common/constants/EntityType');
 var modelName = 'Followups';
 
 const followupSchema = new mongoose.Schema({
-  _id: { type: String, default: uuid.v1},
+  _id: { type: String, default: uuidv1},
   name: {
     type: String,
     required: true,

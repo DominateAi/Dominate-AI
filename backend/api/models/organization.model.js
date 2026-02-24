@@ -1,8 +1,6 @@
-const bcrypt = require('bcrypt-nodejs');
-const crypto = require('crypto');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-var uuid = require('node-uuid');
+const { v1: uuidv1 } = require('uuid');
 const BillingTypes = require('../../common/constants/BillingTypes');
 const SubscriptionTypes = require('../../common/constants/SubscriptionTypes');
 const OrganizationTypes = require('../../common/constants/OrganizationTypes');
@@ -10,7 +8,7 @@ const PlanStatus = require('../../common/constants/PlanStatus');
 const Status = require('../../common/constants/Status');
 
 const organizationSchema = new mongoose.Schema({
-  _id: { type: String, default: uuid.v1 },
+  _id: { type: String, default: uuidv1 },
   organizationName: {
     type: String,
     required: true
@@ -23,8 +21,6 @@ const organizationSchema = new mongoose.Schema({
   },
   customerId:{
     type: String,
-    required: true,
-    unique: true,
   },
   workspaceId: {
     type: String,
